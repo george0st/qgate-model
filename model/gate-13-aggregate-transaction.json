@@ -1,0 +1,39 @@
+{
+  "name": "aggregate-transaction",
+  "description": "Transactions aggregation with relation to account",
+  "targets": "parquet",
+  "entities": [
+    {
+      "name": "party-id",
+      "description": "Unique party identificator",
+      "value_type": "string"
+    },
+    {
+      "name": "transaction-id",
+      "description": "Unique transaction identificator",
+      "value_type": "string"
+    },
+    {
+      "name": "account-id",
+      "description": "Unique account identificator",
+      "value_type": "string"
+    }
+  ],
+  "features": [
+    {
+      "name": "sum-value",
+      "description": "Transaction value summary",
+      "value_type": "double"
+    },
+    {
+      "name": "currency",
+      "description": "Transaction currency",
+      "value_type": "int"
+    },
+    {
+      "name": "record-date",
+      "description": "The date when the record was created",
+      "value_type": "timestamp"
+    }
+  ]
+}

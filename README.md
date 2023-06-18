@@ -1,5 +1,7 @@
 # QGate-FS-Model
-Sample of feature store model for machine learning, part of quality gate concept.
+The sample of feature store model for machine learning, part of quality gate concept.
+This model is independent on machine learning solution and can be used for e.g. Iguazio/MLRun,
+Tecton/FEAST, Hopsworks, Databrick, Dataiku, etc.
 
 ## Usage
 The model is useful for:

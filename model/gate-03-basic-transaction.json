@@ -1,0 +1,44 @@
+{
+  "name": "basic-transaction",
+  "description": "Transactions detail with relation to account",
+  "targets": "parquet",
+  "entities": [
+    {
+      "name": "transaction-id",
+      "description": "Unique transaction identificator",
+      "value_type": "string"
+    },
+    {
+      "name": "account-id",
+      "description": "Unique account identificator",
+      "value_type": "string"
+    },
+    {
+      "name": "party-id",
+      "description": "Unique party identificator",
+      "value_type": "string"
+    }
+  ],
+  "features": [
+    {
+      "name": "transaction-value",
+      "description": "Transaction value",
+      "value_type": "double"
+    },
+    {
+      "name": "transaction-currency",
+      "description": "Transaction currency",
+      "value_type": "int"
+    },
+    {
+      "name": "transaction-date",
+      "description": "Transaction date",
+      "value_type": "timestamp"
+    },
+    {
+      "name": "record-date",
+      "description": "The date when the record was created",
+      "value_type": "timestamp"
+    }
+  ]
+}

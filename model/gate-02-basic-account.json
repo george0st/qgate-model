@@ -1,0 +1,39 @@
+{
+  "name": "basic-account",
+  "description": "Account detail with relation to party",
+  "targets": "parquet",
+  "entities": [
+    {
+      "name": "account-id",
+      "description": "Unique account identificator",
+      "value_type": "string"
+    },
+    {
+      "name": "party-id",
+      "description": "Party identificator",
+      "value_type": "string"
+    }
+  ],
+  "features": [
+    {
+      "name": "account-type",
+      "description": "Type of party account (saving account, current account, etc.)",
+      "value_type": "int"
+    },
+    {
+      "name": "account-createdate",
+      "description": "Date for account creation",
+      "value_type": "timestamp"
+    },
+    {
+      "name": "account-state",
+      "description": "Account state (e.g. active, closed, etc.)",
+      "value_type": "int"
+    },
+    {
+      "name": "record-date",
+      "description": "The date when the record was created",
+      "value_type": "timestamp"
+    }
+  ]
+}
