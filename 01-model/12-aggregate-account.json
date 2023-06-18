@@ -6,34 +6,34 @@
     {
       "name": "account-id",
       "description": "Unique account identificator",
-      "value_type": "string"
+      "type": "string"
     },
     {
       "name": "party-id",
       "description": "Party identificator",
-      "value_type": "string"
+      "type": "string"
     }
   ],
   "features": [
     {
       "name": "type",
       "description": "Type of party account (saving account, current account, etc.)",
-      "value_type": "int"
+      "type": "int"
     },
     {
       "name": "open-date",
       "description": "Account opening date",
-      "value_type": "timestamp"
+      "type": "timestamp"
     },
     {
       "name": "state",
       "description": "Account state (e.g. active, closed, etc.)",
-      "value_type": "int"
+      "type": "int"
     },
     {
       "name": "record-date",
       "description": "The date when the record was created",
-      "value_type": "timestamp"
+      "type": "timestamp"
     }
   ]
 }

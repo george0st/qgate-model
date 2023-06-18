@@ -6,39 +6,39 @@
     {
       "name": "transaction-id",
       "description": "Unique transaction identificator",
-      "value_type": "string"
+      "type": "string"
     },
     {
       "name": "account-id",
       "description": "Unique account identificator",
-      "value_type": "string"
+      "type": "string"
     },
     {
       "name": "party-id",
       "description": "Unique party identificator",
-      "value_type": "string"
+      "type": "string"
     }
   ],
   "features": [
     {
       "name": "transaction-value",
       "description": "Transaction value",
-      "value_type": "double"
+      "type": "double"
     },
     {
       "name": "transaction-currency",
       "description": "Transaction currency",
-      "value_type": "int"
+      "type": "int"
     },
     {
       "name": "transaction-date",
       "description": "Transaction date",
-      "value_type": "timestamp"
+      "type": "timestamp"
     },
     {
       "name": "record-date",
       "description": "The date when the record was created",
-      "value_type": "timestamp"
+      "type": "timestamp"
     }
   ]
 }
