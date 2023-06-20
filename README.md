@@ -10,16 +10,16 @@ Doordash, etc.
 
 ## Usage
 The model is suitable for:
- - independent testing of new versions of machine learning solutions (with aim to keep quality in time)
- - compare machine learning solutions (as part of RFI, RFP, RFX and SWOT analysis)
+ - independent testing new versions of machine learning solutions (with aim to keep quality in time)
+ - compare capabilities of machine learning solutions (as part of RFI, RFP, RFX and SWOT analysis)
  - unit, function, acceptance, performance, shadow, ... tests
  - etc.
 
 ## Structure
 The solution contains this simple structure:
  - **00-high-level**
-   - The high-level view to the current model for better model understanding
+   - The high-level view to the current model for better understanding
  - **01-model**
-   - The definition of projects, feature sets, etc. in JSON format
+   - The definition of projects, feature sets, feature vectors, etc. in JSON format
  - **02-data**
    - The data for model in CSV and XML formats
