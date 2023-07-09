@@ -2,11 +2,7 @@
 The sample of feature store model for machine learning, part of quality gate concept. 
 This model is independent (definition in json, data in csv/xlsx) on machine learning solution.
 
-It can be used for different ML/MLOps solutions such as Iguazio/MLRun/MLRun-CE,
-Tecton/FEAST, Hopsworks, Comet, Rasgo, Kaskada, Molecula, H2O, Databricks, 
-Dataiku, Abacus, Sagemaker, Vertex, Zipline, Featureform, Featurebase, 
-Continual, Metarank, Feathr, Michelangelo, Bigabid, Fblearner, Overton,
-Doordash, etc.
+It can be used with various of ML/MLOps solutions.
 
 ## Usage
 The model is suitable for:
