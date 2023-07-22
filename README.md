@@ -15,7 +15,8 @@ The model is suitable for:
 The solution contains this simple structure:
  - **00-high-level**
    - The high-level view to the current model for better understanding
+   - see [schema](./00-high-level/qgate-fs-model.png)
  - **01-model**
    - The definition of projects, feature sets, feature vectors, etc. in JSON format
  - **02-data**
-   - The data for model in CSV and XML formats
+   - The data for model in CSV (and XML formats for better human readability)
