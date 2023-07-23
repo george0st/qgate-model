@@ -1,8 +1,8 @@
 {
-  "name": "tst-alfa",
-  "description": "Test project",
-  "label": {
-    "temporary": "True"
+  "name": "gate-alfa",
+  "description": "The test project, part of quality gate",
+  "labels": {
+    "temp": "True"
   },
   "kind": "project",
   "spec": [

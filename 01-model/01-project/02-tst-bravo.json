@@ -1,9 +1,0 @@
-{
-  "name": "tst-bravo",
-  "description": "Test project",
-  "label": {
-    "temporary": "True"
-  },
-  "kind": "project",
-  "spec": []
-}

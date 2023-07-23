@@ -1,0 +1,9 @@
+{
+  "name": "gate-bravo",
+  "description": "The test project, part of quality gate",
+  "labels": {
+    "temp": "True"
+  },
+  "kind": "project",
+  "spec": []
+}
