@@ -1,0 +1,11 @@
+{
+  "name": "tst-alfa",
+  "description": "Test project",
+  "label": {
+    "temporary": "True"
+  },
+  "kind": "project",
+  "spec": [
+    "basic-party","basic-account","basic-transaction",
+    "aggregate-party", "aggregate-account", "aggregate-transaction"]
+}
