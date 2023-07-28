@@ -2,20 +2,15 @@
   "name": "basic-party",
   "description": "Party (client, prospect, lead, ...) detail",
   "kind": "feature-set",
-  "spec": [
-    {
-      "targets": "parquet"
-    },
-    {
+  "spec": {
+      "targets": ["parquet"],
       "entities": [
         {
           "name": "party-id",
           "description": "Unigue party identificator",
           "type": "string"
         }
-      ]
-    },
-    {
+      ],
       "features": [
         {
           "name": "party-establishment",
@@ -109,5 +104,4 @@
         }
       ]
     }
-  ]
 }

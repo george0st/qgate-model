@@ -2,11 +2,8 @@
   "name": "aggregate-account",
   "description": "Account aggregation with relation to party",
   "kind": "feature-set",
-  "spec": [
-    {
-      "targets": "parquet"
-    },
-    {
+  "spec": {
+      "targets": ["parquet"],
       "entities": [
         {
           "name": "account-id",
@@ -18,9 +15,7 @@
           "description": "Party identificator",
           "type": "string"
         }
-      ]
-    },
-    {
+      ],
       "features": [
         {
           "name": "type",
@@ -44,5 +39,4 @@
         }
       ]
     }
-  ]
 }

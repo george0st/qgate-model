@@ -2,11 +2,8 @@
   "name": "basic-transaction",
   "description": "Transactions detail with relation to account",
   "kind": "feature-set",
-  "spec": [
-    {
-      "targets": "parquet"
-    },
-    {
+  "spec": {
+      "targets": ["parquet"],
       "entities": [
         {
           "name": "transaction-id",
@@ -23,9 +20,7 @@
           "description": "Unique party identificator",
           "type": "string"
         }
-      ]
-    },
-    {
+      ],
       "features": [
         {
           "name": "transaction-value",
@@ -49,5 +44,4 @@
         }
       ]
     }
-  ]
 }

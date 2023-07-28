@@ -2,11 +2,8 @@
   "name": "basic-account",
   "description": "Account detail with relation to party",
   "kind": "feature-set",
-  "spec": [
-    {
-      "targets": "parquet"
-    },
-    {
+  "spec": {
+      "targets": ["parquet"],
       "entities": [
         {
           "name": "account-id",
@@ -18,9 +15,7 @@
           "description": "Party identificator",
           "type": "string"
         }
-      ]
-    },
-    {
+      ],
       "features": [
         {
           "name": "account-type",
@@ -44,5 +39,4 @@
         }
       ]
     }
-  ]
 }
