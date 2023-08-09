@@ -14,7 +14,7 @@
       "features": [
         {
           "name": "party-establishment",
-          "description": "Date of establishment of the party (e.g. birthday for client, etc.",
+          "description": "Date of establishment of the party (e.g. birthday for client, etc.)",
           "type": "timestamp"
         },
         {
@@ -59,12 +59,12 @@
         },
         {
           "name": "party-residencecountry",
-          "description": "Party residence (e.g. country, etc.)",
+          "description": "Party country residence",
           "type": "string"
         },
         {
-          "name": "party-residencecity",
-          "description": "Party residence (e.g. city, etc.)",
+          "name": "party-city",
+          "description": "Permanent stay-city (part of permanent stay)",
           "type": "string"
         },
         {
