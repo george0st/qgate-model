@@ -20,7 +20,7 @@ The solution contains this simple structure:
  - **01-model**
    - The definition of 01-projects, 02-feature sets, 03-feature vectors, etc. in JSON format
  - **02-data**
-   - The data for model in CSV format (data sets in different sizes S, M and L)
+   - The data for model in CSV format (data sets are in a few sizes)
 
 
 ## Structure details
@@ -28,7 +28,7 @@ The solution contains this simple structure:
    - Name of objects such as entities, features, feature sets, etc. are chosen based on
    best practices (without view to limits some specific ML/MLOps solutions)
  - **02-data**
-   - Data sets are in different sizes S ~100 items, M ~1K items, L ~100K items
+   - Data sets are in different sizes ~100 items, ~1K items, ~10K items
    - The data is synthetic and generated with the aim of maintaining referential integrity 
    and closeness to real dates (this also applies to sensitive data such as PII, SPII, etc. 
    see email, birthday, etc.)
