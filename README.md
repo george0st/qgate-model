@@ -2,7 +2,7 @@
 The sample of feature store model for machine learning, part of quality gate concept. 
 This model is independent (definition in json, data in csv) for machine learning solutions.
 
-It can be used with various of ML/MLOps solutions.
+It can be used with various of ML/MLOps solutions with or without FeatureStore concept.
 
 ## Usage
 The model is suitable for:
