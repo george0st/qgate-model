@@ -1,13 +1,13 @@
 # QGate-FS-Model
 The sample of feature store model for machine learning, part of quality gate concept. 
-This model is independent (definition in json, data in csv/xlsx) on machine learning solution.
+This model is independent (definition in json, data in csv) for machine learning solutions.
 
 It can be used with various of ML/MLOps solutions.
 
 ## Usage
 The model is suitable for:
  - independent testing new versions of machine learning solutions (with aim to keep quality in time)
- - compare capabilities of machine learning solutions (as part of RFI, RFP, RFX and SWOT analysis)
+ - compare capabilities/functions of machine learning solutions (as part of RFP/X and SWOT analysis)
  - unit, function, acceptance, performance, shadow, ... tests
  - etc.
 
@@ -19,4 +19,4 @@ The solution contains this simple structure:
  - **01-model**
    - The definition of 01-projects, 02-feature sets, 03-feature vectors, etc. in JSON format
  - **02-data**
-   - The data for model in CSV (and XML formats for better human readability)
+   - The data for model in CSV format
