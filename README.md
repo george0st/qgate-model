@@ -1,6 +1,6 @@
 # QGate-FS-Model
 The sample of feature store model for machine learning, part of quality gate concept. 
-This model is independent (definition in json, data in csv) of machine learning solutions.
+This model is independent of machine learning solutions (definition in json, data in csv).
 
 It can be used with various of ML/MLOps solutions with or without FeatureStore concept.
 
@@ -27,6 +27,7 @@ The solution contains this simple structure:
  - **01-model**
    - Name of objects such as entities, features, feature sets, etc. are chosen based on
    best practices (without view to limits some specific ML/MLOps solutions)
+   - A few conventions (max name: 32 chars)
  - **02-data**
    - Data sets are in different sizes ~100 items, ~1K items, ~10K items
    - The data is synthetic and generated with the aim of maintaining referential integrity 
