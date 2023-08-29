@@ -19,7 +19,7 @@
       "features": [
         {
           "name": "account-type",
-          "description": "Type of party account (saving account, current account, etc.)",
+          "description": "Type of party account (current account, saving account, term account, etc.)",
           "type": "int"
         },
         {
@@ -29,7 +29,7 @@
         },
         {
           "name": "account-state",
-          "description": "Account state (e.g. active, closed, etc.)",
+          "description": "Account state (e.g. active, closed, blocked)",
           "type": "int"
         },
         {

@@ -29,7 +29,7 @@ The solution contains this simple structure:
    best practices (without view to limits some specific ML/MLOps solutions)
    - A few conventions (max name: 32 chars)
  - **02-data**
-   - Data sets are in different sizes ~100 items, ~1K items, ~10K items
+   - Data sets are in different sizes based on amount of counterparties (clients, ...), ~100 items, ~1K items, ~10K items
    - The data is synthetic and generated with the aim of maintaining referential integrity 
    and closeness to real dates (this also applies to sensitive data such as PII, SPII, etc. 
    see email, birthday, etc.)
