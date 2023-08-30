@@ -1,5 +1,5 @@
 # QGate-FS-Model
-The sample of feature store model for machine learning, part of quality gate concept. 
+The sample of model for machine learning, part of quality gate concept. 
 This model is independent of machine learning solutions (definition in json, data in csv).
 
 It can be used with various of ML/MLOps solutions with or without FeatureStore concept.
