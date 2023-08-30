@@ -1,5 +1,5 @@
 # QGate-Model
-The sample machine learning model, part of the quality gateway concept. 
+The sample machine learning (feature store) model, part of the quality gateway concept. 
 This model is independent of machine learning solutions (definition in json, data in csv).
 
 It can be used with various of ML/MLOps solutions with or without FeatureStore concept.
