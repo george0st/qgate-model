@@ -22,5 +22,5 @@ The solution contains this simple structure:
  - **02-data**
    - The data for model in CSV format (data sets are in a few sizes)
 
-**[Addition detail](./docs/README.md)**
+Addition detail, [see](./docs/README.md)
 
