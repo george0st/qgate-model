@@ -1,4 +1,4 @@
-# QGate-FS-Model
+# QGate-Model
 The sample of model for machine learning, part of quality gate concept. 
 This model is independent of machine learning solutions (definition in json, data in csv).
 
