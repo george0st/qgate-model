@@ -19,7 +19,7 @@
         },
         {
           "name": "party-type",
-          "description": "Party state (e.g. prospect, lead, client, etc.)",
+          "description": "Party state (e.g. lead, prospect, client)",
           "type": "string"
         },
         {
@@ -29,17 +29,17 @@
         },
         {
           "name": "party-gender",
-          "description": "Party gender",
+          "description": "Party gender ('F' or 'M')",
           "type": "string"
         },
         {
           "name": "party-education",
-          "description": "Party education (e.g. university, high-school, etc.)",
+          "description": "Party education (e.g. 'Elementary school', 'High school', 'University', etc.)",
           "type": "string"
         },
         {
           "name": "party-familystatus",
-          "description": "Family status for party (e.g. xxx, etc.)",
+          "description": "Family status for party ('Married', 'Single', 'Divorced')",
           "type": "string"
         },
         {
@@ -49,12 +49,12 @@
         },
         {
           "name": "party-industry",
-          "description": "Party industry (e.g. IT, Medical, Finance, etc.)",
+          "description": "Party industry (e.g. 'IT', 'Finance', 'Telco', 'Medical', etc.)",
           "type": "string"
         },
         {
           "name": "party-industryposition",
-          "description": "Party position in industry (e.g. IT-developer, IT-admin, Finance-Accountant, etc.)",
+          "description": "Party position in industry (e.g. 'Manager', 'Developer', 'Analyst', etc.)",
           "type": "string"
         },
         {
@@ -74,8 +74,8 @@
         },
         {
           "name": "party-incometype",
-          "description": "Type of the main income",
-          "type": "int"
+          "description": "Type of the main income (e.g. 'Earned', 'Passive', 'Portfolio')",
+          "type": "string"
         },
         {
           "name": "party-peoplehousehold",
@@ -94,7 +94,7 @@
         },
         {
           "name": "party-currency",
-          "description": "Party currency (USD, EUR, etc.)",
+          "description": "Party currency (USD, EUR)",
           "type": "string"
         },
         {

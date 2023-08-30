@@ -16,20 +16,11 @@ The model is suitable for:
 The solution contains this simple structure:
  - **00-high-level**
    - The high-level view to the current model for better understanding of logical relations
-   - see [schema](./00-high-level/qgate-fs-model.png)
+   - see [Class model](./00-high-level/qgate-fs-model.png)
  - **01-model**
    - The definition of 01-projects, 02-feature sets, 03-feature vectors, etc. in JSON format
  - **02-data**
    - The data for model in CSV format (data sets are in a few sizes)
 
+**[Addition detail](./docs/README.md)**
 
-## Structure details
- - **01-model**
-   - Name of objects such as entities, features, feature sets, etc. are chosen based on
-   best practices (without view to limits some specific ML/MLOps solutions)
-   - A few conventions (max name: 32 chars)
- - **02-data**
-   - Data sets are in different sizes based on amount of counterparties (clients, ...), ~100 items, ~1K items, ~10K items
-   - The data is synthetic and generated with the aim of maintaining referential integrity 
-   and closeness to real dates (this also applies to sensitive data such as PII, SPII, etc. 
-   see email, birthday, etc.)
