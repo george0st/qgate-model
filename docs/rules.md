@@ -1,6 +1,6 @@
 # Rules for generated data
 
-This is a basic look at several roles (not complited list) applied to generated data.
+This is a basic look at several roles (not completed list) applied to generated data.
 
 ## 1. Basic-party
 
