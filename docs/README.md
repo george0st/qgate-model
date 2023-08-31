@@ -1,6 +1,8 @@
 # Addition details
 
 ## Structure details
+ - **00-high-level**
+   - [Class model](../00-high-level/qgate-fs-model.png) in UML
  - **01-model**
    - Name of objects such as entities, features, feature sets, etc. are chosen based on
    best practices (without view to limits some specific ML/MLOps solutions)
@@ -16,10 +18,6 @@
 ## Generated data
  - [Basic rules for generated data](./rules.md), cardinality, constrains, etc.
  - etc.
-
-## Model
- - [Class model](../00-high-level/qgate-fs-model.png), graphical visualization
-
 
 
 
