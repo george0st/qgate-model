@@ -2,7 +2,7 @@
 
 ## Structure details
  - **00-high-level**
-   - [Model schema](../00-high-level/qgate-model.png) is as class model in UML
+   - [Model](../00-high-level/qgate-model.png) is described as class model in UML
  - **01-model**
    - Name of objects such as entities, features, feature sets, etc. are chosen based on
    best practices (without view to limits some specific ML/MLOps solutions)
