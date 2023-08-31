@@ -20,7 +20,7 @@ The solution contains this simple structure:
  - **01-model**
    - The definition of 01-projects, 02-feature sets, 03-feature vectors, etc. in JSON format
  - **02-data**
-   - The data for model in CSV format (data sets are in a few sizes)
+   - The data for model in CSV format for party, account, transaction, etc.
 
 Addition detail, [see](./docs/README.md)
 
