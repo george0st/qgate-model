@@ -12,9 +12,6 @@ The model is suitable for:
  - external test coverage (in case, that internal test coverage is not available or weak)
  - etc.
 
-## Model
-[![Class model](./00-high-level/qgate-model.png)](./00-high-level/qgate-model.png)
-
 ## Structure
 The solution contains this simple structure:
  - **00-high-level**
@@ -25,4 +22,7 @@ The solution contains this simple structure:
    - The data for model in CSV format for party, account, transaction, etc.
 
 Addition detail, [see](./docs/README.md)
+
+## Model
+[![Class model](./00-high-level/qgate-model.png)](./00-high-level/qgate-model.png)
 
