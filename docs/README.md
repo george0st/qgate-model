@@ -17,7 +17,8 @@
 
 ## Generated data
  - [Basic rules for generated data](./rules.md), cardinality, constrains, etc.
- - etc.
+ - Data is in format CSV (or compressed CSV)
+   - header=True, encoding='utf-8', sep=";", decimal=","
 
 
 
