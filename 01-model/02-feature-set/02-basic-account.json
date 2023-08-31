@@ -14,7 +14,7 @@
       "features": [
         {
           "name": "party-id",
-          "description": "Party identificator",
+          "description": "Party identificator, relation to feature set party",
           "type": "string"
         },
         {
