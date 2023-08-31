@@ -2,7 +2,7 @@
 
 ## Structure details
  - **00-high-level**
-   - [Class model](../00-high-level/qgate-model.png) in UML
+   - [Model](../00-high-level/qgate-model.png) is described as class model in UML
  - **01-model**
    - Name of objects such as entities, features, feature sets, etc. are chosen based on
    best practices (without view to limits some specific ML/MLOps solutions)
@@ -18,7 +18,7 @@
 ## Generated data
  - [Basic rules for generated data](./rules.md), cardinality, constrains, etc.
  - Data is in format CSV (or compressed CSV)
-   - header=True, encoding='utf-8', sep=";", decimal=","
+   - header=True, encoding="utf-8", sep=";", decimal=","
 
 
 

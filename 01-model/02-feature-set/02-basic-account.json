@@ -9,14 +9,14 @@
           "name": "account-id",
           "description": "Unique account identificator",
           "type": "string"
-        },
-        {
-          "name": "party-id",
-          "description": "Party identificator",
-          "type": "string"
         }
       ],
       "features": [
+        {
+          "name": "party-id",
+          "description": "Party identificator, relation to feature set party",
+          "type": "string"
+        },
         {
           "name": "account-type",
           "description": "Type of party account (current account, saving account, term account, etc.)",

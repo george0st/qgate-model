@@ -12,17 +12,17 @@ The model is suitable for:
  - external test coverage (in case, that internal test coverage is not available or weak)
  - etc.
 
-## Model
-[![Class model](./00-high-level/qgate-model.png)](./00-high-level/qgate-model.png)
-
 ## Structure
 The solution contains this simple structure:
  - **00-high-level**
-   - The high-level view to the current model for better understanding of logical relations
+   - The high-level [view](./00-high-level/qgate-model.png) to the model for better understanding of logical relations
  - **01-model**
    - The definition of 01-projects, 02-feature sets, 03-feature vectors, etc. in JSON format
  - **02-data**
    - The data for model in CSV format for party, account, transaction, etc.
 
 Addition detail, [see](./docs/README.md)
+
+## Model
+[![Class model](./00-high-level/qgate-model.png)](./00-high-level/qgate-model.png)
 
