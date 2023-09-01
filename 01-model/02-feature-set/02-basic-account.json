@@ -14,12 +14,12 @@
       "features": [
         {
           "name": "party-id",
-          "description": "Party identificator, relation to feature set party",
+          "description": "Relation to party-id",
           "type": "string"
         },
         {
           "name": "account-type",
-          "description": "Type of party account (current account, saving account, term account, etc.)",
+          "description": "Type of party account (current account, saving account, etc.)",
           "type": "string"
         },
         {
@@ -31,6 +31,11 @@
           "name": "account-state",
           "description": "Account state (e.g. active, closed, blocked)",
           "type": "string"
+        },
+        {
+          "name": "account-nonactivedate",
+          "description": "Date when account state was closed or blocked",
+          "type": "timestamp"
         },
         {
           "name": "record-date",
