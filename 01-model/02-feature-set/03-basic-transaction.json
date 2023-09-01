@@ -9,19 +9,19 @@
           "name": "transaction-id",
           "description": "Unique transaction identificator",
           "type": "string"
-        },
+        }
+      ],
+      "features": [
         {
           "name": "account-id",
-          "description": "Unique account identificator",
+          "description": "Relation to account identificator",
           "type": "string"
         },
         {
           "name": "party-id",
-          "description": "Unique party identificator",
+          "description": "Relation to party identificator",
           "type": "string"
-        }
-      ],
-      "features": [
+        },
         {
           "name": "transaction-value",
           "description": "Transaction value",
@@ -30,7 +30,7 @@
         {
           "name": "transaction-currency",
           "description": "Transaction currency",
-          "type": "int"
+          "type": "string"
         },
         {
           "name": "transaction-date",
