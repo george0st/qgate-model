@@ -20,7 +20,7 @@
         {
           "name": "account-type",
           "description": "Type of party account (current account, saving account, term account, etc.)",
-          "type": "int"
+          "type": "string"
         },
         {
           "name": "account-createdate",
@@ -30,7 +30,7 @@
         {
           "name": "account-state",
           "description": "Account state (e.g. active, closed, blocked)",
-          "type": "int"
+          "type": "string"
         },
         {
           "name": "record-date",
