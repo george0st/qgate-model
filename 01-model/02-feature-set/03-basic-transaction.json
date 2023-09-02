@@ -25,7 +25,7 @@
         {
           "name": "transaction-value",
           "description": "Transaction value",
-          "type": "double"
+          "type": "int"
         },
         {
           "name": "transaction-currency",
