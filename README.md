@@ -24,6 +24,6 @@ The solution contains this simple structure:
 Addition detail, [see](./docs/README.md)
 
 ## Model
-[![Basic-model](./00-high-level/basic-feature-sets.png)]
-[![Derived-model](./00-high-level/derived-feature-sets.png)]
+![Basic-model](./00-high-level/basic-feature-sets.png)
+![Derived-model](./00-high-level/derived-feature-sets.png)
 
