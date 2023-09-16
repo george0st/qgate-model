@@ -15,7 +15,7 @@ The model is suitable for:
 ## Structure
 The solution contains this simple structure:
  - **00-high-level**
-   - The high-level [view](./00-high-level/qgate-model.png) to the model for better understanding of logical relations
+   - The high-level [view](./00-high-level/basic-feature-sets.png) to the model for better understanding of logical relations
  - **01-model**
    - The definition of 01-projects, 02-feature sets, 03-feature vectors, etc. in JSON format
  - **02-data**
@@ -24,5 +24,6 @@ The solution contains this simple structure:
 Addition detail, [see](./docs/README.md)
 
 ## Model
-[![Class model](./00-high-level/qgate-model.png)](./00-high-level/qgate-model.png)
+[![Basic-model](../00-high-level/basic-feature-sets.png)]
+[![Derived-model](../00-high-level/derived-feature-sets.png)]
 

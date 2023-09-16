@@ -1,0 +1,49 @@
+{
+  "name": "basic-partycontant",
+  "description": "Contact to party",
+  "kind": "feature-set",
+  "spec": {
+    "targets": [
+      "parquet"
+    ],
+    "entities": [
+      {
+        "name": "contact-id",
+        "description": "Unigue party contact identificator",
+        "type": "string"
+      }
+    ],
+    "features": [
+      {
+        "name": "party-id",
+        "description": "Relation to party ID",
+        "type": "string"
+      },
+      {
+        "name": "contact-email",
+        "description": "Party email",
+        "type": "string"
+      },
+      {
+        "name": "contact-phone",
+        "description": "Party phone",
+        "type": "string"
+      },
+      {
+        "name": "contact-other",
+        "description": "Party other contact",
+        "type": "string"
+      },
+      {
+        "name": "contact-state",
+        "description": "Contact state e.g. active, inactive, ...",
+        "type": "string"
+      },
+      {
+        "name": "record-date",
+        "description": "The date when the record was created",
+        "type": "timestamp"
+      }
+    ]
+  }
+}

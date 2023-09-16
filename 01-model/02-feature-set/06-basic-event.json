@@ -1,0 +1,57 @@
+{
+  "name": "basic-event",
+  "description": "Party events e.g. run app, view paymemt conditions, check account state, show item in shop, send message to friend, etc.",
+
+  "kind": "feature-set",
+  "spec": {
+    "targets": [
+      "parquet"
+    ],
+    "entities": [
+      {
+        "name": "event-id",
+        "description": "Unigue party event identificator",
+        "type": "string"
+      }
+    ],
+    "features": [
+            {
+        "name": "party-id",
+        "description": "Relation to party ID",
+        "type": "string"
+      },
+
+      {
+        "name": "event-group",
+        "description": "Party event group (L0)",
+        "type": "string"
+      },
+      {
+        "name": "event-category",
+        "description": "Party event category (L1)",
+        "type": "string"
+      },
+      {
+        "name": "event-action",
+        "description": "Party event action (L2)",
+        "type": "string"
+      },
+      {
+        "name": "event-detail",
+        "description": "Party event detail (L3)",
+        "type": "string"
+      },
+      {
+        "name": "event-date",
+        "description": "Datetime for party event",
+        "type": "datetime"
+      },
+
+      {
+        "name": "record-date",
+        "description": "The date when the record was created",
+        "type": "timestamp"
+      }
+    ]
+  }
+}
