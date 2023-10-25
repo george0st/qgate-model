@@ -20,6 +20,7 @@ The solution contains this simple structure:
    - The definition of 01-projects, 02-feature sets, 03-feature vectors, etc. in JSON format
  - **02-data**
    - The data for model in CSV format for party, account, transaction, etc.
+   - NOTE: all data is artificial include personal data (PII, SPII, etc.) 
 
 Addition detail, [see](./docs/README.md)
 
