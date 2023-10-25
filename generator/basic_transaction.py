@@ -2,14 +2,14 @@ import datetime
 import math
 import uuid
 
-import base
+from generator.base import Base
 from faker import Faker
 import faker.providers
 import numpy
 import pandas as pd
 
 
-class BasicTransaction(base.Base):
+class BasicTransaction(Base):
 
     NAME= "05-basic-transaction"
 

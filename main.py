@@ -1,6 +1,4 @@
-import json
 import os, glob
-import pandas as pd
 
 from generator.basic_party import BasicParty
 from generator.basic_account import BasicAccount
@@ -37,7 +35,7 @@ class Factory:
 
 if __name__ == '__main__':
 
-    path=os.path.join(os.getcwd(), "..", "qgate-model", "01-model", "02-feature-set")
+    path=os.path.join(os.getcwd(), "01-model", "02-feature-set")
     count=1000
     compress=True
     label="1k"

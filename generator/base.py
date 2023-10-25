@@ -85,7 +85,7 @@ class Base:
 
     def save(self, append: bool, dir: str, compress: bool):
 
-        path=os.path.join("data",dir)
+        path=os.path.join("02-data",dir)
         if not os.path.exists(path):
             os.mkdir(path)
 
