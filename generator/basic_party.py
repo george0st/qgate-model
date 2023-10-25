@@ -1,13 +1,13 @@
 import datetime
 import uuid
 
-import base
+from generator.base import Base
 from faker import Faker
 import faker.providers
 import numpy
 
 
-class BasicParty(base.Base):
+class BasicParty(Base):
 
     NAME= "01-basic-party"
 

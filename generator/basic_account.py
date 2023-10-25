@@ -2,15 +2,15 @@ import datetime
 import math
 import uuid
 
-import base
+from generator.base import Base
 from faker import Faker
 import faker.providers
 import numpy
 import pandas as pd
-from basic_party import BasicParty
+from generator.basic_party import BasicParty
 
 
-class BasicAccount(base.Base):
+class BasicAccount(Base):
 
     NAME = "04-basic-account"
 
