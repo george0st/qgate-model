@@ -7,7 +7,7 @@ if __name__ == '__main__':
     generator=SyntheticData(path, label="50 items", count=50, bulk_max=10, compress=True)
 
     generator.generate()
-    
+
     print("")
 
 
