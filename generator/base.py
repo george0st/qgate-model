@@ -89,7 +89,7 @@ class Base:
         if not os.path.exists(path):
             os.mkdir(path)
 
-        print(f"Creating: {'APPEND' if append else 'WRITE'}, {self._name}, {dir}...")
+        print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self._name}', dir: '{dir}'...")
         df=pd.DataFrame(self.model)
         if compress:
             # start time
