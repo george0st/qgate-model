@@ -10,10 +10,7 @@ import time
 
 class Base:
 
-    ITEM_SEPARATOR=";"
-    LINE_SEPARATOR="\n"
     MAX_DATE=datetime.date(2200,1,1)
-
 
     def __init__(self, path, gmodel, definition_file):
         self._create(path, definition_file)
@@ -52,36 +49,14 @@ class Base:
 
         # create entities
         for entity in definition['spec']['entities']:
-#            print(entity['name'])
             self.model[entity['name']]=[]
 
         # create features
         for feature in definition['spec']['features']:
-#            print(feature['name'])
             self.model[feature['name']]=[]
 
     def generate(self, count):
         pass
-
-    # def save_header(self, f: TextIOWrapper):
-    #     next_item=False
-    #     for key in self.model.keys():
-    #         if next_item:
-    #             f.write(self.ITEM_SEPARATOR)
-    #         else:
-    #             next_item=True
-    #         f.write(str(key))
-    #     f.write(self.LINE_SEPARATOR)
-    #
-    # def save_item(self, f: TextIOWrapper):
-    #     next_item=False
-    #     for itm in self.model_item.items():
-    #         if next_item:
-    #             f.write(self.ITEM_SEPARATOR)
-    #         else:
-    #             next_item=True
-    #         f.write(str(itm[1][0]))
-    #     f.write(self.LINE_SEPARATOR)
 
     def save(self, append: bool, dir: str, compress: bool):
 
