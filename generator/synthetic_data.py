@@ -1,5 +1,6 @@
 import datetime
 import os, glob
+import time
 
 from generator.basic_party import BasicParty
 from generator.basic_account import BasicAccount
@@ -39,6 +40,10 @@ class SyntheticData:
 
     def generate(self, label, count, bulk_max=1000, compress=True):
 
+        print(f"Creating label: '{label}', count: {count} ...")
+        # start time
+        start_time = time.time()
+
         current_count = 0
         while (current_count < count):
             # generate data in bulk size based on party amount
@@ -49,3 +54,5 @@ class SyntheticData:
             self._save_all(False if current_count == 0 else True, label, compress)
             self._clean_all()
             current_count = current_count + bulk
+        diff_time=time.time()-start_time
+        print(f"... DONE Duration: {round(diff_time,6)} seconds ({datetime.timedelta(seconds=diff_time)})")

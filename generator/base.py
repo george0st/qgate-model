@@ -67,12 +67,9 @@ class Base:
         if not os.path.exists(path):
             os.makedirs(path)
 
-        print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self._name}', dir: '{dir}'...")
+        # print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self._name}', dir: '{dir}'...")
         df=pd.DataFrame(self.model)
         if compress:
-            # start time
-            start_time = time.time()
-
             compression_opts = dict(method='gzip')
             df.to_csv(os.path.join(path,f"{self._name}.csv.gz"),
                       header=False if append else True,
@@ -82,21 +79,13 @@ class Base:
                       sep=";",
                       decimal=",",
                       compression=compression_opts)
-            # stop time
-            diff_time=time.time()-start_time
-            print(f"Duration: {round(diff_time,6)} seconds ({datetime.timedelta(seconds=diff_time)})")
 
-#             # start time
-#             start_time = time.time()
 #             df.to_parquet(os.path.join(path,f"{self._name}.parquet"),
 #                           engine="pyarrow",
 #                           compression='gzip',
 # #                          header=False if append else True,
 #                           index=False,
 #                           mode = "a" if append else "w")
-#             # stop time
-#             diff_time=time.time()-start_time
-#             print(f"Duration: {round(diff_time,6)} seconds ({datetime.timedelta(seconds=diff_time)})")
 
         else:
             df.to_csv(os.path.join(path,f"{self._name}.csv"),
@@ -118,6 +107,5 @@ class Base:
             #               compression="snappy",
             #               index=False)
 
-        print(f"... Done")
         del df
 
