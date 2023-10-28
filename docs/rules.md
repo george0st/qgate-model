@@ -1,6 +1,7 @@
 # Rules for generated data
 
-This is a basic look at several roles (not completed list) applied to generated data.
+This is a basic look at several roles (not completed list) applied to generated data. 
+You can see full detail in source code see the folder [generator](./generator/)
 
 ## 1. Basic-party
 
