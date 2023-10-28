@@ -91,4 +91,4 @@ class BasicAccount(Base):
 
                 # "name": "record-date",
                 # "description": "The date when the record was created",
-                self.model['record-date'].append(datetime.date.today())
+                self.model['record-date'].append(self.gmodel["NOW"])
