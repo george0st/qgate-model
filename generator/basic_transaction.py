@@ -4,10 +4,10 @@ import uuid
 
 from generator.base import Base
 from faker import Faker
+from generator.basic_account import BasicAccount
 import faker.providers
 import numpy
 import pandas as pd
-
 
 class BasicTransaction(Base):
 
@@ -23,17 +23,18 @@ class BasicTransaction(Base):
 
     def generate(self, count):
 
+        # reference to the data from BasicAccount
+        account = self.gmodel[BasicAccount.NAME]
+
         # iteration cross all accounts
-        for account_index in range(len(self.gmodel['04-basic-account']['account-id'])):
+        for account_index in range(len(account['account-id'])):
 
-            date_from=self.gmodel['04-basic-account']['account-createdate'][account_index]
+            date_from=account['account-createdate'][account_index]
 
-#            if self.global_model['04-basic-account']['account-nonactivedate'][account_index] is None:
-
-            if self.gmodel['04-basic-account']['account-nonactivedate'][account_index] ==  self.MAX_DATE:
+            if account['account-nonactivedate'][account_index] ==  self.MAX_DATE:
                 date_to=datetime.date.today()
             else:
-                date_to=self.gmodel['04-basic-account']['account-nonactivedate'][account_index]
+                date_to=account['account-nonactivedate'][account_index]
 
             dif_date=round((date_to-date_from).days/30)
 
@@ -52,11 +53,11 @@ class BasicTransaction(Base):
 
                 # "name": "account-id",
                 # "description": "Relation to account identificator",
-                self.model['account-id'].append(self.gmodel['04-basic-account']['account-id'][account_index])
+                self.model['account-id'].append(account['account-id'][account_index])
 
                 # "name": "party-id",
                 # "description": "Relation to party identificator",
-                self.model['party-id'].append(self.gmodel['04-basic-account']['party-id'][account_index])
+                self.model['party-id'].append(account['party-id'][account_index])
 
                 # "name": "transaction-value",
                 # "description": "Transaction value",

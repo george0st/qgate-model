@@ -23,7 +23,6 @@ class BasicParty(Base):
         for i in range(count):
             self._generate()
 
-
     def _generate(self):
         """
         Generate one item
