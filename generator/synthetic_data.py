@@ -14,7 +14,7 @@ class SyntheticData:
         self._bulk_max=bulk_max
         self._compress=compress
 
-        self._global_model={}
+        self._gmodel={}
         self._entities=[Base]
 
         self._create_all()
@@ -22,13 +22,13 @@ class SyntheticData:
     def _create_all(self):
         self._entities.clear()
 
-        self._create(BasicParty(self._path, self._global_model))
-        self._create(BasicAccount(self._path, self._global_model))
-        self._create(BasicTransaction(self._path, self._global_model))
+        self._create(BasicParty(self._path, self._gmodel))
+        self._create(BasicAccount(self._path, self._gmodel))
+        self._create(BasicTransaction(self._path, self._gmodel))
 
     def _create(self, new_entity: Base):
         self._entities.append(new_entity)
-        self._global_model[new_entity.Name] = new_entity.model
+        self._gmodel[new_entity.Name] = new_entity.model
 
     def _save_all(self, append):
         for entity in self._entities:

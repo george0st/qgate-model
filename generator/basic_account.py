@@ -23,11 +23,15 @@ class BasicAccount(Base):
         return BasicAccount.NAME
 
     def generate(self, count):
+
+        # reference to the data from BasicParty
+        party = self.gmodel[BasicParty.NAME]
+
         # iteration cross all parties
-        for party_index in range(len(self.gmodel['01-basic-party']['party-id'])):
+        for party_index in range(len(party['party-id'])):
 
             # accounts will be generated only for customers
-            if self.gmodel['01-basic-party']['party-type'][party_index] != "Customer":
+            if party['party-type'][party_index] != "Customer":
                 continue
 
             # customer can have from 1 to 4 accounts
@@ -41,7 +45,7 @@ class BasicAccount(Base):
 
                 # "name": "party-id",
                 # "description": "Party identificator",
-                self.model['party-id'].append(self.gmodel['01-basic-party']['party-id'][party_index])
+                self.model['party-id'].append(party['party-id'][party_index])
 
                 # "name": "account-type",
                 # "description": "Type of party account (saving account, current account, etc.)",
@@ -58,19 +62,19 @@ class BasicAccount(Base):
                     if active_account_count==1:
                         # only first account will have date for counterparty established
                         self.model['account-createdate'].append(
-                            self.gmodel['01-basic-party']['party-typedate'][party_index])
+                            party['party-typedate'][party_index])
                     else:
                         # other active accounts, date will be between today and date for counterparty established
                         self.model['account-createdate'].append(
                             self.fake.date_between_dates(
-                                self.gmodel['01-basic-party']['party-typedate'][party_index],
+                                party['party-typedate'][party_index],
                                 datetime.date.today())
                         )
                 else:
                     # account is in state closed or blocked date will be between today and date for countrparty established
                     self.model['account-createdate'].append(
                         self.fake.date_between_dates(
-                            self.gmodel['01-basic-party']['party-typedate'][party_index],
+                            party['party-typedate'][party_index],
                             datetime.date.today())
                     )
 
