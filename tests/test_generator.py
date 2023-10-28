@@ -12,20 +12,29 @@ class TestGenerator(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
+        # setup the same dir for different unit test execution
         if os.path.split(os.getcwd())[-1]!="tests":
             os.chdir("tests")
             print(f"!!! Change directory for test execution to '{os.getcwd()}' !!!")
+
         shutil.rmtree(TestGenerator.OUTPUT_ADR, True)
 
     @classmethod
     def tearDownClass(cls):
         pass
 
-    def test_generate_data(self):
+    def test_generate_compress(self):
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
+        generator.generate(label="0-size-10-compress", count=10, bulk_max=10, compress=True)
 
-        generator.generate(label="0-size-100", count=100, bulk_max=100, compress=True)
-        generator.generate(label="1-size-1K", count=1000, bulk_max=1000, compress=True)
+    def test_generate_compress_smallbulk(self):
+        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
+        generator.generate(label="0-size-10,3-compress", count=10, bulk_max=3, compress=True)
 
-#        self.assertFalse(False)
+    def test_generate(self):
+        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
+        generator.generate(label="0-size-10", count=10, bulk_max=10, compress=False)
 
+    def test_generate_smallbulk(self):
+        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
+        generator.generate(label="0-size-10,3", count=10, bulk_max=3, compress=False)
