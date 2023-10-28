@@ -8,8 +8,9 @@ from generator.base import Base
 
 class SyntheticData:
 
-    def __init__(self, path):
-        self._path=path
+    def __init__(self, model_path="01-model", output_path="02-data"):
+        self._model_path=model_path
+        self._output_path=output_path
 
         self._gmodel={}
         self._gmodel["NOW"]=datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -20,9 +21,9 @@ class SyntheticData:
     def _create_all(self):
         self._entities.clear()
 
-        self._create(BasicParty(self._path, self._gmodel))
-        self._create(BasicAccount(self._path, self._gmodel))
-        self._create(BasicTransaction(self._path, self._gmodel))
+        self._create(BasicParty(self._model_path, self._gmodel))
+        self._create(BasicAccount(self._model_path, self._gmodel))
+        self._create(BasicTransaction(self._model_path, self._gmodel))
 
     def _create(self, new_entity: Base):
         self._entities.append(new_entity)
@@ -30,7 +31,7 @@ class SyntheticData:
 
     def _save_all(self, append, label, compress):
         for entity in self._entities:
-            entity.save(append, label, compress)
+            entity.save(self._output_path, append, label, compress)
 
     def _clean_all(self):
         for entity in self._entities:

@@ -43,7 +43,10 @@ class Base:
     def _create(self, path, definition_file):
 
         self.model = {}
-        with open(os.path.join(path, definition_file+".json"), "r") as json_file:
+        path=os.path.join(path,"02-feature-set", definition_file+".json")
+
+#        with open(os.path.join(path, definition_file+".json"), "r") as json_file:
+        with open(path, "r") as json_file:
             definition = json.load(json_file)
 
 
@@ -58,11 +61,11 @@ class Base:
     def generate(self, count):
         pass
 
-    def save(self, append: bool, dir: str, compress: bool):
+    def save(self, path, append: bool, dir: str, compress: bool):
 
-        path=os.path.join("02-data",dir)
+        path=os.path.join(path, dir)
         if not os.path.exists(path):
-            os.mkdir(path)
+            os.makedirs(path)
 
         print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self._name}', dir: '{dir}'...")
         df=pd.DataFrame(self.model)

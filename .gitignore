@@ -3,3 +3,5 @@
 /.coverage
 /.idea/
 /00-high-level/source/qgate-fs-model.ldb
+/tests_output/
+

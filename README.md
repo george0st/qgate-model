@@ -1,3 +1,9 @@
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![PyPI version fury.io](https://badge.fury.io/py/qgate-model.svg)](https://pypi.python.org/pypi/qgate-model/)
+![coverage](https://github.com/george0st/qgate-model/blob/main/coverage.svg)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/george0st/qgate-model)
+![GitHub release](https://img.shields.io/github/v/release/george0st/qgate-model)
+
 # QGate-Model
 The sample machine learning (feature store) model, part of the quality gateway concept. 
 This model is independent of machine learning solutions (definition in json, data in csv).
