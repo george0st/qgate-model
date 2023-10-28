@@ -15,12 +15,12 @@ The model is suitable for:
 ## Structure
 The solution contains this simple structure:
  - **00-high-level**
-   - The high-level [view](./00-high-level/basic-feature-sets.png) to the model for better understanding of logical relations
+   - The high-level [view](./00-high-level/basic-feature-sets.png) to the model for better understanding
    - Note: The HL model is drawn in Enterprise Architect (from Sparx) 
  - **01-model**
    - The definition contains 01-projects, 02-feature sets, 03-feature vectors, etc. in JSON format
  - **02-data**
-   - The data for model in CSV format for party, account, transaction, etc.
+   - The data for model in CSV/GZ format (future support parquet) for party, account, transaction, etc.
    - Note: All data is synthetic include personal data (PII, SPII, etc.) 
 
 Addition detail, [see](./docs/README.md)

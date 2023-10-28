@@ -1,3 +1,4 @@
+import datetime
 import os, glob
 
 from generator.basic_party import BasicParty
@@ -11,6 +12,7 @@ class SyntheticData:
         self._path=path
 
         self._gmodel={}
+        self._gmodel["NOW"]=datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         self._entities=[Base]
 
         self._create_all()
