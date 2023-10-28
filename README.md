@@ -21,7 +21,9 @@ The solution contains this simple structure:
    - The definition contains 01-projects, 02-feature sets, 03-feature vectors, etc. in JSON format
  - **02-data**
    - The data for model in CSV/GZ format (future support parquet) for party, account, transaction, etc.
-   - Note: All data is synthetic include personal data (PII, SPII, etc.) 
+   - Note: 
+     - All data is synthetic include personal data (PII, SPII, etc.)
+     - You can also generate your own data set with specific size
 
 Addition detail, [see](./docs/README.md)
 
