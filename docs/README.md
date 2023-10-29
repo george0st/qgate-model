@@ -8,9 +8,10 @@
    best practices (without view to limits some specific ML/MLOps solutions)
    - A few details: max_name=32 chars, code_page=ASCII
  - **02-data**
-   - Data sets are in different sizes based on amount of counterparties (clients, prospects, leads), 100 items and ~1K items. You can also generate your own data set with specific size.
+   - Data sets are in different sizes based on amount of counterparties (clients, prospects, leads), 
+   100 items and ~1K items. You can also generate your own data set with specific size.
    - The data is synthetic and generated with the aim of maintaining referential integrity 
-   and closeness to real dates (this also applies to sensitive data such as PII, SPII, etc. 
+   and "closeness" to real dates (this also applies to sensitive data such as PII, SPII, etc. 
    see email, birthday, etc.)
 
 ## Generated data
