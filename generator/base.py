@@ -1,11 +1,8 @@
 import datetime
 import json
-from io import TextIOWrapper
-
 import pandas as pd
 import numpy as np
 import os
-import time
 
 
 class Base:
@@ -45,10 +42,8 @@ class Base:
         self.model = {}
         path=os.path.join(path,"02-feature-set", definition_file+".json")
 
-#        with open(os.path.join(path, definition_file+".json"), "r") as json_file:
         with open(path, "r") as json_file:
             definition = json.load(json_file)
-
 
         # create entities
         for entity in definition['spec']['entities']:
