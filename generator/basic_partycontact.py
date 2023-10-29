@@ -32,7 +32,7 @@ class BasicPartyContact(Base):
         # iteration cross all parties
         for party_index in range(len(party['party-id'])):
 
-            contacts=self.rnd_choose([1, 2], [0.9, 0.1])
+            contacts=self.rnd_choose([1, 2, 3], [0.85, 0.1, 0.05])
             for count in range(contacts):
 
                 # "name": "contact-id",
@@ -50,8 +50,11 @@ class BasicPartyContact(Base):
                 # "name": "contact-state"
                 if count==0:
                     self.model['contact-state'].append("Active")
-                else:
+                elif count==1:
                     self.model['contact-state'].append(self.rnd_choose(["Active","InActive"],[0.95,0.05]))
+                else:
+                    self.model['contact-state'].append("InActive")
+
 
                 # "name": "record-date"
                 self.model['record-date'].append(self.gmodel["NOW"])
