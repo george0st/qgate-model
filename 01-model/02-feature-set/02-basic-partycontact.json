@@ -30,11 +30,6 @@
         "type": "string"
       },
       {
-        "name": "contact-other",
-        "description": "Party other contact",
-        "type": "string"
-      },
-      {
         "name": "contact-state",
         "description": "Contact state e.g. active, inactive, ...",
         "type": "string"
