@@ -13,6 +13,7 @@ import numpy
 class BasicPartyRelation(Base):
 
     NAME= "03-basic-partyrelation"
+    MAX_RELATIONS = 5
 
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, BasicPartyRelation.NAME)
@@ -28,12 +29,13 @@ class BasicPartyRelation(Base):
 
         # reference to the data from BasicParty
         parties = self.gmodel[BasicParty.NAME]
+        if len(parties) < BasicPartyRelation.MAX_RELATIONS:
+            return
 
         # iteration cross all parties
         for party in parties:
 
-            #contacts=self.rnd_choose([1, 2, 3], [0.85, 0.1, 0.05])
-            relations=self.rnd_choose(range(0,5), [0.1, 0.5, 0.2, 0.15, 0.05])
+            relations=self.rnd_choose(range(0, BasicPartyRelation.MAX_RELATIONS), [0.55, 0.3, 0.1, 0.04, 0.01])
             for relation in range(relations):
 
                 # add new model
@@ -42,12 +44,21 @@ class BasicPartyRelation(Base):
                 # "name": "relation-id",
                 model['relation-id']=str(uuid.uuid4())
 
-
                 # "name": "relation-parentid",
-                # "name": "relation-childid",
-                # "name": "relation-type",
-                # "name": "relation-date",
+                model['relation-parentid']=party['party-id']
 
+                # "name": "relation-childid",
+                while (True):
+                    random_id = parties[self.rnd_int(0, len(parties))]['party-id']
+                    if random_id != model['relation-parentid']:
+                        model['relation-childid'] = random_id
+                        break
+
+                # "name": "relation-type",
+                model['relation-type']=None     # not used, right now
+
+                # "name": "relation-date",
+                model['relation-date']=None     # not used, right now
 
                 # "name": "record-date"
                 model['record-date']=self.gmodel["NOW"]

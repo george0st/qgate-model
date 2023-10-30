@@ -20,8 +20,8 @@ class Base:
     def Name(self):
         pass
 
-    def rnd_int(self, low, high):
-        return self._gen.integers(low, high, 1)
+    def rnd_int(self, low, high) -> int:
+        return self._gen.integers(low, high)
 
     def rnd_choose(self, items: list=[], probability: list=None):
         """
