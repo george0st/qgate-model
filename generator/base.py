@@ -18,7 +18,7 @@ class Base:
 
     @property
     def Name(self):
-        return None
+        pass
 
     def rnd_int(self, low, high):
         return self._gen.integers(low, high, 1)
