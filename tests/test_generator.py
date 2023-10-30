@@ -38,3 +38,7 @@ class TestGenerator(unittest.TestCase):
     def test_generate_smallbulk(self):
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
         generator.generate(label="0-size-10,3", count=10, bulk_max=3, compress=False)
+
+    def test_generate_bigbulk(self):
+        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
+        generator.generate(label="0-size-2000", count=2000, bulk_max=2000, compress=True)
