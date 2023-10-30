@@ -67,7 +67,6 @@ class BasicPartyContact(Base):
         parties = self.gmodel[BasicParty.NAME]
 
         # iteration cross all parties
-#        for party_index in range(len(party['party-id'])):
         for party in parties:
 
             contacts=self.rnd_choose([1, 2, 3], [0.85, 0.1, 0.05])
@@ -78,36 +77,28 @@ class BasicPartyContact(Base):
 
                 # "name": "contact-id",
                 model['contact-id']=str(uuid.uuid4())
-#                self.model['contact-id'].append(str(uuid.uuid4()))
 
                 # "name": "party-id",
                 model['party-id']=party['party-id']
-#                self.model['party-id'].append(party['party-id'][party_index])
 
                 # TODO: evaluate if email and phone has prospect and lead
 
                 # "name": "contact-email"
                 model['contact-email']=self.fake.email()
-#                self.model['contact-email'].append(self.fake.email())
 
                 # "name": "contact-phone"
                 model['contact-phone']=self.fake.phone_number()
-#                self.model['contact-phone'].append(self.fake.phone_number())
 
                 # "name": "contact-state"
                 if count==0:
                     model['contact-state']= "Active"
-#                    self.model['contact-state'].append("Active")
                 elif count==1:
                     model['contact-state']=self.rnd_choose(["Active", "InActive"], [0.95, 0.05])
-#                    self.model['contact-state'].append(self.rnd_choose(["Active","InActive"],[0.95,0.05]))
                 else:
                     model['contact-state']= "InActive"
-#                    self.model['contact-state'].append("InActive")
 
                 # "name": "record-date"
                 model['record-date']=self.gmodel["NOW"]
-#                self.model['record-date'].append(self.gmodel["NOW"])
 
                 self.model.append(model)
 
