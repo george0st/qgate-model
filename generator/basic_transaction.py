@@ -24,17 +24,17 @@ class BasicTransaction(Base):
     def generate(self, count):
 
         # reference to the data from BasicAccount
-        account = self.gmodel[BasicAccount.NAME]
+        accounts = self.gmodel[BasicAccount.NAME]
 
         # iteration cross all accounts
-        for account_index in range(len(account['account-id'])):
+        for account in accounts:
 
-            date_from=account['account-createdate'][account_index]
+            date_from=account['account-createdate']
 
-            if account['account-nonactivedate'][account_index] ==  self.MAX_DATE:
+            if account['account-nonactivedate'] ==  self.MAX_DATE:
                 date_to=datetime.date.today()
             else:
-                date_to=account['account-nonactivedate'][account_index]
+                date_to=account['account-nonactivedate']
 
             dif_date=round((date_to-date_from).days/30)
 
@@ -43,33 +43,37 @@ class BasicTransaction(Base):
                 b=(int)(self.rnd_int(1,30)[0])
                 new_date=date_from+datetime.timedelta(days=a+b)
 
+                model=self.model_item()
+
                 # "name": "transaction-date",
                 # "description": "Transaction date",
-                self.model['transaction-date'].append(new_date)
+                model['transaction-date']=new_date
 
                 # "name": "transaction-id",
                 # "description": "Unique transaction identificator",
-                self.model['transaction-id'].append(str(uuid.uuid4()))
+                model['transaction-id']=str(uuid.uuid4())
 
                 # "name": "account-id",
                 # "description": "Relation to account identificator",
-                self.model['account-id'].append(account['account-id'][account_index])
+                model['account-id']=account['account-id']
 
                 # "name": "party-id",
                 # "description": "Relation to party identificator",
-                self.model['party-id'].append(account['party-id'][account_index])
+                model['party-id']=account['party-id']
 
                 # "name": "transaction-value",
                 # "description": "Transaction value",
 
                 #TODO: generate negative items also
-                self.model['transaction-value'].append(self.rnd_choose(range(1000, 5000)))
+                model['transaction-value']=self.rnd_choose(range(1000, 5000))
 
                 # "name": "transaction-currency",
                 # "description": "Transaction currency",
-                self.model['transaction-currency'].append("USD")
+                model['transaction-currency']="USD"
 
                 # "name": "record-date",
                 # "description": "The date when the record was created",
-                self.model['record-date'].append(self.gmodel["NOW"])
+                model['record-date']=self.gmodel["NOW"]
+
+                self.model.append(model)
 
