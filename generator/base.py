@@ -11,6 +11,7 @@ class Base:
 
     def __init__(self, path, gmodel, definition_file):
         self._create(path, definition_file)
+        self.model=[]
         self._gen = np.random.default_rng()
         self.gmodel = gmodel
         self._name = definition_file
@@ -33,13 +34,11 @@ class Base:
         return self._gen.choice(items, size=1, p=probability)[0]
 
     def clean(self):
-
-        for key in self.model.keys():
-            self.model[key]=[]
+        self.model.clear()
 
     def _create(self, path, definition_file):
 
-        self.model = {}
+        self._model_definition = {}
         path=os.path.join(path,"02-feature-set", definition_file+".json")
 
         with open(path, "r") as json_file:
@@ -47,11 +46,15 @@ class Base:
 
         # create entities
         for entity in definition['spec']['entities']:
-            self.model[entity['name']]=[]
+            self._model_definition[entity['name']]=None
 
         # create features
         for feature in definition['spec']['features']:
-            self.model[feature['name']]=[]
+            self._model_definition[feature['name']]=None
+
+    def model_item(self) -> dict:
+        """Return new empty item"""
+        return self._model_definition.copy()
 
     def generate(self, count):
         pass
