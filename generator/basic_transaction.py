@@ -40,7 +40,7 @@ class BasicTransaction(Base):
 
             for mounth in range(dif_date):
                 a=mounth*30
-                b=(int)(self.rnd_int(1,30)[0])
+                b=int(self.rnd_int(1,30))
                 new_date=date_from+datetime.timedelta(days=a+b)
 
                 model=self.model_item()
