@@ -24,7 +24,7 @@ The solution contains this simple structure:
    - Note: The HL meta-model is drawn in Enterprise Architect (from Sparx) 
  - **01-model**
    - The definition contains 01-projects, 02-feature sets, 03-feature vectors, etc. in JSON format
-   - This is kev-value model designed for these [use cases](./docs/usecases.md) 
+   - This key-value model is designed for these [use cases](./docs/usecases.md) 
  - **02-data**
    - The data for meta-model in CSV/GZ format (future support parquet) for party, account, transaction, etc.
    - Note: 
