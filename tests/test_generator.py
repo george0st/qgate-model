@@ -25,20 +25,20 @@ class TestGenerator(unittest.TestCase):
 
     def test_generate_compress(self):
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
-        generator.generate(label="0-size-10-compress", count=20, bulk_max=20, compress=True)
+        generator.generate(label="0-size-20,20-compress", count=20, bulk_max=20, compress=True)
 
     def test_generate_compress_smallbulk(self):
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
-        generator.generate(label="0-size-10,3-compress", count=20, bulk_max=6, compress=True)
+        generator.generate(label="0-size-20,6-compress", count=20, bulk_max=6, compress=True)
 
     def test_generate(self):
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
-        generator.generate(label="0-size-10", count=200, bulk_max=20, compress=False)
+        generator.generate(label="0-size-200,20", count=200, bulk_max=20, compress=False)
 
     def test_generate_smallbulk(self):
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
-        generator.generate(label="0-size-10,3", count=20, bulk_max=6, compress=False)
+        generator.generate(label="0-size-20,6", count=20, bulk_max=6, compress=False)
 
     def test_generate_bigbulk(self):
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
-        generator.generate(label="0-size-2000", count=2000, bulk_max=2000, compress=True)
+        generator.generate(label="0-size-2000,2000", count=2000, bulk_max=2000, compress=True)

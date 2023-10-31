@@ -7,6 +7,7 @@ from generator.basic_partycontact import BasicPartyContact
 from generator.basic_partyrelation import BasicPartyRelation
 from generator.basic_account import BasicAccount
 from generator.basic_transaction import BasicTransaction
+from generator.basic_event import BasicEvent
 from generator.base import Base
 
 class SyntheticData:
@@ -29,6 +30,7 @@ class SyntheticData:
         self._create(BasicPartyRelation(self._model_path, self._gmodel))
         self._create(BasicAccount(self._model_path, self._gmodel))
         self._create(BasicTransaction(self._model_path, self._gmodel))
+        self._create(BasicEvent(self._model_path, self._gmodel))
 
     def _create(self, new_entity: Base):
         self._entities.append(new_entity)
