@@ -10,7 +10,7 @@ learning solutions (definition in json, data in csv/parquet). It can be used wit
 ML/MLOps solutions with or without FeatureStore.
 
 ## Usage
-This meta-model is suitable for:
+This meta-model (based on key-value design) is suitable for:
  - compare capabilities and functions of machine learning solutions (as part of RFP/X and SWOT analysis)
  - independent test new versions of machine learning solutions (with aim to keep quality in time)
  - unit, sanity, smoke, system, reqression, function, acceptance, performance, shadow, ... tests
