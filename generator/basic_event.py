@@ -46,7 +46,7 @@ class BasicEvent(Base):
             # mix of action
                 # login-logout or login only
                 # profile, contract, check account state, list product, list services,
-            
+
             # "name": "event-group",
             # "name": "event-category",
             # "name": "event-action",
