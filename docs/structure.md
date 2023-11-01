@@ -1,6 +1,4 @@
-# Addition details
-
-## Structure details
+# Structure details
  - **00-high-level**
    - [Basic-model](../00-high-level/basic-feature-sets.png), [Derived-model](../00-high-level/derived-feature-sets.png) are described as class model in UML
  - **01-model**
@@ -10,7 +8,7 @@
  - **02-data**
    - Data sets are in different sizes based on amount of counterparties (clients, prospects, leads), 
    100 items and ~1K items. You can also generate your own data set with specific size.
-   - The data is synthetic and generated with the aim of maintaining referential integrity 
+   - The all data is synthetic and generated with the aim of maintaining referential integrity 
    and "closeness" to real dates (this also applies to sensitive data such as PII, SPII, etc. 
    see email, birthday, etc.)
 

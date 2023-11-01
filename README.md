@@ -27,11 +27,8 @@ The solution contains this simple structure:
    - This key-value model is designed for these [use cases](./docs/usecases.md) 
  - **02-data**
    - The data for meta-model in CSV/GZ format (future support parquet) for party, account, transaction, etc.
-   - Note: 
-     - All data is synthetic include personal data (PII, SPII, etc.)
-     - You can also generate your own data set with specific size
 
-Addition detail, [see](./docs/README.md)
+Addition detail, [see](./docs/structure.md)
 
 ## Model
 ![Basic-model](./00-high-level/basic-feature-sets.png)
