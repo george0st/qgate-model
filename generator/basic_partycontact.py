@@ -37,8 +37,8 @@ class BasicPartyContact(Base):
         # iteration cross all parties
         for party in parties:
 
-            # TODO: generate more contacts only for Customers
-            contacts=self.rnd_choose([1, 2, 3], [0.85, 0.1, 0.05])
+            # max 3 contacts for Customers and only one contact for Leads or Prospects
+            contacts= 1 if party['party-type'] != "Customer" else self.rnd_choose([1, 2, 3], [0.85, 0.1, 0.05])
             for count in range(contacts):
 
                 # add new model

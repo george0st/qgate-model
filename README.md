@@ -20,7 +20,7 @@ This meta-model (based on key-value design) is suitable for:
 ## Structure
 The solution contains this simple structure:
  - **00-high-level**
-   - The high-level [view](./00-high-level/basic-feature-sets.png) to the meta-model for better understanding
+   - The high-level [view](#model) to the meta-model for better understanding
    - Note: The HL meta-model is drawn in Enterprise Architect (from Sparx) 
  - **01-model**
    - The definition contains 01-projects, 02-feature sets, 03-feature vectors, etc. in JSON format
