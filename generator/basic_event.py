@@ -41,11 +41,13 @@ class BasicEvent(Base):
             # "name": "party-id",
             model['party-id']=party['party-id']
 
-            # only 3 months back
-            # max 0-2 bandl per day
-            # mix of action
-                # login-logout or login only
-                # profile, contract, check account state, list product, list services,
+            # only 3 months back history
+            # max 0-2 bandl of events per day
+            # mix of actions
+                # access - login, logout
+                # profile - income, expences, address, email, phone, children
+                # product - contract detail, account detail, legal conditions, sanctions
+                # offer - product list, service list, legal conditions, sanctions
 
             # "name": "event-group",
             # "name": "event-category",
