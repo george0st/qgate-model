@@ -31,7 +31,7 @@
       },
       {
         "name": "relation-date",
-        "description": "The date when the relation was created",
+        "description": "The date when the relation was identificated/created",
         "type": "timestamp"
       },
       {

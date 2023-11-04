@@ -23,6 +23,9 @@ class Base:
     def rnd_int(self, low, high) -> int:
         return self._gen.integers(low, high)
 
+    def rnd_bool(self) -> bool:
+        return bool(self._gen.integers(0, 2))
+
     def rnd_choose(self, items: list=[], probability: list=None):
         """
         Generate random value from list and based on defined probabilities

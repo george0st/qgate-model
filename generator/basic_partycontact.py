@@ -1,5 +1,6 @@
 import datetime
 import uuid
+from enum import Enum, Flag, IntFlag
 
 from generator.base import Base
 from faker import Faker
@@ -9,6 +10,10 @@ from generator.basic_party import BasicParty
 import faker.providers
 import numpy
 
+class ContactEnum(IntFlag):
+    Phone = 1,
+    Email = 2,
+    Full = 3,
 
 class BasicPartyContact(Base):
 
@@ -32,6 +37,7 @@ class BasicPartyContact(Base):
         # iteration cross all parties
         for party in parties:
 
+            # TODO: generate more contacts only for Customers
             contacts=self.rnd_choose([1, 2, 3], [0.85, 0.1, 0.05])
             for count in range(contacts):
 
@@ -44,13 +50,19 @@ class BasicPartyContact(Base):
                 # "name": "party-id",
                 model['party-id']=party['party-id']
 
-                # TODO: evaluate if email and phone has prospect and lead
+                # generate different amount of contact information
+                # Customer = email + phone
+                # !Customer = random email or phone
+                contact_detail=ContactEnum.Full if party['party-type']=="Customer" else ContactEnum.Email\
+                    if self.rnd_bool() else ContactEnum.Phone
 
-                # "name": "contact-email"
-                model['contact-email']=self.fake.email()
+                if contact_detail & ContactEnum.Email:
+                    # "name": "contact-email"
+                    model['contact-email']=self.fake.email()
 
-                # "name": "contact-phone"
-                model['contact-phone']=self.fake.phone_number()
+                if contact_detail & ContactEnum.Phone:
+                    # "name": "contact-phone"
+                    model['contact-phone']=self.fake.phone_number()
 
                 # "name": "contact-state"
                 if count==0:
