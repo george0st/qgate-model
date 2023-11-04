@@ -37,6 +37,7 @@ class BasicPartyContact(Base):
         # iteration cross all parties
         for party in parties:
 
+            # TODO: generate more contacts only for Customers
             contacts=self.rnd_choose([1, 2, 3], [0.85, 0.1, 0.05])
             for count in range(contacts):
 
