@@ -29,6 +29,8 @@ class BasicPartyRelation(Base):
 
         # reference to the data from BasicParty
         parties = self.gmodel[BasicParty.NAME]
+
+        # remove unlimited cycle for generation of relations
         if len(parties) < BasicPartyRelation.MAX_RELATIONS:
             return
 
