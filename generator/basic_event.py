@@ -26,6 +26,31 @@ class BasicEvent(Base):
 
     def generate(self, count):
 
+        events_init = {"access": ["login", "logout"]}
+
+        # list of groups and group probability
+        #   [[group, group probability], ...]
+        events_group=[["user profile", 0.01],
+                      ["product", 0.2],
+                      ["offer", 0.8]]
+
+        # list of categorie and probabilities for show and change
+        #   "group": [["category", show probability, change probability], ...]
+        events_category = {"user profile": [["income", 0.999, 0.001],
+                                                  ["expences", 0.9995, 0.0005],
+                                                  ["address", 0.999, 0.001],
+                                                  ["email", 0.995, 0.005],
+                                                  ["phone", 0.998, 0.002],
+                                                  ["children", 0.99995, 0.00005]],
+                     "product": [["contract detail", 0.99, 0.01],
+                                 ["account detail", 0.99, 0.01],
+                                 ["legal conditions", 0.9999, 0.0001],
+                                 ["sanctions", 0.9999, 0.0001]],
+                     "offer": [["product list"],
+                               ["service list"],
+                               ["legal conditions"],
+                               ["sanctions"]]}
+
         # reference to the data from BasicParty
         parties = self.gmodel[BasicParty.NAME]
 
@@ -48,6 +73,8 @@ class BasicEvent(Base):
                 # profile - income, expences, address, email, phone, children
                 # product - contract detail, account detail, legal conditions, sanctions
                 # offer - product list, service list, legal conditions, sanctions
+
+
 
             # "name": "event-group",
             # "name": "event-category",
