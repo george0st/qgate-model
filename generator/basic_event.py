@@ -20,36 +20,46 @@ class BasicEvent(Base):
         self.fake.add_provider(internet)
         self.fake.add_provider(phone_number)
 
+        self.event_inits = {"access": ["login", "logout"]}
+
+        # list of groups and group probability
+        #   [[group, ...], [group probability, ...]]
+        self.event_groups=[["user profile", "product", "offer"],
+                           [0.01, 0.19, 0.8]]
+
+        # list of categorie and probabilities for group
+        #   "group": [["category", ...], [category probability, ...]]
+        self.event_categories = {"user profile": [["income", "expences", "address", "email", "phone", "children"],
+                                                  [0.1, 0.1, 0.2, 0.2, 0.2, 0.2]],
+                     "product": [["contract detail", "account detail", "legal conditions","sanctions"],
+                                 [0.35, 0.55, 0.05, 0.05]],
+                     "offer": [["product list", "service list", "legal conditions", "sanctions"],
+                               [0.45, 0.45, 0.05, 0.05]]}
+
+        # list of action and probabilities for group/category
+        #   "group/category": [["action", ...], [action probability, ...]]
+        self.event_actions = {"user profile/income": [["show", "edit"], [0.999, 0.001]],
+                        "user profile/expences": [["show", "edit"], [0.9995, 0.0005]],
+                        "user profile/address": [["show", "edit"], [0.999, 0.001]],
+                        "user profile/email": [["show", "edit"], [0.995, 0.005]],
+                        "user profile/phone": [["show", "edit"], [0.998, 0.002]],
+                        "user profile/children": [["show", "edit"], [0.99995, 0.00005]],
+                        "product/contract detail": [["show", "edit"], [0.99, 0.01]],
+                        "product/account detail": [["show", "edit"], [0.99, 0.01]],
+                        "product/legal conditions": [["show", "edit"], [0.9999, 0.0001]],
+                        "product/sanctions": [["show", "edit"], [0.9999, 0.0001]],
+                        "offer/product list": [["show"], [1]],
+                        "offer/service list": [["show"], [1]],
+                        "offer/legal conditions": [["show"], [1]],
+                        "offer/sanctions": [["show"], [1]]}
+
+
     @property
     def Name(self):
         return BasicEvent.NAME
 
     def generate(self, count):
 
-        events_init = {"access": ["login", "logout"]}
-
-        # list of groups and group probability
-        #   [[group, group probability], ...]
-        events_group=[["user profile", 0.01],
-                      ["product", 0.2],
-                      ["offer", 0.8]]
-
-        # list of categorie and probabilities for show and change
-        #   "group": [["category", show probability, change probability], ...]
-        events_category = {"user profile": [["income", 0.999, 0.001],
-                                                  ["expences", 0.9995, 0.0005],
-                                                  ["address", 0.999, 0.001],
-                                                  ["email", 0.995, 0.005],
-                                                  ["phone", 0.998, 0.002],
-                                                  ["children", 0.99995, 0.00005]],
-                     "product": [["contract detail", 0.99, 0.01],
-                                 ["account detail", 0.99, 0.01],
-                                 ["legal conditions", 0.9999, 0.0001],
-                                 ["sanctions", 0.9999, 0.0001]],
-                     "offer": [["product list"],
-                               ["service list"],
-                               ["legal conditions"],
-                               ["sanctions"]]}
 
         # reference to the data from BasicParty
         parties = self.gmodel[BasicParty.NAME]
@@ -69,19 +79,27 @@ class BasicEvent(Base):
             # only 3 months back history
             # max 0-2 bandl of events per day
             # mix of actions
-                # access - login, logout
-                # profile - income, expences, address, email, phone, children
-                # product - contract detail, account detail, legal conditions, sanctions
-                # offer - product list, service list, legal conditions, sanctions
 
+            # TODO: generate amount of fundles for last 3 months
 
+            # generate bundle (with random amount of iterations)
+            for i in range(5):
+                # TODO: add login
 
-            # "name": "event-group",
-            # "name": "event-category",
-            # "name": "event-action",
+                # "name": "event-group",
+                group = self.rnd_choose(self.event_groups[0], self.event_groups[1])
+                model['event-group'] = group
 
-            # "name": "event-detail",
-            # "name": "event-date",
+                # "name": "event-category",
+                category=self.rnd_choose(self.event_categories[group][0], self.event_categories[group][1])
+                model['event-category'] = category
+
+                # "name": "event-action",
+                group_category_name=str.format("{0}/{1}", group,category)
+                model['event-action'] = self.rnd_choose(self.event_actions[group_category_name][0], self.event_actions[group_category_name][1])
+
+                # "name": "event-detail",
+                # "name": "event-date",
 
             # "name": "record-date"
             model['record-date']=self.gmodel["NOW"]
