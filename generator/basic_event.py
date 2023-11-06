@@ -27,8 +27,11 @@ class BasicEvent(Base):
 
         # list of groups and group probability
         #   [[group, ...], [group probability, ...]]
-        self.event_groups=[["user profile", "product", "offer"],
-                           [0.01, 0.19, 0.8]]
+        self.event_groups_customer=[["user profile", "product", "offer"],
+                                    [0.01, 0.19, 0.8]]
+
+        self.event_groups=[["user profile", "offer"],
+                                    [0.2, 0.8]]
 
         # list of categorie and probabilities for group
         #   "group": [["category", ...], [category probability, ...]]
@@ -70,9 +73,6 @@ class BasicEvent(Base):
         # iteration cross all parties
         for party in parties:
 
-            if party['party-type']!="Customer":
-                break
-
             # only 3 months back history
             # max 0-2 bandl of events per day
             # mix of actions
@@ -104,8 +104,13 @@ class BasicEvent(Base):
                         # TODO: add login
                         pass
                     else:
+
+                        if party['party-type'] == "Customer":
+                            group = self.rnd_choose(self.event_groups_customer[0], self.event_groups_customer[1])
+                        else:
+                            group = self.rnd_choose(self.event_groups[0], self.event_groups[1])
+
                         # "name": "event-group",
-                        group = self.rnd_choose(self.event_groups[0], self.event_groups[1])
                         model['event-group'] = group
 
                         # "name": "event-category",
