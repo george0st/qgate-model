@@ -12,13 +12,16 @@ import numpy
 
 class BasicEvent(Base):
 
-    NAME= "06-basic-event"
+    NAME = "06-basic-event"
+    EVENT_HISTORY_DAYS = 90
 
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, BasicEvent.NAME)
         self.fake=Faker(['en_US'])
         self.fake.add_provider(internet)
         self.fake.add_provider(phone_number)
+
+        self.now = datetime.datetime.fromisoformat(self.gmodel["NOW"])
 
         self.event_inits = {"access": ["login", "logout"]}
 
@@ -67,42 +70,57 @@ class BasicEvent(Base):
         # iteration cross all parties
         for party in parties:
 
-            # add new model
-            model = self.model_item()
-
-            # "name": "event-id",
-            model['event-id']=str(uuid.uuid4())
-
-            # "name": "party-id",
-            model['party-id']=party['party-id']
+            if party['party-type']!="Customer":
+                break
 
             # only 3 months back history
             # max 0-2 bandl of events per day
             # mix of actions
 
-            # TODO: generate amount of fundles for last 3 months
+            # generate event with history EVENT_HISTORY_DAYS
+            day=BasicEvent.EVENT_HISTORY_DAYS
+            while True:
 
-            # generate bundle (with random amount of iterations)
-            for i in range(5):
-                # TODO: add login
+                # day for event (it is possible to generate more bundles in the same day also)
+                day-=self.rnd_choose(range(5),[0.2, 0.1, 0.4, 0.2, 0.1])
+                if day<0:
+                    break
+                event_date = self.now - datetime.timedelta(days=float(day))
 
-                # "name": "event-group",
-                group = self.rnd_choose(self.event_groups[0], self.event_groups[1])
-                model['event-group'] = group
+                # define bundle (size 4-25x) events
+                day_events=self.rnd_choose(range(2,25))
+                for event in range(day_events):
 
-                # "name": "event-category",
-                category=self.rnd_choose(self.event_categories[group][0], self.event_categories[group][1])
-                model['event-category'] = category
+                    # add new model
+                    model = self.model_item()
 
-                # "name": "event-action",
-                group_category_name=str.format("{0}/{1}", group,category)
-                model['event-action'] = self.rnd_choose(self.event_actions[group_category_name][0], self.event_actions[group_category_name][1])
+                    # "name": "event-id",
+                    model['event-id'] = str(uuid.uuid4())
 
-                # "name": "event-detail",
-                # "name": "event-date",
+                    # "name": "party-id",
+                    model['party-id'] = party['party-id']
 
-            # "name": "record-date"
-            model['record-date']=self.gmodel["NOW"]
+                    if event==0:
+                        # TODO: add login
+                        pass
+                    else:
+                        # "name": "event-group",
+                        group = self.rnd_choose(self.event_groups[0], self.event_groups[1])
+                        model['event-group'] = group
 
-            self.model.append(model)
+                        # "name": "event-category",
+                        category=self.rnd_choose(self.event_categories[group][0], self.event_categories[group][1])
+                        model['event-category'] = category
+
+                        # "name": "event-action",
+                        group_category_name=str.format("{0}/{1}", group,category)
+                        model['event-action'] = self.rnd_choose(self.event_actions[group_category_name][0], self.event_actions[group_category_name][1])
+
+                    # "name": "event-detail",
+                    # "name": "event-date",
+
+                    # "name": "record-date"
+                    model['record-date']=self.gmodel["NOW"]
+
+                    self.model.append(model)
 
