@@ -33,7 +33,7 @@ class BasicEvent(Base):
 
         # list of categorie and probabilities for group
         #   "group": [["category", ...], [category probability, ...]]
-        self.event_categories = {"user profile": [["income", "expences", "address", "email", "phone", "children"],
+        self.event_categories = {"user profile": [["income", "expenses", "address", "email", "phone", "children"],
                                                   [0.1, 0.1, 0.2, 0.2, 0.2, 0.2]],
                      "product": [["contract detail", "account detail", "legal conditions","sanctions"],
                                  [0.35, 0.55, 0.05, 0.05]],
@@ -43,7 +43,7 @@ class BasicEvent(Base):
         # list of action and probabilities for group/category
         #   "group/category": [["action", ...], [action probability, ...]]
         self.event_actions = {"user profile/income": [["show", "edit"], [0.999, 0.001]],
-                        "user profile/expences": [["show", "edit"], [0.9995, 0.0005]],
+                        "user profile/expenses": [["show", "edit"], [0.9995, 0.0005]],
                         "user profile/address": [["show", "edit"], [0.999, 0.001]],
                         "user profile/email": [["show", "edit"], [0.995, 0.005]],
                         "user profile/phone": [["show", "edit"], [0.998, 0.002]],
