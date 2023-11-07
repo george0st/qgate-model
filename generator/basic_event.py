@@ -75,16 +75,26 @@ class BasicEvent(Base):
 
             # generate event with history EVENT_HISTORY_DAYS
             day=BasicEvent.EVENT_HISTORY_DAYS
+            party_customer=party['party-type'] == "Customer"
             while True:
 
-                # day for event (it is possible to generate more bundles in the same day also)
-                day-=self.rnd_choose(range(5),[0.2, 0.1, 0.4, 0.2, 0.1])
+                # day for events
+                #   for customer:       more active
+                #   for non customer:   small amount of activities
+                if party_customer:
+                    day-=self.rnd_choose(range(10),[0.01, 0.19, 0.1, 0.2, 0.1, 0.05, 0.05, 0.1, 0.1, 0.1])
+                else:
+                    day -= self.rnd_choose(range(10), [0, 0, 0, 0, 0.05, 0.05, 0.1, 0.2, 0.3, 0.3])
+
                 if day<0:
                     break
                 event_date = self.now - datetime.timedelta(days=float(day))
 
-                # define bundle (size 4-25x) events
-                day_events=self.rnd_choose(range(2,25))
+                session_id = str(uuid.uuid4())
+                # define bundle
+                #   for customer:       size 2-15x events (bigger amount of activities)
+                #   for non-customer:   size 2-10x events (small amount of activites)
+                day_events=self.rnd_choose(range(2, 15)) if party_customer else self.rnd_choose(range(2, 10))
                 for event in range(day_events):
 
                     # add new model
@@ -92,6 +102,9 @@ class BasicEvent(Base):
 
                     # "name": "event-id",
                     model['event-id'] = str(uuid.uuid4())
+
+                    # "name": "session-id",
+                    model['session-id'] = session_id
 
                     # "name": "party-id",
                     model['party-id'] = party['party-id']
@@ -103,7 +116,7 @@ class BasicEvent(Base):
                         action="mobile" if self.rnd_bool() else "web"
                     else:
                         # add random group, category, action
-                        if party['party-type'] == "Customer":
+                        if party_customer:
                             group = self.rnd_choose(self.event_groups_customer[0], self.event_groups_customer[1])
                         else:
                             group = self.rnd_choose(self.event_groups[0], self.event_groups[1])
