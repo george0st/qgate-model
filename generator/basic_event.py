@@ -23,8 +23,6 @@ class BasicEvent(Base):
 
         self.now = datetime.datetime.fromisoformat(self.gmodel["NOW"])
 
-        self.event_inits = {"access": ["login", "logout"]}
-
         # list of groups and group probability
         #   [[group, ...], [group probability, ...]]
         self.event_groups_customer=[["user profile", "product", "offer"],
@@ -59,13 +57,11 @@ class BasicEvent(Base):
                         "offer/legal conditions": [["show"], [1]],
                         "offer/sanctions": [["show"], [1]]}
 
-
     @property
     def Name(self):
         return BasicEvent.NAME
 
     def generate(self, count):
-
 
         # reference to the data from BasicParty
         parties = self.gmodel[BasicParty.NAME]
@@ -101,25 +97,30 @@ class BasicEvent(Base):
                     model['party-id'] = party['party-id']
 
                     if event==0:
-                        # TODO: add login
-                        pass
+                        # add login for first event in bundle
+                        group="access"
+                        category="login"
+                        action="mobile" if self.rnd_bool() else "web"
                     else:
-
+                        # add random group, category, action
                         if party['party-type'] == "Customer":
                             group = self.rnd_choose(self.event_groups_customer[0], self.event_groups_customer[1])
                         else:
                             group = self.rnd_choose(self.event_groups[0], self.event_groups[1])
 
-                        # "name": "event-group",
-                        model['event-group'] = group
-
-                        # "name": "event-category",
                         category=self.rnd_choose(self.event_categories[group][0], self.event_categories[group][1])
-                        model['event-category'] = category
 
-                        # "name": "event-action",
                         group_category_name=str.format("{0}/{1}", group,category)
-                        model['event-action'] = self.rnd_choose(self.event_actions[group_category_name][0], self.event_actions[group_category_name][1])
+                        action = self.rnd_choose(self.event_actions[group_category_name][0], self.event_actions[group_category_name][1])
+
+                    # "name": "event-group",
+                    model['event-group'] = group
+
+                    # "name": "event-category",
+                    model['event-category'] = category
+
+                    # "name": "event-action",
+                    model['event-action'] = action
 
                     # "name": "event-detail",
                     # "name": "event-date",
