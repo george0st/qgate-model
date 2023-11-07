@@ -23,8 +23,6 @@ class BasicEvent(Base):
 
         self.now = datetime.datetime.fromisoformat(self.gmodel["NOW"])
 
-        self.event_inits = {"access": ["login", "logout"]}
-
         # list of groups and group probability
         #   [[group, ...], [group probability, ...]]
         self.event_groups_customer=[["user profile", "product", "offer"],
@@ -59,13 +57,11 @@ class BasicEvent(Base):
                         "offer/legal conditions": [["show"], [1]],
                         "offer/sanctions": [["show"], [1]]}
 
-
     @property
     def Name(self):
         return BasicEvent.NAME
 
     def generate(self, count):
-
 
         # reference to the data from BasicParty
         parties = self.gmodel[BasicParty.NAME]
@@ -79,16 +75,26 @@ class BasicEvent(Base):
 
             # generate event with history EVENT_HISTORY_DAYS
             day=BasicEvent.EVENT_HISTORY_DAYS
+            party_customer=party['party-type'] == "Customer"
             while True:
 
-                # day for event (it is possible to generate more bundles in the same day also)
-                day-=self.rnd_choose(range(5),[0.2, 0.1, 0.4, 0.2, 0.1])
+                # day for events
+                #   for customer:       more active
+                #   for non customer:   small amount of activities
+                if party_customer:
+                    day-=self.rnd_choose(range(10),[0.01, 0.19, 0.1, 0.2, 0.1, 0.05, 0.05, 0.1, 0.1, 0.1])
+                else:
+                    day -= self.rnd_choose(range(10), [0, 0, 0, 0, 0.05, 0.05, 0.1, 0.2, 0.3, 0.3])
+
                 if day<0:
                     break
                 event_date = self.now - datetime.timedelta(days=float(day))
 
-                # define bundle (size 4-25x) events
-                day_events=self.rnd_choose(range(2,25))
+                session_id = str(uuid.uuid4())
+                # define bundle
+                #   for customer:       size 2-15x events (bigger amount of activities)
+                #   for non-customer:   size 2-10x events (small amount of activites)
+                day_events=self.rnd_choose(range(2, 15)) if party_customer else self.rnd_choose(range(2, 10))
                 for event in range(day_events):
 
                     # add new model
@@ -97,29 +103,37 @@ class BasicEvent(Base):
                     # "name": "event-id",
                     model['event-id'] = str(uuid.uuid4())
 
+                    # "name": "session-id",
+                    model['session-id'] = session_id
+
                     # "name": "party-id",
                     model['party-id'] = party['party-id']
 
                     if event==0:
-                        # TODO: add login
-                        pass
+                        # add login for first event in bundle
+                        group="access"
+                        category="login"
+                        action="mobile" if self.rnd_bool() else "web"
                     else:
-
-                        if party['party-type'] == "Customer":
+                        # add random group, category, action
+                        if party_customer:
                             group = self.rnd_choose(self.event_groups_customer[0], self.event_groups_customer[1])
                         else:
                             group = self.rnd_choose(self.event_groups[0], self.event_groups[1])
 
-                        # "name": "event-group",
-                        model['event-group'] = group
-
-                        # "name": "event-category",
                         category=self.rnd_choose(self.event_categories[group][0], self.event_categories[group][1])
-                        model['event-category'] = category
 
-                        # "name": "event-action",
                         group_category_name=str.format("{0}/{1}", group,category)
-                        model['event-action'] = self.rnd_choose(self.event_actions[group_category_name][0], self.event_actions[group_category_name][1])
+                        action = self.rnd_choose(self.event_actions[group_category_name][0], self.event_actions[group_category_name][1])
+
+                    # "name": "event-group",
+                    model['event-group'] = group
+
+                    # "name": "event-category",
+                    model['event-category'] = category
+
+                    # "name": "event-action",
+                    model['event-action'] = action
 
                     # "name": "event-detail",
                     # "name": "event-date",

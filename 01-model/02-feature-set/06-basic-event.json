@@ -15,12 +15,16 @@
       }
     ],
     "features": [
-            {
+      {
+        "name": "session-id",
+        "description": "Session ID (bundle of event for one customer session)",
+        "type": "string"
+      },
+      {
         "name": "party-id",
         "description": "Relation to party ID",
         "type": "string"
       },
-
       {
         "name": "event-group",
         "description": "Party event group (L0)",
