@@ -74,28 +74,35 @@ class BasicEvent(Base):
             # mix of actions
 
             # generate event with history EVENT_HISTORY_DAYS
-            day=BasicEvent.EVENT_HISTORY_DAYS
             party_customer=party['party-type'] == "Customer"
+            event_date = self.now - datetime.timedelta(days=float(BasicEvent.EVENT_HISTORY_DAYS))
+
+            # iteration cross days
             while True:
 
                 # day for events
                 #   for customer:       more active
                 #   for non customer:   small amount of activities
                 if party_customer:
-                    day-=self.rnd_choose(range(10),[0.01, 0.19, 0.1, 0.2, 0.1, 0.05, 0.05, 0.1, 0.1, 0.1])
+                    day = self.rnd_choose(range(10),[0.01, 0.19, 0.1, 0.2, 0.1, 0.05, 0.05, 0.1, 0.1, 0.1])
                 else:
-                    day -= self.rnd_choose(range(10), [0, 0, 0, 0, 0.05, 0.05, 0.1, 0.2, 0.3, 0.3])
-
-                if day<0:
+                    day = self.rnd_choose(range(10), [0, 0, 0, 0, 0.05, 0.05, 0.1, 0.2, 0.3, 0.3])
+                event_date = event_date + datetime.timedelta(days=float(day))
+                if event_date > self.now:
                     break
-                event_date = self.now - datetime.timedelta(days=float(day))
 
-                session_id = str(uuid.uuid4())
                 # define bundle
                 #   for customer:       size 2-15x events (bigger amount of activities)
                 #   for non-customer:   size 2-10x events (small amount of activites)
-                day_events=self.rnd_choose(range(2, 15)) if party_customer else self.rnd_choose(range(2, 10))
-                for event in range(day_events):
+                session_id = str(uuid.uuid4())
+                session_events=self.rnd_choose(range(2, 15)) if party_customer else self.rnd_choose(range(2, 10))
+                session_datetime = datetime.datetime(event_date.year,
+                                                     event_date.month,
+                                                     event_date.day,
+                                                     self.rnd_int(0,24),
+                                                     self.rnd_int(0, 60),
+                                                     self.rnd_int(0, 60))
+                for event in range(session_events):
 
                     # add new model
                     model = self.model_item()
@@ -136,7 +143,13 @@ class BasicEvent(Base):
                     model['event-action'] = action
 
                     # "name": "event-detail",
+                    model['event-detail'] = None    # not used, right now
+
                     # "name": "event-date",
+                    #   random movement in second for next event
+                    #   new datetime for this event in session
+                    session_datetime = session_datetime + datetime.timedelta(seconds=float(self.rnd_int(0,13)))
+                    model['event-date']=session_datetime.strftime("%Y-%m-%d %H:%M:%S")
 
                     # "name": "record-date"
                     model['record-date']=self.gmodel["NOW"]
