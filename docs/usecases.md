@@ -1,6 +1,6 @@
-# Use cases for key-value model
+# Use cases for model
 
-The list of expected use cases for key-value model (for MLOps with/without feature store):
+The list of expected use cases for model (for MLOps with/without feature store):
 
  - **UC001: Get list of parties** 
    - with details e.g. income, etc.
@@ -15,5 +15,5 @@ The list of expected use cases for key-value model (for MLOps with/without featu
  - **UC006: Get list of events for relevant party**
    - with detail e.g. event action - login, show contract detail, change contact information, etc.
 
-Note: The feature store concept is based on feature sets (tables with key-value structure)
-which can be joined via feature vectors (views).
+Note: The feature store concept is based on feature sets (similar to standard tables)
+which can be joined via feature vector (something like view).
