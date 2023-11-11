@@ -10,7 +10,7 @@ learning solutions (definition in json, data in csv/parquet). It can be used wit
 ML/MLOps solutions with or without FeatureStore.
 
 ## Usage
-This meta-model (based on key-value design) is suitable for:
+This meta-model is suitable for:
  - compare capabilities and functions of machine learning solutions (as part of RFP/X and SWOT analysis)
  - independent test new versions of machine learning solutions (with aim to keep quality in time)
  - unit, sanity, smoke, system, reqression, function, acceptance, performance, shadow, ... tests
@@ -24,7 +24,7 @@ The solution contains this simple structure:
    - Note: The HL meta-model is drawn in Enterprise Architect (from Sparx) 
  - **01-model**
    - The definition contains 01-projects, 02-feature sets, 03-feature vectors, etc. in JSON format
-   - This key-value model is designed for these [use cases](./docs/usecases.md) 
+   - This model is designed for these [use cases](./docs/usecases.md) 
  - **02-data**
    - The data for meta-model in CSV/GZ format (future support parquet) for party, account, transaction, etc.
 
