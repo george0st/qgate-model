@@ -5,6 +5,9 @@
     "temp": "True"
   },
   "kind": "project",
-  "spec": [
-    "basic-account", "aggregate-account"]
+  "spec": {
+    "feature-sets": [
+      "basic-account", "aggregate-account"],
+    "feature-vectors": []
+  }
 }
