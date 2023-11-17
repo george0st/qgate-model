@@ -5,7 +5,10 @@
     "temp": "True"
   },
   "kind": "project",
-  "spec": [
-    "basic-party","basic-account","basic-transaction",
-    "aggregate-party", "aggregate-account", "aggregate-transaction"]
+  "spec": {
+    "feature-sets": [
+      "basic-party","basic-account","basic-transaction",
+      "aggregate-party", "aggregate-account", "aggregate-transaction"],
+    "feature-vectors": ["vector-partycontact"]
+  }
 }
