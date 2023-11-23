@@ -1,12 +1,9 @@
 {
   "name": "basic-event",
   "description": "Party events e.g. run app, view paymemt conditions, check account state, show item in shop, send message to friend, etc.",
-
   "kind": "feature-set",
   "spec": {
-    "targets": [
-      "parquet"
-    ],
+    "targets": ["parquet"],
     "entities": [
       {
         "name": "event-id",
@@ -48,9 +45,8 @@
       {
         "name": "event-date",
         "description": "Datetime for party event",
-        "type": "datetime"
+        "type": "timestamp"
       },
-
       {
         "name": "record-date",
         "description": "The date when the record was created",
