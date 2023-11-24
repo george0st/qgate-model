@@ -60,7 +60,8 @@ class BasicPartyRelation(Base):
                 model['relation-type']=None     # not used, right now
 
                 # "name": "relation-date",
-                model['relation-date']=None     # not used, right now
+                # not used, right now
+                model['relation-date']=datetime.datetime(1970, 1, 1, 8, 0, 0).strftime("%Y-%m-%d %H:%M:%S")
 
                 # "name": "record-date"
                 model['record-date']=self.gmodel["NOW"]
