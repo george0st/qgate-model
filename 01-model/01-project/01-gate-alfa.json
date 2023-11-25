@@ -9,6 +9,8 @@
     "feature-sets": [
       "basic-party", "basic-partycontact", "basic-partyrelation", "basic-account", "basic-transaction", "basic-event",
       "aggregate-party", "aggregate-account", "aggregate-transaction"],
-    "feature-vectors": ["vector-partycontact"]
+    "feature-vectors": ["vector-partycontact",
+      "vector-partyaccount",
+      "vector-partycontactaccount"]
   }
 }
