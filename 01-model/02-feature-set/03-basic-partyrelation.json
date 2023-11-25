@@ -8,15 +8,15 @@
     ],
     "entities": [
       {
-        "name": "relation-id",
-        "description": "Unigue party relation identificator",
+        "name": "party-id",
+        "description": "Parent party identificator",
         "type": "string"
       }
     ],
     "features": [
       {
-        "name": "relation-parentid",
-        "description": "Parent party identificator",
+        "name": "relation-id",
+        "description": "Unigue party relation identificator",
         "type": "string"
       },
       {
