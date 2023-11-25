@@ -6,20 +6,20 @@
     "targets": ["parquet"],
     "entities": [
       {
-        "name": "event-id",
-        "description": "Unigue party event identificator",
+        "name": "party-id",
+        "description": "Relation to party ID",
         "type": "string"
       }
     ],
     "features": [
       {
-        "name": "session-id",
-        "description": "Session ID (bundle of event for one customer session)",
+        "name": "event-id",
+        "description": "Unigue party event identificator",
         "type": "string"
       },
       {
-        "name": "party-id",
-        "description": "Relation to party ID",
+        "name": "session-id",
+        "description": "Session ID (bundle of event for one customer session)",
         "type": "string"
       },
       {

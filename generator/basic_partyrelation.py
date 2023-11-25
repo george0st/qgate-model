@@ -47,12 +47,12 @@ class BasicPartyRelation(Base):
                 model['relation-id']=str(uuid.uuid4())
 
                 # "name": "relation-parentid",
-                model['relation-parentid']=party['party-id']
+                model['party-id']=party['party-id']
 
                 # "name": "relation-childid",
                 while (True):
                     random_id = parties[self.rnd_int(0, len(parties))]['party-id']
-                    if random_id != model['relation-parentid']:
+                    if random_id != model['party-id']:
                         model['relation-childid'] = random_id
                         break
 
