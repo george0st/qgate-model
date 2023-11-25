@@ -6,15 +6,15 @@
       "targets": ["parquet"],
       "entities": [
         {
-          "name": "account-id",
-          "description": "Unique account identificator",
+          "name": "party-id",
+          "description": "Relation to party-id",
           "type": "string"
         }
       ],
       "features": [
         {
-          "name": "party-id",
-          "description": "Relation to party-id",
+          "name": "account-id",
+          "description": "Unique account identificator",
           "type": "string"
         },
         {
