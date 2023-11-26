@@ -3,7 +3,10 @@
   "description": "Party (client, prospect, lead, ...) detail",
   "kind": "feature-set",
   "spec": {
-      "targets": ["parquet"],
+      "targets": [
+        "parquet",
+        "csv"
+      ],
       "entities": [
         {
           "name": "party-id",
