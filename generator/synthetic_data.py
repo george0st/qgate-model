@@ -3,8 +3,8 @@ import os, glob
 import time
 
 from generator.basic_party import BasicParty
-from generator.basic_partycontact import BasicPartyContact
-from generator.basic_partyrelation import BasicPartyRelation
+from generator.basic_contact import BasicContact
+from generator.basic_relation import BasicRelation
 from generator.basic_account import BasicAccount
 from generator.basic_transaction import BasicTransaction
 from generator.basic_event import BasicEvent
@@ -26,8 +26,8 @@ class SyntheticData:
         self._entities.clear()
 
         self._create(BasicParty(self._model_path, self._gmodel))
-        self._create(BasicPartyContact(self._model_path, self._gmodel))
-        self._create(BasicPartyRelation(self._model_path, self._gmodel))
+        self._create(BasicContact(self._model_path, self._gmodel))
+        self._create(BasicRelation(self._model_path, self._gmodel))
         self._create(BasicAccount(self._model_path, self._gmodel))
         self._create(BasicTransaction(self._model_path, self._gmodel))
         self._create(BasicEvent(self._model_path, self._gmodel))

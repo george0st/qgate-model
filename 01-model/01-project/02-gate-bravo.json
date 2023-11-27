@@ -7,7 +7,7 @@
   "kind": "project",
   "spec": {
     "feature-sets": [
-      "basic-account", "basic-partycontact", "aggregate-account"],
+      "basic-account", "basic-contact", "aggregate-account"],
     "feature-vectors": []
   }
 }

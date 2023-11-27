@@ -15,19 +15,19 @@ class ContactEnum(IntFlag):
     Email = 2,
     Full = 3,
 
-class BasicPartyContact(Base):
+class BasicContact(Base):
 
-    NAME= "02-basic-partycontact"
+    NAME= "02-basic-contact"
 
     def __init__(self, path, gmodel):
-        super().__init__(path, gmodel, BasicPartyContact.NAME)
+        super().__init__(path, gmodel, BasicContact.NAME)
         self.fake=Faker(['en_US'])
         self.fake.add_provider(internet)
         self.fake.add_provider(phone_number)
 
     @property
     def Name(self):
-        return BasicPartyContact.NAME
+        return BasicContact.NAME
 
     def generate(self, count):
 
