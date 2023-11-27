@@ -7,7 +7,7 @@
   "kind": "project",
   "spec": {
     "feature-sets": [
-      "basic-party", "basic-partycontact", "basic-partyrelation", "basic-account", "basic-transaction", "basic-event",
+      "basic-party", "basic-contact", "basic-relation", "basic-account", "basic-transaction", "basic-event",
       "aggregate-party", "aggregate-account", "aggregate-transaction"],
     "feature-vectors": [
       "vector-party",

@@ -10,20 +10,20 @@ import faker.providers
 import numpy
 
 
-class BasicPartyRelation(Base):
+class BasicRelation(Base):
 
-    NAME= "03-basic-partyrelation"
+    NAME= "03-basic-relation"
     MAX_RELATIONS = 5
 
     def __init__(self, path, gmodel):
-        super().__init__(path, gmodel, BasicPartyRelation.NAME)
+        super().__init__(path, gmodel, BasicRelation.NAME)
         self.fake=Faker(['en_US'])
         self.fake.add_provider(internet)
         self.fake.add_provider(phone_number)
 
     @property
     def Name(self):
-        return BasicPartyRelation.NAME
+        return BasicRelation.NAME
 
     def generate(self, count):
 
@@ -31,13 +31,13 @@ class BasicPartyRelation(Base):
         parties = self.gmodel[BasicParty.NAME]
 
         # remove unlimited cycle for generation of relations
-        if len(parties) < BasicPartyRelation.MAX_RELATIONS:
+        if len(parties) < BasicRelation.MAX_RELATIONS:
             return
 
         # iteration cross all parties
         for party in parties:
 
-            relations=self.rnd_choose(range(0, BasicPartyRelation.MAX_RELATIONS), [0.55, 0.3, 0.1, 0.04, 0.01])
+            relations=self.rnd_choose(range(0, BasicRelation.MAX_RELATIONS), [0.55, 0.3, 0.1, 0.04, 0.01])
             for relation in range(relations):
 
                 # add new model
