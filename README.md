@@ -5,14 +5,20 @@
 ![GitHub release](https://img.shields.io/github/v/release/george0st/qgate-model) 
 
 # QGate-Model
-<table style="border: 0px solid; margin: 0px; border-spacing: 0;">
-   <tr>
-      <td>The machine learning meta-model with synthetic data (useful for MLOps/feature store), is independent of machine
+<!--
+<table style="border: 0px; margin: 0px; border-spacing: 0;">
+   <tr><td>The machine learning meta-model with synthetic data (useful for MLOps/feature store), is independent of machine
 learning solutions (definition in json, data in csv/parquet). It can be used with various of 
 ML/MLOps solutions with or without FeatureStore.</td>
-      <td width="100"><p><img src="./docs/assets/icons8-quality-100.png" alt="QGate-Model" width="100"/></p></td>
-</tr>
+   <td width="100"><p><img src="./docs/assets/icons8-quality-100.png" alt="QGate-Model" width="100"/></p></td>
+   </tr>
 </table>
+-->
+The machine learning meta-model with synthetic data (useful for MLOps/feature store), is independent of machine
+learning solutions (definition in json, data in csv/parquet). It can be used with various of 
+ML/MLOps solutions with or without FeatureStore.
+
+![Quality-Gate](./docs/assets/icons8-quality-100.png)
 
 ## Usage
 This meta-model is suitable for:
