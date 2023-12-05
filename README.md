@@ -2,12 +2,17 @@
 [![PyPI version fury.io](https://badge.fury.io/py/qgate-model.svg)](https://pypi.python.org/pypi/qgate-model/)
 ![coverage](https://github.com/george0st/qgate-model/blob/main/coverage.svg)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/george0st/qgate-model)
-![GitHub release](https://img.shields.io/github/v/release/george0st/qgate-model)
+![GitHub release](https://img.shields.io/github/v/release/george0st/qgate-model) 
 
 # QGate-Model
-The machine learning meta-model with synthetic data (useful for MLOps/feature store), is independent of machine
+<table style="border: 0px solid; margin: 0px; border-spacing: 0;">
+   <tr>
+      <td>The machine learning meta-model with synthetic data (useful for MLOps/feature store), is independent of machine
 learning solutions (definition in json, data in csv/parquet). It can be used with various of 
-ML/MLOps solutions with or without FeatureStore.
+ML/MLOps solutions with or without FeatureStore.</td>
+      <td width="100"><p><img src="C:\Python\qgate-model\docs\assets\icons8-quality-100.png" alt="QGate-Model" width="100"/></p></td>
+</tr>
+</table>
 
 ## Usage
 This meta-model is suitable for:
