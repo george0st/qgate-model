@@ -57,10 +57,6 @@ class BasicTransaction(Base):
                 # "description": "Relation to account identificator",
                 model['account-id']=account['account-id']
 
-                # "name": "party-id",
-                # "description": "Relation to party identificator",
-                #model['party-id']=account['party-id']
-
                 # "name": "transaction-value",
                 # "description": "Transaction value",
 
