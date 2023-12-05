@@ -10,7 +10,7 @@
       <td>The machine learning meta-model with synthetic data (useful for MLOps/feature store), is independent of machine
 learning solutions (definition in json, data in csv/parquet). It can be used with various of 
 ML/MLOps solutions with or without FeatureStore.</td>
-      <td width="100"><p><img src="C:\Python\qgate-model\docs\assets\icons8-quality-100.png" alt="QGate-Model" width="100"/></p></td>
+      <td width="100"><p><img src="./docs/assets/icons8-quality-100.png" alt="QGate-Model" width="100"/></p></td>
 </tr>
 </table>
 
