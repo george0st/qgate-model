@@ -6,8 +6,8 @@
       "targets": ["parquet"],
       "entities": [
         {
-          "name": "party-id",
-          "description": "Relation to party identificator",
+          "name": "account-id",
+          "description": "Relation to account identificator",
           "type": "string"
         }
       ],
@@ -15,11 +15,6 @@
         {
           "name": "transaction-id",
           "description": "Unique transaction identificator",
-          "type": "string"
-        },
-        {
-          "name": "account-id",
-          "description": "Relation to account identificator",
           "type": "string"
         },
         {
