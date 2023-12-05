@@ -6,22 +6,17 @@
       "targets": ["parquet"],
       "entities": [
         {
-          "name": "party-id",
-          "description": "Unique party identificator",
-          "type": "string"
-        },
-        {
-          "name": "transaction-id",
-          "description": "Unique transaction identificator",
-          "type": "string"
-        },
-        {
           "name": "account-id",
           "description": "Unique account identificator",
           "type": "string"
         }
       ],
       "features": [
+        {
+          "name": "transaction-id",
+          "description": "Unique transaction identificator",
+          "type": "string"
+        },
         {
           "name": "sum-value",
           "description": "Transaction value summary",
