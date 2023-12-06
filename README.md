@@ -5,15 +5,6 @@
 ![GitHub release](https://img.shields.io/github/v/release/george0st/qgate-model) 
 
 # QGate-Model
-<!--
-<table style="border: 0px; margin: 0px; border-spacing: 0;">
-   <tr><td>The machine learning meta-model with synthetic data (useful for MLOps/feature store), is independent of machine
-learning solutions (definition in json, data in csv/parquet). It can be used with various of 
-ML/MLOps solutions with or without FeatureStore.</td>
-   <td width="100"><p><img src="./docs/assets/icons8-quality-100.png" alt="QGate-Model" width="100"/></p></td>
-   </tr>
-</table>
--->
 The machine learning meta-model with synthetic data (useful for MLOps/feature store), is independent of machine
 learning solutions (definition in json, data in csv/parquet). It can be used with various of 
 ML/MLOps solutions with or without FeatureStore.
@@ -37,7 +28,8 @@ The solution contains this simple structure:
    - The definition contains 01-projects, 02-feature sets, 03-feature vectors, etc. in JSON format
    - This model is designed for these [use cases](./docs/usecases.md) 
  - **02-data**
-   - The data for meta-model in CSV/GZ format (future support parquet) for party, account, transaction, etc.
+   - The data for meta-model in CSV/GZ format (future support parquet) for party, account, transaction, event, etc.
+   - You can generate your own dataset with requested size (see cmd 'python main.py generate --help')
 
 Addition detail, [see](./docs/structure.md)
 
