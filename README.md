@@ -23,13 +23,12 @@ This meta-model is suitable for:
 The solution contains this simple structure:
  - **00-high-level**
    - The high-level [view](#model) to the meta-model for better understanding
-   - Note: The HL meta-model is drawn in Enterprise Architect (from Sparx) 
  - **01-model**
    - The definition contains 01-projects, 02-feature sets, 03-feature vectors, etc. in JSON format
    - This model is designed for these [use cases](./docs/usecases.md) 
  - **02-data**
-   - The data for meta-model in CSV/GZ format (future support parquet) for party, account, transaction, event, etc.
-   - You can generate your own dataset with requested size (see cmd 'python main.py generate --help')
+   - The data for meta-model in CSV/GZ format (future support parquet) for party, account, transaction, event, communication, etc.
+   - You can also generate your own dataset with requested size (see cmd 'python main.py generate --help')
 
 Addition detail, [see](./docs/structure.md)
 
