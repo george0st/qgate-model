@@ -35,6 +35,11 @@ def standard():
 cli = click.CommandCollection(sources=[std_group, custom_group])
 
 if __name__ == '__main__':
+
+    # Sample of command lines:
+        # python main.py standard
+        # python main.py generate -l 2-size-6K -c 6000 -b 1000
+    
     cli()
 
 
