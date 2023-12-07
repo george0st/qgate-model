@@ -29,6 +29,6 @@ class BasicCommunication(Base):
 
         # iteration cross all parties
         for party in parties:
-            
+
             model=self.model_item()
             self.model.append(model)
