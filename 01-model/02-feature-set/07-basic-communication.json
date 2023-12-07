@@ -1,0 +1,42 @@
+{
+  "name": "basic-communication",
+  "description": "Party communication content from e.g. email, chat, phone, etc.",
+  "kind": "feature-set",
+  "spec": {
+    "targets": ["parquet"],
+    "entities": [
+      {
+        "name": "party-id",
+        "description": "Relation to party ID",
+        "type": "string"
+      }
+    ],
+    "features": [
+      {
+        "name": "communication-id",
+        "description": "Unigue communication identificator",
+        "type": "string"
+      },
+      {
+        "name": "content",
+        "description": "Content of communication",
+        "type": "string"
+      },
+      {
+        "name": "content-type",
+        "description": "Type of content",
+        "type": "string"
+      },
+      {
+        "name": "channel",
+        "description": "Communication channel",
+        "type": "string"
+      },
+      {
+        "name": "record-date",
+        "description": "The date when the record was created",
+        "type": "timestamp"
+      }
+    ]
+  }
+}
