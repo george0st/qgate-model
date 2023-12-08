@@ -49,6 +49,8 @@ class BasicCommunication(Base):
             #
             # "name": "channel",
             # "description": "Communication channel",
-        
+
+            # "name": "record-date"
+            model['record-date'] = self.gmodel["NOW"]
 
             self.model.append(model)
