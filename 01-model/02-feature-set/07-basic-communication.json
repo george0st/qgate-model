@@ -33,6 +33,11 @@
         "type": "string"
       },
       {
+        "name": "communication-date",
+        "description": "Datetime for party communication",
+        "type": "timestamp"
+      },
+      {
         "name": "record-date",
         "description": "The date when the record was created",
         "type": "timestamp"
