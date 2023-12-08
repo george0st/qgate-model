@@ -32,12 +32,15 @@ class BasicCommunication(Base):
 
             model=self.model_item()
 
-            # "name": "party-id",
-            # "description": "Relation to party ID",
-            #
+            # add new model
+            model = self.model_item()
+
             # "name": "communication-id",
-            # "description": "Unigue communication identificator",
-            #
+            model['communication-id'] = str(uuid.uuid4())
+
+            # "name": "party-id",
+            model['party-id'] = party['party-id']
+
             # "name": "content",
             # "description": "Content of communication",
             #
@@ -46,8 +49,6 @@ class BasicCommunication(Base):
             #
             # "name": "channel",
             # "description": "Communication channel",
-            #
-            # "name": "record-date",
-            # "description": "The date when the record was created",
+        
 
             self.model.append(model)
