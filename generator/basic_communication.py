@@ -42,13 +42,16 @@ class BasicCommunication(Base):
             model['party-id'] = party['party-id']
 
             # "name": "content",
-            # "description": "Content of communication",
-            #
+            model['content'] = ""
+
             # "name": "content-type",
-            # "description": "Type of content",
-            #
+            model['content-type'] = "text"
+
             # "name": "channel",
-            # "description": "Communication channel",
+            model['channel'] = self.rnd_choose(["email", "chat"], [0.8, 0.2])
+
+            # "name": "communication-date",
+            model['communication-date'] = self.gmodel["NOW"]
 
             # "name": "record-date"
             model['record-date'] = self.gmodel["NOW"]
