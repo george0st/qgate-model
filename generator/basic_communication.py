@@ -50,6 +50,9 @@ class BasicCommunication(Base):
             # "name": "channel",
             model['channel'] = self.rnd_choose(["email", "chat"], [0.8, 0.2])
 
+            # "name": "communication-date",
+            model['communication-date'] = self.gmodel["NOW"]
+
             # "name": "record-date"
             model['record-date'] = self.gmodel["NOW"]
 
