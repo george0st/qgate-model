@@ -19,7 +19,7 @@ This meta-model is suitable for:
  - external test coverage (in case, that internal test coverage is not available or weak)
  - etc.
 
-Note: You can see real usage in e.g. this project **[qgate-sln-mlrun](https://github.com/george0st/qgate-sln-mlrun)** for testing MLRun/Iguazio solution.
+Note: You can see real usage in e.g. project **[qgate-sln-mlrun](https://github.com/george0st/qgate-sln-mlrun)** for testing MLRun/Iguazio solution.
 
 ## Structure
 The solution contains this simple structure:
