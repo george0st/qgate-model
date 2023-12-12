@@ -10,7 +10,6 @@
           "basic-contact.contact-email",
           "basic-contact.contact-phone",
           "basic-contact.contact-state",
-          "basic-account.account-id",
           "basic-account.account-type",
           "basic-account.account-state"
         ]

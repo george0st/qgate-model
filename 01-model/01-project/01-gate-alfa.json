@@ -13,6 +13,8 @@
       "vector-party",
       "vector-partycontact",
       "vector-partyaccount",
-      "vector-partycontactaccount"]
+      "vector-partycontactaccount",
+      "vector-accounttransaction"
+    ]
   }
 }
