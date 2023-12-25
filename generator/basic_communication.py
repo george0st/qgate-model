@@ -63,6 +63,8 @@ class BasicCommunication(Base):
                                                      self.rnd_int(0,24),
                                                      self.rnd_int(0, 60),
                                                      self.rnd_int(0, 60))
+                # TODO: generate type of sentiment
+                session_sentiment_type=self.rnd_choose(["neutral", "positive", "negative", "fake"], [0.6, 0.15, 0.15, 0.1])
                 for event in range(session_communications):
 
                     # add new model
@@ -75,9 +77,10 @@ class BasicCommunication(Base):
                     model['party-id'] = party['party-id']
 
 
+
                     # TODO: add content
                     # "name": "content",
-                    model['content'] = ""
+                    model['content'] = self._generate_test(session_sentiment_type)
 
                     # faker.providers.lorem
                     print(self.fake.text())
@@ -90,7 +93,6 @@ class BasicCommunication(Base):
                     model['channel'] = self.rnd_choose(["email", "chat"], [0.8, 0.2])
 
                     # "name": "communication-date",
-                    #model['communication-date'] = self.gmodel["NOW"]
                     session_datetime = session_datetime + datetime.timedelta(seconds=float(self.rnd_int(0,13)))
                     model['communication-date']=session_datetime.strftime("%Y-%m-%d %H:%M:%S")
 
@@ -99,7 +101,7 @@ class BasicCommunication(Base):
 
                     self.model.append(model)
 
-    def _generate_test(self):
+    def _generate_test(self, sentiment_type) -> str:
         pass
 
     positive_sentences = (
