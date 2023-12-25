@@ -59,7 +59,6 @@ class BasicTransaction(Base):
 
                 # "name": "transaction-value",
                 # "description": "Transaction value",
-
                 #TODO: generate negative items also
                 model['transaction-value']=self.rnd_choose(range(1000, 5000))
 
@@ -72,4 +71,3 @@ class BasicTransaction(Base):
                 model['record-date']=self.gmodel["NOW"]
 
                 self.model.append(model)
-
