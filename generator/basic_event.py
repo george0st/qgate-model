@@ -117,7 +117,7 @@ class BasicEvent(Base):
                     model['party-id'] = party['party-id']
 
                     if event==0:
-                        # add login for first event in bundle
+                        # add default group, category and action -> login for first event in bundle
                         group="access"
                         category="login"
                         action="mobile" if self.rnd_bool() else "web"
