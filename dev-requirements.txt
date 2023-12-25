@@ -1,7 +1,7 @@
 click~=8.1
 numpy~=1.26
 pandas~=2.1.2
-faker~=19.12
+faker~=21.0
 packaging>=21.3
 coverage>=7
 coverage-badge>=1
