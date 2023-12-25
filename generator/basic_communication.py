@@ -18,6 +18,7 @@ class BasicCommunication(Base):
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, BasicCommunication.NAME)
         self.fake = Faker(['en_US'])
+        self.now = datetime.datetime.fromisoformat(self.gmodel["NOW"])
 
     @property
     def Name(self):
