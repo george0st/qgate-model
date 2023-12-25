@@ -87,7 +87,9 @@ class BasicCommunication(Base):
                     model['channel'] = self.rnd_choose(["email", "chat"], [0.8, 0.2])
 
                     # "name": "communication-date",
-                    model['communication-date'] = self.gmodel["NOW"]
+                    #model['communication-date'] = self.gmodel["NOW"]
+                    session_datetime = session_datetime + datetime.timedelta(seconds=float(self.rnd_int(0,13)))
+                    model['communication-date']=session_datetime.strftime("%Y-%m-%d %H:%M:%S")
 
                     # "name": "record-date"
                     model['record-date'] = self.gmodel["NOW"]
