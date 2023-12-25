@@ -32,39 +32,38 @@ class BasicCommunication(Base):
         for party in parties:
 
             # only 3 months back history
-            # max 0-2 bandl of events per day
-            # mix of actions
+            # max 0-2 bandl of communication per day
 
-            # generate event with history EVENT_HISTORY_DAYS
+            # generate communication with history EVENT_HISTORY_DAYS
             party_customer=party['party-type'] == "Customer"
-            event_date = self.now - datetime.timedelta(days=float(BasicCommunication.COMMUNICATION_HISTORY_DAYS))
+            communication_date = self.now - datetime.timedelta(days=float(BasicCommunication.COMMUNICATION_HISTORY_DAYS))
 
             # iteration cross days
             while True:
 
-                # day for events
+                # day for communication
                 #   for customer:       more active
                 #   for non customer:   small amount of activities
                 if party_customer:
-                    day = self.rnd_choose(range(10),[0.01, 0.19, 0.1, 0.2, 0.1, 0.05, 0.05, 0.1, 0.1, 0.1])
+                    day = int(1.1 * self.rnd_choose(range(10),[0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.9]))
                 else:
-                    day = self.rnd_choose(range(10), [0, 0, 0, 0, 0.05, 0.05, 0.1, 0.2, 0.3, 0.3])
-                event_date = event_date + datetime.timedelta(days=float(day))
-                if event_date > self.now:
+                    day = int(1.3 * self.rnd_choose(range(15), [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.05, 0.05, 0.9]))
+                communication_date = communication_date + datetime.timedelta(days=float(day))
+                if communication_date > self.now:
                     break
 
                 # define bundle
                 #   for customer:       size 2-15x events (bigger amount of activities)
                 #   for non-customer:   size 2-10x events (small amount of activites)
                 session_id = str(uuid.uuid4())
-                session_events=self.rnd_choose(range(2, 15)) if party_customer else self.rnd_choose(range(2, 10))
-                session_datetime = datetime.datetime(event_date.year,
-                                                     event_date.month,
-                                                     event_date.day,
+                session_communications=self.rnd_choose(range(2, 15)) if party_customer else self.rnd_choose(range(2, 10))
+                session_datetime = datetime.datetime(communication_date.year,
+                                                     communication_date.month,
+                                                     communication_date.day,
                                                      self.rnd_int(0,24),
                                                      self.rnd_int(0, 60),
                                                      self.rnd_int(0, 60))
-                for event in range(session_events):
+                for event in range(session_communications):
 
                     # add new model
                     model = self.model_item()
