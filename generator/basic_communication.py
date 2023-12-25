@@ -33,8 +33,6 @@ class BasicCommunication(Base):
         for party in parties:
 
             # only 3 months back history
-            # max 0-2 bandl of communication per day
-
             # generate communication with history EVENT_HISTORY_DAYS
             party_customer=party['party-type'] == "Customer"
             communication_date = self.now - datetime.timedelta(days=float(BasicCommunication.COMMUNICATION_HISTORY_DAYS))
@@ -43,8 +41,8 @@ class BasicCommunication(Base):
             while True:
 
                 # day for communication
-                #   for customer:       more active
-                #   for non customer:   small amount of activities
+                #   for customer:       more active (~ each 11 days)
+                #   for non customer:   small amount of activities (~ each 19 days)
                 if party_customer:
                     day = int(1.1 * self.rnd_choose(range(10),[0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.9]))
                 else:
@@ -54,10 +52,10 @@ class BasicCommunication(Base):
                     break
 
                 # define bundle
-                #   for customer:       size 2-15x events (bigger amount of activities)
-                #   for non-customer:   size 2-10x events (small amount of activites)
+                #   for customer:       size 2-5x communications (bigger amount of activities)
+                #   for non-customer:   size 1-3x communications (small amount of activites)
                 session_id = str(uuid.uuid4())
-                session_communications=self.rnd_choose(range(2, 15)) if party_customer else self.rnd_choose(range(2, 10))
+                session_communications=self.rnd_choose(range(2, 5)) if party_customer else self.rnd_choose(range(1, 3))
                 session_datetime = datetime.datetime(communication_date.year,
                                                      communication_date.month,
                                                      communication_date.day,
