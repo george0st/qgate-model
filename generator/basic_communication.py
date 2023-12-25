@@ -13,6 +13,7 @@ from generator.basic_party import BasicParty
 class BasicCommunication(Base):
 
     NAME = "07-basic-communication"
+    COMMUNICATION_HISTORY_DAYS = 90
 
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, BasicCommunication.NAME)
@@ -36,7 +37,7 @@ class BasicCommunication(Base):
 
             # generate event with history EVENT_HISTORY_DAYS
             party_customer=party['party-type'] == "Customer"
-            event_date = self.now - datetime.timedelta(days=float(BasicEvent.EVENT_HISTORY_DAYS))
+            event_date = self.now - datetime.timedelta(days=float(BasicCommunication.COMMUNICATION_HISTORY_DAYS))
 
             # iteration cross days
             while True:
