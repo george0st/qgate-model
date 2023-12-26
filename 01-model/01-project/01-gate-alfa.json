@@ -8,7 +8,7 @@
   "spec": {
     "feature-sets": [
       "basic-party", "basic-contact", "basic-relation", "basic-account", "basic-transaction", "basic-event", "basic-communication",
-      "aggregate-party", "aggregate-account", "aggregate-transaction"],
+      "aggregate-party", "aggregate-account", "aggregate-transaction", "aggregate-circle"],
     "feature-vectors": [
       "vector-party",
       "vector-partycontact",

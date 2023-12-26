@@ -1,0 +1,62 @@
+{
+  "name": "aggregate-circle",
+  "description": "Circle aggregation for e.g. geo, transaction, etc.",
+  "kind": "feature-set",
+  "spec": {
+      "targets": ["parquet"],
+      "entities": [
+        {
+          "name": "party-id",
+          "description": "Relation to party ID",
+          "type": "string"
+        }
+      ],
+      "features": [
+        {
+          "name": "circle-id",
+          "description": "Unique circle identificator",
+          "type": "string"
+        },
+        {
+          "name": "circle-type",
+          "description": "Circle type",
+          "type": "string"
+        },
+        {
+          "name": "circle-level",
+          "description": "Circle level e.g. geo distance",
+          "type": "int"
+        },
+        {
+          "name": "agg-geoscore",
+          "description": "Geo score",
+          "type": "int"
+        },
+        {
+          "name": "agg-transactionscore",
+          "description": "Transaction score",
+          "type": "int"
+        },
+        {
+          "name": "agg-contactscore",
+          "description": "Contact score",
+          "type": "int"
+        },
+        {
+          "name": "agg-relationscore",
+          "description": "Relation score",
+          "type": "int"
+        },
+        {
+          "name": "agg-eventscore",
+          "description": "Event score",
+          "type": "int"
+        },
+        {
+          "name": "record-date",
+          "description": "The date when the record was created",
+          "type": "timestamp"
+        }
+      ]
+    }
+}
