@@ -1,0 +1,62 @@
+{
+  "name": "aggregate-circle",
+  "description": "Circle aggregation for e.g. geo, transaction, etc.",
+  "kind": "feature-set",
+  "spec": {
+      "targets": ["parquet"],
+      "entities": [
+        {
+          "name": "party-id",
+          "description": "Unique account identificator",
+          "type": "string"
+        }
+      ],
+      "features": [
+        {
+          "name": "circle-id",
+          "description": "Unique transaction identificator",
+          "type": "string"
+        },
+        {
+          "name": "circle-type",
+          "description": "Transaction value aggregation",
+          "type": "double"
+        },
+        {
+          "name": "circle-level",
+          "description": "Transaction currency",
+          "type": "int"
+        },
+        {
+          "name": "agg-geoscore",
+          "description": "Transaction currency",
+          "type": "int"
+        },
+        {
+          "name": "agg-transactionscore",
+          "description": "Transaction currency",
+          "type": "int"
+        },
+        {
+          "name": "agg-contactscore",
+          "description": "Transaction currency",
+          "type": "int"
+        },
+        {
+          "name": "agg-relationscore",
+          "description": "Transaction currency",
+          "type": "int"
+        },
+        {
+          "name": "agg-eventscore",
+          "description": "Transaction currency",
+          "type": "int"
+        },
+        {
+          "name": "record-date",
+          "description": "The date when the record was created",
+          "type": "timestamp"
+        }
+      ]
+    }
+}
