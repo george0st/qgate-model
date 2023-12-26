@@ -18,6 +18,11 @@
         "type": "string"
       },
       {
+        "name": "session-id",
+        "description": "Session ID (bundle of communications for one customer session)",
+        "type": "string"
+      },
+      {
         "name": "content",
         "description": "Content of communication",
         "type": "string"
