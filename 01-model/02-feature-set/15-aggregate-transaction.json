@@ -6,7 +6,7 @@
       "targets": ["parquet"],
       "entities": [
         {
-          "name": "account-id",
+          "name": "account-bundleid",
           "description": "Unique account identificator",
           "type": "string"
         }
@@ -18,12 +18,12 @@
           "type": "string"
         },
         {
-          "name": "sum-value",
-          "description": "Transaction value summary",
+          "name": "agg-value",
+          "description": "Transaction value aggregation",
           "type": "double"
         },
         {
-          "name": "currency",
+          "name": "agg-currency",
           "description": "Transaction currency",
           "type": "int"
         },
