@@ -8,7 +8,14 @@ from faker.providers import lorem
 import numpy
 import pandas as pd
 from generator.basic_party import BasicParty
+from enum import Enum
 
+
+class Sentiment(Enum):
+    Positive = 1
+    Negative = 2
+    Neutral = 3
+    Fake = 4
 
 class BasicCommunication(Base):
 
@@ -63,8 +70,8 @@ class BasicCommunication(Base):
                                                      self.rnd_int(0,24),
                                                      self.rnd_int(0, 60),
                                                      self.rnd_int(0, 60))
-                # TODO: generate type of sentiment
-                session_sentiment_type=self.rnd_choose(["neutral", "positive", "negative", "fake"], [0.6, 0.15, 0.15, 0.1])
+                session_sentiment=self.rnd_choose([Sentiment.Neutral, Sentiment.Positive, Sentiment.Negative, Sentiment.Fake],
+                                                       [0.6, 0.15, 0.05, 0.2])
                 for event in range(session_communications):
 
                     # add new model
@@ -76,15 +83,9 @@ class BasicCommunication(Base):
                     # "name": "party-id",
                     model['party-id'] = party['party-id']
 
-
-
                     # TODO: add content
                     # "name": "content",
-                    model['content'] = self._generate_test(session_sentiment_type)
-
-                    # faker.providers.lorem
-                    print(self.fake.text())
-
+                    model['content'] = self._generate_test(session_sentiment)
 
                     # "name": "content-type",
                     model['content-type'] = "text"
@@ -101,10 +102,18 @@ class BasicCommunication(Base):
 
                     self.model.append(model)
 
-    def _generate_test(self, sentiment_type) -> str:
-        pass
+    def _generate_test(self, sentiment: Sentiment) -> str:
 
-    positive_sentences = (
+        if sentiment==Sentiment.Positive:
+            return self.positive_sentences[self.rnd_int(0, len(self.positive_sentences))]
+        elif sentiment==Sentiment.Negative:
+            return self.negative_sentences[self.rnd_int(0, len(self.negative_sentences))]
+        elif sentiment==Sentiment.Neutral:
+            return self.neutral_sentences[self.rnd_int(0,len(self.neutral_sentences))]
+        else:
+            return self.fake.text()
+
+    positive_sentences = [
         "I just wanted to say thank you for your amazing service. You really made my day!",
         "I’m very impressed with your product. It works flawlessly and has all the features I need. How can I leave a positive review?",
         "You are awesome! You solved my problem in no time and were very friendly and helpful. Can I speak to your supervisor and praise your work?",
@@ -125,9 +134,9 @@ class BasicCommunication(Base):
         "You are a gem. You answered all my queries and addressed all my concerns with patience and clarity. How can I express my satisfaction and admiration for your service and expertise?",
         "I’m very content with your product. It is high-quality, durable, and has a great design. How can I share my experience and opinion with other customers and potential buyers?",
         "You have been a delight to deal with. You were responsive, helpful, and knowledgeable throughout our communication. How can I compliment you and let your manager know how well you did?"
-    )
+    ]
 
-    negative_sentences = (
+    negative_sentences = [
         "Why is your product so slow and buggy? Fix it now or I’m leaving!",
         "You charged me twice for the same service! This is unacceptable! I want a refund immediately!",
         "Your agent was rude and unhelpful! I demand to speak to a manager!",
@@ -169,9 +178,9 @@ class BasicCommunication(Base):
         "I want to know why my account was banned.",
         "I want to know why my account was locked.",
         "I’m experiencing an issue with my account."
-    )
+    ]
 
-    neutral_sentences = (
+    neutral_sentences = [
         "Thank you for your help.",
         "Could you please clarify this for me?",
         "I’m sorry, I didn’t understand what you meant.",
@@ -240,4 +249,4 @@ class BasicCommunication(Base):
         "How can I set up or change a payment plan or due date for my card?",
         "How can I avoid or reduce interest or late fees on my card?",
         "How can I get a balance transfer or cash advance with my card?"
-    )
+    ]
