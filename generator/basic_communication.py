@@ -1,12 +1,8 @@
 import datetime
-import math
 import uuid
-
 from generator.base import Base
 from faker import Faker
 from faker.providers import lorem
-import numpy
-import pandas as pd
 from generator.basic_party import BasicParty
 from enum import Enum
 
@@ -79,6 +75,9 @@ class BasicCommunication(Base):
 
                     # "name": "communication-id",
                     model['communication-id'] = str(uuid.uuid4())
+
+                    # "name": "session-id",
+                    model['session-id'] = session_id
 
                     # "name": "party-id",
                     model['party-id'] = party['party-id']
