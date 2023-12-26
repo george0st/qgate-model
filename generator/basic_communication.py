@@ -83,7 +83,6 @@ class BasicCommunication(Base):
                     # "name": "party-id",
                     model['party-id'] = party['party-id']
 
-                    # TODO: add content
                     # "name": "content",
                     model['content'] = self._generate_test(session_sentiment)
 
@@ -114,14 +113,14 @@ class BasicCommunication(Base):
 
     positive_sentences = [
         "I just wanted to say thank you for your amazing service. You really made my day!",
-        "I’m very impressed with your product. It works flawlessly and has all the features I need. How can I leave a positive review?",
+        "I'm very impressed with your product. It works flawlessly and has all the features I need. How can I leave a positive review?",
         "You are awesome! You solved my problem in no time and were very friendly and helpful. Can I speak to your supervisor and praise your work?",
         "I love your company. You always go above and beyond to meet my needs and expectations. Do you have a referral program that I can join?",
         "You have been very patient and informative with me. I appreciate your professionalism and expertise. Can you send me some additional resources to learn more about your product?",
-        "I’m very happy with your service. You delivered on time, the quality was excellent, and the price was fair. Do you offer any discounts or coupons for loyal customers?",
+        "I'm very happy with your service. You delivered on time, the quality was excellent, and the price was fair. Do you offer any discounts or coupons for loyal customers?",
         "You have exceeded my expectations. Your product is amazing and your support is outstanding. How can I share my feedback with other potential customers?",
         "You are the best! You answered all my questions and gave me some great tips and advice. Can I subscribe to your newsletter or blog to get more updates?",
-        "I’m very grateful for your assistance. You were very courteous and respectful and handled my issue with care. Can I fill out a survey or a testimonial to express my satisfaction?",
+        "I'm very grateful for your assistance. You were very courteous and respectful and handled my issue with care. Can I fill out a survey or a testimonial to express my satisfaction?",
         "You have made me a very happy customer. Your product is exactly what I was looking for and your support is top-notch. Do you have any other products or services that I might be interested in?",
         "I’m blown away by your product. It has transformed the way I work and saved me so much time and hassle. How can I spread the word about your amazing solution?",
         "You have been a lifesaver. You resolved my issue quickly and efficiently and followed up with me to make sure everything was working well. How can I rate your service and give you a glowing review?",
