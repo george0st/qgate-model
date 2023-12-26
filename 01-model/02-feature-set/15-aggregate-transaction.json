@@ -13,11 +13,6 @@
       ],
       "features": [
         {
-          "name": "transaction-id",
-          "description": "Unique transaction identificator",
-          "type": "string"
-        },
-        {
           "name": "agg-value",
           "description": "Transaction value aggregation",
           "type": "double"
