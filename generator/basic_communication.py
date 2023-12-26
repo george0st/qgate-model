@@ -103,7 +103,6 @@ class BasicCommunication(Base):
                     self.model.append(model)
 
     def _generate_test(self, sentiment: Sentiment) -> str:
-
         if sentiment==Sentiment.Positive:
             return self.positive_sentences[self.rnd_int(0, len(self.positive_sentences))]
         elif sentiment==Sentiment.Negative:
@@ -111,7 +110,7 @@ class BasicCommunication(Base):
         elif sentiment==Sentiment.Neutral:
             return self.neutral_sentences[self.rnd_int(0,len(self.neutral_sentences))]
         else:
-            return self.fake.text()
+            return self.fake.sentence(nb_words = 15,variable_nb_words = True)
 
     positive_sentences = [
         "I just wanted to say thank you for your amazing service. You really made my day!",
