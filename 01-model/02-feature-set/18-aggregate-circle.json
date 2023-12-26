@@ -7,49 +7,49 @@
       "entities": [
         {
           "name": "party-id",
-          "description": "Unique account identificator",
+          "description": "Relation to party ID",
           "type": "string"
         }
       ],
       "features": [
         {
           "name": "circle-id",
-          "description": "Unique transaction identificator",
+          "description": "Unique circle identificator",
           "type": "string"
         },
         {
           "name": "circle-type",
-          "description": "Transaction value aggregation",
-          "type": "double"
+          "description": "Circle type",
+          "type": "string"
         },
         {
           "name": "circle-level",
-          "description": "Transaction currency",
+          "description": "Circle level e.g. geo distance",
           "type": "int"
         },
         {
           "name": "agg-geoscore",
-          "description": "Transaction currency",
+          "description": "Geo score",
           "type": "int"
         },
         {
           "name": "agg-transactionscore",
-          "description": "Transaction currency",
+          "description": "Transaction score",
           "type": "int"
         },
         {
           "name": "agg-contactscore",
-          "description": "Transaction currency",
+          "description": "Contact score",
           "type": "int"
         },
         {
           "name": "agg-relationscore",
-          "description": "Transaction currency",
+          "description": "Relation score",
           "type": "int"
         },
         {
           "name": "agg-eventscore",
-          "description": "Transaction currency",
+          "description": "Event score",
           "type": "int"
         },
         {
