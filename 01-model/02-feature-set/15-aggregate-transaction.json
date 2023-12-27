@@ -23,9 +23,14 @@
           "type": "int"
         },
         {
-          "name": "agg-score",
-          "description": "Transaction score",
+          "name": "agg-transaction",
+          "description": "Aggregation of transactions",
           "type": "int"
+        },
+        {
+          "name": "agg-counterparty",
+          "description": "Aggregation of counterparty",
+          "type": "string"
         },
         {
           "name": "record-date",
