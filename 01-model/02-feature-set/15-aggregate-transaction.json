@@ -23,6 +23,11 @@
           "type": "int"
         },
         {
+          "name": "agg-score",
+          "description": "Transaction score",
+          "type": "int"
+        },
+        {
           "name": "record-date",
           "description": "The date when the record was created",
           "type": "timestamp"
