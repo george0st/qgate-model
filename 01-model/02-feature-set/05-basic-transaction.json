@@ -18,6 +18,16 @@
           "type": "string"
         },
         {
+          "name": "transaction-direction",
+          "description": "Transaction direction e.g. incoming, outgoing",
+          "type": "string"
+        },
+        {
+          "name": "transaction-type",
+          "description": "Transaction type",
+          "type": "string"
+        },
+        {
           "name": "transaction-value",
           "description": "Transaction value",
           "type": "int"
@@ -31,6 +41,26 @@
           "name": "transaction-date",
           "description": "Transaction date",
           "type": "timestamp"
+        },
+        {
+          "name": "transaction-description",
+          "description": "Transaction description",
+          "type": "string"
+        },
+        {
+          "name": "counterparty-name",
+          "description": "Transaction counterparty name",
+          "type": "string"
+        },
+        {
+          "name": "counterparty-iban",
+          "description": "Transaction counterparty IBAN",
+          "type": "string"
+        },
+        {
+          "name": "counterparty-other",
+          "description": "Transaction counterparty other information",
+          "type": "string"
         },
         {
           "name": "record-date",
