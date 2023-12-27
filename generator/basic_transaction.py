@@ -55,11 +55,12 @@ class BasicTransaction(Base):
 
                 # "name": "transaction-direction",
                 # "description": "Transaction direction e.g. incoming, outgoing",
-                # TODO: Add
-                #
+                # TODO: Add both directions
+                model['transaction-direction']="Incoming"
+
                 # "name": "transaction-type",
                 # "description": "Transaction type",
-                # TODO: Add
+                model['transaction-type']=self.rnd_choose(["Standard", "Instant"], [0.7, 0.3])
 
                 # "name": "transaction-value",
                 # "description": "Transaction value",
@@ -81,11 +82,11 @@ class BasicTransaction(Base):
                 # "name": "counterparty-name",
                 # "description": "Transaction counterparty name",
                 # TODO: Add
-                #
+
                 # "name": "counterparty-iban",
                 # "description": "Transaction counterparty IBAN",
                 # TODO: Add
-                #
+
                 # "name": "counterparty-other",
                 # "description": "Transaction counterparty other information",
                 # TODO: Add
