@@ -45,10 +45,6 @@ class BasicTransaction(Base):
 
                 model=self.model_item()
 
-                # "name": "transaction-date",
-                # "description": "Transaction date",
-                model['transaction-date']=new_date
-
                 # "name": "transaction-id",
                 # "description": "Unique transaction identificator",
                 model['transaction-id']=str(uuid.uuid4())
@@ -56,6 +52,14 @@ class BasicTransaction(Base):
                 # "name": "account-id",
                 # "description": "Relation to account identificator",
                 model['account-id']=account['account-id']
+
+                # "name": "transaction-direction",
+                # "description": "Transaction direction e.g. incoming, outgoing",
+                # TODO: Add
+                #
+                # "name": "transaction-type",
+                # "description": "Transaction type",
+                # TODO: Add
 
                 # "name": "transaction-value",
                 # "description": "Transaction value",
@@ -65,6 +69,26 @@ class BasicTransaction(Base):
                 # "name": "transaction-currency",
                 # "description": "Transaction currency",
                 model['transaction-currency']="USD"
+
+                # "name": "transaction-description",
+                # "description": "Transaction description",
+                # TODO: Add
+
+                # "name": "transaction-date",
+                # "description": "Transaction date",
+                model['transaction-date']=new_date
+
+                # "name": "counterparty-name",
+                # "description": "Transaction counterparty name",
+                # TODO: Add
+                #
+                # "name": "counterparty-iban",
+                # "description": "Transaction counterparty IBAN",
+                # TODO: Add
+                #
+                # "name": "counterparty-other",
+                # "description": "Transaction counterparty other information",
+                # TODO: Add
 
                 # "name": "record-date",
                 # "description": "The date when the record was created",

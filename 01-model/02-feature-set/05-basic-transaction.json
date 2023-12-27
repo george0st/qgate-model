@@ -38,14 +38,14 @@
           "type": "string"
         },
         {
-          "name": "transaction-date",
-          "description": "Transaction date",
-          "type": "timestamp"
-        },
-        {
           "name": "transaction-description",
           "description": "Transaction description",
           "type": "string"
+        },
+        {
+          "name": "transaction-date",
+          "description": "Transaction date",
+          "type": "timestamp"
         },
         {
           "name": "counterparty-name",
