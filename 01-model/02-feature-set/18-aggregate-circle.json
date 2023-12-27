@@ -28,27 +28,27 @@
           "type": "int"
         },
         {
-          "name": "agg-geoscore",
+          "name": "score-geo",
           "description": "Geo score",
           "type": "int"
         },
         {
-          "name": "agg-transactionscore",
+          "name": "score-transaction",
           "description": "Transaction score",
           "type": "int"
         },
         {
-          "name": "agg-contactscore",
+          "name": "score-contact",
           "description": "Contact score",
           "type": "int"
         },
         {
-          "name": "agg-relationscore",
+          "name": "score-relation",
           "description": "Relation score",
           "type": "int"
         },
         {
-          "name": "agg-eventscore",
+          "name": "score-event",
           "description": "Event score",
           "type": "int"
         },
