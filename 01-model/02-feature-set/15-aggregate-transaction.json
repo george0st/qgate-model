@@ -23,6 +23,16 @@
           "type": "int"
         },
         {
+          "name": "agg-transaction",
+          "description": "Aggregation of transactions",
+          "type": "int"
+        },
+        {
+          "name": "agg-counterparty",
+          "description": "Aggregation of counterparty",
+          "type": "string"
+        },
+        {
           "name": "record-date",
           "description": "The date when the record was created",
           "type": "timestamp"
