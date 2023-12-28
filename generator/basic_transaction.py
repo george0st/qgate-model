@@ -14,7 +14,6 @@ class BasicTransaction(Base):
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, BasicTransaction.NAME)
         self.fake = Faker(['en_US'])
-        self.fake_multilocate = Faker(['az_AZ', 'es_ES', 'ru_RU', 'de_AT', 'de_DE', 'de_CH', 'en_GB', 'pl_PL', 'tr_TR', 'it_IT'])
 
     @property
     def Name(self):
