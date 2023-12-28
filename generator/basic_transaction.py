@@ -5,9 +5,7 @@ import uuid
 from generator.base import Base
 from faker import Faker
 from generator.basic_account import BasicAccount
-import faker.providers
-import numpy
-import pandas as pd
+from faker.providers import bank
 
 class BasicTransaction(Base):
 
@@ -16,6 +14,7 @@ class BasicTransaction(Base):
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, BasicTransaction.NAME)
         self.fake = Faker(['en_US'])
+        self.fake.add_provider(bank)
 
     @property
     def Name(self):
@@ -85,7 +84,7 @@ class BasicTransaction(Base):
 
                 # "name": "counterparty-iban",
                 # "description": "Transaction counterparty IBAN",
-                # TODO: Add
+                model["counterparty-iban"]=self.fake.iban()
 
                 # "name": "counterparty-other",
                 # "description": "Transaction counterparty other information",
