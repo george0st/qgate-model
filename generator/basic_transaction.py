@@ -14,7 +14,15 @@ class BasicTransaction(Base):
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, BasicTransaction.NAME)
         self.fake = Faker(['en_US'])
-        self.fake.add_provider(bank)
+        self.fake_at = Faker(['de_AT'])
+        self.fake_de = Faker(['de_DE'])
+        self.fake_ch = Faker(['de_CH'])
+        self.fake_pl = Faker(['pl_PL'])
+        self.fake_it = Faker(['it_IT'])
+        self.fake_es = Faker(['es_ES'])
+        self.fake_tr = Faker(['tr_TR'])
+        self.fake_az = Faker(['az_AZ'])
+        self.fake_ru = Faker(['ru_RU'])
 
     @property
     def Name(self):
@@ -84,7 +92,15 @@ class BasicTransaction(Base):
 
                 # "name": "counterparty-iban",
                 # "description": "Transaction counterparty IBAN",
-                model["counterparty-iban"]=self.fake.iban()
+                if int(self.rnd_choose([0,1],[0.998, 0.002]))==0:
+                    iban=self.fake.iban()
+                else:
+                    tmp_fake=self.rnd_choose([self.fake_at, self.fake_de, self.fake_ch,
+                                                    self.fake_pl, self.fake_it, self.fake_es,
+                                                    self.fake_tr, self.fake_az, self.fake_ru],
+                                          [0.3, 0.2, 0.2, 0.1, 0.1, 0.025, 0.025, 0.025, 0.025])
+                    iban=tmp_fake.iban()
+                model["counterparty-iban"]=iban
 
                 # "name": "counterparty-other",
                 # "description": "Transaction counterparty other information",

@@ -89,14 +89,6 @@ class BasicParty(Base):
              0.12, 0.12, 0.1, 0.12, 0.1, 0.1,  # 0.66]))
              0.05, 0.079, 0.05])  # 0.179
 
-        # # "name": "party-industry",
-        # # "description": "Party industry (e.g. 'IT', 'Finance', 'Telco', 'Medical', etc.)",
-        # self.model['party-industry'].append(self.rnd_choose(["IT", "Finance", "Telco", "Medical"]))
-        #
-        # # "name": "party-industryposition",
-        # # "description": "Party position in industry (e.g. 'Manager', 'Developer', 'Analyst', etc.)",
-        # self.model['party-industryposition'].append(self.rnd_choose(["Manager", "Developer", "Analyst"], [0.1, 0.45, 0.45]))
-
         # "name": "party-residencecountry",
         # "description": "Party country residence",
         model['party-residencecountry']=self.fake.country()
