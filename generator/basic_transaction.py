@@ -101,7 +101,6 @@ class BasicTransaction(Base):
                                           [0.3, 0.2, 0.2, 0.1, 0.1, 0.025, 0.025, 0.025, 0.025])
                     iban=tmp_fake.iban()
                 model["counterparty-iban"]=iban
-                print(model["counterparty-iban"])
 
                 # "name": "counterparty-other",
                 # "description": "Transaction counterparty other information",
