@@ -14,7 +14,6 @@ class BasicTransaction(Base):
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, BasicTransaction.NAME)
         self.fake = Faker(['en_US'])
-
         self.fake_at = Faker(['de_AT'])
         self.fake_de = Faker(['de_DE'])
         self.fake_ch = Faker(['de_CH'])
@@ -93,11 +92,13 @@ class BasicTransaction(Base):
 
                 # "name": "counterparty-iban",
                 # "description": "Transaction counterparty IBAN",
-                if int(self.rnd_choose([0,1],[0.998, 0.002]))==1:
+                if int(self.rnd_choose([0,1],[0.998, 0.002]))==0:
                     iban=self.fake.iban()
                 else:
-                    tmp_fake=Faker(self.rnd_choose(['de_AT', 'de_DE', 'de_CH', 'pl_PL', 'it_IT', 'es_ES', 'tr_TR', 'az_AZ', 'ru_RU' ],
-                                          [0.3, 0.2, 0.2, 0.1, 0.1, 0.025, 0.025, 0.025, 0.025]))
+                    tmp_fake=self.rnd_choose([self.fake_at, self.fake_de, self.fake_ch,
+                                                    self.fake_pl, self.fake_it, self.fake_es,
+                                                    self.fake_tr, self.fake_az, self.fake_ru],
+                                          [0.3, 0.2, 0.2, 0.1, 0.1, 0.025, 0.025, 0.025, 0.025])
                     iban=tmp_fake.iban()
                 model["counterparty-iban"]=iban
                 print(model["counterparty-iban"])
