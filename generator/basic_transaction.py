@@ -80,7 +80,7 @@ class BasicTransaction(Base):
 
                 # "name": "transaction-description",
                 # "description": "Transaction description",
-                # TODO: Add
+                model["transaction-description"] = self.fake.text(max_nb_chars=64)
 
                 # "name": "transaction-date",
                 # "description": "Transaction date",
