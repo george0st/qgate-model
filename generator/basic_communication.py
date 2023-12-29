@@ -83,7 +83,7 @@ class BasicCommunication(Base):
                     model['party-id'] = party['party-id']
 
                     # "name": "content",
-                    model['content'] = self._generate_test(session_sentiment)
+                    model['content'] = self._generate_text(session_sentiment)
 
                     # "name": "content-type",
                     model['content-type'] = "text"
@@ -100,7 +100,7 @@ class BasicCommunication(Base):
 
                     self.model.append(model)
 
-    def _generate_test(self, sentiment: Sentiment) -> str:
+    def _generate_text(self, sentiment: Sentiment) -> str:
         if sentiment==Sentiment.Positive:
             return self.positive_sentences[self.rnd_int(0, len(self.positive_sentences))]
         elif sentiment==Sentiment.Negative:
