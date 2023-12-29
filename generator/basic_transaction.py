@@ -63,7 +63,7 @@ class BasicTransaction(Base):
                 # "name": "transaction-direction",
                 # "description": "Transaction direction e.g. incoming, outgoing",
                 # TODO: Add both directions
-                model['transaction-direction']="Incoming"
+                model['transaction-direction'] = "Incoming"
 
                 # "name": "transaction-type",
                 # "description": "Transaction type",
@@ -88,7 +88,7 @@ class BasicTransaction(Base):
 
                 # "name": "counterparty-name",
                 # "description": "Transaction counterparty name",
-                # TODO: Add
+                model["counterparty-name"] = self.fake.name()
 
                 # "name": "counterparty-iban",
                 # "description": "Transaction counterparty IBAN",
