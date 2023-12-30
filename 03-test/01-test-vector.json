@@ -1,9 +1,0 @@
-{
-  "name": "test-vector",
-  "description": "The setting for feature vector tests",
-  "kind": "test",
-  "spec": {
-    "online": [
-      "basic-party"]
-  }
-}
