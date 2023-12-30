@@ -18,7 +18,7 @@
         {
           "name": "party-establishment",
           "description": "Date of establishment of the party (e.g. birthday for client, etc.)",
-          "type": "timestamp"
+          "type": "datetime"
         },
         {
           "name": "party-type",
@@ -28,7 +28,7 @@
         {
           "name": "party-typedate",
           "description": "Date for party type creation (data for change of the state to the prospect or client)",
-          "type": "timestamp"
+          "type": "datetime"
         },
         {
           "name": "party-gender",
@@ -103,7 +103,7 @@
         {
           "name": "record-date",
           "description": "The date when the record was created",
-          "type": "timestamp"
+          "type": "datetime"
         }
       ]
     }

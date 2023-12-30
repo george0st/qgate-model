@@ -45,7 +45,7 @@
         {
           "name": "transaction-date",
           "description": "Transaction date",
-          "type": "timestamp"
+          "type": "datetime"
         },
         {
           "name": "counterparty-name",
@@ -65,7 +65,7 @@
         {
           "name": "record-date",
           "description": "The date when the record was created",
-          "type": "timestamp"
+          "type": "datetime"
         }
       ]
     }

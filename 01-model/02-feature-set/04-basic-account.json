@@ -25,7 +25,7 @@
         {
           "name": "account-createdate",
           "description": "Date for account creation",
-          "type": "timestamp"
+          "type": "datetime"
         },
         {
           "name": "account-state",
@@ -35,12 +35,12 @@
         {
           "name": "account-nonactivedate",
           "description": "Date when account state was closed or blocked",
-          "type": "timestamp"
+          "type": "datetime"
         },
         {
           "name": "record-date",
           "description": "The date when the record was created",
-          "type": "timestamp"
+          "type": "datetime"
         }
       ]
     }

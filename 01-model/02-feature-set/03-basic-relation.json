@@ -32,12 +32,12 @@
       {
         "name": "relation-date",
         "description": "The date when the relation was identificated/created",
-        "type": "timestamp"
+        "type": "datetime"
       },
       {
         "name": "record-date",
         "description": "The date when the record was created",
-        "type": "timestamp"
+        "type": "datetime"
       }
     ]
   }
