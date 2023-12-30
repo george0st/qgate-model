@@ -55,7 +55,7 @@
         {
           "name": "record-date",
           "description": "The date when the record was created",
-          "type": "timestamp"
+          "type": "datetime"
         }
       ]
     }

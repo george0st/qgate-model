@@ -40,12 +40,12 @@
       {
         "name": "communication-date",
         "description": "Datetime for party communication",
-        "type": "timestamp"
+        "type": "datetime"
       },
       {
         "name": "record-date",
         "description": "The date when the record was created",
-        "type": "timestamp"
+        "type": "datetime"
       }
     ]
   }
