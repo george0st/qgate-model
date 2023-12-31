@@ -5,7 +5,8 @@
   "spec": {
       "targets": [
         "parquet",
-        "csv"
+        "csv",
+        "redis"
       ],
       "entities": [
         {

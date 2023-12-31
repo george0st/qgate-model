@@ -1,0 +1,8 @@
+{
+  "name": "vector",
+  "description": "Setting for test vectors",
+  "kind": "test",
+  "spec": {
+        "online": ["vector-party"]
+  }
+}
