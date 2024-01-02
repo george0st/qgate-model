@@ -34,3 +34,8 @@ You can see full detail in source code, see the folder `generator` in this GIT p
 
  - **cardinality**: basic-party vs basic-event (1:N) 
  - ...
+
+## 07. Basic-communication
+ 
+ - **cardinality**: basic-party vs basic-event (1:N) 
+ - ...
