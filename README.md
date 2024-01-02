@@ -30,9 +30,11 @@ The solution contains this simple structure:
    - This model is designed for these [use cases](./docs/usecases.md) 
  - **02-data**
    - The data for meta-model in CSV/GZ format (future support parquet) for party, account, transaction, event, communication, etc.
-   - You can also generate your own dataset with requested size (see cmd 'python main.py generate --help')
+   - You can also generate your own dataset with requested size (see sample './02-data/2-size-10k.sh' and description 'python main.py generate --help')
+ - **03-test**
+   - The information for testing e.g. feature vector vs on/off-line data, test data, etc. 
 
-Addition detail, [see](./docs/structure.md)
+ Addition detail, [see](./docs/structure.md)
 
 ## Model
 ![Basic-model](./00-high-level/basic-feature-sets.png)
