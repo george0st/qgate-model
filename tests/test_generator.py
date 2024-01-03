@@ -4,6 +4,7 @@ import time
 from os import path
 import shutil
 from generator.synthetic_data import SyntheticData
+from generator.basic_communication import BasicCommunication
 
 
 class TestGenerator(unittest.TestCase):
@@ -24,21 +25,51 @@ class TestGenerator(unittest.TestCase):
         pass
 
     def test_generate_compress(self):
+
+        lbl="0-size-20,20-compress"
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
-        generator.generate(label="0-size-20,20-compress", count=20, bulk_max=20, compress=True)
+        generator.generate(label=lbl, count=20, bulk_max=20, compress=True)
+
+        dir=path.join(TestGenerator.OUTPUT_ADR, lbl)
+        self.assertTrue(os.path.exists(dir))
+        self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv.gz")))
 
     def test_generate_compress_smallbulk(self):
+        lbl="0-size-20,6-compress"
+
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
-        generator.generate(label="0-size-20,6-compress", count=20, bulk_max=6, compress=True)
+        generator.generate(label=lbl, count=20, bulk_max=6, compress=True)
+
+        dir=path.join(TestGenerator.OUTPUT_ADR, lbl)
+        self.assertTrue(os.path.exists(dir))
+        self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv.gz")))
 
     def test_generate(self):
+        lbl = "0-size-200,20"
+
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
-        generator.generate(label="0-size-200,20", count=200, bulk_max=20, compress=False)
+        generator.generate(label=lbl, count=200, bulk_max=20, compress=False)
+
+        dir=path.join(TestGenerator.OUTPUT_ADR, lbl)
+        self.assertTrue(os.path.exists(dir))
+        self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv")))
 
     def test_generate_smallbulk(self):
+        lbl = "0-size-20,6"
+
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
-        generator.generate(label="0-size-20,6", count=20, bulk_max=6, compress=False)
+        generator.generate(label=lbl, count=20, bulk_max=6, compress=False)
+
+        dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
+        self.assertTrue(os.path.exists(dir))
+        self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv")))
 
     def test_generate_bigbulk(self):
+        lbl = "0-size-2000,2000"
+
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
-        generator.generate(label="0-size-2000,2000", count=2000, bulk_max=2000, compress=False)
+        generator.generate(label=lbl, count=2000, bulk_max=2000, compress=False)
+
+        dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
+        self.assertTrue(os.path.exists(dir))
+        self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv")))
