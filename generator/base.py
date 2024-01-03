@@ -9,16 +9,16 @@ class Base:
 
     MAX_DATE=datetime.date(2200,1,1)
 
-    def __init__(self, path, gmodel, definition_file):
-        self._create(path, definition_file)
+    def __init__(self, path, gmodel, name):
+        self._create(path, name)
         self.model=[]
         self._gen = np.random.default_rng()
         self.gmodel = gmodel
-        self._name = definition_file
+        self._name = name
 
     @property
     def name(self):
-        pass
+        return self._name
 
     def rnd_int(self, low, high) -> int:
         return self._gen.integers(low, high)
@@ -68,11 +68,11 @@ class Base:
         if not os.path.exists(path):
             os.makedirs(path)
 
-        # print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self._name}', dir: '{dir}'...")
+        # print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self.name}', dir: '{dir}'...")
         df=pd.DataFrame(self.model)
         if compress:
             compression_opts = dict(method='gzip')
-            df.to_csv(os.path.join(path,f"{self._name}.csv.gz"),
+            df.to_csv(os.path.join(path,f"{self.name}.csv.gz"),
                       header=False if append else True,
                       index=False,
                       mode="a" if append else "w",
@@ -81,7 +81,7 @@ class Base:
                       decimal=",",
                       compression=compression_opts)
 
-#             df.to_parquet(os.path.join(path,f"{self._name}.parquet"),
+#             df.to_parquet(os.path.join(path,f"{self.name}.parquet"),
 #                           engine="pyarrow",
 #                           compression='gzip',
 # #                          header=False if append else True,
@@ -89,7 +89,7 @@ class Base:
 #                           mode = "a" if append else "w")
 
         else:
-            df.to_csv(os.path.join(path,f"{self._name}.csv"),
+            df.to_csv(os.path.join(path,f"{self.name}.csv"),
                       header=False if append else True,
                       index=False,
                       mode="a" if append else "w",
@@ -97,13 +97,13 @@ class Base:
                       sep=";",
                       decimal=",")
 
-            # df.to_parquet(os.path.join(path,f"{self._name}.parquet"),
+            # df.to_parquet(os.path.join(path,f"{self.name}.parquet"),
             #                            engine='fastparquet',
             #                            append=True if append else False,
             #                            compression = "snappy",
             #                            index = False)
 
-            # df.to_parquet(os.path.join(path,f"{self._name}.parquet"),
+            # df.to_parquet(os.path.join(path,f"{self.name}.parquet"),
             #                            engine="pyarrow",
             #               compression="snappy",
             #               index=False)
