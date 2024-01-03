@@ -1,0 +1,9 @@
+{
+  "name": "data-hint",
+  "description": "Data hints (sample of data) for testing",
+  "kind": "test",
+  "spec": {
+        "0-size-100": [{}, {}, {}],
+        "1-size-1k": [{}, {}, {}]
+  }
+}
