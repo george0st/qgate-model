@@ -18,10 +18,6 @@ class BasicAccount(Base):
         super().__init__(path, gmodel, BasicAccount.NAME)
         self.fake = Faker(['en_US'])
 
-    @property
-    def name(self):
-        return BasicAccount.NAME
-
     def generate(self, count):
 
         # reference to the data from BasicParty

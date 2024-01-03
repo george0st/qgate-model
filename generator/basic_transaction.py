@@ -24,10 +24,6 @@ class BasicTransaction(Base):
         self.fake_az = Faker(['az_AZ'])
         self.fake_ru = Faker(['ru_RU'])
 
-    @property
-    def name(self):
-        return BasicTransaction.NAME
-
     def generate(self, count):
 
         # reference to the data from BasicAccount

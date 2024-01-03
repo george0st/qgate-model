@@ -57,10 +57,6 @@ class BasicEvent(Base):
                         "offer/legal conditions": [["show"], [1]],
                         "offer/sanctions": [["show"], [1]]}
 
-    @property
-    def name(self):
-        return BasicEvent.NAME
-
     def generate(self, count):
 
         # reference to the data from BasicParty

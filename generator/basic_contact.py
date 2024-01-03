@@ -25,10 +25,6 @@ class BasicContact(Base):
         self.fake.add_provider(internet)
         self.fake.add_provider(phone_number)
 
-    @property
-    def name(self):
-        return BasicContact.NAME
-
     def generate(self, count):
 
         # reference to the data from BasicParty

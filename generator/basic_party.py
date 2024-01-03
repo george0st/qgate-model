@@ -15,10 +15,6 @@ class BasicParty(Base):
         super().__init__(path, gmodel, BasicParty.NAME)
         self.fake=Faker(['en_US'])
 
-    @property
-    def name(self):
-        return BasicParty.NAME
-
     def generate(self, count):
         for i in range(count):
             self._generate()

@@ -24,10 +24,6 @@ class BasicCommunication(Base):
         self.fake.add_provider(lorem)
         self.now = datetime.datetime.fromisoformat(self.gmodel["NOW"])
 
-    @property
-    def name(self):
-        return BasicCommunication.NAME
-
     def generate(self, count):
 
         # reference to the data from BasicParty
