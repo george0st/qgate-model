@@ -22,7 +22,7 @@ class BasicRelation(Base):
         self.fake.add_provider(phone_number)
 
     @property
-    def Name(self):
+    def name(self):
         return BasicRelation.NAME
 
     def generate(self, count):

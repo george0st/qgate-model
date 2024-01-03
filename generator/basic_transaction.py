@@ -25,7 +25,7 @@ class BasicTransaction(Base):
         self.fake_ru = Faker(['ru_RU'])
 
     @property
-    def Name(self):
+    def name(self):
         return BasicTransaction.NAME
 
     def generate(self, count):

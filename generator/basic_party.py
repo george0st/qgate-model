@@ -16,7 +16,7 @@ class BasicParty(Base):
         self.fake=Faker(['en_US'])
 
     @property
-    def Name(self):
+    def name(self):
         return BasicParty.NAME
 
     def generate(self, count):
