@@ -56,7 +56,7 @@ class SyntheticData:
         while (current_count < count):
             # generate data in bulk size based on party amount
             bulk = bulk_max if count > (current_count + bulk_max) else count - current_count
-            print(f"  {current_count} -> {current_count+bulk} generate ...")
+            print(f"  Bundle {current_count} -> {current_count+bulk} generate ...")
             for entity in self._entities:
                 print(f"    '{entity.name}' ...")
                 entity.generate(bulk)
@@ -65,4 +65,4 @@ class SyntheticData:
             self._clean_all()
             current_count = current_count + bulk
         diff_time=time.time()-start_time
-        print(f"... DONE Duration: {round(diff_time,6)} seconds ({datetime.timedelta(seconds=diff_time)})")
+        print(f"DONE Duration: {round(diff_time,6)} seconds ({datetime.timedelta(seconds=diff_time)})")
