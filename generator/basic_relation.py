@@ -1,7 +1,7 @@
 import datetime
 import uuid
 
-from generator.base import Base
+from generator.base_data import BaseData
 from faker import Faker
 from faker.providers import internet, phone_number
 from generator.basic_party import BasicParty
@@ -10,7 +10,7 @@ import faker.providers
 import numpy
 
 
-class BasicRelation(Base):
+class BasicRelation(BaseData):
 
     NAME= "03-basic-relation"
     MAX_RELATIONS = 5

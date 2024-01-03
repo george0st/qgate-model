@@ -5,7 +5,7 @@ import numpy as np
 import os
 
 
-class Base:
+class BaseData:
 
     MAX_DATE=datetime.date(2200,1,1)
 

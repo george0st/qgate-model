@@ -9,7 +9,7 @@ from generator.basic_account import BasicAccount
 from generator.basic_transaction import BasicTransaction
 from generator.basic_event import BasicEvent
 from generator.basic_communication import BasicCommunication
-from generator.base import Base
+from generator.base_data import BaseData
 
 class SyntheticData:
 
@@ -19,7 +19,7 @@ class SyntheticData:
 
         self._gmodel={}
         self._gmodel["NOW"]=datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        self._entities=[Base]
+        self._entities=[BaseData]
 
         self._create_all()
 
@@ -34,7 +34,7 @@ class SyntheticData:
         self._create(BasicEvent(self._model_path, self._gmodel))
         self._create(BasicCommunication(self._model_path, self._gmodel))
 
-    def _create(self, new_entity: Base):
+    def _create(self, new_entity: BaseData):
         self._entities.append(new_entity)
         self._gmodel[new_entity.name] = new_entity.model
 

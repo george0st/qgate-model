@@ -2,10 +2,10 @@ import datetime
 import math
 import uuid
 
-from generator.base import Base
+from generator.base_data import BaseData
 
 
-class DataHint(Base):
+class DataHint(BaseData):
     NAME = "02-data-hint"
 
     def __init__(self, path, gmodel):

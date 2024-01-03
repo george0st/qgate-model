@@ -2,12 +2,12 @@ import datetime
 import math
 import uuid
 
-from generator.base import Base
+from generator.base_data import BaseData
 from faker import Faker
 from generator.basic_account import BasicAccount
 from faker.providers import bank
 
-class BasicTransaction(Base):
+class BasicTransaction(BaseData):
 
     NAME= "05-basic-transaction"
 

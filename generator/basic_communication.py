@@ -1,6 +1,6 @@
 import datetime
 import uuid
-from generator.base import Base
+from generator.base_data import BaseData
 from faker import Faker
 from faker.providers import lorem
 from generator.basic_party import BasicParty
@@ -13,7 +13,7 @@ class Sentiment(Enum):
     Neutral = 3
     Fake = 4
 
-class BasicCommunication(Base):
+class BasicCommunication(BaseData):
 
     NAME = "07-basic-communication"
     COMMUNICATION_HISTORY_DAYS = 90
