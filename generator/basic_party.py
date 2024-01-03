@@ -1,23 +1,19 @@
 import datetime
 import uuid
 
-from generator.base import Base
+from generator.base_data import BaseData
 from faker import Faker
 import faker.providers
 import numpy
 
 
-class BasicParty(Base):
+class BasicParty(BaseData):
 
     NAME= "01-basic-party"
 
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, BasicParty.NAME)
         self.fake=Faker(['en_US'])
-
-    @property
-    def name(self):
-        return BasicParty.NAME
 
     def generate(self, count):
         for i in range(count):

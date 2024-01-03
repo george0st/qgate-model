@@ -1,7 +1,7 @@
 import datetime
 import uuid
 
-from generator.base import Base
+from generator.base_data import BaseData
 from faker import Faker
 from faker.providers import internet, phone_number
 from generator.basic_party import BasicParty
@@ -10,7 +10,7 @@ import faker.providers
 import numpy
 
 
-class BasicEvent(Base):
+class BasicEvent(BaseData):
 
     NAME = "06-basic-event"
     EVENT_HISTORY_DAYS = 90
@@ -56,10 +56,6 @@ class BasicEvent(Base):
                         "offer/service list": [["show"], [1]],
                         "offer/legal conditions": [["show"], [1]],
                         "offer/sanctions": [["show"], [1]]}
-
-    @property
-    def name(self):
-        return BasicEvent.NAME
 
     def generate(self, count):
 

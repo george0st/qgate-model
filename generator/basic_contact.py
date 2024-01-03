@@ -2,7 +2,7 @@ import datetime
 import uuid
 from enum import Enum, Flag, IntFlag
 
-from generator.base import Base
+from generator.base_data import BaseData
 from faker import Faker
 from faker.providers import internet, phone_number
 from generator.basic_party import BasicParty
@@ -15,7 +15,7 @@ class ContactEnum(IntFlag):
     Email = 2,
     Full = 3,
 
-class BasicContact(Base):
+class BasicContact(BaseData):
 
     NAME= "02-basic-contact"
 
@@ -24,10 +24,6 @@ class BasicContact(Base):
         self.fake=Faker(['en_US'])
         self.fake.add_provider(internet)
         self.fake.add_provider(phone_number)
-
-    @property
-    def name(self):
-        return BasicContact.NAME
 
     def generate(self, count):
 
