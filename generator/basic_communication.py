@@ -25,7 +25,7 @@ class BasicCommunication(Base):
         self.now = datetime.datetime.fromisoformat(self.gmodel["NOW"])
 
     @property
-    def Name(self):
+    def name(self):
         return BasicCommunication.NAME
 
     def generate(self, count):

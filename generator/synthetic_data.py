@@ -36,7 +36,7 @@ class SyntheticData:
 
     def _create(self, new_entity: Base):
         self._entities.append(new_entity)
-        self._gmodel[new_entity.Name] = new_entity.model
+        self._gmodel[new_entity.name] = new_entity.model
 
     def _save_all(self, append, label, compress):
         for entity in self._entities:
@@ -56,11 +56,13 @@ class SyntheticData:
         while (current_count < count):
             # generate data in bulk size based on party amount
             bulk = bulk_max if count > (current_count + bulk_max) else count - current_count
+            print(f"  Bundle {current_count} -> {current_count+bulk} generate ...")
             for entity in self._entities:
+                print(f"    '{entity.name}' ...")
                 entity.generate(bulk)
 
             self._save_all(False if current_count == 0 else True, label, compress)
             self._clean_all()
             current_count = current_count + bulk
         diff_time=time.time()-start_time
-        print(f"... DONE Duration: {round(diff_time,6)} seconds ({datetime.timedelta(seconds=diff_time)})")
+        print(f"DONE Duration: {round(diff_time,6)} seconds ({datetime.timedelta(seconds=diff_time)})")

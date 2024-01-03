@@ -17,7 +17,7 @@ class Base:
         self._name = definition_file
 
     @property
-    def Name(self):
+    def name(self):
         pass
 
     def rnd_int(self, low, high) -> int:

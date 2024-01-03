@@ -26,7 +26,7 @@ class BasicContact(Base):
         self.fake.add_provider(phone_number)
 
     @property
-    def Name(self):
+    def name(self):
         return BasicContact.NAME
 
     def generate(self, count):

@@ -58,7 +58,7 @@ class BasicEvent(Base):
                         "offer/sanctions": [["show"], [1]]}
 
     @property
-    def Name(self):
+    def name(self):
         return BasicEvent.NAME
 
     def generate(self, count):
