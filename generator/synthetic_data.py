@@ -1,5 +1,4 @@
 import datetime
-import os, glob
 import time
 
 from generator.basic_party import BasicParty
