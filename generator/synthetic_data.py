@@ -77,15 +77,10 @@ class SyntheticData:
             self.generate_test(3)
             self._clean_all()
             current_count = current_count + bulk
-
-
-
         diff_time=time.time()-start_time
         print(f"DONE Duration: {round(diff_time,6)} seconds ({datetime.timedelta(seconds=diff_time)})")
 
     def generate_test(self, test_max):
         # test, if all test entities were added
-
-        #self._gmodel[BasicParty]
-        #self._tmodel
-        pass
+        for test in self._tests:
+            test.generate(test_max)
