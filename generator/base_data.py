@@ -3,14 +3,16 @@ import json
 import pandas as pd
 import numpy as np
 import os
+from generator.base import Base
 
 
-class BaseData:
+class BaseData(Base):
 
     MAX_DATE=datetime.date(2200,1,1)
 
     def __init__(self, path, gmodel, name):
-        self._create(path, name)
+        super().__init__()
+        self._model_definition=Base.create(path, name)
         self.model=[]
         self._gen = np.random.default_rng()
         self.gmodel = gmodel
@@ -39,21 +41,21 @@ class BaseData:
     def clean(self):
         self.model.clear()
 
-    def _create(self, path, definition_file):
-
-        self._model_definition = {}
-        path=os.path.join(path,"02-feature-set", definition_file+".json")
-
-        with open(path, "r") as json_file:
-            definition = json.load(json_file)
-
-        # create entities
-        for entity in definition['spec']['entities']:
-            self._model_definition[entity['name']]=None
-
-        # create features
-        for feature in definition['spec']['features']:
-            self._model_definition[feature['name']]=None
+    # def _create(self, path, definition_file):
+    #
+    #     self._model_definition = {}
+    #     path=os.path.join(path,"02-feature-set", definition_file+".json")
+    #
+    #     with open(path, "r") as json_file:
+    #         definition = json.load(json_file)
+    #
+    #     # create entities
+    #     for entity in definition['spec']['entities']:
+    #         self._model_definition[entity['name']]=None
+    #
+    #     # create features
+    #     for feature in definition['spec']['features']:
+    #         self._model_definition[feature['name']]=None
 
     def model_item(self) -> dict:
         """Return new empty item"""
