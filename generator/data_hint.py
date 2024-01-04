@@ -16,8 +16,8 @@ class DataHint(BaseTest):
             self._generate()
 
     def _generate(self):
-
-        # model = self.model_item()
+        # generate one data set
+        model = []
 
             # iteration cross all gmodel entities
 
@@ -26,5 +26,4 @@ class DataHint(BaseTest):
 
             # iteration cross other entities and select random values based on defined party
 
-        # self.model.append(model)
-        pass
+        self.model.append(model)

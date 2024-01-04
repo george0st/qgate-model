@@ -12,10 +12,15 @@ class BaseTest(Base):
         super().__init__()
         self._gen = np.random.default_rng()
         self.model = []
+        self.gmodel = gmodel
+        self._name = name
 
     @property
     def name(self):
         return self._name
+
+    def clean(self):
+        self.model.clear()
 
     def generate(self, count):
         pass
