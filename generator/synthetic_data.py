@@ -9,16 +9,22 @@ from generator.basic_transaction import BasicTransaction
 from generator.basic_event import BasicEvent
 from generator.basic_communication import BasicCommunication
 from generator.base_data import BaseData
+from generator.base_test import BaseTest
+from generator.data_hint import DataHint
 
 class SyntheticData:
 
-    def __init__(self, model_path="01-model", output_path="02-data"):
+    def __init__(self, model_path="01-model", output_path="02-data", test_path="03-test"):
         self._model_path=model_path
         self._output_path=output_path
+        self._test_path=test_path
 
         self._gmodel={}
         self._gmodel["NOW"]=datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         self._entities=[BaseData]
+
+        self._tmodel={}
+        self._tests=[BaseTest]
 
         self._create_all()
 
@@ -33,20 +39,32 @@ class SyntheticData:
         self._create(BasicEvent(self._model_path, self._gmodel))
         self._create(BasicCommunication(self._model_path, self._gmodel))
 
+        self._tests.clear()
+        self._create_test(DataHint(self._model_path, self._gmodel))
+
     def _create(self, new_entity: BaseData):
         self._entities.append(new_entity)
         self._gmodel[new_entity.name] = new_entity.model
+
+    def _create_test(self, new_test: BaseTest):
+        self._tests.append(new_test)
+        self._tmodel[new_test.name] = new_test.model
 
     def _save_all(self, append, label, compress):
         for entity in self._entities:
             entity.save(self._output_path, append, label, compress)
 
+    def _save_test_all(self, label):
+        for test in self._tests:
+            test.save(self._test_path, label)
+
     def _clean_all(self):
         for entity in self._entities:
             entity.clean()
+        for test in self._tests:
+            test.clean()
 
     def generate(self, label, count, bulk_max=1000, compress=True):
-
         print(f"Creating label: '{label}', count: {count} ...")
         # start time
         start_time = time.time()
@@ -61,7 +79,16 @@ class SyntheticData:
                 entity.generate(bulk)
 
             self._save_all(False if current_count == 0 else True, label, compress)
+
+            self.generate_test(3)
+            self._save_test_all(label)
+
             self._clean_all()
             current_count = current_count + bulk
         diff_time=time.time()-start_time
         print(f"DONE Duration: {round(diff_time,6)} seconds ({datetime.timedelta(seconds=diff_time)})")
+
+    def generate_test(self, test_max):
+        # test, if all test entities were added
+        for test in self._tests:
+            test.generate(test_max)
