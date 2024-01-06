@@ -3,7 +3,7 @@ import math
 import uuid
 
 from generator.base_test import BaseTest
-
+from generator.basic_party import BasicParty
 
 class DataHint(BaseTest):
     NAME = "02-data-hint"
@@ -18,6 +18,12 @@ class DataHint(BaseTest):
     def _generate(self):
         # generate one data set
         model = []
+
+        # reference to the data from BasicParty
+        parties = self.gmodel[BasicParty.NAME]
+        party=parties[self.rnd_int(0, len(parties))]
+        partyid=party['party-id']
+        print(partyid)
 
             # iteration cross all gmodel entities
 

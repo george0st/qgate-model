@@ -14,9 +14,10 @@ from generator.data_hint import DataHint
 
 class SyntheticData:
 
-    def __init__(self, model_path="01-model", output_path="02-data"):
+    def __init__(self, model_path="01-model", output_path="02-data", test_path="03-test"):
         self._model_path=model_path
         self._output_path=output_path
+        self._test_path=test_path
 
         self._gmodel={}
         self._gmodel["NOW"]=datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")

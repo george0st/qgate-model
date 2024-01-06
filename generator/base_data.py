@@ -14,7 +14,7 @@ class BaseData(Base):
         super().__init__()
         self._model_definition=Base.create(path, name)
         self.model=[]
-        self._gen = np.random.default_rng()
+        # self._gen = np.random.default_rng()
         self.gmodel = gmodel
         self._name = name
 
@@ -22,21 +22,21 @@ class BaseData(Base):
     def name(self):
         return self._name
 
-    def rnd_int(self, low, high) -> int:
-        return self._gen.integers(low, high)
-
-    def rnd_bool(self) -> bool:
-        return bool(self._gen.integers(0, 2))
-
-    def rnd_choose(self, items: list=[], probability: list=None):
-        """
-        Generate random value from list and based on defined probabilities
-
-        :param items:        item for selection
-        :param probability:  probability items (total sum is 1, sample [0.5, 0.1, 0.1, 0.3]
-        :return:             selected value
-        """
-        return self._gen.choice(items, size=1, p=probability)[0]
+    # def rnd_int(self, low, high) -> int:
+    #     return self._gen.integers(low, high)
+    #
+    # def rnd_bool(self) -> bool:
+    #     return bool(self._gen.integers(0, 2))
+    #
+    # def rnd_choose(self, items: list=[], probability: list=None):
+    #     """
+    #     Generate random value from list and based on defined probabilities
+    #
+    #     :param items:        item for selection
+    #     :param probability:  probability items (total sum is 1, sample [0.5, 0.1, 0.1, 0.3]
+    #     :return:             selected value
+    #     """
+    #     return self._gen.choice(items, size=1, p=probability)[0]
 
     def clean(self):
         self.model.clear()
