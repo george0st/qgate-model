@@ -26,11 +26,4 @@ class BaseTest(Base):
         pass
 
     def save(self, path, dir: str):
-        # (self._output_path, label, compress)
-
-        path=os.path.join(path, dir)
-        if not os.path.exists(path):
-            os.makedirs(path)
-
-        # print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self.name}', dir: '{dir}'...")
-        df=pd.DataFrame(self.model)
+        pass
