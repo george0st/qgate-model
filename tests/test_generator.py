@@ -27,7 +27,7 @@ class TestGenerator(unittest.TestCase):
     def test_generate_compress(self):
 
         lbl="0-size-20,20-compress"
-        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
+        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
         generator.generate(label=lbl, count=20, bulk_max=20, compress=True)
 
         dir=path.join(TestGenerator.OUTPUT_ADR, lbl)
@@ -37,7 +37,7 @@ class TestGenerator(unittest.TestCase):
     def test_generate_compress_smallbulk(self):
         lbl="0-size-20,6-compress"
 
-        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
+        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
         generator.generate(label=lbl, count=20, bulk_max=6, compress=True)
 
         dir=path.join(TestGenerator.OUTPUT_ADR, lbl)
@@ -47,7 +47,7 @@ class TestGenerator(unittest.TestCase):
     def test_generate(self):
         lbl = "0-size-200,20"
 
-        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
+        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
         generator.generate(label=lbl, count=200, bulk_max=20, compress=False)
 
         dir=path.join(TestGenerator.OUTPUT_ADR, lbl)
@@ -57,7 +57,7 @@ class TestGenerator(unittest.TestCase):
     def test_generate_smallbulk(self):
         lbl = "0-size-20,6"
 
-        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
+        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
         generator.generate(label=lbl, count=20, bulk_max=6, compress=False)
 
         dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
@@ -67,7 +67,7 @@ class TestGenerator(unittest.TestCase):
     def test_generate_bigbulk(self):
         lbl = "0-size-2000,2000"
 
-        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR)
+        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
         generator.generate(label=lbl, count=2000, bulk_max=2000, compress=False)
 
         dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
