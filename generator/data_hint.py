@@ -36,6 +36,14 @@ class DataHint(BaseTest):
             contact=contacts_party[self.rnd_int(0, len(contacts_party))]
             model.append(contact)
 
+        # random relation
+        relations = self.gmodel[BasicRelation.NAME]
+        relation_party = [r for r in relations if r['party-id'] == partyid]
+        if len(relation_party) > 0:
+            relation = relation_party[self.rnd_int(0, len(relation_party))]
+            model.append(relation)
+
+        # random account
 
             # iteration cross all gmodel entities
 
