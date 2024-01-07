@@ -6,6 +6,8 @@ import os
 from generator.base_test import BaseTest
 from generator.basic_party import BasicParty
 from generator.basic_contact import BasicContact
+from generator.basic_relation import BasicRelation
+
 
 class DataHint(BaseTest):
     NAME = "02-data-hint"
@@ -34,8 +36,6 @@ class DataHint(BaseTest):
             contact=contacts_party[self.rnd_int(0, len(contacts_party))]
             model.append(contact)
 
-        # random relation
-
 
             # iteration cross all gmodel entities
 
@@ -48,10 +48,10 @@ class DataHint(BaseTest):
 
     def save(self, path, dir: str):
         # (self._output_path, label, compress)
-
-        path=os.path.join(path, dir)
         if not os.path.exists(path):
             os.makedirs(path)
+
+        os.path.join(path, f"{dir}.json"),
 
         # print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self.name}', dir: '{dir}'...")
         #df=pd.DataFrame(self.model)
