@@ -7,6 +7,7 @@ from generator.base_test import BaseTest
 from generator.basic_party import BasicParty
 from generator.basic_contact import BasicContact
 from generator.basic_relation import BasicRelation
+from generator.basic_account import BasicAccount
 
 
 class DataHint(BaseTest):
@@ -44,6 +45,13 @@ class DataHint(BaseTest):
             model.append(relation)
 
         # random account
+        accounts = self.gmodel[BasicAccount.NAME]
+        account_party = [a for a in relations if a['party-id'] == partyid]
+        if len(account_party) > 0:
+            account = account_party[self.rnd_int(0, len(account_party))]
+            model.append(account)
+
+        # transaction
 
             # iteration cross all gmodel entities
 
