@@ -48,19 +48,21 @@ class DataHint(BaseTest):
             model.append(relation)
 
         # random account
+        accountid=None
         accounts = self.gmodel[BasicAccount.NAME]
-        account_party = [a for a in relations if a['party-id'] == partyid]
+        account_party = [a for a in accounts if a['party-id'] == partyid]
         if len(account_party) > 0:
             account = account_party[self.rnd_int(0, len(account_party))]
+            accountid = account["account-id"]
             model.append(account)
 
-        # TODO: add transaction
         # transaction
-        # accounts = self.gmodel[BasicAccount.NAME]
-        # account_party = [a for a in relations if a['party-id'] == partyid]
-        # if len(account_party) > 0:
-        #     account = account_party[self.rnd_int(0, len(account_party))]
-        #     model.append(account)
+        if accountid:
+            transactions = self.gmodel[BasicTransaction.NAME]
+            transaction_account = [t for t in transactions if t['account-id'] == accountid]
+            if len(transaction_account) > 0:
+                transaction = transaction_account[self.rnd_int(0, len(transaction_account))]
+                model.append(transaction)
 
         # event
         events = self.gmodel[BasicEvent.NAME]
