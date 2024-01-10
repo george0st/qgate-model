@@ -53,6 +53,14 @@ class DataHint(BaseTest):
 
         # transaction
 
+
+        # event
+        events = self.gmodel[BasicAccount.NAME]
+        event_party = [e for e in events if e['party-id'] == partyid]
+        if len(event_party) > 0:
+            event = event_party[self.rnd_int(0, len(event_party))]
+            model.append(event)
+
             # iteration cross all gmodel entities
 
             # start with party
