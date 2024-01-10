@@ -51,8 +51,7 @@ class DataHint(BaseTest):
             account = account_party[self.rnd_int(0, len(account_party))]
             model.append(account)
 
-        # transaction
-
+        # TODO: add transaction
 
         # event
         events = self.gmodel[BasicAccount.NAME]
@@ -67,14 +66,6 @@ class DataHint(BaseTest):
         if len(communication_party) > 0:
             communication = communication_party[self.rnd_int(0, len(communication_party))]
             model.append(communication)
-
-
-            # iteration cross all gmodel entities
-
-            # start with party
-                # random selection party from current bundle
-
-            # iteration cross other entities and select random values based on defined party
 
         self.model.append(model)
 
