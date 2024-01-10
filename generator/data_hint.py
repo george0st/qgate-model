@@ -27,9 +27,10 @@ class DataHint(BaseTest):
         # generate one data set
         model = []
 
-        # random party
+        # random party (focus on 'Customer' because they have accounts and transactions
         parties = self.gmodel[BasicParty.NAME]
-        party=parties[self.rnd_int(0, len(parties))]
+        parties_customer = [c for c in parties if c['party-type']=='Customer']
+        party=parties_customer[self.rnd_int(0, len(parties_customer))]
         partyid = party['party-id']
         model.append(party)
 
