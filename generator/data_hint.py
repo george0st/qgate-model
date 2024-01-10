@@ -8,6 +8,9 @@ from generator.basic_party import BasicParty
 from generator.basic_contact import BasicContact
 from generator.basic_relation import BasicRelation
 from generator.basic_account import BasicAccount
+from generator.basic_transaction import BasicTransaction
+from generator.basic_event import BasicEvent
+from generator.basic_communication import BasicCommunication
 
 
 class DataHint(BaseTest):
@@ -52,16 +55,22 @@ class DataHint(BaseTest):
             model.append(account)
 
         # TODO: add transaction
+        # transaction
+        # accounts = self.gmodel[BasicAccount.NAME]
+        # account_party = [a for a in relations if a['party-id'] == partyid]
+        # if len(account_party) > 0:
+        #     account = account_party[self.rnd_int(0, len(account_party))]
+        #     model.append(account)
 
         # event
-        events = self.gmodel[BasicAccount.NAME]
+        events = self.gmodel[BasicEvent.NAME]
         event_party = [e for e in events if e['party-id'] == partyid]
         if len(event_party) > 0:
             event = event_party[self.rnd_int(0, len(event_party))]
             model.append(event)
 
         # communication
-        communications = self.gmodel[BasicAccount.NAME]
+        communications = self.gmodel[BasicCommunication.NAME]
         communication_party = [c for c in communications if c['party-id'] == partyid]
         if len(communication_party) > 0:
             communication = communication_party[self.rnd_int(0, len(communication_party))]
