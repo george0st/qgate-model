@@ -61,6 +61,14 @@ class DataHint(BaseTest):
             event = event_party[self.rnd_int(0, len(event_party))]
             model.append(event)
 
+        # communication
+        communications = self.gmodel[BasicAccount.NAME]
+        communication_party = [c for c in communications if c['party-id'] == partyid]
+        if len(communication_party) > 0:
+            communication = communication_party[self.rnd_int(0, len(communication_party))]
+            model.append(communication)
+
+
             # iteration cross all gmodel entities
 
             # start with party
