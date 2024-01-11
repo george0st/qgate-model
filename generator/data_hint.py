@@ -35,21 +35,21 @@ class DataHint(BaseTest):
             parties_customer = parties
         party=parties_customer[self.rnd_int(0, len(parties_customer))]
         partyid = party['party-id']
-        model.append(party)
+        model.append({BasicParty.NAME: party})
 
         # random contact based on party
         contacts = self.gmodel[BasicContact.NAME]
         contacts_party = [c for c in contacts if c['party-id']==partyid]
         if len(contacts_party)>0:
             contact=contacts_party[self.rnd_int(0, len(contacts_party))]
-            model.append(contact)
+            model.append({BasicContact.NAME: contact})
 
         # random relation
         relations = self.gmodel[BasicRelation.NAME]
         relation_party = [r for r in relations if r['party-id'] == partyid]
         if len(relation_party) > 0:
             relation = relation_party[self.rnd_int(0, len(relation_party))]
-            model.append(relation)
+            model.append({BasicRelation.NAME: relation})
 
         # random account
         accountid=None
@@ -58,7 +58,7 @@ class DataHint(BaseTest):
         if len(account_party) > 0:
             account = account_party[self.rnd_int(0, len(account_party))]
             accountid = account["account-id"]
-            model.append(account)
+            model.append({BasicAccount.NAME: account})
 
         # transaction
         if accountid:
@@ -66,21 +66,21 @@ class DataHint(BaseTest):
             transaction_account = [t for t in transactions if t['account-id'] == accountid]
             if len(transaction_account) > 0:
                 transaction = transaction_account[self.rnd_int(0, len(transaction_account))]
-                model.append(transaction)
+                model.append({BasicTransaction.NAME: transaction})
 
         # event
         events = self.gmodel[BasicEvent.NAME]
         event_party = [e for e in events if e['party-id'] == partyid]
         if len(event_party) > 0:
             event = event_party[self.rnd_int(0, len(event_party))]
-            model.append(event)
+            model.append({BasicEvent.NAME: event})
 
         # communication
         communications = self.gmodel[BasicCommunication.NAME]
         communication_party = [c for c in communications if c['party-id'] == partyid]
         if len(communication_party) > 0:
             communication = communication_party[self.rnd_int(0, len(communication_party))]
-            model.append(communication)
+            model.append({BasicCommunication.NAME: communication})
 
         self.model.append(model)
 
