@@ -1,4 +1,5 @@
-import datetime
+from datetime import datetime, date, time
+import json
 import math
 import uuid
 import os
@@ -85,11 +86,17 @@ class DataHint(BaseTest):
         self.model.append(model)
 
     def save(self, path, dir: str):
-        # (self._output_path, label, compress)
         if not os.path.exists(path):
             os.makedirs(path)
 
-        os.path.join(path, f"{dir}.json"),
+        json_path=os.path.join(path, f"{dir}xx.json")
+
+        with open(json_path, "w") as out_file:
+            json.dump(self.model, out_file, indent=4, default=self.datetime_handler)
 
         # print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self.name}', dir: '{dir}'...")
         #df=pd.DataFrame(self.model)
+
+    def datetime_handler(self,obj):
+        if isinstance(obj, (datetime, date, time)):
+            return str(obj)
