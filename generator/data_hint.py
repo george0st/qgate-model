@@ -91,6 +91,12 @@ class DataHint(BaseTest):
 
         json_path=os.path.join(path, f"{dir}xx.json")
 
+        # "name": "01-size-100",
+        # "description": "Data hints (sample of data) for testing",
+        # "kind": "test",
+        # "spec": {
+
+
         with open(json_path, "w") as out_file:
             json.dump(self.model, out_file, indent=4, default=self.datetime_handler)
 
