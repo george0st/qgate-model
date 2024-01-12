@@ -11,7 +11,7 @@ class BaseTest(Base):
     def __init__(self, path, gmodel, name):
         super().__init__()
         self._gen = np.random.default_rng()
-        self.model = []
+        self.model = {}
         self.gmodel = gmodel
         self._name = name
 

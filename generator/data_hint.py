@@ -21,12 +21,17 @@ class DataHint(BaseTest):
         super().__init__(path, gmodel, DataHint.NAME)
 
     def generate(self, count):
-        for i in range(count):
-            self._generate()
+        self.model["name"] = ""
+        self.model["description"] = ""
+        self.model["kind"]="test"
+        self.model["spec"]={}
 
-    def _generate(self):
+        for i in range(count):
+            self._generate(i)
+
+    def _generate(self,i):
         # generate one data set
-        model = []
+        model = {}
 
         # random party (focus on 'Customer' because they have accounts and transactions also)
         parties = self.gmodel[BasicParty.NAME]
@@ -36,21 +41,21 @@ class DataHint(BaseTest):
             parties_customer = parties
         party=parties_customer[self.rnd_int(0, len(parties_customer))]
         partyid = party['party-id']
-        model.append({BasicParty.NAME: party})
+        model[BasicParty.NAME] = party
 
         # random contact based on party
         contacts = self.gmodel[BasicContact.NAME]
         contacts_party = [c for c in contacts if c['party-id']==partyid]
         if len(contacts_party)>0:
             contact=contacts_party[self.rnd_int(0, len(contacts_party))]
-            model.append({BasicContact.NAME: contact})
+            model[BasicContact.NAME] = contact
 
         # random relation
         relations = self.gmodel[BasicRelation.NAME]
         relation_party = [r for r in relations if r['party-id'] == partyid]
         if len(relation_party) > 0:
             relation = relation_party[self.rnd_int(0, len(relation_party))]
-            model.append({BasicRelation.NAME: relation})
+            model[BasicRelation.NAME] = relation
 
         # random account
         accountid=None
@@ -59,7 +64,7 @@ class DataHint(BaseTest):
         if len(account_party) > 0:
             account = account_party[self.rnd_int(0, len(account_party))]
             accountid = account["account-id"]
-            model.append({BasicAccount.NAME: account})
+            model[BasicAccount.NAME] = account
 
         # transaction
         if accountid:
@@ -67,38 +72,35 @@ class DataHint(BaseTest):
             transaction_account = [t for t in transactions if t['account-id'] == accountid]
             if len(transaction_account) > 0:
                 transaction = transaction_account[self.rnd_int(0, len(transaction_account))]
-                model.append({BasicTransaction.NAME: transaction})
+                model[BasicTransaction.NAME] = transaction
 
         # event
         events = self.gmodel[BasicEvent.NAME]
         event_party = [e for e in events if e['party-id'] == partyid]
         if len(event_party) > 0:
             event = event_party[self.rnd_int(0, len(event_party))]
-            model.append({BasicEvent.NAME: event})
+            model[BasicEvent.NAME] = event
 
         # communication
         communications = self.gmodel[BasicCommunication.NAME]
         communication_party = [c for c in communications if c['party-id'] == partyid]
         if len(communication_party) > 0:
             communication = communication_party[self.rnd_int(0, len(communication_party))]
-            model.append({BasicCommunication.NAME: communication})
+            model[BasicCommunication.NAME] = communication
 
-        self.model.append(model)
+        self.model["spec"][f"DataHint-{i}"] = model
 
     def save(self, path, dir: str):
         if not os.path.exists(path):
             os.makedirs(path)
 
-        json_path=os.path.join(path, f"{dir}xx.json")
+        json_path=os.path.join(path, f"{dir}.json")
 
-        # "name": "01-size-100",
-        # "description": "Data hints (sample of data) for testing",
-        # "kind": "test",
-        # "spec": {
-
+        self.model["name"] = dir
+        self.model["description"] = f"Data hints (sample of data) for testing '{dir}'"
 
         with open(json_path, "w") as out_file:
-            json.dump(self.model, out_file, indent=4, default=self.datetime_handler)
+            json.dump(self.model, out_file, indent=2, default=self.datetime_handler)
 
         # print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self.name}', dir: '{dir}'...")
         #df=pd.DataFrame(self.model)
