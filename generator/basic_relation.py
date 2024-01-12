@@ -33,7 +33,10 @@ class BasicRelation(BaseData):
         # iteration cross all parties
         for party in parties:
 
-            relations=self.rnd_choose(range(0, BasicRelation.MAX_RELATIONS), [0.55, 0.3, 0.1, 0.04, 0.01])
+            if party['party-type']=="Customer":
+                relations=self.rnd_choose(range(0, BasicRelation.MAX_RELATIONS), [0.15, 0.5, 0.3, 0.04, 0.01])
+            else:
+                relations=self.rnd_choose(range(0, BasicRelation.MAX_RELATIONS), [0.55, 0.3, 0.1, 0.04, 0.01])
             for relation in range(relations):
 
                 # add new model
