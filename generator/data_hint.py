@@ -100,7 +100,7 @@ class DataHint(BaseTest):
         self.model["description"] = f"Data hints (sample of data) for testing '{dir}'"
 
         with open(json_path, "w") as out_file:
-            json.dump(self.model, out_file, indent=4, default=self.datetime_handler)
+            json.dump(self.model, out_file, indent=2, default=self.datetime_handler)
 
         # print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self.name}', dir: '{dir}'...")
         #df=pd.DataFrame(self.model)
