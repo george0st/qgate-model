@@ -94,7 +94,7 @@ class DataHint(BaseTest):
         if not os.path.exists(path):
             os.makedirs(path)
 
-        json_path=os.path.join(path, f"{dir}xx.json")
+        json_path=os.path.join(path, f"{dir}.json")
 
         self.model["name"] = dir
         self.model["description"] = f"Data hints (sample of data) for testing '{dir}'"
