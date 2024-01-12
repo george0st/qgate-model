@@ -21,10 +21,16 @@ class DataHint(BaseTest):
         super().__init__(path, gmodel, DataHint.NAME)
 
     def generate(self, count):
-        for i in range(count):
-            self._generate()
 
-    def _generate(self):
+        self.model["name"]=dir
+        self.model["description"]="sss"
+        self.model["kind"]="test"
+        self.model["spec"]={}
+
+        for i in range(count):
+            self._generate(i)
+
+    def _generate(self,i):
         # generate one data set
         model = []
 
@@ -83,7 +89,7 @@ class DataHint(BaseTest):
             communication = communication_party[self.rnd_int(0, len(communication_party))]
             model.append({BasicCommunication.NAME: communication})
 
-        self.model.append(model)
+        self.model["spec"][str(i)] = model
 
     def save(self, path, dir: str):
         if not os.path.exists(path):
