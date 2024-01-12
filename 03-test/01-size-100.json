@@ -1,34 +1,256 @@
 {
   "name": "01-size-100",
-  "description": "Data hints (sample of data) for testing",
+  "description": "Data hints (sample of data) for testing '01-size-100'",
   "kind": "test",
   "spec": {
-        "header":
-        {
-          "01-basic-party": ["a","b","c"],
-          "02-basic-contact": ["aa","bb","cc"]
-        },
-        "data": {
-          "00-aa": [
-            {
-              "a": 1,
-              "b": 2
-            },
-            {
-              "c": 3,
-              "d": 4
-            }
-          ],
-          "01-basic-party": [
-            [1,2,3],
-            [2,3,4],
-            [3,4,5]
-          ],
-          "02-basic-contact": [
-            [11,22,33],
-            [22,33,44],
-            [33,44,55]
-          ]
-        }
+    "DataHint-0": {
+      "01-basic-party": {
+        "party-id": "0b03ed84-f48b-4f09-ac1c-ba6eab242b07",
+        "party-establishment": "1953-05-18",
+        "party-type": "Customer",
+        "party-typedate": "2005-04-05",
+        "party-gender": "M",
+        "party-education": "Elementary school",
+        "party-familystatus": "Single",
+        "party-nchild": null,
+        "party-industry": "Real Estate",
+        "party-industryposition": "Analyst",
+        "party-residencecountry": "Iceland",
+        "party-city": "Millstown",
+        "party-income": null,
+        "party-incometype": "Earned",
+        "party-peoplehousehold": null,
+        "party-incomehousehold": 154800,
+        "party-expenseshousehold": 23220,
+        "party-currency": "EUR",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "02-basic-contact": {
+        "party-id": "0b03ed84-f48b-4f09-ac1c-ba6eab242b07",
+        "contact-id": "04cb409b-9043-4588-9940-76463db6089e",
+        "contact-email": "qgray@example.org",
+        "contact-phone": "+1-644-269-7557x02793",
+        "contact-state": "Active",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "03-basic-relation": {
+        "party-id": "0b03ed84-f48b-4f09-ac1c-ba6eab242b07",
+        "relation-id": "95a44a1f-3615-40bb-848b-054cba2ad4a9",
+        "relation-childid": "aaa27d12-023b-49b1-8b7d-bc0ceddcaf6f",
+        "relation-type": null,
+        "relation-date": "1970-01-01 08:00:00",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "04-basic-account": {
+        "party-id": "0b03ed84-f48b-4f09-ac1c-ba6eab242b07",
+        "account-id": "2deb5776-ab06-41fd-9635-7b67a12dfcea",
+        "account-type": "current account",
+        "account-createdate": "2005-04-05",
+        "account-state": "active",
+        "account-nonactivedate": "2200-01-01",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "05-basic-transaction": {
+        "account-id": "2deb5776-ab06-41fd-9635-7b67a12dfcea",
+        "transaction-id": "c4df4970-b426-47b5-8734-2098e0398c3c",
+        "transaction-direction": "Incoming",
+        "transaction-type": "Standard",
+        "transaction-value": null,
+        "transaction-currency": "USD",
+        "transaction-description": "Clear mother trial second property.",
+        "transaction-date": "2021-01-18",
+        "counterparty-name": "Jennifer Jackson",
+        "counterparty-iban": "GB78TLTR01483262861335",
+        "counterparty-other": null,
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "06-basic-event": {
+        "party-id": "0b03ed84-f48b-4f09-ac1c-ba6eab242b07",
+        "event-id": "4bce1ded-ea1c-4149-baa9-f86152ddc1c4",
+        "session-id": "2ba56ca2-0943-4330-9af5-773bac2502cc",
+        "event-group": "product",
+        "event-category": "account detail",
+        "event-action": "show",
+        "event-detail": null,
+        "event-date": "2023-11-08 00:04:04",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "07-basic-communication": {
+        "party-id": "0b03ed84-f48b-4f09-ac1c-ba6eab242b07",
+        "communication-id": "6951d9e7-6fed-450c-9a98-64eef02363a9",
+        "session-id": "a6e37ffd-8ba0-4010-98e3-365817a6af5f",
+        "content": "About data song operation for tonight half exist free pressure responsibility mission relate defense east.",
+        "content-type": "text",
+        "channel": "email",
+        "communication-date": "2023-12-24 19:39:33",
+        "record-date": "2024-01-12 20:07:17"
+      }
+    },
+    "DataHint-1": {
+      "01-basic-party": {
+        "party-id": "eceafd16-5690-4eca-a6d3-0ac05cf90d36",
+        "party-establishment": "2008-10-10",
+        "party-type": "Customer",
+        "party-typedate": "2017-02-13",
+        "party-gender": "F",
+        "party-education": "High school",
+        "party-familystatus": "Married",
+        "party-nchild": null,
+        "party-industry": "Financial services",
+        "party-industryposition": "Cashier",
+        "party-residencecountry": "Mozambique",
+        "party-city": "Lake Dwaynefort",
+        "party-income": null,
+        "party-incometype": "Earned",
+        "party-peoplehousehold": null,
+        "party-incomehousehold": 106000,
+        "party-expenseshousehold": 13780,
+        "party-currency": "USD",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "02-basic-contact": {
+        "party-id": "eceafd16-5690-4eca-a6d3-0ac05cf90d36",
+        "contact-id": "366f070e-a147-4651-80e1-64b815a46a85",
+        "contact-email": "wgonzales@example.com",
+        "contact-phone": "667.628.9750",
+        "contact-state": "Active",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "03-basic-relation": {
+        "party-id": "eceafd16-5690-4eca-a6d3-0ac05cf90d36",
+        "relation-id": "8e10b357-20a6-481f-830e-6b5fd86da5df",
+        "relation-childid": "fa327777-9f85-43f0-b100-0344edf0896c",
+        "relation-type": null,
+        "relation-date": "1970-01-01 08:00:00",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "04-basic-account": {
+        "party-id": "eceafd16-5690-4eca-a6d3-0ac05cf90d36",
+        "account-id": "6fcb004e-e515-4557-9e7f-709243f65bbb",
+        "account-type": "current account",
+        "account-createdate": "2017-02-13",
+        "account-state": "active",
+        "account-nonactivedate": "2200-01-01",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "05-basic-transaction": {
+        "account-id": "6fcb004e-e515-4557-9e7f-709243f65bbb",
+        "transaction-id": "7aa8d17d-cf76-4f28-8b34-45dd75427d27",
+        "transaction-direction": "Incoming",
+        "transaction-type": "Standard",
+        "transaction-value": null,
+        "transaction-currency": "USD",
+        "transaction-description": "Never spend moment. Become only condition discuss bank clear.",
+        "transaction-date": "2021-10-21",
+        "counterparty-name": "Zachary Cruz",
+        "counterparty-iban": "GB90NFLX68999527132619",
+        "counterparty-other": null,
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "06-basic-event": {
+        "party-id": "eceafd16-5690-4eca-a6d3-0ac05cf90d36",
+        "event-id": "a2daaaab-e91d-4c38-81e9-c9a60f7e8f7a",
+        "session-id": "d610f73f-2caa-48f3-a145-5be39155d2b1",
+        "event-group": "offer",
+        "event-category": "service list",
+        "event-action": "show",
+        "event-detail": null,
+        "event-date": "2023-10-28 10:34:45",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "07-basic-communication": {
+        "party-id": "eceafd16-5690-4eca-a6d3-0ac05cf90d36",
+        "communication-id": "7257eac9-fb41-4b4f-aea1-b657207a224b",
+        "session-id": "77debd82-6cdf-492a-90e7-a007a20fbc53",
+        "content": "Thank you for your help.",
+        "content-type": "text",
+        "channel": "chat",
+        "communication-date": "2023-11-28 04:56:05",
+        "record-date": "2024-01-12 20:07:17"
+      }
+    },
+    "DataHint-2": {
+      "01-basic-party": {
+        "party-id": "21969955-0454-4f4f-9f8a-c3e8a04a2ff7",
+        "party-establishment": "1932-10-21",
+        "party-type": "Customer",
+        "party-typedate": "1993-12-01",
+        "party-gender": "F",
+        "party-education": "Elementary school",
+        "party-familystatus": "Divorced",
+        "party-nchild": null,
+        "party-industry": "Transport",
+        "party-industryposition": "Developer",
+        "party-residencecountry": "British Virgin Islands",
+        "party-city": "New Stephen",
+        "party-income": null,
+        "party-incometype": "Earned",
+        "party-peoplehousehold": null,
+        "party-incomehousehold": 108000,
+        "party-expenseshousehold": 32400,
+        "party-currency": "USD",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "02-basic-contact": {
+        "party-id": "21969955-0454-4f4f-9f8a-c3e8a04a2ff7",
+        "contact-id": "e8f3cbce-975d-427f-b211-616c623a61fd",
+        "contact-email": "olsonbeverly@example.com",
+        "contact-phone": "807-352-3787",
+        "contact-state": "Active",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "03-basic-relation": {
+        "party-id": "21969955-0454-4f4f-9f8a-c3e8a04a2ff7",
+        "relation-id": "f4072018-d629-457a-844d-b8e41035f1e2",
+        "relation-childid": "3ee839e3-9fd4-4957-b30e-a50a8f19f1ce",
+        "relation-type": null,
+        "relation-date": "1970-01-01 08:00:00",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "04-basic-account": {
+        "party-id": "21969955-0454-4f4f-9f8a-c3e8a04a2ff7",
+        "account-id": "9e594cb2-dec4-464c-8bf9-ae12d68798a1",
+        "account-type": "current account",
+        "account-createdate": "1993-12-01",
+        "account-state": "active",
+        "account-nonactivedate": "2200-01-01",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "05-basic-transaction": {
+        "account-id": "9e594cb2-dec4-464c-8bf9-ae12d68798a1",
+        "transaction-id": "c98f40a9-b6c9-4152-8880-91dabcc6d886",
+        "transaction-direction": "Incoming",
+        "transaction-type": "Standard",
+        "transaction-value": null,
+        "transaction-currency": "USD",
+        "transaction-description": "Treat behavior value system.",
+        "transaction-date": "2015-12-23",
+        "counterparty-name": "Timothy Ward",
+        "counterparty-iban": "GB73HZWI88966547639752",
+        "counterparty-other": null,
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "06-basic-event": {
+        "party-id": "21969955-0454-4f4f-9f8a-c3e8a04a2ff7",
+        "event-id": "e0e02078-92a8-4f6f-857d-9323344f5dd2",
+        "session-id": "d67e0419-18ed-4aa1-82b6-0d06b99c745b",
+        "event-group": "offer",
+        "event-category": "service list",
+        "event-action": "show",
+        "event-detail": null,
+        "event-date": "2023-11-29 20:56:10",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "07-basic-communication": {
+        "party-id": "21969955-0454-4f4f-9f8a-c3e8a04a2ff7",
+        "communication-id": "f65a69e2-14d4-4209-9d8d-479e4c37f366",
+        "session-id": "709ca5c8-587e-47c5-bbf4-69ef5e16dfaf",
+        "content": "How can I open or close a bank account?",
+        "content-type": "text",
+        "channel": "email",
+        "communication-date": "2023-12-07 21:00:29",
+        "record-date": "2024-01-12 20:07:17"
+      }
+    }
   }
 }

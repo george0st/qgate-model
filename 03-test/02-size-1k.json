@@ -1,24 +1,248 @@
 {
-  "name": "02-size-1k",
-  "description": "Data hints (sample of data) for testing",
+  "name": "02-size-1K",
+  "description": "Data hints (sample of data) for testing '02-size-1K'",
   "kind": "test",
   "spec": {
-        "header":
-        {
-          "01-basic-party": ["a","b","c"],
-          "02-basic-contact": ["aa","bb","cc"]
-        },
-        "data": {
-          "01-basic-party": [
-            [1,2,3],
-            [2,3,4],
-            [3,4,5]
-          ],
-          "02-basic-contact": [
-            [11,22,33],
-            [22,33,44],
-            [33,44,55]
-          ]
-        }
+    "DataHint-0": {
+      "01-basic-party": {
+        "party-id": "5f9003f5-bf03-45b4-a47a-d8987355e69b",
+        "party-establishment": "1974-04-17",
+        "party-type": "Customer",
+        "party-typedate": "2003-12-29",
+        "party-gender": "F",
+        "party-education": "University",
+        "party-familystatus": "Single",
+        "party-nchild": null,
+        "party-industry": "Telcommunications",
+        "party-industryposition": "Accountant",
+        "party-residencecountry": "Thailand",
+        "party-city": "Mitchellland",
+        "party-income": null,
+        "party-incometype": "Earned",
+        "party-peoplehousehold": null,
+        "party-incomehousehold": 136000,
+        "party-expenseshousehold": 31280,
+        "party-currency": "USD",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "02-basic-contact": {
+        "party-id": "5f9003f5-bf03-45b4-a47a-d8987355e69b",
+        "contact-id": "a9bb067a-a8f3-4e56-be4f-ae125b5527a7",
+        "contact-email": "marcushoffman@example.net",
+        "contact-phone": "001-224-426-4838x11071",
+        "contact-state": "Active",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "04-basic-account": {
+        "party-id": "5f9003f5-bf03-45b4-a47a-d8987355e69b",
+        "account-id": "2237c10d-8d59-4411-b747-f1546bb9cf32",
+        "account-type": "current account",
+        "account-createdate": "2003-12-29",
+        "account-state": "active",
+        "account-nonactivedate": "2200-01-01",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "05-basic-transaction": {
+        "account-id": "2237c10d-8d59-4411-b747-f1546bb9cf32",
+        "transaction-id": "a6748196-7183-4a2a-82d8-fb667e959e36",
+        "transaction-direction": "Incoming",
+        "transaction-type": "Instant",
+        "transaction-value": null,
+        "transaction-currency": "USD",
+        "transaction-description": "Dog stage upon. Budget its trade imagine.",
+        "transaction-date": "2012-04-03",
+        "counterparty-name": "Marie Beltran",
+        "counterparty-iban": "GB52JMDN03168157707246",
+        "counterparty-other": null,
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "06-basic-event": {
+        "party-id": "5f9003f5-bf03-45b4-a47a-d8987355e69b",
+        "event-id": "ce72dab3-4da4-4448-b681-d13130931570",
+        "session-id": "d580b667-41d4-48a0-96cd-a828930f8dc2",
+        "event-group": "offer",
+        "event-category": "product list",
+        "event-action": "show",
+        "event-detail": null,
+        "event-date": "2023-11-19 05:06:54",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "07-basic-communication": {
+        "party-id": "5f9003f5-bf03-45b4-a47a-d8987355e69b",
+        "communication-id": "995032b9-15eb-4637-83eb-47fa4c37b6c3",
+        "session-id": "9cd344fb-6038-40d5-b797-a93731853a12",
+        "content": "What are the shipping options?",
+        "content-type": "text",
+        "channel": "chat",
+        "communication-date": "2023-12-07 08:27:45",
+        "record-date": "2024-01-12 20:07:17"
+      }
+    },
+    "DataHint-1": {
+      "01-basic-party": {
+        "party-id": "6368e368-3c93-448b-9b6d-184c5b1948e1",
+        "party-establishment": "1928-06-25",
+        "party-type": "Customer",
+        "party-typedate": "2018-01-12",
+        "party-gender": "F",
+        "party-education": "High school",
+        "party-familystatus": "Married",
+        "party-nchild": null,
+        "party-industry": "Medical services",
+        "party-industryposition": "Receptionist",
+        "party-residencecountry": "Senegal",
+        "party-city": "Hansonside",
+        "party-income": null,
+        "party-incometype": "Earned",
+        "party-peoplehousehold": null,
+        "party-incomehousehold": 84000,
+        "party-expenseshousehold": 38640,
+        "party-currency": "USD",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "02-basic-contact": {
+        "party-id": "6368e368-3c93-448b-9b6d-184c5b1948e1",
+        "contact-id": "6d3ae5fd-afe6-49b5-9b5f-4086c00002ff",
+        "contact-email": "otorres@example.net",
+        "contact-phone": "431-305-5315",
+        "contact-state": "Active",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "03-basic-relation": {
+        "party-id": "6368e368-3c93-448b-9b6d-184c5b1948e1",
+        "relation-id": "57d2040c-0a6d-4123-b13e-52afc165f585",
+        "relation-childid": "465cfd0c-de8d-40cd-9552-ff10a3017346",
+        "relation-type": null,
+        "relation-date": "1970-01-01 08:00:00",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "04-basic-account": {
+        "party-id": "6368e368-3c93-448b-9b6d-184c5b1948e1",
+        "account-id": "2d99257d-5c0f-45ff-9863-c125571ad372",
+        "account-type": "current account",
+        "account-createdate": "2018-01-12",
+        "account-state": "active",
+        "account-nonactivedate": "2200-01-01",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "05-basic-transaction": {
+        "account-id": "2d99257d-5c0f-45ff-9863-c125571ad372",
+        "transaction-id": "62bfdf51-d6af-410f-84ed-3d515381c488",
+        "transaction-direction": "Incoming",
+        "transaction-type": "Standard",
+        "transaction-value": null,
+        "transaction-currency": "USD",
+        "transaction-description": "For respond learn. Site skill pretty line own discuss peace.",
+        "transaction-date": "2021-04-21",
+        "counterparty-name": "Bonnie Murphy",
+        "counterparty-iban": "GB41JVOG81357848065085",
+        "counterparty-other": null,
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "06-basic-event": {
+        "party-id": "6368e368-3c93-448b-9b6d-184c5b1948e1",
+        "event-id": "92683358-96e0-4632-8726-84262883371a",
+        "session-id": "4ef9a4b2-5172-4fd9-ba26-caf32a692883",
+        "event-group": "offer",
+        "event-category": "service list",
+        "event-action": "show",
+        "event-detail": null,
+        "event-date": "2023-12-03 05:01:15",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "07-basic-communication": {
+        "party-id": "6368e368-3c93-448b-9b6d-184c5b1948e1",
+        "communication-id": "9f9d64c6-ad86-4905-a69f-7c3c32c44cc8",
+        "session-id": "77686240-5e8f-4b4b-a4ef-0221871e0419",
+        "content": "How can I find a network provider or hospital near me?",
+        "content-type": "text",
+        "channel": "chat",
+        "communication-date": "2023-11-09 03:40:32",
+        "record-date": "2024-01-12 20:07:17"
+      }
+    },
+    "DataHint-2": {
+      "01-basic-party": {
+        "party-id": "d65d7165-e0bf-4d3d-98b5-8eb18ba73643",
+        "party-establishment": "1925-12-11",
+        "party-type": "Customer",
+        "party-typedate": "2019-08-01",
+        "party-gender": "F",
+        "party-education": "High school",
+        "party-familystatus": "Married",
+        "party-nchild": null,
+        "party-industry": "Mining",
+        "party-industryposition": "Sales",
+        "party-residencecountry": "Serbia",
+        "party-city": "North Pedroview",
+        "party-income": null,
+        "party-incometype": "Earned",
+        "party-peoplehousehold": null,
+        "party-incomehousehold": 255000,
+        "party-expenseshousehold": 48450,
+        "party-currency": "USD",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "02-basic-contact": {
+        "party-id": "d65d7165-e0bf-4d3d-98b5-8eb18ba73643",
+        "contact-id": "d67c49ab-3f21-48a9-8bac-c4459a80f736",
+        "contact-email": "julie75@example.net",
+        "contact-phone": "999.284.8355",
+        "contact-state": "Active",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "03-basic-relation": {
+        "party-id": "d65d7165-e0bf-4d3d-98b5-8eb18ba73643",
+        "relation-id": "a3a983ef-b7db-407c-9ee8-9bab793bf508",
+        "relation-childid": "21936cca-6ac4-4289-8c2c-f0610cae64d4",
+        "relation-type": null,
+        "relation-date": "1970-01-01 08:00:00",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "04-basic-account": {
+        "party-id": "d65d7165-e0bf-4d3d-98b5-8eb18ba73643",
+        "account-id": "578c0cce-301a-499e-9090-c02bef3416ed",
+        "account-type": "current account",
+        "account-createdate": "2019-08-01",
+        "account-state": "active",
+        "account-nonactivedate": "2200-01-01",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "05-basic-transaction": {
+        "account-id": "578c0cce-301a-499e-9090-c02bef3416ed",
+        "transaction-id": "cd05e47e-3f96-4488-9946-2597706e2e64",
+        "transaction-direction": "Incoming",
+        "transaction-type": "Instant",
+        "transaction-value": null,
+        "transaction-currency": "USD",
+        "transaction-description": "Ability create always always deep marriage beautiful.",
+        "transaction-date": "2020-06-11",
+        "counterparty-name": "Ryan Mueller",
+        "counterparty-iban": "GB79ENIQ65193445984774",
+        "counterparty-other": null,
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "06-basic-event": {
+        "party-id": "d65d7165-e0bf-4d3d-98b5-8eb18ba73643",
+        "event-id": "3655c954-1824-45ad-b6e8-b8286865473b",
+        "session-id": "05ea4aaf-505e-4316-8cd3-045c1b6e1163",
+        "event-group": "offer",
+        "event-category": "service list",
+        "event-action": "show",
+        "event-detail": null,
+        "event-date": "2024-01-08 04:26:30",
+        "record-date": "2024-01-12 20:07:17"
+      },
+      "07-basic-communication": {
+        "party-id": "d65d7165-e0bf-4d3d-98b5-8eb18ba73643",
+        "communication-id": "35866dcd-f272-45bf-b248-9c6e298c91bb",
+        "session-id": "36ad995d-62bb-4f4c-b865-88af677a0801",
+        "content": "What is your return policy?",
+        "content-type": "text",
+        "channel": "chat",
+        "communication-date": "2023-12-16 14:41:50",
+        "record-date": "2024-01-12 20:07:17"
+      }
+    }
   }
 }
