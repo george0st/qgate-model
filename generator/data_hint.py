@@ -21,9 +21,8 @@ class DataHint(BaseTest):
         super().__init__(path, gmodel, DataHint.NAME)
 
     def generate(self, count):
-
-        self.model["name"]=dir
-        self.model["description"]="sss"
+        self.model["name"] = ""
+        self.model["description"] = ""
         self.model["kind"]="test"
         self.model["spec"]={}
 
@@ -97,11 +96,8 @@ class DataHint(BaseTest):
 
         json_path=os.path.join(path, f"{dir}xx.json")
 
-        # "name": "01-size-100",
-        # "description": "Data hints (sample of data) for testing",
-        # "kind": "test",
-        # "spec": {
-
+        self.model["name"] = dir
+        self.model["description"] = f"Data hints (sample of data) for testing '{dir}'"
 
         with open(json_path, "w") as out_file:
             json.dump(self.model, out_file, indent=4, default=self.datetime_handler)
