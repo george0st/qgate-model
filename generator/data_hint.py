@@ -88,7 +88,7 @@ class DataHint(BaseTest):
             communication = communication_party[self.rnd_int(0, len(communication_party))]
             model.append({BasicCommunication.NAME: communication})
 
-        self.model["spec"][str(i)] = model
+        self.model["spec"][f"DataHint-{i}"] = model
 
     def save(self, path, dir: str):
         if not os.path.exists(path):
