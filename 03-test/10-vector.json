@@ -3,6 +3,13 @@
   "description": "Setting for test vectors",
   "kind": "test",
   "spec": {
-        "online": ["vector-party"]
+        "online": ["vector-party"],
+        "test": {
+          "vector-party": {
+            "feature-set": "basic-party",
+            "entities": ["party-id"],
+            "features": ["party-establishment", "party-type"]
+          }
+        }
   }
 }
