@@ -27,12 +27,11 @@ The solution contains this simple structure:
    - The high-level [view](#model) to the meta-model for better understanding
  - **01-model**
    - The definition contains 01-projects, 02-feature sets, 03-feature vectors, etc. in JSON format
-   - This model is designed for these [use cases](./docs/usecases.md) 
  - **02-data**
    - The data for meta-model in CSV/GZ format (future support parquet) for party, account, transaction, event, communication, etc.
    - You can also generate your own dataset with requested size (see sample './02-data/03-size-10k.sh' and description 'python main.py generate --help')
  - **03-test**
-   - The information for test simplification e.g. feature vector vs on/off-line data, data hints, etc. 
+   - The information for test simplification e.g. feature vector vs on/off-line data, test/data hints, etc. 
 
  Addition detail, [see](./docs/structure.md)
 
