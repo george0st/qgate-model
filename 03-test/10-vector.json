@@ -6,7 +6,7 @@
         "online": ["vector-party"],
         "test": {
           "vector-party": {
-            "feature-set": "basic-party",
+            "feature-set": "01-basic-party",
             "entities": ["party-id"],
             "features": ["party-establishment", "party-type"]
           }
