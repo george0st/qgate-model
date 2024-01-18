@@ -59,7 +59,6 @@ class BasicParty(BaseData):
         # "description": "Family status for party ('Married','Single', 'Divorced')",
         model['party-familystatus']=self.rnd_choose(["Married", "Single", "Divorced"], [0.5, 0.4, 0.1])
 
-        #ERR
         # "name": "party-nchild",
         # "description": "Count of children",
         model['party-nchild']=self.rnd_choose(range(0, 4), [0.05, 0.6, 0.3, 0.05])
@@ -94,7 +93,6 @@ class BasicParty(BaseData):
         # "description": "Permanent stay-city (part of permanent stay)",
         model['party-city']=self.fake.city()
 
-        # ERR
         # "name": "party-income",
         # "description": "Monthly income in local currency",
         model['party-income']=self.rnd_choose(range(50, 200)) * 1000
@@ -103,7 +101,6 @@ class BasicParty(BaseData):
         # "description": "Type of the main income (e.g. 'Earned', 'Passive', 'Portfolio')",
         model['party-incometype']=self.rnd_choose(["Earned", "Passive", "Portfolio"], [0.96, 0.02, 0.02])
 
-        # ERR
         # "name": "party-peoplehousehold",
         # "description": "Number of people in household",
         model['party-peoplehousehold']=model['party-nchild'] + self.rnd_choose(range(1, 4), [0.05, 0.9, 0.05])
