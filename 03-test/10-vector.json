@@ -14,7 +14,7 @@
           "vector-partycontact": {
             "feature-set": "02-basic-contact",
             "entities": ["party-id"],
-            "features": ["contact-id", "contact-email", "contact-phone", "contact-state"]
+            "features": ["contact-email", "contact-phone", "contact-state"]
           }
 
         }
