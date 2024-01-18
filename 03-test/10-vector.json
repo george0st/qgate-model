@@ -8,7 +8,8 @@
           "vector-party": {
             "feature-set": "01-basic-party",
             "entities": ["party-id"],
-            "features": ["party-establishment", "party-type"]
+            "features": ["party-establishment", "party-type", "party-gender","party-education", "party-familystatus",
+            "party-nchild", "party-industry","party-industryposition", "party-income", "party-incomehousehold"]
           }
         }
   }
