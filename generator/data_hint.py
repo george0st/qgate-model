@@ -3,6 +3,7 @@ import json
 import math
 import uuid
 import os
+import numpy as np
 
 from generator.base_test import BaseTest
 from generator.basic_party import BasicParty
@@ -108,3 +109,6 @@ class DataHint(BaseTest):
     def datetime_handler(self,obj):
         if isinstance(obj, (datetime, date, time)):
             return str(obj)
+
+        if isinstance(obj, np.int32):
+            return int(obj)
