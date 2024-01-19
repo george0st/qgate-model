@@ -4,7 +4,7 @@
   "kind": "test",
   "spec": {
         "online": ["vector-party", "vector-partycontact"],
-        "test": {
+        "tests": {
           "vector-party": {
             "feature-set": "01-basic-party",
             "entities": ["party-id"],
