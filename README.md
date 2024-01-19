@@ -6,10 +6,9 @@
 
 # QGate-Model
 The machine learning meta-model with synthetic data (useful for MLOps/feature store), is independent of machine
-learning solutions (definition in json, data in csv/parquet). It can be used with various of 
-ML/MLOps solutions with or without FeatureStore.
+learning solutions (definition in json, data in csv/parquet).
 
-![Quality-Gate](./docs/assets/icons8-quality-100.png)
+![Quality-Gate](./docs/assets/icons8-quality-100.png) 
 
 ## Usage
 This meta-model is suitable for:
