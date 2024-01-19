@@ -23,6 +23,11 @@
             "feature-set": "02-basic-contact",
             "entities": ["party-id"],
             "features": ["contact-id","contact-email", "contact-phone", "contact-state"]
+          },
+          "vector-partyaccount": {
+            "feature-set": "04-basic-account",
+            "entities": ["party-id"],
+            "features": ["account-id","party-gender", "party-nchild", "account-type","account-state"]
           }
         }
   }

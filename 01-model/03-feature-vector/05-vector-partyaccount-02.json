@@ -7,8 +7,7 @@
           "basic-party.party-gender",
           "basic-party.party-familystatus",
           "basic-party.party-nchild",
-          "basic-account.account-type",
-          "basic-account.account-state"
+          "basic-account.*"
           ]
   }
 }
