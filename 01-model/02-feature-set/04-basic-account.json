@@ -3,7 +3,9 @@
   "description": "Account detail with relation to party",
   "kind": "feature-set",
   "spec": {
-      "targets": ["parquet"],
+      "targets": [
+        "parquet",
+        "redis"],
       "entities": [
         {
           "name": "party-id",
