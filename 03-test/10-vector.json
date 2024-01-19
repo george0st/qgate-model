@@ -34,7 +34,6 @@
             "entities": ["party-id"],
             "features": ["party-id", "account-id", "account-createdate", "account-nonactivedate"]
           }
-
         }
   }
 }
