@@ -12,6 +12,7 @@
     "feature-vectors": [
       "vector-party",
       "vector-partycontact",
+      "vector-partycontact-full",
       "vector-partyaccount",
       "vector-partycontactaccount",
       "vector-accounttransaction"

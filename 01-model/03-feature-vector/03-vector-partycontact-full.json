@@ -1,0 +1,10 @@
+{
+  "name": "vector-partycontact-full",
+  "description": "Vector joins the 'basic-party' and the 'basic-contact'",
+  "kind": "feature-vector",
+  "spec": {
+        "features": [
+          "basic-party.*",
+          "basic-contact.*"]
+  }
+}
