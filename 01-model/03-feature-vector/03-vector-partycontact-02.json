@@ -1,0 +1,12 @@
+{
+  "name": "vector-partycontact-02",
+  "description": "Vector joins the 'basic-party' and the 'basic-contact'",
+  "kind": "feature-vector",
+  "spec": {
+        "features": [
+          "basic-party.party-gender",
+          "basic-party.party-familystatus",
+          "basic-party.party-nchild",
+          "basic-contact.*"]
+  }
+}
