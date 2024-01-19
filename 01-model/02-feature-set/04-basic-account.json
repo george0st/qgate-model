@@ -5,7 +5,8 @@
   "spec": {
       "targets": [
         "parquet",
-        "redis"],
+        "redis"
+      ],
       "entities": [
         {
           "name": "party-id",
