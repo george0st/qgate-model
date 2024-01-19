@@ -3,7 +3,10 @@
   "description": "Setting for test vectors",
   "kind": "test",
   "spec": {
-        "online": ["vector-party", "vector-partycontact", "vector-partycontact-02"],
+        "online": ["vector-party",
+          "vector-partycontact", "vector-partycontact-02",
+          "vector-partyaccount", "vector-partyaccount-02"
+        ],
         "tests": {
           "vector-party": {
             "feature-set": "01-basic-party",
