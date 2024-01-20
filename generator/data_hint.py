@@ -30,7 +30,15 @@ class DataHint(BaseTest):
         for i in range(count):
             self._generate(i)
 
-    def _generate(self,i):
+    def _generate(self, i, last_values=True):
+        """
+        Generate data hints.
+        
+        :param i:
+        :param last_values:     True - generate last value from collection (not random), useful for on-line feature store
+                                where only the last value is stored on e.g. Redis, etc.
+        :return:
+        """
         # generate one data set
         model = {}
 
@@ -48,14 +56,14 @@ class DataHint(BaseTest):
         contacts = self.gmodel[BasicContact.NAME]
         contacts_party = [c for c in contacts if c['party-id']==partyid]
         if len(contacts_party)>0:
-            contact=contacts_party[self.rnd_int(0, len(contacts_party))]
+            contact = contacts_party[-1] if last_values else contacts_party[self.rnd_int(0, len(contacts_party))]
             model[BasicContact.NAME] = contact
 
         # random relation
         relations = self.gmodel[BasicRelation.NAME]
         relation_party = [r for r in relations if r['party-id'] == partyid]
         if len(relation_party) > 0:
-            relation = relation_party[self.rnd_int(0, len(relation_party))]
+            relation = relation_party[-1] if last_values else relation_party[self.rnd_int(0, len(relation_party))]
             model[BasicRelation.NAME] = relation
 
         # random account
@@ -63,7 +71,7 @@ class DataHint(BaseTest):
         accounts = self.gmodel[BasicAccount.NAME]
         account_party = [a for a in accounts if a['party-id'] == partyid]
         if len(account_party) > 0:
-            account = account_party[self.rnd_int(0, len(account_party))]
+            account = account_party[-1] if last_values else account_party[self.rnd_int(0, len(account_party))]
             accountid = account["account-id"]
             model[BasicAccount.NAME] = account
 
@@ -72,21 +80,21 @@ class DataHint(BaseTest):
             transactions = self.gmodel[BasicTransaction.NAME]
             transaction_account = [t for t in transactions if t['account-id'] == accountid]
             if len(transaction_account) > 0:
-                transaction = transaction_account[self.rnd_int(0, len(transaction_account))]
+                transaction = transaction_account[-1] if last_values else transaction_account[self.rnd_int(0, len(transaction_account))]
                 model[BasicTransaction.NAME] = transaction
 
         # event
         events = self.gmodel[BasicEvent.NAME]
         event_party = [e for e in events if e['party-id'] == partyid]
         if len(event_party) > 0:
-            event = event_party[self.rnd_int(0, len(event_party))]
+            event = event_party[-1] if last_values else event_party[self.rnd_int(0, len(event_party))]
             model[BasicEvent.NAME] = event
 
         # communication
         communications = self.gmodel[BasicCommunication.NAME]
         communication_party = [c for c in communications if c['party-id'] == partyid]
         if len(communication_party) > 0:
-            communication = communication_party[self.rnd_int(0, len(communication_party))]
+            communication = communication_party[-1] if last_values else communication_party[self.rnd_int(0, len(communication_party))]
             model[BasicCommunication.NAME] = communication
 
         self.model["spec"][f"DataHint-{i}"] = model
