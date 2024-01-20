@@ -1,0 +1,10 @@
+{
+  "name": "vector-account",
+  "description": "Vector for the 'basic-account'",
+  "kind": "feature-vector",
+  "spec": {
+        "features": [
+          "basic-account.*"
+          ]
+  }
+}

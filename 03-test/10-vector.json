@@ -31,7 +31,7 @@
           },
           "vector-partyaccount-02": {
             "feature-set": "04-basic-account",
-            "entities": ["party-id"],
+            "entities": ["party-id", "account-id"],
             "features": ["party-id", "account-id", "account-createdate", "account-nonactivedate"]
           }
         }
