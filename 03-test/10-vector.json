@@ -3,7 +3,10 @@
   "description": "Setting for test vectors",
   "kind": "test",
   "spec": {
-        "online": ["vector-party", "vector-partycontact", "vector-partycontact-02"],
+        "online": ["vector-party",
+          "vector-partycontact", "vector-partycontact-02",
+          "vector-partyaccount", "vector-partyaccount-02"
+        ],
         "tests": {
           "vector-party": {
             "feature-set": "01-basic-party",
@@ -20,6 +23,16 @@
             "feature-set": "02-basic-contact",
             "entities": ["party-id"],
             "features": ["contact-id","contact-email", "contact-phone", "contact-state"]
+          },
+          "vector-partyaccount": {
+            "feature-set": "04-basic-account",
+            "entities": ["party-id"],
+            "features": ["party-id", "account-type", "account-state"]
+          },
+          "vector-partyaccount-02": {
+            "feature-set": "04-basic-account",
+            "entities": ["party-id"],
+            "features": ["party-id", "account-id", "account-createdate", "account-nonactivedate"]
           }
         }
   }
