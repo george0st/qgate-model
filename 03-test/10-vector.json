@@ -5,7 +5,7 @@
   "spec": {
         "online": ["vector-party",
           "vector-partycontact", "vector-partycontact-02",
-          "vector-partyaccount", "vector-partyaccount-02"
+          "vector-account","vector-partyaccount", "vector-partyaccount-02"
         ],
         "tests": {
           "vector-party": {
@@ -24,6 +24,11 @@
             "entities": ["party-id"],
             "features": ["contact-id","contact-email", "contact-phone", "contact-state"]
           },
+          "vector-account": {
+            "feature-set": "04-basic-account",
+            "entities": ["party-id"],
+            "features": ["party-id", "account-id","account-type", "account-state", "account-createdate", "account-nonactivedate"]
+          },
           "vector-partyaccount": {
             "feature-set": "04-basic-account",
             "entities": ["party-id"],
@@ -31,7 +36,7 @@
           },
           "vector-partyaccount-02": {
             "feature-set": "04-basic-account",
-            "entities": ["party-id"],
+            "entities": ["party-id", "account-id"],
             "features": ["party-id", "account-id", "account-createdate", "account-nonactivedate"]
           }
         }
