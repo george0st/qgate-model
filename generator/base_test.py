@@ -14,11 +14,7 @@ class BaseTest(Base):
         self.model = {}
         self.gmodel = gmodel
         self._name = name
-
-        self.model["name"] = ""
-        self.model["description"] = ""
-        self.model["kind"]="test"
-        self.model["spec"]={}
+        self.clean()
 
     @property
     def name(self):

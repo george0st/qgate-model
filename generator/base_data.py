@@ -17,7 +17,7 @@ class BaseData(Base):
         # self._gen = np.random.default_rng()
         self.gmodel = gmodel
         self._name = name
-
+        self.clean()
 
     @property
     def name(self):
