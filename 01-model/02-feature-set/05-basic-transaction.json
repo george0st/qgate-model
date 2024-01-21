@@ -63,6 +63,16 @@
           "type": "string"
         },
         {
+          "name": "transaction-fraudanomaly",
+          "description": "Possible fraud anomaly detection (min. 0 - without anomaly detection, max. 1)",
+          "type": "float"
+        },
+        {
+          "name": "transaction-fraud",
+          "description": "Identification of fraud (True - fraud, False - without fraud)",
+          "type": "bool"
+        },
+        {
           "name": "record-date",
           "description": "The date when the record was created",
           "type": "datetime"
