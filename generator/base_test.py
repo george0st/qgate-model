@@ -26,6 +26,10 @@ class BaseTest(Base):
 
     def clean(self):
         self.model.clear()
+        self.model["name"] = ""
+        self.model["description"] = ""
+        self.model["kind"]="test"
+        self.model["spec"]={}
 
     def generate(self, count, last_values):
         pass
