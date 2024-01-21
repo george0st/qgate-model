@@ -116,7 +116,7 @@ class BasicTransaction(BaseData):
 
                 # "name": "transaction-fraud",
                 # "description": "Identification of fraud (True - fraud, False - without fraud)",
-                model["transaction-fraud"] = fraud
+                model["transaction-fraud"] = int(fraud)
 
             # "name": "record-date",
                 # "description": "The date when the record was created",
