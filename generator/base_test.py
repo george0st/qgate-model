@@ -15,6 +15,11 @@ class BaseTest(Base):
         self.gmodel = gmodel
         self._name = name
 
+        self.model["name"] = ""
+        self.model["description"] = ""
+        self.model["kind"]="test"
+        self.model["spec"]={}
+
     @property
     def name(self):
         return self._name

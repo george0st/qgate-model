@@ -18,6 +18,7 @@ class BaseData(Base):
         self.gmodel = gmodel
         self._name = name
 
+
     @property
     def name(self):
         return self._name
