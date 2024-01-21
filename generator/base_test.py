@@ -22,7 +22,7 @@ class BaseTest(Base):
     def clean(self):
         self.model.clear()
 
-    def generate(self, count):
+    def generate(self, count, last_values):
         pass
 
     def save(self, path, dir: str):
