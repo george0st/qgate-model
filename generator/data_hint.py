@@ -33,11 +33,10 @@ class DataHint(BaseTest):
     def _generate(self, i, last_values=True):
         """
         Generate data hints.
-        
-        :param i:
+
+        :param i:               Current iteration
         :param last_values:     True - generate last value from collection (not random), useful for on-line feature store
                                 where only the last value is stored on e.g. Redis, etc.
-        :return:
         """
         # generate one data set
         model = {}
