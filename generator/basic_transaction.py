@@ -102,7 +102,23 @@ class BasicTransaction(BaseData):
                 # "description": "Transaction counterparty other information",
                 # TODO: Add
 
-                # "name": "record-date",
+                fraud=False
+                fraud_anomaly=0
+                if self.rnd_choose([False, True],[0.95, 0.05]):
+                    fraud_anomaly = self.rnd_float(0,1,4)
+                    if self.rnd_choose([False, True],[0.95, 0.05]):
+                        if self.rnd_bool():
+                            fraud=True
+
+                # "name": "transaction-fraudanomaly",
+                # "description": "Possible fraud anomaly detection (min. 0 - without anomaly detection, max. 1)",
+                model["transaction-fraudanomaly"] = fraud_anomaly
+
+                # "name": "transaction-fraud",
+                # "description": "Identification of fraud (True - fraud, False - without fraud)",
+                model["transaction-fraud"] = fraud
+
+            # "name": "record-date",
                 # "description": "The date when the record was created",
                 model['record-date']=self.gmodel["NOW"]
 
