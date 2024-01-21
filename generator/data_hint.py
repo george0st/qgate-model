@@ -21,6 +21,7 @@ class DataHint(BaseTest):
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, DataHint.NAME)
 
+
     def generate(self, count, last_values = True):
         self.model["name"] = ""
         self.model["description"] = ""
