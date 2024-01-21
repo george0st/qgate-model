@@ -3,6 +3,6 @@
   "description": "The machine learning meta-model with synthetic data (useful for MLOps/feature store), part of the quality gateway concept.",
   "kind": "model",
   "spec": {
-    "version": "0.1.4"
+    "version": "0.1.5"
   }
 }
