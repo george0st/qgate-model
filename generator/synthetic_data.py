@@ -91,4 +91,5 @@ class SyntheticData:
     def generate_test(self, test_max):
         # test, if all test entities were added
         for test in self._tests:
-            test.generate(test_max)
+            test.generate(test_max, True)
+            test.generate(test_max, False)

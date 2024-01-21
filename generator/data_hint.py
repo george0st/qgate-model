@@ -21,23 +21,17 @@ class DataHint(BaseTest):
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, DataHint.NAME)
 
-    def generate(self, count):
-        self.model["name"] = ""
-        self.model["description"] = ""
-        self.model["kind"]="test"
-        self.model["spec"]={}
-
+    def generate(self, count, last_values = True):
         for i in range(count):
-            self._generate(i)
+            self._generate(i, last_values)
 
     def _generate(self, i, last_values=True):
         """
         Generate data hints.
-        
-        :param i:
+
+        :param i:               Current iteration
         :param last_values:     True - generate last value from collection (not random), useful for on-line feature store
                                 where only the last value is stored on e.g. Redis, etc.
-        :return:
         """
         # generate one data set
         model = {}
@@ -97,7 +91,11 @@ class DataHint(BaseTest):
             communication = communication_party[-1] if last_values else communication_party[self.rnd_int(0, len(communication_party))]
             model[BasicCommunication.NAME] = communication
 
-        self.model["spec"][f"DataHint-{i}"] = model
+        if last_values:
+            self.model["spec"][f"HintLast-{i}"] = model
+        else:
+            self.model["spec"][f"Hint-{i}"] = model
+
 
     def save(self, path, dir: str):
         if not os.path.exists(path):
