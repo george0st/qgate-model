@@ -32,7 +32,7 @@ class Base:
     def rnd_int(self, low, high) -> int:
         return self._gen.integers(low, high)
 
-    def rnd_float(self, low, high, ndigits = 0) -> int:
+    def rnd_float(self, low, high, ndigits = 0) -> float:
         if ndigits > 0:
             return round(self._gen.uniform(low, high), ndigits)
         return self._gen.uniform(low, high)
