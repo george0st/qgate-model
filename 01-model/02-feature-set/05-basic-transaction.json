@@ -69,8 +69,8 @@
         },
         {
           "name": "transaction-fraud",
-          "description": "Identification of fraud (True - fraud, False - without fraud)",
-          "type": "bool"
+          "description": "Identification of fraud (1 - fraud, 0 - without fraud)",
+          "type": "int"
         },
         {
           "name": "record-date",
