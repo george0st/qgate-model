@@ -3,15 +3,15 @@
   "description": "Setting for test vectors",
   "kind": "test",
   "spec": {
-        "online": ["vector-party","vector-contact",
+        "online": ["vector-party", "vector-contact",
           "vector-partycontact", "vector-partycontact-02",
-          "vector-account","vector-partyaccount", "vector-partyaccount-02"
+          "vector-account", "vector-partyaccount", "vector-partyaccount-02"
         ],
         "tests": {
           "vector-party": {
             "feature-set": "01-basic-party",
             "entities": ["party-id"],
-            "features": ["party-establishment", "party-type", "party-gender","party-education", "party-familystatus",
+            "features": ["party-id", "party-establishment", "party-type", "party-gender","party-education", "party-familystatus",
             "party-nchild", "party-industry","party-industryposition", "party-income", "party-incomehousehold"]
           },
           "vector-contact": {
@@ -22,12 +22,12 @@
           "vector-partycontact": {
             "feature-set": "02-basic-contact",
             "entities": ["party-id"],
-            "features": ["party-id","contact-email", "contact-phone", "contact-state"]
+            "features": ["party-id", "contact-email", "contact-phone", "contact-state"]
           },
           "vector-partycontact-02": {
             "feature-set": "02-basic-contact",
             "entities": ["party-id"],
-            "features": ["contact-id","contact-email", "contact-phone", "contact-state"]
+            "features": ["contact-id", "contact-email", "contact-phone", "contact-state"]
           },
           "vector-account": {
             "feature-set": "04-basic-account",
