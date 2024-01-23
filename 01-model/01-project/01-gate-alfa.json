@@ -11,6 +11,7 @@
       "aggregate-party", "aggregate-account", "aggregate-transaction", "aggregate-circle"],
     "feature-vectors": [
       "vector-party",
+      "vector-contact",
       "vector-partycontact",
       "vector-partycontact-02",
       "vector-account",
