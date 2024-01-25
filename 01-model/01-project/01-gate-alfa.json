@@ -20,6 +20,9 @@
       "vector-transaction",
       "vector-partycontactaccount",
       "vector-accounttransaction"
+    ],
+    "ml-models": [
+      "model-transaction"
     ]
   }
 }

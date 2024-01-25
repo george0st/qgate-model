@@ -1,0 +1,12 @@
+{
+  "name": "model-transaction",
+  "description": "Setting for model 'transaction'",
+  "kind": "ml-model",
+  "spec": {
+        "vector": "vector-transaction",
+        "query": "",
+        "source": ["transaction-direction","transaction-type","transaction-value", "transaction-currency", "counterparty-name", "counterparty-iban"]
+        "target": "transaction-fraud",
+        "test-size": 0.3
+  }
+}
