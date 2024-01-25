@@ -3,12 +3,14 @@
   "description": "Setting for test vectors",
   "kind": "test",
   "spec": {
-        "vector": ["vector-transaction"]
-        },
-        "vector-transaction": {
+        "model": ["model-transaction"],
+        "model-transaction": {
+          "vector": "vector-transaction",
           "query": "",
-          "x": "",
-          "y": ""
+          "source": "",
+          "target": "",
+          "test-size": 0.3,
+          "output": "aa.pkl"
         }
   }
 }
