@@ -17,6 +17,7 @@
       "vector-account",
       "vector-partyaccount",
       "vector-partyaccount-02",
+      "vector-transaction",
       "vector-partycontactaccount",
       "vector-accounttransaction"
     ]
