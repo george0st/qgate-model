@@ -1,0 +1,16 @@
+{
+  "name": "ml-model",
+  "description": "Setting for test vectors",
+  "kind": "test",
+  "spec": {
+        "model": ["model-transaction"],
+        "model-transaction": {
+          "vector": "vector-transaction",
+          "query": "",
+          "source": "",
+          "target": "",
+          "test-size": 0.3,
+          "output": "aa.pkl"
+        }
+  }
+}
