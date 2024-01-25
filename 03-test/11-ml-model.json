@@ -7,10 +7,9 @@
         "model-transaction": {
           "vector": "vector-transaction",
           "query": "",
-          "source": "",
-          "target": "",
-          "test-size": 0.3,
-          "output": "aa.pkl"
+          "source": ["transaction-direction","transaction-type","transaction-value", "transaction-currency", "counterparty-name", "counterparty-iban"]
+          "target": "transaction-fraud",
+          "test-size": 0.3
         }
   }
 }
