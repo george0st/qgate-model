@@ -5,7 +5,8 @@
   "spec": {
         "vector": "vector-transaction",
         "query": "",
-        "source": ["transaction-direction","transaction-type","transaction-value", "transaction-currency", "counterparty-name", "counterparty-iban"]
+        "source": ["transaction-direction","transaction-type","transaction-value",
+          "transaction-currency", "counterparty-name", "counterparty-iban"],
         "target": "transaction-fraud",
         "test-size": 0.3
   }
