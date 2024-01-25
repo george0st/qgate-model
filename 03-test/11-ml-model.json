@@ -1,0 +1,9 @@
+{
+  "name": "ml-model",
+  "description": "Setting for test vectors",
+  "kind": "test",
+  "spec": {
+        "data": ["vector-transaction"]
+        }
+  }
+}
