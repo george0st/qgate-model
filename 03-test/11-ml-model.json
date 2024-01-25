@@ -3,7 +3,12 @@
   "description": "Setting for test vectors",
   "kind": "test",
   "spec": {
-        "data": ["vector-transaction"]
+        "vector": ["vector-transaction"]
+        },
+        "vector-transaction": {
+          "query": "",
+          "x": "",
+          "y": ""
         }
   }
 }
