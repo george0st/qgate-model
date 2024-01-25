@@ -22,7 +22,7 @@
       "vector-accounttransaction"
     ],
     "ml-models": [
-      ""
+      "model-transaction"
     ]
   }
 }
