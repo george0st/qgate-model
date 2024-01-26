@@ -2,8 +2,9 @@
  - **00-high-level**
    - [Basic-model](../00-high-level/basic-feature-sets.png), [Derived-model](../00-high-level/derived-feature-sets.png) are described as class model in UML
  - **01-model**
-   - Name of objects such as entities, features, feature sets, etc. are chosen based on
-   best practices (without view to limits some specific ML/MLOps solutions)
+   - The objects such as projects, feature sets, feature vectors, ml models, etc.
+   are chosen based on best practices (without view to limits some specific 
+   ML/MLOps solutions)
    - A few details: max_name=32 chars, code_page=ASCII
  - **02-data**
    - Data sets are in different amount of items based on amount of counterparties 
