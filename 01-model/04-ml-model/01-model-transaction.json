@@ -7,6 +7,7 @@
         "query": "",
         "source": ["transaction-direction","transaction-type","transaction-value","transaction-currency"],
         "target": "transaction-fraud",
+        "encoding": ["transaction-direction","transaction-type","transaction-currency"],
         "test-size": 0.3
   }
 }
