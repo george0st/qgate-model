@@ -6,7 +6,7 @@
         "vector": "vector-transaction",
         "query": "",
         "source": ["transaction-direction","transaction-type","transaction-value",
-          "transaction-currency", "counterparty-name", "counterparty-iban"],
+          "transaction-currency"],
         "target": "transaction-fraud",
         "test-size": 0.3
   }
