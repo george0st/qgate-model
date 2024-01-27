@@ -7,7 +7,7 @@
         "query": "",
         "source-columns": ["transaction-direction","transaction-type","transaction-value","transaction-currency"],
         "target-columns": "transaction-fraud",
-        "encode": ["transaction-direction","transaction-type","transaction-currency"],
+        "encode-columns": ["transaction-direction","transaction-type","transaction-currency"],
         "test-size": 0.3
   }
 }
