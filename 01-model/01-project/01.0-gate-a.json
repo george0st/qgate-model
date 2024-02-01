@@ -1,11 +1,15 @@
 {
-  "name": "gate-alfa",
-  "description": "The test project, part of quality gate",
+  "name": "gate-a",
+  "description": "The GATE-A, focus on Redis",
   "labels": {
     "temp": "True"
   },
   "kind": "project",
   "spec": {
+    "targets": {
+      "global-offline": ["parquet", "csv"],
+      "global-online": ["redis"]
+    },
     "feature-sets": [
       "basic-party", "basic-contact", "basic-relation", "basic-account", "basic-transaction", "basic-event", "basic-communication",
       "aggregate-party", "aggregate-account", "aggregate-transaction", "aggregate-circle"],
