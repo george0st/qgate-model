@@ -1,0 +1,15 @@
+{
+  "name": "gate-a-sql",
+  "description": "The GATE-A-SQL, focus on MySQL",
+  "labels": {
+    "temp": "True"
+  },
+  "kind": "project",
+  "parent": "gate-a",
+  "spec": {
+    "targets": {
+      "global-offline": ["parquet", "csv"],
+      "global-online": ["mysql"]
+    }
+  }
+}

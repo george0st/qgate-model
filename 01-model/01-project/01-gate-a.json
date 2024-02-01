@@ -1,6 +1,6 @@
 {
-  "name": "gate-alfa",
-  "description": "The test project, part of quality gate",
+  "name": "gate-a",
+  "description": "The GATE-A, focus on Redis",
   "labels": {
     "temp": "True"
   },
