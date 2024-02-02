@@ -7,8 +7,8 @@
   "kind": "project",
   "spec": {
     "targets": {
-      "global-offline": ["parquet", "csv"],
-      "global-online": ["redis"]
+      "prj-offline": ["parquet", "csv"],
+      "prj-online": ["redis"]
     },
     "feature-sets": [
       "basic-party", "basic-contact", "basic-relation", "basic-account", "basic-transaction", "basic-event", "basic-communication",
