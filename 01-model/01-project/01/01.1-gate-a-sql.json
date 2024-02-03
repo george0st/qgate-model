@@ -8,8 +8,8 @@
   "parent": "gate-a",
   "spec": {
     "targets": {
-      "prj-offline": ["parquet", "csv"],
-      "prj-online": ["mysql"]
+      "prj-offline": ["parquet"],
+      "prj-online": ["redis"]
     }
   }
 }
