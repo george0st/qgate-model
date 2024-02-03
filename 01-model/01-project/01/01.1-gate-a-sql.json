@@ -9,7 +9,7 @@
   "spec": {
     "targets": {
       "prj-offline": ["parquet"],
-      "prj-online": ["mysql"]
+      "prj-online": ["redis"]
     }
   }
 }

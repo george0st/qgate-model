@@ -5,7 +5,7 @@
   "spec": {
       "targets": [
         "prj-offline",
-        "redis"
+        "prj-online"
       ],
       "entities": [
         {
