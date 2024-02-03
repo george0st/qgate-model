@@ -4,8 +4,7 @@
   "kind": "feature-set",
   "spec": {
       "targets": [
-        "parquet",
-        "csv",
+        "prj-offline",
         "redis"
       ],
       "entities": [
