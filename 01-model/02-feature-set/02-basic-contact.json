@@ -4,8 +4,8 @@
   "kind": "feature-set",
   "spec": {
     "targets": [
-      "parquet",
-      "redis"
+      "prj-offline",
+      "prj-online"
     ],
     "entities": [
       {

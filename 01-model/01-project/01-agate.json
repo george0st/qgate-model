@@ -1,6 +1,6 @@
 {
-  "name": "gate-a",
-  "description": "The GATE-A, focus on Redis",
+  "name": "agate",
+  "description": "The A-GATE, focus on Redis, Parquet, CSV",
   "labels": {
     "temp": "True"
   },

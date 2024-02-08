@@ -3,7 +3,10 @@
   "description": "Party communication content from e.g. email, chat, phone, etc.",
   "kind": "feature-set",
   "spec": {
-    "targets": ["parquet"],
+    "targets": [
+      "prj-offline",
+      "prj-online"
+    ],
     "entities": [
       {
         "name": "party-id",

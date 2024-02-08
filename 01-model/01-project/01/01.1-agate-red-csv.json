@@ -1,0 +1,15 @@
+{
+  "name": "agate-red-csv",
+  "description": "The A-GATE, focus on Redis, CSV",
+  "labels": {
+    "temp": "True"
+  },
+  "kind": "project",
+  "parent": "agate",
+  "spec": {
+    "targets": {
+      "prj-offline": ["csv"],
+      "prj-online": ["redis"]
+    }
+  }
+}
