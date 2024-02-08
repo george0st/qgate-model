@@ -1,13 +1,13 @@
 {
   "name": "gate-a",
-  "description": "The GATE-A, focus on Redis",
+  "description": "The GATE-A, focus on Redis+Parquet",
   "labels": {
     "temp": "True"
   },
   "kind": "project",
   "spec": {
     "targets": {
-      "prj-offline": ["parquet", "csv"],
+      "prj-offline": ["parquet"],
       "prj-online": ["redis"]
     },
     "feature-sets": [

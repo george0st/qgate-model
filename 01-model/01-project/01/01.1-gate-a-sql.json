@@ -1,6 +1,6 @@
 {
   "name": "gate-a-sql",
-  "description": "The GATE-A, focus on MySQL",
+  "description": "The GATE-A, focus on Redis+CSV",
   "labels": {
     "temp": "True"
   },
@@ -8,7 +8,7 @@
   "parent": "gate-a",
   "spec": {
     "targets": {
-      "prj-offline": ["parquet"],
+      "prj-offline": ["csv"],
       "prj-online": ["redis"]
     }
   }
