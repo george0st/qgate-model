@@ -1,11 +1,11 @@
 {
-  "name": "gate-a-sql",
-  "description": "The GATE-A, focus on Redis+CSV",
+  "name": "agate-red-parq",
+  "description": "The A-GATE, focus on Redis, Parquet",
   "labels": {
     "temp": "True"
   },
   "kind": "project",
-  "parent": "gate-a",
+  "parent": "agate",
   "spec": {
     "targets": {
       "prj-offline": ["parquet"],
