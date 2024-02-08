@@ -1,0 +1,15 @@
+{
+  "name": "gate-a-sql",
+  "description": "The GATE-A, focus on Redis+CSV",
+  "labels": {
+    "temp": "True"
+  },
+  "kind": "project",
+  "parent": "gate-a",
+  "spec": {
+    "targets": {
+      "prj-offline": ["parquet"],
+      "prj-online": ["redis"]
+    }
+  }
+}
