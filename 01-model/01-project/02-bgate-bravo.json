@@ -1,11 +1,15 @@
 {
-  "name": "gate-bravo",
-  "description": "The test project, part of quality gate",
+  "name": "bgate",
+  "description": "The B-GATE, focus on Redis, Parquet, CSV",
   "labels": {
     "temp": "True"
   },
   "kind": "project",
   "spec": {
+    "targets": {
+      "prj-offline": ["parquet", "csv"],
+      "prj-online": ["redis"]
+    },
     "feature-sets": [
       "basic-account", "basic-contact", "aggregate-account"],
     "feature-vectors": []
