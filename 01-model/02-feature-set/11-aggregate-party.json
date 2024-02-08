@@ -3,7 +3,10 @@
   "description": "Party aggregation",
   "kind": "feature-set",
   "spec": {
-      "targets": ["parquet"],
+      "targets": [
+        "prj-offline",
+        "prj-online"
+      ],
       "entities": [
         {
           "name": "party-id",

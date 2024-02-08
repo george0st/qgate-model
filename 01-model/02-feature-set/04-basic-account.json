@@ -3,10 +3,11 @@
   "description": "Account detail with relation to party",
   "kind": "feature-set",
   "spec": {
-      "targets": [
-        "parquet",
-        "redis"
-      ],
+    "targets": [
+      "prj-offline",
+      "prj-online"
+    ],
+
       "entities": [
         {
           "name": "party-id",
