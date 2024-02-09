@@ -1,8 +1,8 @@
 {
   "name": "Financial services",
-  "description": "The machine learning meta-model with synthetic data (useful for MLOps/feature store), part of the quality gateway concept.",
+  "description": "The machine learning meta-model with synthetic data (useful for MLOps/feature store), part of the quality gate concept.",
   "kind": "model",
   "spec": {
-    "version": "0.1.5"
+    "version": "0.1.6"
   }
 }
