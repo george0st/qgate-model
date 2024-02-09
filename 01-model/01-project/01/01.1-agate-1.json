@@ -2,7 +2,8 @@
   "name": "agate-1",
   "description": "The A-GATE-1, focus on Redis, CSV",
   "labels": {
-    "temp": "True"
+    "temp": "True",
+    "focus": "Redis, CSV"
   },
   "kind": "project",
   "parent": "agate",
