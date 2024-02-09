@@ -2,7 +2,8 @@
   "name": "agate-2",
   "description": "The A-GATE-2, focus on Redis, Parquet",
   "labels": {
-    "temp": "True"
+    "temp": "True",
+    "focus": "Redis, Parquet"
   },
   "kind": "project",
   "parent": "agate",
