@@ -1,6 +1,6 @@
 {
-  "name": "agate-red-parq",
-  "description": "The A-GATE, focus on Redis, Parquet",
+  "name": "agate-2",
+  "description": "The A-GATE-2, focus on Redis, Parquet",
   "labels": {
     "temp": "True"
   },
