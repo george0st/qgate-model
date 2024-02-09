@@ -1,6 +1,6 @@
 {
-  "name": "agate-red-csv",
-  "description": "The A-GATE, focus on Redis, CSV",
+  "name": "agate-2",
+  "description": "The A-GATE, focus on Redis, Parquet",
   "labels": {
     "temp": "True"
   },
@@ -8,7 +8,7 @@
   "parent": "agate",
   "spec": {
     "targets": {
-      "prj-offline": ["csv"],
+      "prj-offline": ["parquet"],
       "prj-online": ["redis"]
     }
   }
