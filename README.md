@@ -33,7 +33,13 @@ The solution contains this simple structure:
  - **03-test**
    - The information for test simplification e.g. feature vector vs on/off-line data, test/data hints, etc.
 
- Addition detail, [see](./docs/structure.md)
+Addition detail, [see](./docs/structure.md)
+
+## Integrations
+The supported sources/targets for realization (see `/spec/targets/` in JSON files):
+ - Redis, MySQL
+ - File system with format
+   - Parquet, CSV
 
 ## Model
 ![Basic-model](./00-high-level/basic-feature-sets.png)
