@@ -2,8 +2,7 @@
   "name": "bgate",
   "description": "The B-GATE, focus on Redis, Parquet, CSV",
   "labels": {
-    "temp": "True",
-    "focus": "Redis, Parquet, CSV"
+    "temp": "True"
   },
   "kind": "project",
   "spec": {
