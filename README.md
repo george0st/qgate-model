@@ -35,8 +35,9 @@ The solution contains this simple structure:
 
 Addition detail, [see](./docs/structure.md)
 
-## Integrations
-The supported sources/targets for realization (see `/spec/targets/` in JSON files):
+## Expected integrations
+The supported sources/targets for realization (see the definition `/spec/targets/`
+in JSON files):
  - Redis, MySQL
  - File system with format
    - Parquet, CSV
