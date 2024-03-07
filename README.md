@@ -38,11 +38,11 @@ The solution contains this simple structure:
 Addition detail, [see](./docs/structure.md)
 
 ## Expected integrations
-The supported sources/targets for realization (see the definition `/spec/targets/`
-in JSON files):
- - Redis, MySQL
+The supported sources/targets for realization (✅ done, ✔ in-progress, ❌ planned), see 
+the definition `/spec/targets/` in JSON files:
+ - ✅ Redis, ✔ MySQL, ✔ Postgres, ❌ Kafka 
  - File system with format
-   - Parquet, CSV
+   - ✅ Parquet, ✅ CSV
 
 ## Model
 ![Basic-model](./00-high-level/basic-feature-sets.png)
