@@ -28,8 +28,10 @@ The solution contains this simple structure:
    - The definition contains 01-projects, 02-feature sets, 03-feature vectors, 
    04-ml models, etc. in JSON format
  - **02-data**
-   - The data for meta-model in CSV/GZ format (future support parquet) for party, account, transaction, event, communication, etc.
-   - You can also generate your own dataset with requested size (see sample './02-data/03-size-10k.sh' and description 'python main.py generate --help')
+   - The synthetic data for meta-model in CSV/GZ format (future support parquet) for party, account,
+   transaction, event, communication, etc.
+   - You can also generate your own dataset with requested size (see sample './02-data/03-size-10k.sh'
+   or description 'python main.py generate --help')
  - **03-test**
    - The information for test simplification e.g. feature vector vs on/off-line data, test/data hints, etc.
 
