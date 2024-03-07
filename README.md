@@ -30,8 +30,8 @@ The solution contains this simple structure:
  - **02-data**
    - The synthetic data for meta-model in CSV/GZ format (future support parquet) for party, account,
    transaction, event, communication, etc.
-   - You can also generate your own dataset with requested size (see sample './02-data/03-size-10k.sh'
-   or description 'python main.py generate --help')
+   - You can also generate your own dataset with requested size (see sample `./02-data/03-size-10k.sh`
+   or description `python main.py generate --help`)
  - **03-test**
    - The information for test simplification e.g. feature vector vs on/off-line data, test/data hints, etc.
 
