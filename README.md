@@ -41,7 +41,7 @@ Addition detail, [see](./docs/structure.md)
 The supported sources/targets for realization (✅ done, ✔ in-progress, ❌ planned), see 
 the definition `/spec/targets/` in JSON files:
  - ✅ Redis, ✔ MySQL, ✔ Postgres, ❌ Kafka 
- - File system with format
+ - Formats:
    - ✅ Parquet, ✅ CSV
 
 ## Model
