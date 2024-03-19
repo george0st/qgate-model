@@ -10,7 +10,7 @@
       "entities": [
         {
           "name": "party-id",
-          "description": "Unigue party identificator",
+          "description": "Unique party identificator",
           "type": "string"
         }
       ],
