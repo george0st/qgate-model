@@ -1,4 +1,4 @@
 click~=8.1
 numpy~=1.26
-pandas~=2.2.1
+pandas~=2.2
 faker~=24.2

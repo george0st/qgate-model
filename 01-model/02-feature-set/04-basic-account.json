@@ -7,45 +7,44 @@
       "prj-offline",
       "prj-online"
     ],
-
-      "entities": [
-        {
-          "name": "party-id",
-          "description": "Relation to party-id",
-          "type": "string"
-        }
-      ],
-      "features": [
-        {
-          "name": "account-id",
-          "description": "Unique account identificator",
-          "type": "string"
-        },
-        {
-          "name": "account-type",
-          "description": "Type of party account (current account, saving account, etc.)",
-          "type": "string"
-        },
-        {
-          "name": "account-createdate",
-          "description": "Date for account creation",
-          "type": "datetime"
-        },
-        {
-          "name": "account-state",
-          "description": "Account state (e.g. active, closed, blocked)",
-          "type": "string"
-        },
-        {
-          "name": "account-nonactivedate",
-          "description": "Date when account state was closed or blocked",
-          "type": "datetime"
-        },
-        {
-          "name": "record-date",
-          "description": "The date when the record was created",
-          "type": "datetime"
-        }
-      ]
-    }
+    "entities": [
+      {
+        "name": "party-id",
+        "description": "Relation to party-id",
+        "type": "string"
+      }
+    ],
+    "features": [
+      {
+        "name": "account-id",
+        "description": "Unique account identificator",
+        "type": "string"
+      },
+      {
+        "name": "account-type",
+        "description": "Type of party account (current account, saving account, etc.)",
+        "type": "string"
+      },
+      {
+        "name": "account-createdate",
+        "description": "Date for account creation",
+        "type": "datetime"
+      },
+      {
+        "name": "account-state",
+        "description": "Account state (e.g. active, closed, blocked)",
+        "type": "string"
+      },
+      {
+        "name": "account-nonactivedate",
+        "description": "Date when account state was closed or blocked",
+        "type": "datetime"
+      },
+      {
+        "name": "record-date",
+        "description": "The date when the record was created",
+        "type": "datetime"
+      }
+    ]
+  }
 }
