@@ -17,7 +17,7 @@
     "features": [
       {
         "name": "relation-id",
-        "description": "Unigue party relation identificator",
+        "description": "Unique party relation identificator",
         "type": "string"
       },
       {

@@ -17,7 +17,7 @@
     "features": [
       {
         "name": "communication-id",
-        "description": "Unigue communication identificator",
+        "description": "Unique communication identificator",
         "type": "string"
       },
       {

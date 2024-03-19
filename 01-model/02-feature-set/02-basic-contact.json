@@ -17,7 +17,7 @@
     "features": [
       {
         "name": "contact-id",
-        "description": "Unigue party contact identificator",
+        "description": "Unique party contact identificator",
         "type": "string"
       },
       {

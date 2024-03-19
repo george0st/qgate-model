@@ -17,7 +17,7 @@
     "features": [
       {
         "name": "event-id",
-        "description": "Unigue party event identificator",
+        "description": "Unique party event identificator",
         "type": "string"
       },
       {
