@@ -1,6 +1,6 @@
 {
   "name": "agate-5",
-  "description": "The A-GATE-3, focus on Postgres, CSV",
+  "description": "The A-GATE-5, focus on Postgres, CSV",
   "labels": {
     "temp": "True"
   },
