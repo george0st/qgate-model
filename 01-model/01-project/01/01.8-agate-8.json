@@ -1,0 +1,15 @@
+{
+  "name": "agate-8",
+  "description": "The A-GATE-4, focus on Kafka, Parquet",
+  "labels": {
+    "temp": "True"
+  },
+  "kind": "project",
+  "parent": "agate",
+  "spec": {
+    "targets": {
+      "prj-offline": ["parquet"],
+      "prj-online": ["kafka"]
+    }
+  }
+}
