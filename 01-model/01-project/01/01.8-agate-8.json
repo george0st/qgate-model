@@ -1,6 +1,6 @@
 {
-  "name": "agate-6",
-  "description": "The A-GATE-6, focus on Postgres, Parquet",
+  "name": "agate-8",
+  "description": "The A-GATE-8, focus on Kafka, Parquet",
   "labels": {
     "temp": "True"
   },
@@ -9,7 +9,7 @@
   "spec": {
     "targets": {
       "prj-offline": ["parquet"],
-      "prj-online": ["postgres"]
+      "prj-online": ["kafka"]
     }
   }
 }

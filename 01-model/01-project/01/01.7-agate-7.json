@@ -1,6 +1,6 @@
 {
-  "name": "agate-5",
-  "description": "The A-GATE-5, focus on Postgres, CSV",
+  "name": "agate-7",
+  "description": "The A-GATE-7, focus on Kafka, CSV",
   "labels": {
     "temp": "True"
   },
@@ -9,7 +9,7 @@
   "spec": {
     "targets": {
       "prj-offline": ["csv"],
-      "prj-online": ["postgres"]
+      "prj-online": ["kafka"]
     }
   }
 }
