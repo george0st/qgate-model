@@ -47,7 +47,7 @@
         },
         {
           "name": "party-nchild",
-          "description": "Count of children",
+          "description": "Amount of childrens",
           "type": "int"
         },
         {

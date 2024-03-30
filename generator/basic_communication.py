@@ -106,6 +106,8 @@ class BasicCommunication(BaseData):
         else:
             return self.fake.sentence(nb_words = 15,variable_nb_words = True)
 
+    # GenAI prompt
+    # Write ten positive sentences to the user support. The writer will be the user.
     positive_sentences = [
         "I just wanted to say thank you for your amazing service. You really made my day!",
         "I'm very impressed with your product. It works flawlessly and has all the features I need. How can I leave a positive review?",
@@ -126,9 +128,23 @@ class BasicCommunication(BaseData):
         "I'm ecstatic with your service. You went above and beyond to make me happy and satisfied. How can I reward you and show you my appreciation for your outstanding work?",
         "You are a gem. You answered all my queries and addressed all my concerns with patience and clarity. How can I express my satisfaction and admiration for your service and expertise?",
         "I'm very content with your product. It is high-quality, durable, and has a great design. How can I share my experience and opinion with other customers and potential buyers?",
-        "You have been a delight to deal with. You were responsive, helpful, and knowledgeable throughout our communication. How can I compliment you and let your manager know how well you did?"
+        "You have been a delight to deal with. You were responsive, helpful, and knowledgeable throughout our communication. How can I compliment you and let your manager know how well you did?",
+        "I am incredibly grateful for the unwavering support from our users",
+        "Every milestone we achieve is a testament to the strong user support we receive.",
+        "We are humbled by the overwhelming support from our users.",
+        "I appreciate your prompt response to my queries.",
+        "I am very pleased with the quality of service I have been receiving.",
+        "The application has been running smoothly and efficiently.",
+        "I appreciate the quick and helpful responses to my inquiries.",
+        "The product delivers all the features as advertised, which is fantastic.",
+        "The user interface is intuitive and easy to navigate.",
+        "The clear instructions on your platform have been very helpful.",
+        "I am impressed with the quality of your customer service.",
+        "My issue was resolved promptly after my request, thank you for that."
     ]
 
+    # GenAI prompt
+    # Write ten negative sentences to the user support. The writer will be the user.
     negative_sentences = [
         "Why is your product so slow and buggy? Fix it now or I'm leaving!",
         "You charged me twice for the same service! This is unacceptable! I want a refund immediately!",
@@ -170,9 +186,21 @@ class BasicCommunication(BaseData):
         "I want to know why my account was deleted.",
         "I want to know why my account was banned.",
         "I want to know why my account was locked.",
-        "I'm experiencing an issue with my account."
+        "I'm experiencing an issue with my account.",
+        "I am not satisfied with the level of service I have been receiving.",
+        "The application has been crashing frequently, which is very frustrating.",
+        "I have been overcharged for my subscription, which is unacceptable.",
+        "The response time to my previous inquiries has been disappointingly slow.",
+        "The product does not deliver the features as advertised.",
+        "I am having a hard time navigating your user interface, it is not user-friendly.",
+        "The lack of clear instructions on your platform is causing confusion.",
+        "I am disappointed with the quality of your customer service.",
+        "The frequent updates are disruptive and do not seem to improve the product.",
+        "Despite my repeated requests, my issue has not been resolved."
     ]
 
+    # GenAI prompt
+    # Write ten neutral sentences to the user support. The writer will be the user.
     neutral_sentences = [
         "Thank you for your help.",
         "Could you please clarify this for me?",
@@ -241,5 +269,13 @@ class BasicCommunication(BaseData):
         "How can I access or manage my card account online or on the app?",
         "How can I set up or change a payment plan or due date for my card?",
         "How can I avoid or reduce interest or late fees on my card?",
-        "How can I get a balance transfer or cash advance with my card?"
+        "How can I get a balance transfer or cash advance with my card?",
+        "I am writing to inquire about the status of my account.",
+        "Could you please provide me with more information about your services?",
+        "I would like to know more about the features of your product.",
+        "I am interested in upgrading my subscription, could you guide me through the process?",
+        "I have noticed a discrepancy in my billing information and would like it to be rectified.",
+        "Could you please clarify the terms and conditions of your service?",
+        "I am unable to access certain features on your platform, could you please assist me?",
+
     ]
