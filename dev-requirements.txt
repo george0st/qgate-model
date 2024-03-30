@@ -1,8 +1,16 @@
+# command line
 click~=8.1
+
 numpy~=1.26
 pandas~=2.2
+
+# generation of synthetic data
 faker~=24.2
+
 packaging>=21.3
+
+# test coverage
 coverage>=7
 coverage-badge>=1
+
 pympler==1.0.1
