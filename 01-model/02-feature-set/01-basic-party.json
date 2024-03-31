@@ -7,10 +7,7 @@
         "prj-offline",
         "prj-online"
       ],
-      "sources": [
-        "df",
-        "csv"
-      ],
+      "sources": ["prj-all"],
       "entities": [
         {
           "name": "party-id",

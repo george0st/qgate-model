@@ -11,7 +11,7 @@
       "prj-online": ["redis"]
     },
     "sources": {
-      "prj-all": ["df", "csv"]
+      "prj-all": ["csv", "df"]
     },
     "feature-sets": [
       "basic-party", "basic-contact", "basic-relation", "basic-account", "basic-transaction", "basic-event", "basic-communication",
