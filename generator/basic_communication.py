@@ -107,7 +107,7 @@ class BasicCommunication(BaseData):
             return self.fake.sentence(nb_words = 15,variable_nb_words = True)
 
     # GenAI prompt
-    # Write ten positive sentences to the user support. The writer will be the user.
+    # Write ten positive sentences or questions to the user support. The writer will be the satisfy or very satisfy user.
     positive_sentences = [
         "I just wanted to say thank you for your amazing service. You really made my day!",
         "I'm very impressed with your product. It works flawlessly and has all the features I need. How can I leave a positive review?",
@@ -140,11 +140,41 @@ class BasicCommunication(BaseData):
         "The user interface is intuitive and easy to navigate.",
         "The clear instructions on your platform have been very helpful.",
         "I am impressed with the quality of your customer service.",
-        "My issue was resolved promptly after my request, thank you for that."
+        "My issue was resolved promptly after my request, thank you for that.",
+        "Your team’s exceptional service is a testament to the high standards of this organization.",
+        "The unparalleled expertise of your support staff has left a lasting impression on me.",
+        "I am in awe of your team’s ability to consistently deliver top-notch service.",
+        "The extraordinary effort put forth by your team to resolve my issue was nothing short of commendable.",
+        "Your team’s unwavering dedication to customer satisfaction is truly praiseworthy.",
+        "The level of service provided by your team has set a new benchmark in customer support.",
+        "I am profoundly grateful for the remarkable assistance provided by your team.",
+        "The exemplary professionalism displayed by your support staff is a model for others to follow.",
+        "Your team’s commitment to resolving customer issues is a shining example of excellent service.",
+        "Thank you for providing an unparalleled customer service experience.",
+        "Your team’s response time was impressive. How do you manage to be so efficient?",
+        "The solution provided by your support team resolved my issue perfectly.",
+        "I appreciate the professionalism and knowledge of your support staff.",
+        "Your service exceeded my expectations. What other services do you offer?",
+        "I am grateful for your team’s relentless effort in solving my problem.",
+        "The user interface is very intuitive. Who designed it?",
+        "Your product has significantly improved my productivity.",
+        "I would like to commend your team for their excellent customer service.",
+        "How can I leave a positive review for your outstanding service?",
+        "Your product has made a significant difference in my work.",
+        "The features of your software are very user-friendly.",
+        "I am impressed by the seamless integration of your services.",
+        "Your customer service is top-notch and highly commendable.",
+        "The regular updates and improvements show your commitment to customer satisfaction.",
+        "Your product is reliable and consistent, how do you maintain such high standards?",
+        "I am amazed by the quick and efficient problem-solving by your team.",
+        "The training resources provided by your team were very helpful.",
+        "I am happy to recommend your services to others because of my excellent experience.",
+        "Can I subscribe to your newsletter to stay updated with new features and services?",
     ]
 
     # GenAI prompt
     # Write ten negative sentences to the user support. The writer will be the user.
+    # Write ten highly negative sentences to the user support. The writer will be the user.
     negative_sentences = [
         "Why is your product so slow and buggy? Fix it now or I'm leaving!",
         "You charged me twice for the same service! This is unacceptable! I want a refund immediately!",
@@ -196,11 +226,57 @@ class BasicCommunication(BaseData):
         "The lack of clear instructions on your platform is causing confusion.",
         "I am disappointed with the quality of your customer service.",
         "The frequent updates are disruptive and do not seem to improve the product.",
-        "Despite my repeated requests, my issue has not been resolved."
+        "Despite my repeated requests, my issue has not been resolved.",
+        "I’m disappointed with the recent changes in the product.",
+        "The new update seems to have more bugs than improvements.",
+        "I’ve been experiencing frequent crashes since the last update.",
+        "The product doesn’t seem to meet the quality standards I expected.",
+        "The customer service response time has been unsatisfactory.",
+        "The user interface is not as intuitive as it used to be.",
+        "The recent price increase doesn’t seem to be justified by the features offered.",
+        "The product’s performance has been inconsistent recently.",
+        "The lack of transparency in your policies is concerning.",
+        "I feel that my feedback isn’t being taken into consideration.",
+        "The product’s performance has been far below my expectations.",
+        "The quality of the service provided has been disappointing.",
+        "I’ve noticed a significant decline in the product’s reliability.",
+        "The frequent technical issues have been frustrating.",
+        "The product’s performance has been egregiously subpar, falling drastically short of the anticipated standards.",
+        "The service provided has been lamentably deficient, failing to meet even the most basic expectations.",
+        "The product’s reliability has been alarmingly inconsistent, leading to a significant loss of trust.",
+        "The ostensible value proposition of the product does not align with its actual performance and quality.",
+        "The customer service has been woefully inadequate, showing a lack of commitment to resolving customer issues.",
+        "The product’s features are a far cry from the advertised standards, leading to a profound sense of disappointment.",
+        "The persistent technical glitches have been a source of considerable frustration and inconvenience.",
+        "The user interface of the product is remarkably unintuitive, necessitating a comprehensive overhaul.",
+        "The exorbitant cost of the product is not justified by its mediocre quality and performance.",
+        "The lack of efficient and responsive customer support is a glaring issue that needs immediate attention.",
+        "The product’s performance is disappointingly inferior compared to its competitors.",
+        "The quality of service is regrettably substandard when juxtaposed with industry standards.",
+        "The product’s reliability is alarmingly inconsistent, especially when compared to previous versions.",
+        "The customer service is lamentably unresponsive, particularly when contrasted with the prompt service provided by other companies.",
+        "The features of the product are woefully inadequate, especially when compared to the advertised promises.",
+        "The technical issues are significantly more frequent than what one would expect from a product of this caliber.",
+        "The user interface is remarkably less intuitive than those of similar products in the market.",
+        "The high cost of the product is unjustifiable, especially when compared to the superior quality offered by competitors at a similar price point.",
+        "The lack of efficient customer support is glaringly evident when compared to the swift and effective support provided by other companies.",
+        "The lack of professionalism displayed by the team is disheartening.",
+        "The communication from the staff has been less than satisfactory.",
+        "The team’s inability to meet deadlines consistently is concerning.",
+        "The dismissive attitude towards customer feedback is not conducive to a healthy business relationship.",
+        "The lack of transparency in the team’s operations raises questions about their integrity.",
+        "The team’s reluctance to take responsibility for mistakes is disappointing.",
+        "The unprofessional behavior displayed during meetings is unacceptable.",
+        "The team’s lack of respect for differing opinions stifles innovation and growth.",
+        "The lack of clear communication from the management leads to confusion and inefficiency.",
+        "The team’s inability to handle criticism constructively hampers progress and improvement.",
+        "I am curious about the measures you take to ensure the quality of your product.",
+        "Could you please elaborate on the steps you take to rectify product mistakes?",
+
     ]
 
     # GenAI prompt
-    # Write ten neutral sentences to the user support. The writer will be the user.
+    # Write ten neutral sentences or questions to the user support. The writer will be the user.
     neutral_sentences = [
         "Thank you for your help.",
         "Could you please clarify this for me?",
@@ -277,5 +353,18 @@ class BasicCommunication(BaseData):
         "I have noticed a discrepancy in my billing information and would like it to be rectified.",
         "Could you please clarify the terms and conditions of your service?",
         "I am unable to access certain features on your platform, could you please assist me?",
-
+        "I am writing to inquire about the features of your product.",
+        "Could you please provide more information about your services?",
+        "I am interested in understanding the quality of your services.",
+        "How can I get in touch with your user support team?",
+        "Can you provide some insights into how your product compares to others in the market?",
+        "I am looking forward to your response and appreciate your prompt attention to this matter.",
+        "Can you help me understand how to use the main features of the product?",
+        "What should I do if I forget my password?",
+        "How can I change my account settings?",
+        "What are the system requirements for this product?",
+        "Can you guide me on how to upgrade to the latest version?",
+        "What are the terms and conditions of the product’s usage?",
+        "How does the product ensure the security and privacy of my data?",
+        "What resources (like tutorials or guides) are available for learning more about the product?",
     ]
