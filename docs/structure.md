@@ -25,7 +25,7 @@
 ## Generated data
  - [Basic rules for generated data](./rules.md), cardinality, constrains, etc.
  - Data is in format CSV/GZ format (with expected future parquet support)
-   - A few details: header=True, encoding="utf-8", sep=";", decimal=","
+   - A few details: header=True, encoding="utf-8", sep=",", decimal="."
 
 
 
