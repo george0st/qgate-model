@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import os
 from generator.base import Base
+from generator.setup import Setup
 
 
 class BaseData(Base):
@@ -39,6 +40,8 @@ class BaseData(Base):
         if not os.path.exists(path):
             os.makedirs(path)
 
+        stp=Setup()
+
         # print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self.name}', dir: '{dir}'...")
         df=pd.DataFrame(self.model)
         if compress:
@@ -48,8 +51,8 @@ class BaseData(Base):
                       index=False,
                       mode="a" if append else "w",
                       encoding='utf-8',
-                      sep=";",
-                      decimal=",",
+                      sep=stp.csv_separator,
+                      decimal=stp.csv_decimal,
                       compression=compression_opts)
 
 #            compression: CompressionOptions = "infer",

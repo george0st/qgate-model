@@ -11,10 +11,15 @@ from generator.basic_communication import BasicCommunication
 from generator.base_data import BaseData
 from generator.base_test import BaseTest
 from generator.data_hint import DataHint
+from generator.setup import Setup
 
 class SyntheticData:
 
     def __init__(self, model_path="01-model", output_path="02-data", test_path="03-test"):
+
+        # init setup singleton
+        Setup(model_path)
+
         self._model_path=model_path
         self._output_path=output_path
         self._test_path=test_path
