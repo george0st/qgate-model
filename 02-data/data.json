@@ -1,9 +1,0 @@
-{
-  "name": "Data setting",
-  "description": "Setting for the machine learning meta-model data.",
-  "kind": "data",
-  "spec": {
-    "CSV_SEPARATOR": ",",
-    "CSV_DECIMAL": "."
-  }
-}
