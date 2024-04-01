@@ -24,8 +24,10 @@
 
 ## Generated data
  - [Basic rules for generated data](./rules.md), cardinality, constrains, etc.
- - Data is in format CSV/GZ format (with expected future parquet support)
-   - A few details: header=True, encoding="utf-8", sep=",", decimal="."
+ - Data is in format CSV/GZ format ( expected future parquet support)
+   - A few details: 
+     - header=True, encoding="utf-8", sep=",", decimal="." 
+     - NOTE: setting of 'sep' and 'decimal' see the json file '01-model/model.json')
 
 
 
