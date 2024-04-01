@@ -40,7 +40,7 @@ class BaseData(Base):
         if not os.path.exists(path):
             os.makedirs(path)
 
-        stp=Setup()
+        setup=Setup()
 
         # print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self.name}', dir: '{dir}'...")
         df=pd.DataFrame(self.model)
@@ -51,8 +51,8 @@ class BaseData(Base):
                       index=False,
                       mode="a" if append else "w",
                       encoding='utf-8',
-                      sep=stp.csv_separator,
-                      decimal=stp.csv_decimal,
+                      sep=setup.csv_separator,
+                      decimal=setup.csv_decimal,
                       compression=compression_opts)
 
 #            compression: CompressionOptions = "infer",
@@ -71,8 +71,8 @@ class BaseData(Base):
                       index=False,
                       mode="a" if append else "w",
                       encoding='utf-8',
-                      sep=";",
-                      decimal=",")
+                      sep=setup.csv_separator,
+                      decimal=setup.csv_decimal)
 
             # df.to_parquet(os.path.join(path,f"{self.name}.parquet"),
             #                            engine='fastparquet',
