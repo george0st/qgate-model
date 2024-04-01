@@ -52,7 +52,10 @@ class BaseData(Base):
                       decimal=",",
                       compression=compression_opts)
 
-#             df.to_parquet(os.path.join(path,f"{self.name}.parquet"),
+#            compression: CompressionOptions = "infer",
+
+
+        #             df.to_parquet(os.path.join(path,f"{self.name}.parquet"),
 #                           engine="pyarrow",
 #                           compression='gzip',
 # #                          header=False if append else True,
