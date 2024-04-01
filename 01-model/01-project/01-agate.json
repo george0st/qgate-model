@@ -1,6 +1,6 @@
 {
   "name": "agate",
-  "description": "The A-GATE, focus on Redis, Parquet, CSV",
+  "description": "The A-GATE, focus on these targets Redis, Parquet, CSV",
   "labels": {
     "temp": "True"
   },
@@ -9,9 +9,6 @@
     "targets": {
       "prj-offline": ["parquet", "csv"],
       "prj-online": ["redis"]
-    },
-    "sources": {
-      "prj-all": ["csv", "df"]
     },
     "feature-sets": [
       "basic-party", "basic-contact", "basic-relation", "basic-account", "basic-transaction", "basic-event", "basic-communication",

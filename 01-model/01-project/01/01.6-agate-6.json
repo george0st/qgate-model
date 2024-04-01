@@ -1,6 +1,6 @@
 {
   "name": "agate-6",
-  "description": "The A-GATE-6, focus on Postgres, Parquet",
+  "description": "The A-GATE-6, focus on these targets Postgres, Parquet",
   "labels": {
     "temp": "True"
   },

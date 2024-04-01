@@ -40,9 +40,8 @@ Addition detail, [see](./docs/structure.md)
 ## Expected integrations
 The supported sources/targets for realization (✅ done, ✔ in-progress, ❌ planned), see 
 the definition `/spec/targets/` in JSON files:
- - ✅ Redis, ✔ MySQL, ✔ Postgres, ❌ Kafka 
- - Formats:
-   - ✅ Parquet, ✅ CSV
+ - ✅ Redis, ✅ MySQL, ✅ Postgres, ✅ Kafka 
+ - ✅ Parquet, ✅ CSV
 
 ## Model
 ![Basic-model](./00-high-level/basic-feature-sets.png)

@@ -7,7 +7,6 @@
         "prj-offline",
         "prj-online"
       ],
-      "sources": ["prj-all"],
       "entities": [
         {
           "name": "account-bundleid",
