@@ -16,7 +16,7 @@ class TestGenerator(unittest.TestCase):
         # setup the same dir for different unit test execution
         if os.path.split(os.getcwd())[-1]!="tests":
             os.chdir("tests")
-            print(f"!!! Change directory for test execution to '{os.getcwd()}' !!!")
+            print(f"ONLY INFO: Change directory for test execution to '{os.getcwd()}'.")
 
         shutil.rmtree(TestGenerator.OUTPUT_ADR, True)
 
