@@ -44,6 +44,26 @@ class TestGenerator(unittest.TestCase):
         self.assertTrue(os.path.exists(dir))
         self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv.gz")))
 
+    def test_generate_compress_smallbulk(self):
+        lbl="0-size-20,6-compress"
+
+        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
+        generator.generate(label=lbl, count=20, bulk_max=6, compress=True)
+
+        dir=path.join(TestGenerator.OUTPUT_ADR, lbl)
+        self.assertTrue(os.path.exists(dir))
+        self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv.gz")))
+
+    def test_generate_compress_super_smallbulk(self):
+        lbl="0-size-s-10,6-compress"
+
+        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
+        generator.generate(label=lbl, count=10, bulk_max=6, compress=True)
+
+        dir=path.join(TestGenerator.OUTPUT_ADR, lbl)
+        self.assertTrue(os.path.exists(dir))
+        self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv.gz")))
+
     def test_generate(self):
         lbl = "0-size-200,20"
 
@@ -64,6 +84,16 @@ class TestGenerator(unittest.TestCase):
         self.assertTrue(os.path.exists(dir))
         self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv")))
 
+    def test_generate_super_smallbulk(self):
+        lbl = "0-size-s-10,6"
+
+        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
+        generator.generate(label=lbl, count=10, bulk_max=6, compress=False)
+
+        dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
+        self.assertTrue(os.path.exists(dir))
+        self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv")))
+
     def test_generate_bigbulk(self):
         lbl = "0-size-2000,2000"
 
@@ -73,3 +103,5 @@ class TestGenerator(unittest.TestCase):
         dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
         self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv")))
+
+    # TODO: Add batch size under limit, it will generate wrong dataset
