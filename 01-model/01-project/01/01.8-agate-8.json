@@ -1,6 +1,6 @@
 {
   "name": "agate-8",
-  "description": "The A-GATE-8, focus on these targets Kafka, Parquet",
+  "description": "The A-GATE-8, focus on the Kafka target",
   "labels": {
     "temp": "True"
   },
@@ -8,8 +8,10 @@
   "parent": "agate",
   "spec": {
     "targets": {
-      "prj-offline": ["parquet"],
+      "prj-offline": [""],
       "prj-online": ["kafka"]
-    }
+    },
+    "feature-vectors": [],
+    "ml-models": []
   }
 }
