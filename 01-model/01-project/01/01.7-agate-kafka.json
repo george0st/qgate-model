@@ -10,8 +10,6 @@
     "targets": {
       "prj-offline": [""],
       "prj-online": ["kafka"]
-    },
-    "feature-vectors": [],
-    "ml-models": []
+    }
   }
 }
