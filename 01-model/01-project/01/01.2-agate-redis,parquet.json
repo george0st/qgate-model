@@ -1,6 +1,6 @@
 {
-  "name": "agate-2",
-  "description": "The A-GATE-2, focus on these targets Redis, Parquet",
+  "name": "agate-redis,parquet",
+  "description": "The A-GATE with redis and parquet",
   "labels": {
     "temp": "True"
   },

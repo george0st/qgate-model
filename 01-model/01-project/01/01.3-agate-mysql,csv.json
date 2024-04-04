@@ -1,6 +1,6 @@
 {
-  "name": "agate-1",
-  "description": "The A-GATE-1, focus on these targets Redis, CSV",
+  "name": "agate-mysql,csv",
+  "description": "The A-GATE with mysql and csv",
   "labels": {
     "temp": "True"
   },
@@ -9,7 +9,7 @@
   "spec": {
     "targets": {
       "prj-offline": ["csv"],
-      "prj-online": ["redis"]
+      "prj-online": ["mysql"]
     }
   }
 }

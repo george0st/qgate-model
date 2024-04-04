@@ -1,6 +1,6 @@
 {
-  "name": "agate-6",
-  "description": "The A-GATE-6, focus on these targets Postgres, Parquet",
+  "name": "agate-mysql,parquet",
+  "description": "The A-GATE with mysql and parquet",
   "labels": {
     "temp": "True"
   },
@@ -9,7 +9,7 @@
   "spec": {
     "targets": {
       "prj-offline": ["parquet"],
-      "prj-online": ["postgres"]
+      "prj-online": ["mysql"]
     }
   }
 }

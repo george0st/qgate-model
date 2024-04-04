@@ -1,6 +1,6 @@
 {
-  "name": "agate-7",
-  "description": "The A-GATE-7, focus on the Kafka target",
+  "name": "agate-kafka",
+  "description": "The A-GATE with kafka",
   "labels": {
     "temp": "True"
   },
