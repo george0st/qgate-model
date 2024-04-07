@@ -1,6 +1,6 @@
 {
-  "name": "agate-redis,parquet",
-  "description": "The A-GATE with redis and parquet",
+  "name": "agate-mysql-parquet",
+  "description": "The A-GATE with mysql and parquet",
   "labels": {
     "temp": "True"
   },
@@ -9,7 +9,7 @@
   "spec": {
     "targets": {
       "prj-offline": ["parquet"],
-      "prj-online": ["redis"]
+      "prj-online": ["mysql"]
     }
   }
 }

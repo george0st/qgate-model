@@ -1,6 +1,6 @@
 {
-  "name": "agate-postgres,parquet",
-  "description": "The A-GATE with postgres and parquet",
+  "name": "agate-postgres-csv",
+  "description": "The A-GATE with postgres and csv",
   "labels": {
     "temp": "True"
   },
@@ -8,7 +8,7 @@
   "parent": "agate",
   "spec": {
     "targets": {
-      "prj-offline": ["parquet"],
+      "prj-offline": ["csv"],
       "prj-online": ["postgres"]
     }
   }
