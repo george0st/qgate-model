@@ -1,0 +1,15 @@
+{
+  "name": "agate-redis",
+  "description": "The A-GATE with redis",
+  "labels": {
+    "temp": "True"
+  },
+  "kind": "project",
+  "parent": "agate",
+  "spec": {
+    "targets": {
+      "prj-offline": [""],
+      "prj-online": ["redis"]
+    }
+  }
+}
