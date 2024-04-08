@@ -10,8 +10,6 @@
     "targets": {
       "prj-offline": ["parquet"],
       "prj-online": [""]
-    },
-    "feature-vectors": [],
-    "ml-models": []
+    }
   }
 }
