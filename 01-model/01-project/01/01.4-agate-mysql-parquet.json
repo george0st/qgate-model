@@ -1,0 +1,15 @@
+{
+  "name": "agate-mysql-parquet",
+  "description": "The A-GATE with mysql and parquet",
+  "labels": {
+    "temp": "True"
+  },
+  "kind": "project",
+  "parent": "agate",
+  "spec": {
+    "targets": {
+      "prj-offline": ["parquet"],
+      "prj-online": ["mysql"]
+    }
+  }
+}

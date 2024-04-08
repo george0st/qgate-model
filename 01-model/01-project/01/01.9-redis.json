@@ -1,6 +1,6 @@
 {
-  "name": "agate-redis,parquet",
-  "description": "The A-GATE with redis and parquet",
+  "name": "agate-redis",
+  "description": "The A-GATE with redis",
   "labels": {
     "temp": "True"
   },
@@ -8,7 +8,7 @@
   "parent": "agate",
   "spec": {
     "targets": {
-      "prj-offline": ["parquet"],
+      "prj-offline": [""],
       "prj-online": ["redis"]
     }
   }

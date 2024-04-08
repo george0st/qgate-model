@@ -47,7 +47,7 @@
         },
         {
           "name": "party-nchild",
-          "description": "Amount of childrens",
+          "description": "Amount of children",
           "type": "int"
         },
         {
@@ -92,7 +92,7 @@
         },
         {
           "name": "party-expenseshousehold",
-          "description": "Monthly expenses (insurence, loans, etc.) for household",
+          "description": "Monthly expenses (insurance, loans, etc.) for household",
           "type": "int"
         },
         {
