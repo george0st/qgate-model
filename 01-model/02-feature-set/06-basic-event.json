@@ -3,10 +3,6 @@
   "description": "Party events e.g. run app, view paymemt conditions, check account state, show item in shop, send message to friend, etc.",
   "kind": "feature-set",
   "spec": {
-    "targets": [
-      "prj-offline",
-      "prj-online"
-    ],
     "entities": [
       {
         "name": "party-id",

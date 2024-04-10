@@ -3,10 +3,6 @@
   "description": "Transactions aggregation with relation to account",
   "kind": "feature-set",
   "spec": {
-      "targets": [
-        "prj-offline",
-        "prj-online"
-      ],
       "entities": [
         {
           "name": "account-bundleid",

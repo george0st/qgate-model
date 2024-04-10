@@ -7,9 +7,6 @@
   "kind": "project",
   "parent": "agate",
   "spec": {
-    "targets": {
-      "prj-offline": ["csv"],
-      "prj-online": ["mysql"]
-    }
+    "targets": ["csv","mysql"]
   }
 }
