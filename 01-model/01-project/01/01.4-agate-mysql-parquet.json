@@ -7,9 +7,6 @@
   "kind": "project",
   "parent": "agate",
   "spec": {
-    "targets": {
-      "prj-offline": ["parquet"],
-      "prj-online": ["mysql"]
-    }
+    "targets": ["parquet","mysql"]
   }
 }
