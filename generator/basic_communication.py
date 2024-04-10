@@ -225,7 +225,7 @@ class BasicCommunication(BaseData):
     # GenAI prompt
     # Write ten negative sentences to the user support. The writer will be the user.
     # Write ten highly negative sentences to the user support. The writer will be the user.
-    # Write ten trully negative sentences from bank environment to the user support. The writer will be the user.
+    # Write ten truly negative sentences from bank environment to the user support. The writer will be the user.
     negative_sentences = [
         "Why is your product so slow and buggy? Fix it now or I'm leaving!",
         "You charged me twice for the same service! This is unacceptable! I want a refund immediately!",
