@@ -3,10 +3,6 @@
   "description": "Account detail with relation to party",
   "kind": "feature-set",
   "spec": {
-    "targets": [
-      "prj-offline",
-      "prj-online"
-    ],
     "entities": [
       {
         "name": "party-id",
