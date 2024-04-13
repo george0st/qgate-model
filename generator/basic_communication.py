@@ -98,18 +98,18 @@ class BasicCommunication(BaseData):
 
     def _generate_text(self, sentiment: Sentiment) -> str:
         if sentiment==Sentiment.Positive:
-            return self.positive_sentences[self.rnd_int(0, len(self.positive_sentences))]
+            return self.POSITIVE_SENTENCES[self.rnd_int(0, len(self.POSITIVE_SENTENCES))]
         elif sentiment==Sentiment.Negative:
-            return self.negative_sentences[self.rnd_int(0, len(self.negative_sentences))]
+            return self.NEGATIVE_SENTENCES[self.rnd_int(0, len(self.NEGATIVE_SENTENCES))]
         elif sentiment==Sentiment.Neutral:
-            return self.neutral_sentences[self.rnd_int(0,len(self.neutral_sentences))]
+            return self.NEUTRAL_SENTENCES[self.rnd_int(0, len(self.NEUTRAL_SENTENCES))]
         else:
             return self.fake.sentence(nb_words = 15,variable_nb_words = True)
 
     # GenAI prompt
     # Write ten positive sentences or questions to the user support. The writer will be the satisfy or very satisfy user.
     # Write ten positive sentences or questions to the user support. The writer will be the satisfy or very satisfy user. The user support will be from travel agency.
-    positive_sentences = [
+    POSITIVE_SENTENCES = [
         "I just wanted to say thank you for your amazing service. You really made my day!",
         "I'm very impressed with your product. It works flawlessly and has all the features I need. How can I leave a positive review?",
         "You are awesome! You solved my problem in no time and were very friendly and helpful. Can I speak to your supervisor and praise your work?",
@@ -226,7 +226,7 @@ class BasicCommunication(BaseData):
     # Write ten negative sentences to the user support. The writer will be the user.
     # Write ten highly negative sentences to the user support. The writer will be the user.
     # Write ten truly negative sentences from bank environment to the user support. The writer will be the user.
-    negative_sentences = [
+    NEGATIVE_SENTENCES = [
         "Why is your product so slow and buggy? Fix it now or I'm leaving!",
         "You charged me twice for the same service! This is unacceptable! I want a refund immediately!",
         "Your agent was rude and unhelpful! I demand to speak to a manager!",
@@ -338,7 +338,7 @@ class BasicCommunication(BaseData):
     # GenAI prompt
     # Write ten neutral sentences or questions to the user support. The writer will be the user.
     # Write ten real neutral sentences or questions to the user support. The writer will be the user. The user support will be from travel agency.
-    neutral_sentences = [
+    NEUTRAL_SENTENCES = [
         "Thank you for your help.",
         "Could you please clarify this for me?",
         "I'm sorry, I didn't understand what you meant.",
