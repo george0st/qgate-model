@@ -124,6 +124,17 @@ class BasicTransaction(BaseData):
 
                 self.model.append(model)
 
+    def _create_transaction_descrition(self, income=True, probability_empty=0.2, probability_fake=0.1):
+        option = self.rnd_choose([0, 1, 2],
+                                 [probability_empty, probability_fake, 1 - probability_empty - probability_fake])
+        if option==0:
+            return ""
+        elif option==1:
+            return self.fake.text(max_nb_chars=64)
+
+        if income:
+            return self.TRANSACTION_INCOME_DESCRIPTION[self.rnd_int(0, len(self.TRANSACTION_INCOME_DESCRIPTION))]
+        return self.TRANSACTION_OUTCOME_DESCRIPTION[self.rnd_int(0, len(self.TRANSACTION_INCOME_DESCRIPTION))]
 
     TRANSACTION_INCOME_DESCRIPTION = [
         "Salary Payment",
@@ -216,7 +227,6 @@ class BasicTransaction(BaseData):
         "Dropshipping Sales Income",
         "Payment for Home Cleaning Services Provided",
     ]
-
 
     TRANSACTION_OUTCOME_DESCRIPTION = [
         "Payment for Invoice",
