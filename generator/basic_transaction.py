@@ -76,7 +76,7 @@ class BasicTransaction(BaseData):
 
                 # "name": "transaction-description",
                 # "description": "Transaction description",
-                model["transaction-description"] = self.fake.text(max_nb_chars=64)
+                model["transaction-description"] = self._transaction_description(True,0.2, 0.1)
 
                 # "name": "transaction-date",
                 # "description": "Transaction date",
@@ -124,7 +124,7 @@ class BasicTransaction(BaseData):
 
                 self.model.append(model)
 
-    def _create_transaction_descrition(self, income=True, probability_empty=0.2, probability_fake=0.1):
+    def _transaction_description(self, income=True, probability_empty=0.2, probability_fake=0.1):
         option = self.rnd_choose([0, 1, 2],
                                  [probability_empty, probability_fake, 1 - probability_empty - probability_fake])
         if option==0:
