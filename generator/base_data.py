@@ -56,25 +56,10 @@ class BaseData(Base):
                   decimal=setup.csv_decimal,
                   compression=compression_opts)
 
-        df.to_parquet(os.path.join(path,f"{self.name}.parquet"),
-                      engine="pyarrow",
-                      header=False if append else True,
-                      index=False,
-                      mode = "a" if append else "w",
-                      encoding = 'utf-8',
-                      compression = compression_opts)
-
-
-            # df.to_parquet(os.path.join(path,f"{self.name}.parquet"),
-            #                            engine='fastparquet',
-            #                            append=True if append else False,
-            #                            compression = "snappy",
-            #                            index = False)
-
-            # df.to_parquet(os.path.join(path,f"{self.name}.parquet"),
-            #                            engine="pyarrow",
-            #               compression="snappy",
-            #               index=False)
+        # df.to_parquet(os.path.join(path,f"{self.name}.parquet"),
+        #               engine="pyarrow",
+        #               index=False,
+        #               compression = compression_opts)
 
         del df
 
