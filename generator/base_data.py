@@ -45,9 +45,9 @@ class BaseData(Base):
         # print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self.name}', dir: '{dir}'...")
         df=pd.DataFrame(self.model)
         compression_opts = dict(method='gzip') if compress else None
-        output_name = f"{self.name}.csv.gz" if compress else f"{self.name}.csv"
-        
-        df.to_csv(os.path.join(path, output_name),
+        output_csv = f"{self.name}.csv.gz" if compress else f"{self.name}.csv"
+
+        df.to_csv(os.path.join(path, output_csv),
                   header=False if append else True,
                   index=False,
                   mode="a" if append else "w",
@@ -56,35 +56,14 @@ class BaseData(Base):
                   decimal=setup.csv_decimal,
                   compression=compression_opts)
 
-#         if compress:
-#             compression_opts = dict(method='gzip')
-#             df.to_csv(os.path.join(path,f"{self.name}.csv.gz"),
-#                       header=False if append else True,
-#                       index=False,
-#                       mode="a" if append else "w",
-#                       encoding='utf-8',
-#                       sep=setup.csv_separator,
-#                       decimal=setup.csv_decimal,
-#                       compression=compression_opts)
-#
-# #            compression: CompressionOptions = "infer",
-#
-#
-#         #             df.to_parquet(os.path.join(path,f"{self.name}.parquet"),
-# #                           engine="pyarrow",
-# #                           compression='gzip',
-# # #                          header=False if append else True,
-# #                           index=False,
-# #                           mode = "a" if append else "w")
-#
-#         else:
-#             df.to_csv(os.path.join(path,f"{self.name}.csv"),
-#                       header=False if append else True,
-#                       index=False,
-#                       mode="a" if append else "w",
-#                       encoding='utf-8',
-#                       sep=setup.csv_separator,
-#                       decimal=setup.csv_decimal)
+        df.to_parquet(os.path.join(path,f"{self.name}.parquet"),
+                      engine="pyarrow",
+                      header=False if append else True,
+                      index=False,
+                      mode = "a" if append else "w",
+                      encoding = 'utf-8',
+                      compression = compression_opts)
+
 
             # df.to_parquet(os.path.join(path,f"{self.name}.parquet"),
             #                            engine='fastparquet',
