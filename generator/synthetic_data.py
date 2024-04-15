@@ -88,13 +88,13 @@ class SyntheticData:
                 entity.generate(bulk)
 
             self._save_all(False if current_count == 0 else True, label, compress)
-            self._close()
 
             self.generate_test(3)
             self._save_test_all(label)
 
             self._clean_all()
             current_count = current_count + bulk
+        self._close()
         diff_time=time.time()-start_time
         print(f"DONE Duration: {round(diff_time,6)} seconds ({datetime.timedelta(seconds=diff_time)})")
 
