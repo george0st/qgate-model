@@ -22,6 +22,7 @@ class BaseData(Base):
         self.gmodel = gmodel
         self._name = name
         self.clean()
+        self._parquet_writer = None
 
     @property
     def name(self):
@@ -38,10 +39,10 @@ class BaseData(Base):
         pass
 
     def close(self):
-        if self._writer:
-            self._writer.close()
+        if self._parquet_writer:
+            self._parquet_writer.close()
 
-            
+
     def save(self, path, append: bool, dir: str, compress: bool):
 
         path=os.path.join(path, dir)
@@ -65,10 +66,8 @@ class BaseData(Base):
                   compression=compression_opts)
 
 
-        self._writer = append_to_parquet_table(df, os.path.join(path, f"{self.name}.parquet.gzip"), self._writer)
+        self._parquet_writer = append_to_parquet_table(df, os.path.join(path, f"{self.name}.parquet"), self._parquet_writer)
 
-        if writer:
-            writer.close()
         # df.to_parquet(os.path.join(path, f"{self.name}.parquet.gzip"),
         #               engine='fastparquet',
         #               index=False,
