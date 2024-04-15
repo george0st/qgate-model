@@ -59,6 +59,10 @@ class SyntheticData:
         for entity in self._entities:
             entity.save(self._output_path, append, label, compress)
 
+    def _close(self):
+        for entity in self._entities:
+            entity.close()
+
     def _save_test_all(self, label):
         for test in self._tests:
             test.save(self._test_path, label)
@@ -84,6 +88,7 @@ class SyntheticData:
                 entity.generate(bulk)
 
             self._save_all(False if current_count == 0 else True, label, compress)
+            self._close()
 
             self.generate_test(3)
             self._save_test_all(label)
