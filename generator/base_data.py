@@ -45,6 +45,9 @@ class BaseData(Base):
 
     def save(self, path, append: bool, dir: str, compress: bool):
 
+        if len(self.model)==0:
+            return
+
         path=os.path.join(path, dir)
         if not os.path.exists(path):
             os.makedirs(path)

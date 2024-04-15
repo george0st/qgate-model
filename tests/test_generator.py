@@ -74,7 +74,7 @@ class TestGenerator(unittest.TestCase):
         self.assertTrue(os.path.exists(dir))
         self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv")))
 
-    def test_generate_smallbulk(self):
+    def test_generate_smallbulk(self):      # issue
         lbl = "0-size-20,6"
 
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
