@@ -57,11 +57,12 @@ class BaseData(Base):
                   decimal=setup.csv_decimal,
                   compression=compression_opts)
 
-        df.to_parquet(os.path.join(path, f"{self.name}.parquet"),
-                      engine='fastparquet',
-                      index=False,
-                      append=True if append else False,
-                      compression = compression_opts)
+        # df.to_parquet(os.path.join(path, f"{self.name}.parquet.gzip"),
+        #               engine='fastparquet',
+        #               index=False,
+        #               append=True if append else False,
+        #               compression = compression_opts,
+        #               object_encoding = 'utf8')
 
 
         # df.to_parquet(os.path.join(path,f"{self.name}.parquet"),
