@@ -44,7 +44,6 @@ class BaseData(Base):
 
         # print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self.name}', dir: '{dir}'...")
         df=pd.DataFrame(self.model)
-        #compression_opts = dict(method='gzip') if compress else None
         compression_opts = 'gzip' if compress else None
         output_csv = f"{self.name}.csv.gz" if compress else f"{self.name}.csv"
 
