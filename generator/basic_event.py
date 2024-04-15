@@ -139,7 +139,7 @@ class BasicEvent(BaseData):
                     model['event-action'] = action
 
                     # "name": "event-detail",
-                    model['event-detail'] = None    # not used, right now
+                    model['event-detail'] = ""    # not used, right now
 
                     # "name": "event-date",
                     #   random movement in second for next event
