@@ -44,7 +44,7 @@ class BaseData(Base):
 
         # print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self.name}', dir: '{dir}'...")
         df=pd.DataFrame(self.model)
-        compression_opts = dict(method='gzip') if compress else None
+        compression_opts = 'gzip' if compress else None
         output_csv = f"{self.name}.csv.gz" if compress else f"{self.name}.csv"
 
         df.to_csv(os.path.join(path, output_csv),
@@ -55,6 +55,14 @@ class BaseData(Base):
                   sep=setup.csv_separator,
                   decimal=setup.csv_decimal,
                   compression=compression_opts)
+
+        # df.to_parquet(os.path.join(path, f"{self.name}.parquet.gzip"),
+        #               engine='fastparquet',
+        #               index=False,
+        #               append=True if append else False,
+        #               compression = compression_opts,
+        #               object_encoding = 'utf8')
+
 
         # df.to_parquet(os.path.join(path,f"{self.name}.parquet"),
         #               engine="pyarrow",
