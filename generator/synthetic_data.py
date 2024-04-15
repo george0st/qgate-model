@@ -59,6 +59,10 @@ class SyntheticData:
         for entity in self._entities:
             entity.save(self._output_path, append, label, compress)
 
+    def _close(self):
+        for entity in self._entities:
+            entity.close()
+
     def _save_test_all(self, label):
         for test in self._tests:
             test.save(self._test_path, label)
@@ -90,6 +94,7 @@ class SyntheticData:
 
             self._clean_all()
             current_count = current_count + bulk
+        self._close()
         diff_time=time.time()-start_time
         print(f"DONE Duration: {round(diff_time,6)} seconds ({datetime.timedelta(seconds=diff_time)})")
 
