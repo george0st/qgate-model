@@ -72,8 +72,6 @@ class BaseData(Base):
 
         del df
 
-
-
     def _append_to_parquet(self, dataframe, filepath=None, writer=None):
         """Method writes/append dataframes in parquet format.
 
