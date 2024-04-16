@@ -68,25 +68,9 @@ class BaseData(Base):
                   decimal=setup.csv_decimal,
                   compression=compression_opts)
 
-        self._parquet_writer = self._append_to_parquet(df, os.path.join(path, f"{self.name}.parquet"), self._parquet_writer)
+        table = pa.Table.from_pandas(df)
+        if self._parquet_writer is None:
+            self._parquet_writer = pq.ParquetWriter(os.path.join(path, f"{self.name}.parquet"), table.schema)
+        self._parquet_writer.write_table(table=table)
 
         del df
-
-    def _append_to_parquet(self, dataframe, filepath=None, writer=None):
-        """Method writes/append dataframes in parquet format.
-
-        This method is used to write pandas DataFrame as pyarrow Table in parquet format. If the methods is invoked
-        with writer, it appends dataframe to the already written pyarrow table.
-
-        :param dataframe: pd.DataFrame to be written in parquet format.
-        :param filepath: target file location for parquet file.
-        :param writer: ParquetWriter object to write pyarrow tables in parquet format.
-        :return: ParquetWriter object. This can be passed in the subsequent method calls to append DataFrame
-            in the pyarrow Table
-        """
-        table = pa.Table.from_pandas(dataframe)
-        if writer is None:
-            writer = pq.ParquetWriter(filepath, table.schema)
-        writer.write_table(table=table)
-        return writer
-
