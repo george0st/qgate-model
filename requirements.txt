@@ -3,8 +3,7 @@ click~=8.1
 
 numpy~=1.26
 pandas==2.2.2
-#pyarrow==15.0.2
-#fastparquet==2024.2.0
+pyarrow==15.0.2
 
 # generation of synthetic data
 faker~=24.2
