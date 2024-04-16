@@ -41,6 +41,7 @@ class BaseData(Base):
     def close(self):
         if self._parquet_writer:
             self._parquet_writer.close()
+            self._parquet_writer = None
 
     def save(self, path, append: bool, dir: str, compress: bool):
 
