@@ -3,7 +3,7 @@
   "description": "The machine learning meta-model with synthetic data (useful for MLOps/feature store), part of the quality gate concept.",
   "kind": "model",
   "spec": {
-    "version": "0.2.2",
+    "version": "0.2.3",
     "CSV_SEPARATOR": ",",
     "CSV_DECIMAL": "."
   }
