@@ -42,7 +42,6 @@ class BaseData(Base):
         if self._parquet_writer:
             self._parquet_writer.close()
 
-
     def save(self, path, append: bool, dir: str, compress: bool):
 
         if len(self.model)==0:
