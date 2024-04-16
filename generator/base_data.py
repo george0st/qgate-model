@@ -71,7 +71,7 @@ class BaseData(Base):
         # write parquet
         table = pa.Table.from_pandas(df)
         if self._parquet_writer is None:
-            self._parquet_writer = pq.ParquetWriter(os.path.join(path, f"{self.name}.parquet"), table.schema)
+            self._parquet_writer = pq.ParquetWriter(os.path.join(path, f"{self.name}.parquet"), table.schema, compression=compression_opts)
         self._parquet_writer.write_table(table=table)
 
         # free memory
