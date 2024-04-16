@@ -53,10 +53,16 @@ class BasicContact(BaseData):
                     if self.rnd_bool() else ContactEnum.Phone
 
                 # "name": "contact-email"
-                model['contact-email']=self.fake.email() if contact_detail & ContactEnum.Email else ""
+                if contact_detail & ContactEnum.Email:
+                    model['contact-email'] = self.fake.email()
+                else:
+                    model['contact-email'] = ""
 
                 # "name": "contact-phone"
-                model['contact-phone']=self.fake.phone_number() if contact_detail & ContactEnum.Phone else ""                     
+                if contact_detail & ContactEnum.Phone:
+                    model['contact-phone'] = self.fake.phone_number()
+                else:
+                    model['contact-phone'] = ""
 
                 # "name": "contact-state"
                 if count==0:
@@ -70,4 +76,3 @@ class BasicContact(BaseData):
                 model['record-date']=self.gmodel["NOW"]
 
                 self.model.append(model)
-
