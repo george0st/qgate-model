@@ -49,16 +49,14 @@ class BasicContact(BaseData):
                 # generate different amount of contact information
                 # Customer = email + phone
                 # !Customer = random email or phone
-                contact_detail=ContactEnum.Full if party['party-type']=="Customer" else ContactEnum.Email\
+                contact_detail=ContactEnum.Full if party['party-type']=="Customer" else ContactEnum.Email \
                     if self.rnd_bool() else ContactEnum.Phone
 
-                if contact_detail & ContactEnum.Email:
-                    # "name": "contact-email"
-                    model['contact-email']=self.fake.email()
+                # "name": "contact-email"
+                model['contact-email']=self.fake.email() if contact_detail & ContactEnum.Email else ""
 
-                if contact_detail & ContactEnum.Phone:
-                    # "name": "contact-phone"
-                    model['contact-phone']=self.fake.phone_number()
+                # "name": "contact-phone"
+                model['contact-phone']=self.fake.phone_number() if contact_detail & ContactEnum.Phone else ""                     
 
                 # "name": "contact-state"
                 if count==0:
