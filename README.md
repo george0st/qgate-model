@@ -28,7 +28,7 @@ The solution contains this simple structure:
    - The definition contains 01-projects, 02-feature sets, 03-feature vectors, 
    04-ml models, etc. in JSON format
  - **02-data**
-   - The synthetic data for meta-model in CSV/GZ format (future support parquet) for party, account,
+   - The synthetic data for meta-model in CSV/GZ and parquet formats for party, account,
    transaction, event, communication, etc.
    - You can also generate your own dataset with requested size (see sample `./02-data/03-size-10k.sh`
    or description `python main.py generate --help`)
