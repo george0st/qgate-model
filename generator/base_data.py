@@ -54,11 +54,11 @@ class BaseData(Base):
 
         setup=Setup()
 
-        # print(f"Creating: {'APPEND' if append else 'WRITE'}, name: '{self.name}', dir: '{dir}'...")
         df=pd.DataFrame(self.model)
         compression_opts = 'gzip' if compress else None
         output_csv = f"{self.name}.csv.gz" if compress else f"{self.name}.csv"
 
+        # write CSV
         df.to_csv(os.path.join(path, output_csv),
                   header=False if append else True,
                   index=False,
@@ -68,9 +68,11 @@ class BaseData(Base):
                   decimal=setup.csv_decimal,
                   compression=compression_opts)
 
+        # write parquet
         table = pa.Table.from_pandas(df)
         if self._parquet_writer is None:
             self._parquet_writer = pq.ParquetWriter(os.path.join(path, f"{self.name}.parquet"), table.schema)
         self._parquet_writer.write_table(table=table)
 
+        # free memory
         del df
