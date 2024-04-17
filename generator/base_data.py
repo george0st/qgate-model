@@ -55,16 +55,16 @@ class BaseData(Base):
         setup=Setup()
 
         df=pd.DataFrame(self.model)
+
         compression_opts = 'gzip' if compress else None
         output_csv = f"{self.name}.csv.gz" if compress else f"{self.name}.csv"
-
-        append=True if os.path.isfile(output_csv) else False
+        append_csv=True if os.path.isfile(output_csv) else False
 
         # write CSV
         df.to_csv(os.path.join(path, output_csv),
-                  header=False if append else True,
+                  header=False if append_csv else True,
                   index=False,
-                  mode="a" if append else "w",
+                  mode="a" if append_csv else "w",
                   encoding='utf-8',
                   sep=setup.csv_separator,
                   decimal=setup.csv_decimal,
