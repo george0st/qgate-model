@@ -43,7 +43,7 @@ class BaseData(Base):
             self._parquet_writer.close()
             self._parquet_writer = None
 
-    def save(self, path, append: bool, dir: str, compress: bool):
+    def save(self, path, dir: str, compress: bool):
 
         if len(self.model)==0:
             return
@@ -56,13 +56,14 @@ class BaseData(Base):
 
         df=pd.DataFrame(self.model)
         compression_opts = 'gzip' if compress else None
-        output_csv = f"{self.name}.csv.gz" if compress else f"{self.name}.csv"
 
         # write CSV
-        df.to_csv(os.path.join(path, output_csv),
-                  header=False if append else True,
+        output_csv = os.path.join(path, f"{self.name}.csv.gz" if compress else f"{self.name}.csv")
+        append_csv=True if os.path.isfile(output_csv) else False
+        df.to_csv(output_csv,
+                  header=False if append_csv else True,
                   index=False,
-                  mode="a" if append else "w",
+                  mode="a" if append_csv else "w",
                   encoding='utf-8',
                   sep=setup.csv_separator,
                   decimal=setup.csv_decimal,
