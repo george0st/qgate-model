@@ -16,7 +16,7 @@ class Sentiment(Enum):
 class BasicCommunication(BaseData):
 
     NAME = "07-basic-communication"
-    COMMUNICATION_HISTORY_DAYS = 90
+    MAX_COMMUNICATION_HISTORY_DAYS = 90
 
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, BasicCommunication.NAME)
@@ -35,7 +35,7 @@ class BasicCommunication(BaseData):
             # only 3 months back history
             # generate communication with history EVENT_HISTORY_DAYS
             party_customer=party['party-type'] == "Customer"
-            communication_date = self.now - datetime.timedelta(days=float(BasicCommunication.COMMUNICATION_HISTORY_DAYS))
+            communication_date = self.now - datetime.timedelta(days=float(BasicCommunication.MAX_COMMUNICATION_HISTORY_DAYS))
 
             # iteration cross days
             while True:
