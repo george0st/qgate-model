@@ -59,7 +59,8 @@ class BaseData(Base):
 
         # write CSV
         output_csv = os.path.join(path, f"{self.name}.csv.gz" if compress else f"{self.name}.csv")
-        append_csv=True if os.path.isfile(output_csv) else False
+        append_csv=False if (self._parquet_writer is None) else True
+#        append_csv=True if os.path.isfile(output_csv) else False
         df.to_csv(output_csv,
                   header=False if append_csv else True,
                   index=False,
