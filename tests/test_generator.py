@@ -1,13 +1,9 @@
 import os
 import unittest
-import time
 from os import path
 import shutil
-
 import pandas as pd
-
 from generator.synthetic_data import SyntheticData
-from generator.basic_communication import BasicCommunication
 from generator import basic_party, basic_contact, basic_relation, basic_account, basic_transaction, basic_event, basic_communication
 
 
