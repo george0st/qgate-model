@@ -65,6 +65,20 @@ class TestGenerator(unittest.TestCase):
         self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv")))
         # TODO: check if the first line contain header
 
+    def test_generate_smallbulk_repeat(self):
+        """Repeat generation of small files"""
+
+        for i in range(15):
+            lbl = f"0-size-iter{i}-8,6"
+
+            generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
+            generator.generate(label=lbl, count=8, bulk_max=6, compress=False)
+
+            dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
+            self.assertTrue(os.path.exists(dir))
+            self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv")))
+            # TODO: check if the first line contain header
+
     def test_generate_smallbulk(self):
         lbl = "0-size-20,6"
 
