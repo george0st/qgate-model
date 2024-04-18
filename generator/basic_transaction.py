@@ -113,7 +113,7 @@ class BasicTransaction(BaseData):
 
                 # "name": "transaction-fraudanomaly",
                 # "description": "Possible fraud anomaly detection (min. 0 - without anomaly detection, max. 1)",
-                model["transaction-fraudanomaly"] = fraud_anomaly
+                model["transaction-fraudanomaly"] = float(fraud_anomaly)
 
                 # "name": "transaction-fraud",
                 # "description": "Identification of fraud (True - fraud, False - without fraud)",
