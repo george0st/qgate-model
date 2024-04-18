@@ -1,10 +1,10 @@
 import os
 import unittest
-import time
 from os import path
 import shutil
+import pandas as pd
 from generator.synthetic_data import SyntheticData
-from generator.basic_communication import BasicCommunication
+from generator import basic_party, basic_contact, basic_relation, basic_account, basic_transaction, basic_event, basic_communication
 
 
 class TestGenerator(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestGenerator(unittest.TestCase):
 
         dir=path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
-        self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv.gz")))
+        self.assertTrue(os.path.exists(path.join(dir, f"{basic_communication.BasicCommunication.NAME}.csv.gz")))
 
     def test_generate_compress_smallbulk(self):
         lbl="0-size-20,6-compress"
@@ -42,7 +42,7 @@ class TestGenerator(unittest.TestCase):
 
         dir=path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
-        self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv.gz")))
+        self.assertTrue(os.path.exists(path.join(dir, f"{basic_communication.BasicCommunication.NAME}.csv.gz")))
 
     def test_generate_compress_super_smallbulk(self):
         lbl="0-size-s-10,6-compress"
@@ -52,7 +52,7 @@ class TestGenerator(unittest.TestCase):
 
         dir=path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
-        self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv.gz")))
+        self.assertTrue(os.path.exists(path.join(dir, f"{basic_communication.BasicCommunication.NAME}.csv.gz")))
 
     def test_generate(self):
         lbl = "0-size-200,20"
@@ -62,8 +62,7 @@ class TestGenerator(unittest.TestCase):
 
         dir=path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
-        self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv")))
-        # TODO: check if the first line contain header
+        self.assertTrue(os.path.exists(path.join(dir, f"{basic_party.BasicParty.NAME}.csv")))
 
     def test_generate_smallbulk_repeat(self):
         """Repeat generation of small files"""
@@ -76,8 +75,7 @@ class TestGenerator(unittest.TestCase):
 
             dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
             self.assertTrue(os.path.exists(dir))
-            self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv")))
-            # TODO: check if the first line contain header
+            self.assertTrue(os.path.exists(path.join(dir, f"{basic_party.BasicParty.NAME}.csv")))
 
     def test_generate_smallbulk(self):
         lbl = "0-size-20,6"
@@ -87,8 +85,7 @@ class TestGenerator(unittest.TestCase):
 
         dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
-        self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv")))
-        # TODO: check if the first line contain header
+        self.assertTrue(os.path.exists(path.join(dir, f"{basic_party.BasicParty.NAME}.csv")))
 
     def test_generate_super_smallbulk(self):
         lbl = "0-size-s-10,6"
@@ -98,8 +95,7 @@ class TestGenerator(unittest.TestCase):
 
         dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
-        self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv")))
-        # TODO: check if the first line contain header
+        self.assertTrue(os.path.exists(path.join(dir, f"{basic_party.BasicParty.NAME}.csv")))
 
     def test_generate_bigbulk(self):
         lbl = "0-size-2000,2000"
@@ -109,7 +105,28 @@ class TestGenerator(unittest.TestCase):
 
         dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
-        self.assertTrue(os.path.exists(path.join(dir, f"{BasicCommunication.NAME}.csv")))
-        # TODO: check if the first line contain header
+        self.assertTrue(os.path.exists(path.join(dir, f"{basic_party.BasicParty.NAME}.csv")))
+
+    def _check_csv_header(self, filename, key_text):
+        if os.path.exists(filename):
+            df = pd.read_csv(filename)
+            self.assertTrue(df.to_string().find(key_text) >= 0)
+
+    def test_csv_structure(self):
+        """All csv have header"""
+        lbl = "0-size-csvcheck-10,6"
+
+        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
+        generator.generate(label=lbl, count=10, bulk_max=6, compress=False)
+
+        dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
+        self.assertTrue(os.path.exists(dir))
+        self._check_csv_header(path.join(dir, f"{basic_party.BasicParty.NAME}.csv"), "party-id")
+        self._check_csv_header(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv"), "party-id")
+        self._check_csv_header(path.join(dir, f"{basic_relation.BasicRelation.NAME}.csv"), "party-id")
+        self._check_csv_header(path.join(dir, f"{basic_account.BasicAccount.NAME}.csv"), "party-id")
+        self._check_csv_header(path.join(dir, f"{basic_transaction.BasicTransaction.NAME}.csv"), "account-id")
+        self._check_csv_header(path.join(dir, f"{basic_event.BasicEvent.NAME}.csv"), "party-id")
+        self._check_csv_header(path.join(dir, f"{basic_communication.BasicCommunication.NAME}.csv"), "party-id")
 
     # TODO: Add batch size under limit, it will generate wrong dataset
