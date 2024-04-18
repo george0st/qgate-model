@@ -80,7 +80,7 @@ class BasicEvent(BaseData):
                 #   for customer:       more active
                 #   for non customer:   small amount of activities
                 if party_customer:
-                    day = self.rnd_choose(range(10),[0.01, 0.19, 0.1, 0.2, 0.1, 0.05, 0.05, 0.1, 0.1, 0.1])
+                    day = self.rnd_choose(range(10),[0, 0, 0, 0.1, 0.3, 0.15, 0.15, 0.1, 0.1, 0.1])
                 else:
                     day = self.rnd_choose(range(10), [0, 0, 0, 0, 0.05, 0.05, 0.1, 0.2, 0.3, 0.3])
                 event_date = event_date + datetime.timedelta(days=float(day))
@@ -88,10 +88,10 @@ class BasicEvent(BaseData):
                     break
 
                 # define bundle
-                #   for customer:       size 2-15x events (bigger amount of activities)
-                #   for non-customer:   size 2-10x events (small amount of activites)
+                #   for customer:       size 2-10x events (bigger amount of activities)
+                #   for non-customer:   size 2-5x events (small amount of activites)
                 session_id = str(uuid.uuid4())
-                session_events=self.rnd_choose(range(2, 15)) if party_customer else self.rnd_choose(range(2, 10))
+                session_events=self.rnd_choose(range(2, 10)) if party_customer else self.rnd_choose(range(2, 5))
                 session_datetime = datetime.datetime(event_date.year,
                                                      event_date.month,
                                                      event_date.day,

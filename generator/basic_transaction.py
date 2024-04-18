@@ -10,6 +10,7 @@ from faker.providers import bank
 class BasicTransaction(BaseData):
 
     NAME= "05-basic-transaction"
+    MAX_EVENT_HISTORY_MONTHS = 3*12     # 3 years as default, in case of value '0' or '-1', it is without limit
 
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, BasicTransaction.NAME)
@@ -41,10 +42,15 @@ class BasicTransaction(BaseData):
 
             dif_date=round((date_to-date_from).days/30)
 
+            # apply limit for max history
+            if self.MAX_EVENT_HISTORY_MONTHS > 0:
+                if dif_date > self.MAX_EVENT_HISTORY_MONTHS:
+                    dif_date = self.MAX_EVENT_HISTORY_MONTHS
+
             for mounth in range(dif_date):
                 a=mounth*30
                 b=int(self.rnd_int(1,30))
-                new_date=date_from+datetime.timedelta(days=a+b)
+                new_date=date_to-datetime.timedelta(days=a+b)
 
                 model=self.model_item()
 
