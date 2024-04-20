@@ -1,6 +1,6 @@
 {
   "name": "agate-redis-parquet",
-  "description": "The A-GATE with redis and parquet",
+  "description": "The A-GATE with redis and parquet targets",
   "labels": {
     "temp": "True"
   },

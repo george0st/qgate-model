@@ -1,6 +1,6 @@
 {
   "name": "bgate",
-  "description": "The B-GATE, focus on these targets Redis, Parquet, CSV",
+  "description": "The B-GATE, focus on these targets Redis, Parquet, CSV targets",
   "labels": {
     "temp": "True"
   },

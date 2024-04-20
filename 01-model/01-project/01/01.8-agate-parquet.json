@@ -1,6 +1,6 @@
 {
   "name": "agate-parquet",
-  "description": "The A-GATE with parquet",
+  "description": "The A-GATE with parquet target",
   "labels": {
     "temp": "True"
   },

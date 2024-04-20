@@ -1,6 +1,6 @@
 {
   "name": "agate",
-  "description": "The A-GATE, focus on these targets Redis, Parquet, CSV",
+  "description": "The A-GATE, focus on these targets Redis, Parquet, CSV targets",
   "labels": {
     "temp": "True"
   },

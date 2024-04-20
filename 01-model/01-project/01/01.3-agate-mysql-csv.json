@@ -1,6 +1,6 @@
 {
   "name": "agate-mysql-csv",
-  "description": "The A-GATE with mysql and csv",
+  "description": "The A-GATE with mysql and csv targets",
   "labels": {
     "temp": "True"
   },
