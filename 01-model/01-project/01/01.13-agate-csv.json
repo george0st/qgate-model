@@ -1,0 +1,12 @@
+{
+  "name": "agate-csv",
+  "description": "The A-GATE with csv target",
+  "labels": {
+    "temp": "True"
+  },
+  "kind": "project",
+  "parent": "agate",
+  "spec": {
+    "targets": ["csv"]
+  }
+}
