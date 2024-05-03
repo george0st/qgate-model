@@ -1,6 +1,6 @@
 {
   "name": "agate-postgres-csv",
-  "description": "The A-GATE with postgres and csv",
+  "description": "The A-GATE with postgres and csv targets",
   "labels": {
     "temp": "True"
   },

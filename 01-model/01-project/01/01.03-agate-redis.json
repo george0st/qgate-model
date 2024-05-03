@@ -1,6 +1,6 @@
 {
   "name": "agate-redis",
-  "description": "The A-GATE with redis",
+  "description": "The A-GATE with redis target",
   "labels": {
     "temp": "True"
   },

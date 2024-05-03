@@ -13,7 +13,7 @@ import numpy
 class BasicEvent(BaseData):
 
     NAME = "06-basic-event"
-    EVENT_HISTORY_DAYS = 90
+    MAX_EVENT_HISTORY_DAYS = 90
 
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, BasicEvent.NAME)
@@ -71,7 +71,7 @@ class BasicEvent(BaseData):
 
             # generate event with history EVENT_HISTORY_DAYS
             party_customer=party['party-type'] == "Customer"
-            event_date = self.now - datetime.timedelta(days=float(BasicEvent.EVENT_HISTORY_DAYS))
+            event_date = self.now - datetime.timedelta(days=float(BasicEvent.MAX_EVENT_HISTORY_DAYS))
 
             # iteration cross days
             while True:

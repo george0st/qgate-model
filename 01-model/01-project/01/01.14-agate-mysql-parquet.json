@@ -1,6 +1,6 @@
 {
   "name": "agate-mysql-parquet",
-  "description": "The A-GATE with mysql and parquet",
+  "description": "The A-GATE with mysql and parquet targets",
   "labels": {
     "temp": "True"
   },

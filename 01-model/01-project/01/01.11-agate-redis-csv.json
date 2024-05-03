@@ -1,6 +1,6 @@
 {
   "name": "agate-redis-csv",
-  "description": "The A-GATE with redis and csv",
+  "description": "The A-GATE with redis and csv targets",
   "labels": {
     "temp": "True"
   },

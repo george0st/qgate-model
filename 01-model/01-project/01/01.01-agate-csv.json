@@ -1,12 +1,12 @@
 {
-  "name": "agate-parquet",
-  "description": "The A-GATE with parquet",
+  "name": "agate-csv",
+  "description": "The A-GATE with csv target",
   "labels": {
     "temp": "True"
   },
   "kind": "project",
   "parent": "agate",
   "spec": {
-    "targets": ["parquet"]
+    "targets": ["csv"]
   }
 }

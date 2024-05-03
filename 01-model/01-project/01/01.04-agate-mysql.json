@@ -1,0 +1,12 @@
+{
+  "name": "agate-mysql",
+  "description": "The A-GATE with mysql target",
+  "labels": {
+    "temp": "True"
+  },
+  "kind": "project",
+  "parent": "agate",
+  "spec": {
+    "targets": ["mysql"]
+  }
+}
