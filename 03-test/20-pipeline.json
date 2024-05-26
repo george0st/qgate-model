@@ -3,9 +3,14 @@
   "description": "Setting for test pipelines",
   "kind": "test",
   "spec": {
-        "online": ["vector-party", "vector-contact",
-          "vector-partycontact", "vector-partycontact-02",
-          "vector-account", "vector-partyaccount", "vector-partyaccount-02"
-        ]
+        "pipeline": ["basic-party"],
+        "tests": {
+          "basic-party": {
+            "filter": "",
+            "extend": "",
+            "calc": "",
+            "agreg": ""
+          }
+        }
   }
 }
