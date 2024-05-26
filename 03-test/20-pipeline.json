@@ -1,0 +1,23 @@
+{
+  "name": "pipeline",
+  "description": "Setting for test pipelines for ingestion",
+  "kind": "test",
+  "spec": {
+        "pipeline": ["basic-party"],
+        "tests": {
+          "basic-party": {
+            "filter": "party-gender == 'F'",
+            "extend": "{'party-establishmentyear': datetime.datetime.now()-event['party-establishment']}",
+            "calc": "",
+            "agreg": ""
+          },
+          "basic-contact": {
+            "filter": "",
+            "extend": "",
+            "calc": "",
+            "agreg": ""
+          }
+
+        }
+  }
+}
