@@ -1,6 +1,6 @@
 {
   "name": "vector",
-  "description": "Setting for test vectors",
+  "description": "Setting for test vectors (focus on on-line vectors)",
   "kind": "test",
   "spec": {
         "online": ["vector-party", "vector-contact",
