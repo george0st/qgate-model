@@ -3,7 +3,7 @@
   "description": "Setting for test pipelines for ingestion",
   "kind": "test",
   "spec": {
-        "pipeline": ["basic-party"],
+        "pipeline": ["basic-party", "basic-contact", "basic-relation", "basic-account"],
         "tests": {
           "basic-party": {
             "filter": "party-gender == 'F'",
