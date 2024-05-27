@@ -16,6 +16,18 @@
             "extend": "",
             "calc": "",
             "agreg": ""
+          },
+          "basic-relation": {
+            "filter": "",
+            "extend": "",
+            "calc": "",
+            "agreg": ""
+          },
+          "basic-account": {
+            "filter": "",
+            "extend": "",
+            "calc": "",
+            "agreg": ""
           }
 
         }
