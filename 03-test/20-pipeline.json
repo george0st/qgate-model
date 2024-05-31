@@ -3,33 +3,54 @@
   "description": "Setting for test pipelines for ingestion",
   "kind": "test",
   "spec": {
-        "featuresets": ["basic-party", "basic-contact", "basic-relation", "basic-account"],
+        "featuresets": ["basic-party", "basic-contact", "basic-relation", "basic-account", "basic-transaction",
+        "basic-event", "basic-communication"],
         "tests": {
           "basic-party": {
             "filter": "(event['party-gender'] == 'F')",
-            "extend": "({'ext': 'd'})",
+            "extend": "({'bparty': 'party'})",
             "calc": "",
             "agreg": ""
           },
           "basic-contact": {
-            "filter": "",
-            "extend": "",
+            "filter": "(event['contact-state'] == 'Active')",
+            "extend": "({'bcontact': 'contact'})",
             "calc": "",
             "agreg": ""
           },
           "basic-relation": {
-            "filter": "",
+            "filter": "(event['relation-type'] == 'TTT')",
             "extend": "",
             "calc": "",
             "agreg": ""
           },
           "basic-account": {
-            "filter": "",
-            "extend": "",
+            "filter": "(event['account-state'] == 'active')",
+            "extend": "({'baccount': 'account'})",
+            "calc": "",
+            "agreg": ""
+          },
+          "basic-transaction":
+          {
+            "filter": "(event['transaction-direction'] == 'Incoming' and event['transaction-type'] == 'Standard')",
+            "extend": "({'btransaction': 'transaction'})",
+            "calc": "",
+            "agreg": ""
+          },
+          "basic-event":
+          {
+            "filter": "(event['event-group'] == 'access' and event['event-action'] == 'login')",
+            "extend": "({'bevent': 'event'})",
+            "calc": "",
+            "agreg": ""
+          },
+          "basic-communication":
+          {
+            "filter": "(event['content-type'] == 'text' and event['channel'] == 'xxx')",
+            "extend": "({'bcommunication': 'communication'})",
             "calc": "",
             "agreg": ""
           }
-
         }
   }
 }
