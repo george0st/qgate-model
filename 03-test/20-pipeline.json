@@ -43,6 +43,13 @@
             "extend": "({'bevent': 'event'})",
             "calc": "",
             "agreg": ""
+          },
+          "basic-communication":
+          {
+            "filter": "(event['content-type'] == 'text' and event['channel'] == 'xxx')",
+            "extend": "({'bcommunication': 'communication'})",
+            "calc": "",
+            "agreg": ""
           }
         }
   }
