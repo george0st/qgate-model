@@ -3,7 +3,8 @@
   "description": "Setting for test pipelines for ingestion",
   "kind": "test",
   "spec": {
-        "featuresets": ["basic-party", "basic-contact", "basic-relation", "basic-account", "basic-transaction"],
+        "featuresets": ["basic-party", "basic-contact", "basic-relation", "basic-account", "basic-transaction",
+        "basic-event", "basic-communication"],
         "tests": {
           "basic-party": {
             "filter": "(event['party-gender'] == 'F')",
@@ -30,6 +31,13 @@
             "agreg": ""
           },
           "basic-transaction":
+          {
+            "filter": "(event['transaction-direction'] == 'Incoming' and event['transaction-type'] == 'Standard')",
+            "extend": "({'btransaction': 'transaction'})",
+            "calc": "",
+            "agreg": ""
+          },
+          "basic-event":
           {
             "filter": "(event['transaction-direction'] == 'Incoming' and event['transaction-type'] == 'Standard')",
             "extend": "({'btransaction': 'transaction'})",
