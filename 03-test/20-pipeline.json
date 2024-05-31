@@ -7,25 +7,25 @@
         "tests": {
           "basic-party": {
             "filter": "(event['party-gender'] == 'F')",
-            "extend": "({'ext': 'd'})",
+            "extend": "({'bparty': 'party'})",
             "calc": "",
             "agreg": ""
           },
           "basic-contact": {
-            "filter": "",
-            "extend": "",
+            "filter": "(event['contact-state'] == 'Active')",
+            "extend": "({'bcontact': 'contact'})",
             "calc": "",
             "agreg": ""
           },
           "basic-relation": {
-            "filter": "",
+            "filter": "(event['relation-type'] == 'TTT')",
             "extend": "",
             "calc": "",
             "agreg": ""
           },
           "basic-account": {
-            "filter": "",
-            "extend": "",
+            "filter": "(event['account-state'] == 'active')",
+            "extend": "({'baccount': 'account'})",
             "calc": "",
             "agreg": ""
           }
