@@ -6,7 +6,7 @@
         "featuresets": ["basic-party", "basic-contact", "basic-relation", "basic-account"],
         "tests": {
           "basic-party": {
-            "filter": "(party-gender == 'F')",
+            "filter": "(event['party-gender'] == 'F')",
             "extend": "({'ext': 'd'})",
             "calc": "",
             "agreg": ""
