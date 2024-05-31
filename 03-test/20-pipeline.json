@@ -39,8 +39,8 @@
           },
           "basic-event":
           {
-            "filter": "(event['transaction-direction'] == 'Incoming' and event['transaction-type'] == 'Standard')",
-            "extend": "({'btransaction': 'transaction'})",
+            "filter": "(event['event-group'] == 'access' and event['event-action'] == 'login')",
+            "extend": "({'bevent': 'event'})",
             "calc": "",
             "agreg": ""
           }

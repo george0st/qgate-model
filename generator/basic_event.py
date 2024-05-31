@@ -115,8 +115,8 @@ class BasicEvent(BaseData):
                     if event==0:
                         # add default group, category and action -> login for first event in bundle
                         group="access"
-                        category="login"
-                        action="mobile" if self.rnd_bool() else "web"
+                        category="mobile" if self.rnd_bool() else "web"
+                        action="login"
                     else:
                         # add random group, category, action
                         if party_customer:
