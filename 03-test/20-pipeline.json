@@ -12,46 +12,46 @@
             "filter": "(event['party-gender'] == 'F')",
             "extend": "({'bparty': 'party'})",
             "calc": "",
-            "agreg": ""
+            "aggregation": ""
           },
           "basic-contact": {
             "filter": "(event['contact-state'] == 'Active')",
             "extend": "({'bcontact': 'contact'})",
             "calc": "",
-            "agreg": ""
+            "aggregation": ""
           },
           "basic-relation": {
             "filter": "(event['relation-type'] == 'TTT')",
             "extend": "",
             "calc": "",
-            "agreg": ""
+            "aggregation": ""
           },
           "basic-account": {
             "filter": "(event['account-state'] == 'active')",
             "extend": "({'baccount': 'account'})",
             "calc": "",
-            "agreg": ""
+            "aggregation": ""
           },
           "basic-transaction":
           {
             "filter": "(event['transaction-direction'] == 'Incoming' and event['transaction-type'] == 'Standard')",
             "extend": "({'btransaction': 'transaction'})",
             "calc": "",
-            "agreg": ""
+            "aggregation": ""
           },
           "basic-event":
           {
             "filter": "(event['event-group'] == 'access' and event['event-action'] == 'login')",
             "extend": "({'bevent': 'event'})",
             "calc": "",
-            "agreg": ""
+            "aggregation": ""
           },
           "basic-communication":
           {
             "filter": "(event['content-type'] == 'text' and event['channel'] == 'xxx')",
             "extend": "({'bcommunication': 'communication'})",
             "calc": "",
-            "agreg": ""
+            "aggregation": ""
           }
         }
   }
