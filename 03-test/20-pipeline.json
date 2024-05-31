@@ -3,11 +3,11 @@
   "description": "Setting for test pipelines for ingestion",
   "kind": "test",
   "spec": {
-        "pipeline": ["basic-party", "basic-contact", "basic-relation", "basic-account"],
+        "featuresets": ["basic-party", "basic-contact", "basic-relation", "basic-account"],
         "tests": {
           "basic-party": {
-            "filter": "party-gender == 'F'",
-            "extend": "{'party-establishmentyear': datetime.datetime.now()-event['party-establishment']}",
+            "filter": "(event['party-gender'] == 'F')",
+            "extend": "({'ext': 'd'})",
             "calc": "",
             "agreg": ""
           },
