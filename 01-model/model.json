@@ -6,6 +6,7 @@
     "version": "0.2.5",
     "CSV_SEPARATOR": ",",
     "CSV_DECIMAL": ".",
-    "NONE_VALUES": true
+    "NONE_VALUES": true,
+    "NONE_VALUES_PROBABILITY": 0.1
   }
 }

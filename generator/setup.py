@@ -32,4 +32,10 @@ class Setup(metaclass=Singleton):
 
     @property
     def none_values(self):
+        """Allow to generate None values (True - generate None values)"""
         return self._model_setting["NONE_VALUES"]
+
+    @property
+    def none_values_probability(self):
+        """Probability of None value generation (1 = 100%, 0.1 = 10%, etc.)"""
+        return self._model_setting["NONE_VALUES_PROBABILITY"]
