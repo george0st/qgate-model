@@ -3,6 +3,7 @@ import uuid
 
 from generator.base_data import BaseData
 from faker import Faker
+from generator.setup import Setup
 import faker.providers
 import numpy
 
