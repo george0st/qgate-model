@@ -3,53 +3,62 @@
   "description": "Setting for test pipelines for ingestion",
   "kind": "test",
   "spec": {
-        "featuresets": ["basic-party", "basic-contact", "basic-relation", "basic-account", "basic-transaction",
-        "basic-event", "basic-communication"],
+        "featuresets": ["basic-party", "basic-contact",
+          "basic-relation", "basic-account",
+          "basic-transaction", "basic-event",
+          "basic-communication"],
         "tests": {
           "basic-party": {
-            "filter": "(event['party-gender'] == 'F')",
-            "extend": "({'bparty': 'party'})",
+            "imputer": {"party-gender": "F", "party-nchild": 0 },
+            "storey.filter": "(event['party-gender'] == 'F')",
+            "storey.extend": "({'bparty': 'party'})",
             "calc": "",
-            "agreg": ""
+            "aggregation": ""
           },
           "basic-contact": {
-            "filter": "(event['contact-state'] == 'Active')",
-            "extend": "({'bcontact': 'contact'})",
+            "imputer": "",
+            "storey.filter": "(event['contact-state'] == 'Active')",
+            "storey.extend": "({'bcontact': 'contact'})",
             "calc": "",
-            "agreg": ""
+            "aggregation": ""
           },
           "basic-relation": {
-            "filter": "(event['relation-type'] == 'TTT')",
-            "extend": "",
+            "imputer": "",
+            "storey.filter": "(event['relation-type'] == 'TTT')",
+            "storey.extend": "",
             "calc": "",
-            "agreg": ""
+            "aggregation": ""
           },
           "basic-account": {
-            "filter": "(event['account-state'] == 'active')",
-            "extend": "({'baccount': 'account'})",
+            "imputer": "",
+            "storey.filter": "(event['account-state'] == 'active')",
+            "storey.extend": "({'baccount': 'account'})",
             "calc": "",
-            "agreg": ""
+            "aggregation": ""
           },
           "basic-transaction":
           {
-            "filter": "(event['transaction-direction'] == 'Incoming' and event['transaction-type'] == 'Standard')",
-            "extend": "({'btransaction': 'transaction'})",
+            "imputer": "",
+            "storey.filter": "(event['transaction-direction'] == 'Incoming' and event['transaction-type'] == 'Standard')",
+            "storey.extend": "({'btransaction': 'transaction'})",
             "calc": "",
-            "agreg": ""
+            "aggregation": ""
           },
           "basic-event":
           {
-            "filter": "(event['event-group'] == 'access' and event['event-action'] == 'login')",
-            "extend": "({'bevent': 'event'})",
+            "imputer": "",
+            "storey.filter": "(event['event-group'] == 'access' and event['event-action'] == 'login')",
+            "storey.extend": "({'bevent': 'event'})",
             "calc": "",
-            "agreg": ""
+            "aggregation": ""
           },
           "basic-communication":
           {
-            "filter": "(event['content-type'] == 'text' and event['channel'] == 'xxx')",
-            "extend": "({'bcommunication': 'communication'})",
+            "imputer": "",
+            "storey.filter": "(event['content-type'] == 'text' and event['channel'] == 'xxx')",
+            "storey.extend": "({'bcommunication': 'communication'})",
             "calc": "",
-            "agreg": ""
+            "aggregation": ""
           }
         }
   }
