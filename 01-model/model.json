@@ -5,6 +5,7 @@
   "spec": {
     "version": "0.2.5",
     "CSV_SEPARATOR": ",",
-    "CSV_DECIMAL": "."
+    "CSV_DECIMAL": ".",
+    "GEN_NONE_VALUES": true
   }
 }
