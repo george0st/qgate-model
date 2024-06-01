@@ -81,9 +81,14 @@ class BaseData(Base):
         # free memory
         del df
 
-    def use_none_value(self, current_value, default_value) -> bool:
-        """Change default value to None, based on project setting (see setting in model.json,
-         config values 'NONE_VALUES' and 'NONE_VALUES_PROBABILITY')"""
+    def apply_none_value(self, current_value, default_value) -> bool:
+        """Apply None value? It is based on project setting (see setting in file 'model.json',
+         with config values 'NONE_VALUES' and 'NONE_VALUES_PROBABILITY')
+
+         :param current_value:      current value
+         :param default_value:      default value (what can be consider such as default value)
+         :return:                   true - apply None value, false - keep current value
+         """
         if current_value == default_value:
             if self.none_values:
                 return self.rnd_bool(self.none_values_probability)
