@@ -24,8 +24,8 @@ class BaseData(Base):
         self.clean()
         self._parquet_writer = None
 
-        self.none_values=Setup.none_values
-        self.none_values_probability=Setup.none_values_probability
+        self._none_values=Setup().none_values
+        self._none_values_probability=Setup().none_values_probability
 
     @property
     def name(self):
@@ -90,7 +90,7 @@ class BaseData(Base):
          :return:                   true - apply None value, false - keep current value
          """
         if current_value == default_value:
-            if self.none_values:
-                return self.rnd_bool(self.none_values_probability)
+            if self._none_values:
+                return self.rnd_bool(self._none_values_probability)
         return False
 

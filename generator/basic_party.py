@@ -58,7 +58,6 @@ class BasicParty(BaseData):
         if self.apply_none_value(model['party-education'], "Elementary school"):
             model['party-education'] = ""
 
-
         # "name": "party-familystatus",
         # "description": "Family status for party ('Married','Single', 'Divorced')",
         model['party-familystatus']=self.rnd_choose(["Married", "Single", "Divorced"], [0.5, 0.4, 0.1])
