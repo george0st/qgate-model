@@ -10,7 +10,7 @@
         "tests": {
           "basic-party": {
             "imputer": {"party-gender": "F", "party-nchild": 0 },
-            "onehotencoder": "",
+            "onehotencoder": {"party-gender": ["F", "M"], "party-familystatus": ["Married", "Single", "Divorced"]},
             "storey.filter": "(event['party-gender'] == 'F')",
             "storey.extend": "({'bparty': 'party'})",
             "calc": "",
