@@ -7,6 +7,6 @@
     "CSV_SEPARATOR": ",",
     "CSV_DECIMAL": ".",
     "NONE_VALUES": true,
-    "NONE_VALUES_PROBABILITY": 0.1
+    "NONE_VALUES_PROBABILITY": 0.05
   }
 }
