@@ -8,6 +8,7 @@ The list of expected/future improvements:
 2. Add to the communication sentences sentiment type
 
 3. Add data with "empty content" with aim to simulate real data samples
+ - for all basic-* e.g. basic-party, etc.
 
 4. Extend communications sentences
 
