@@ -10,6 +10,7 @@
         "tests": {
           "basic-party": {
             "imputer": {"party-gender": "F", "party-nchild": 0 },
+            "onehotencoder": "",
             "storey.filter": "(event['party-gender'] == 'F')",
             "storey.extend": "({'bparty': 'party'})",
             "calc": "",
@@ -17,6 +18,7 @@
           },
           "basic-contact": {
             "imputer": "",
+            "onehotencoder": "",
             "storey.filter": "(event['contact-state'] == 'Active')",
             "storey.extend": "({'bcontact': 'contact'})",
             "calc": "",
@@ -24,6 +26,7 @@
           },
           "basic-relation": {
             "imputer": "",
+            "onehotencoder": "",
             "storey.filter": "(event['relation-type'] == 'TTT')",
             "storey.extend": "",
             "calc": "",
@@ -31,6 +34,7 @@
           },
           "basic-account": {
             "imputer": "",
+            "onehotencoder": "",
             "storey.filter": "(event['account-state'] == 'active')",
             "storey.extend": "({'baccount': 'account'})",
             "calc": "",
@@ -39,6 +43,7 @@
           "basic-transaction":
           {
             "imputer": "",
+            "onehotencoder": "",
             "storey.filter": "(event['transaction-direction'] == 'Incoming' and event['transaction-type'] == 'Standard')",
             "storey.extend": "({'btransaction': 'transaction'})",
             "calc": "",
@@ -47,6 +52,7 @@
           "basic-event":
           {
             "imputer": "",
+            "onehotencoder": "",
             "storey.filter": "(event['event-group'] == 'access' and event['event-action'] == 'login')",
             "storey.extend": "({'bevent': 'event'})",
             "calc": "",
@@ -55,6 +61,7 @@
           "basic-communication":
           {
             "imputer": "",
+            "onehotencoder": "",
             "storey.filter": "(event['content-type'] == 'text' and event['channel'] == 'xxx')",
             "storey.extend": "({'bcommunication': 'communication'})",
             "calc": "",
