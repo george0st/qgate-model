@@ -81,12 +81,11 @@ class BaseData(Base):
         # free memory
         del df
 
-    def add_none_value(self, current_value, default_value):
+    def use_none_value(self, current_value, default_value) -> bool:
         """Change default value to None, based on project setting (see setting in model.json,
          config values 'NONE_VALUES' and 'NONE_VALUES_PROBABILITY')"""
-        if self.none_values:
-            if current_value == default_value:
-                if self.rnd_bool(self.none_values_probability):
-                    return default_value
-        return current_value
+        if current_value == default_value:
+            if self.none_values:
+                return self.rnd_bool(self.none_values_probability)
+        return False
 
