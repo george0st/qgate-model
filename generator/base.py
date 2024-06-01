@@ -37,8 +37,14 @@ class Base:
             return round(self._gen.uniform(low, high), ndigits)
         return self._gen.uniform(low, high)
 
-    def rnd_bool(self) -> bool:
-        return bool(self._gen.integers(0, 2))
+    # def rnd_bool(self) -> bool:
+    #     return bool(self._gen.integers(0, 2))
+
+    def rnd_bool(self, probability=None) -> bool:
+        if probability:
+            return bool(self._gen.choice([0, 1], size = 1, p = [1 - probability, probability]))
+        else:
+            return bool(self._gen.integers(0, 2))
 
     def rnd_choose(self, items: list=[], probability: list=None):
         """

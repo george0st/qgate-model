@@ -24,6 +24,9 @@ class BaseData(Base):
         self.clean()
         self._parquet_writer = None
 
+        self.none_values=Setup.none_values
+        self.none_values_probability=Setup.none_values_probability
+
     @property
     def name(self):
         return self._name
@@ -77,3 +80,13 @@ class BaseData(Base):
 
         # free memory
         del df
+
+    def add_none_value(self, current_value, default_value):
+        """Change default value to None, based on project setting (see setting in model.json,
+         config values 'NONE_VALUES' and 'NONE_VALUES_PROBABILITY')"""
+        if self.none_values:
+            if current_value == default_value:
+                if self.rnd_bool(self.none_values_probability):
+                    return default_value
+        return current_value
+
