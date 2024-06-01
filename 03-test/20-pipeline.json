@@ -9,7 +9,7 @@
           "basic-communication"],
         "tests": {
           "basic-party": {
-            "imputer": "",
+            "imputer": {"party-gender": "F", "party-nchild": 0 },
             "storey.filter": "(event['party-gender'] == 'F')",
             "storey.extend": "({'bparty': 'party'})",
             "calc": "",
