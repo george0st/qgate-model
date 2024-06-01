@@ -38,6 +38,7 @@ class BasicParty(BaseData):
         # "name": "party-type",
         # "description": "Party state (e.g. 1. lead, 2. prospect, 3. client)",
         model['party-type']=self.rnd_choose(["Lead", "Prospect", "Customer"], [0.5, 0.3, 0.2])
+        self.apply_none_value(model,'party-type',"Customer")
 
         # "name": "party-typedate",
         # "description": "Date for party type creation (data for change of the state to the prospect or client)",
@@ -55,6 +56,7 @@ class BasicParty(BaseData):
         # "name": "party-education",
         # "description": "Party education (e.g. 'Elementary school', 'High school', 'University', etc.)",
         model['party-education']=self.rnd_choose(["Elementary school", "High school", "University"], [0.5, 0.4, 0.1])
+        self.apply_none_value(model,'party-education', "Elementary school")
 
         # "name": "party-familystatus",
         # "description": "Family status for party ('Married','Single', 'Divorced')",

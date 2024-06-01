@@ -107,7 +107,7 @@ class BasicTransaction(BaseData):
                 # "name": "counterparty-other",
                 # "description": "Transaction counterparty other information",
                 # TODO: Add relevant value
-                model["counterparty-other"]=""
+                model["counterparty-other"] = ""
 
                 fraud=False
                 fraud_anomaly=0

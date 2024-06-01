@@ -24,8 +24,8 @@ class BaseData(Base):
         self.clean()
         self._parquet_writer = None
 
-        self.none_values=Setup.none_values
-        self.none_values_probability=Setup.none_values_probability
+        self._none_values=Setup().none_values
+        self._none_values_probability=Setup().none_values_probability
 
     @property
     def name(self):
@@ -81,12 +81,16 @@ class BaseData(Base):
         # free memory
         del df
 
-    def add_none_value(self, current_value, default_value):
-        """Change default value to None, based on project setting (see setting in model.json,
-         config values 'NONE_VALUES' and 'NONE_VALUES_PROBABILITY')"""
-        if self.none_values:
-            if current_value == default_value:
-                if self.rnd_bool(self.none_values_probability):
-                    return default_value
-        return current_value
+    def apply_none_value(self, current_collection, property_name, default_value, none_value=""):
+        """Apply None value? It is based on project setting (see setting in file 'model.json',
+         with config values 'NONE_VALUES' and 'NONE_VALUES_PROBABILITY')
+
+         :param current_value:      current value
+         :param default_value:      default value (what can be consider such as default value)
+         :return:                   true - apply None value, false - keep current value
+         """
+        if current_collection[property_name] == default_value:
+            if self._none_values:
+                if self.rnd_bool(self._none_values_probability):
+                    current_collection[property_name] = none_value
 
