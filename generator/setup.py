@@ -29,3 +29,7 @@ class Setup(metaclass=Singleton):
     @property
     def csv_decimal(self):
         return self._model_setting["CSV_DECIMAL"]
+
+    @property
+    def none_values(self):
+        return self._model_setting["NONE_VALUES"]
