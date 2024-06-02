@@ -19,7 +19,8 @@
         {
           "name": "party-type",
           "description": "Party state (e.g. lead, prospect, client)",
-          "type": "string"
+          "type": "string",
+          "none": "Lead"
         },
         {
           "name": "party-typedate",
@@ -34,7 +35,8 @@
         {
           "name": "party-education",
           "description": "Party education (e.g. 'Elementary school', 'High school', 'University', etc.)",
-          "type": "string"
+          "type": "string",
+          "none": "Elementary school"
         },
         {
           "name": "party-familystatus",

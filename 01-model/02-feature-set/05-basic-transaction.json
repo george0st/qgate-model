@@ -23,8 +23,9 @@
         },
         {
           "name": "transaction-type",
-          "description": "Transaction type",
-          "type": "string"
+          "description": "Transaction type e.g. 'Standard', 'Instant'",
+          "type": "string",
+          "none": "Instant"
         },
         {
           "name": "transaction-value",
