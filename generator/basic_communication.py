@@ -81,6 +81,9 @@ class BasicCommunication(BaseData):
                     # "name": "content",
                     model['content'] = self._generate_text(session_sentiment)
 
+                    # "name": "content-sentiment",
+                    model['content-sentiment'] = str(session_sentiment)
+
                     # "name": "content-type",
                     model['content-type'] = "text"
 

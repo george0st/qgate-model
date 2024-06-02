@@ -27,6 +27,11 @@
         "type": "string"
       },
       {
+        "name": "content-sentiment",
+        "description": "Type of sentiment for content",
+        "type": "string"
+      },
+      {
         "name": "content-type",
         "description": "Type of content",
         "type": "string"

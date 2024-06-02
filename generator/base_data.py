@@ -88,7 +88,7 @@ class BaseData(Base):
 
          :param current_collection:     current value (e.g. model)
          :param property_name:          name of property in current collection (e.g. 'transaction-type')
-         :param default_value:          default value (what can be consider such as default value)
+         :param default_value:          default value (what can consider such as default value)
          :param none_value:             changed value, default is ''
          :param lower_probability:      the value 1 = the same probability, 0.5 = 50% of lower probability, default is 1
          """
