@@ -38,7 +38,7 @@ class BasicParty(BaseData):
         # "name": "party-type",
         # "description": "Party state (e.g. 1. lead, 2. prospect, 3. client)",
         model['party-type']=self.rnd_choose(["Lead", "Prospect", "Customer"], [0.5, 0.3, 0.2])
-        self.apply_none_value(model,'party-type',"Customer")
+        self.apply_none_value(model,'party-type',"Lead")
 
         # "name": "party-typedate",
         # "description": "Date for party type creation (data for change of the state to the prospect or client)",
