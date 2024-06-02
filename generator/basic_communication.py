@@ -82,7 +82,7 @@ class BasicCommunication(BaseData):
                     model['content'] = self._generate_text(session_sentiment)
 
                     # "name": "content-sentiment",
-                    model['content-sentiment'] = str(session_sentiment)
+                    model['content-sentiment'] = str(session_sentiment).replace('Sentiment.','')
 
                     # "name": "content-type",
                     model['content-type'] = "text"
