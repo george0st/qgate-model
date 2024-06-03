@@ -83,6 +83,7 @@ class BasicCommunication(BaseData):
 
                     # "name": "content-sentiment",
                     model['content-sentiment'] = str(session_sentiment).replace('Sentiment.','')
+                    self.apply_none_value(model, 'content-sentiment', "Neutral", lower_probability=0.10)
 
                     # "name": "content-type",
                     model['content-type'] = "text"

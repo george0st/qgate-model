@@ -29,7 +29,8 @@
       {
         "name": "content-sentiment",
         "description": "Type of sentiment for content",
-        "type": "string"
+        "type": "string",
+        "None": "Neutral"
       },
       {
         "name": "content-type",
