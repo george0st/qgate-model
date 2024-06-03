@@ -357,6 +357,15 @@ class BasicCommunication(BaseData):
         "Your interest rates are laughable. Might as well stash my money under the mattress.",
         "Your loan approval process is a black hole. No transparency, no updates.",
         "Your bank charges for every little thing. It’s like death by a thousand cuts.",
+        "Our catering equipment keeps breaking down during events, causing delays and frustration.",
+        "The food quality has been consistently subpar, leading to customer complaints.",
+        "The lack of proper hygiene practices in the kitchen has raised serious health concerns.",
+        "Our suppliers frequently deliver incorrect orders, disrupting our operations.",
+        "Customers have complained about the slow service during peak hours.",
+        "The outdated menu options fail to attract new clients.",
+        "Our staff turnover rate is alarmingly high due to poor working conditions.",
+        "The catering company's communication with clients is often unclear and unprofessional.",
+        "We've received negative reviews about the tasteless vegetarian options at our events.",
     ]
 
     # GenAI prompt
