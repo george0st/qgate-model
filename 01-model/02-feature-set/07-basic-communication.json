@@ -30,7 +30,7 @@
         "name": "content-sentiment",
         "description": "Type of sentiment for content",
         "type": "string",
-        "None": "Neutral"
+        "none": "Neutral"
       },
       {
         "name": "content-type",
