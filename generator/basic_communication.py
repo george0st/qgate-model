@@ -225,6 +225,25 @@ class BasicCommunication(BaseData):
         "I value the transparent pricing with no hidden charges.",
         "I’m impressed with the quick response time even during peak hours.",
         "I’m looking forward to using your service again, keep up the good work!",
+        "I'm absolutely thrilled with the cleanliness and attention to detail; your team exceeded my expectations!",
+        "Could you please pass on my thanks to the whole cleaning crew? They did a fantastic job.",
+        "I've noticed such a positive difference since I started using your services. What's the secret to your team's efficiency?",
+        "The level of service was outstanding; can I schedule regular cleanings to maintain this amazing standard?",
+        "I'm really impressed with the eco-friendly products you use. Could you provide more information about them?",
+        "Your team's professionalism is commendable. How do you train your staff to such a high standard?",
+        "I would love to recommend your services. Do you have a referral program in place?",
+        "The customer service was as spotless as my home. Who can I commend for their exceptional service?",
+        "I appreciate the flexibility in scheduling you offer. Is it possible to book an extra cleaning session this month?",
+        "Thank you for the impeccable service. How can I leave a review to share my great experience?",
+        "We're thrilled to be part of your special occasion!",
+        "Our chefs are passionate about creating mouthwatering dishes just for you.",
+        "Your event is unique, and we're here to tailor our services to your preferences.",
+        "Let us know if there's anything specific you'd like us to include in the menu.",
+        "Our team is committed to making your celebration stress-free and enjoyable.",
+        "We take pride in using fresh, high-quality ingredients for every dish.",
+        "Your satisfaction is our top priority; feel free to reach out with any questions.",
+        "We're excited to make your event memorable with our culinary expertise.",
+        "Thank you for choosing us; we can't wait to exceed your expectations!",
     ]
 
     # GenAI prompt
@@ -338,6 +357,15 @@ class BasicCommunication(BaseData):
         "Your interest rates are laughable. Might as well stash my money under the mattress.",
         "Your loan approval process is a black hole. No transparency, no updates.",
         "Your bank charges for every little thing. It’s like death by a thousand cuts.",
+        "Our catering equipment keeps breaking down during events, causing delays and frustration.",
+        "The food quality has been consistently subpar, leading to customer complaints.",
+        "The lack of proper hygiene practices in the kitchen has raised serious health concerns.",
+        "Our suppliers frequently deliver incorrect orders, disrupting our operations.",
+        "Customers have complained about the slow service during peak hours.",
+        "The outdated menu options fail to attract new clients.",
+        "Our staff turnover rate is alarmingly high due to poor working conditions.",
+        "The catering company's communication with clients is often unclear and unprofessional.",
+        "We've received negative reviews about the tasteless vegetarian options at our events.",
     ]
 
     # GenAI prompt
