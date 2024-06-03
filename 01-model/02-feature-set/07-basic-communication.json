@@ -29,12 +29,14 @@
       {
         "name": "content-sentiment",
         "description": "Type of sentiment for content",
-        "type": "string"
+        "type": "string",
+        "none": "Neutral"
       },
       {
         "name": "content-type",
-        "description": "Type of content",
-        "type": "string"
+        "description": "Type of content e.g. text, audio, video",
+        "type": "string",
+        "none": "text"
       },
       {
         "name": "channel",
