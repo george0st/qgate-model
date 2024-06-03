@@ -87,6 +87,7 @@ class BasicCommunication(BaseData):
 
                     # "name": "content-type",
                     model['content-type'] = "text"
+                    self.apply_none_value(model, 'content-type', "text", lower_probability=0.01)
 
                     # "name": "channel",
                     model['channel'] = self.rnd_choose(["email", "chat"], [0.8, 0.2])
