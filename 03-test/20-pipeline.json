@@ -9,7 +9,7 @@
           "basic-communication"],
         "tests": {
           "basic-party": {
-            "imputer": {"party-gender": "F", "party-nchild": 0 },
+            "Imputer": {"party-gender": "F", "party-nchild": 0 },
             "onehotencoder": {"party-gender": ["F", "M"], "party-familystatus": ["Married", "Single", "Divorced"]},
             "dateextractor": {"parts": ["hour", "day_of_week"], "timestamp_col": "timestamp"},
             "MapValues": {},
@@ -19,7 +19,7 @@
             "aggregation": ""
           },
           "basic-contact": {
-            "imputer": "",
+            "Imputer": "",
             "onehotencoder": "",
             "dateextractor": "",
             "MapValues": {},
@@ -29,7 +29,7 @@
             "aggregation": ""
           },
           "basic-relation": {
-            "imputer": "",
+            "Imputer": "",
             "onehotencoder": "",
             "dateextractor": "",
             "MapValues": {},
@@ -39,7 +39,7 @@
             "aggregation": ""
           },
           "basic-account": {
-            "imputer": "",
+            "Imputer": "",
             "onehotencoder": "",
             "dateextractor": "",
             "MapValues": {},
@@ -50,7 +50,7 @@
           },
           "basic-transaction":
           {
-            "imputer": "",
+            "Imputer": "",
             "onehotencoder": "",
             "dateextractor": "",
             "MapValues": {},
@@ -61,7 +61,7 @@
           },
           "basic-event":
           {
-            "imputer": "",
+            "Imputer": "",
             "onehotencoder": "",
             "dateextractor": "",
             "MapValues": {},
@@ -72,7 +72,7 @@
           },
           "basic-communication":
           {
-            "imputer": "",
+            "Imputer": "",
             "onehotencoder": "",
             "dateextractor": "",
             "MapValues": {},
