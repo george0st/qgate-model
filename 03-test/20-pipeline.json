@@ -11,6 +11,7 @@
           "basic-party": {
             "imputer": {"party-gender": "F", "party-nchild": 0 },
             "onehotencoder": {"party-gender": ["F", "M"], "party-familystatus": ["Married", "Single", "Divorced"]},
+            "dateextractor": {"parts": ["hour", "day_of_week"], "timestamp_col": "timestamp"},
             "storey.filter": "(event['party-gender'] == 'F')",
             "storey.extend": "({'bparty': 'party'})",
             "calc": "",
@@ -19,6 +20,7 @@
           "basic-contact": {
             "imputer": "",
             "onehotencoder": "",
+            "dateextractor": "",
             "storey.filter": "(event['contact-state'] == 'Active')",
             "storey.extend": "({'bcontact': 'contact'})",
             "calc": "",
@@ -27,6 +29,7 @@
           "basic-relation": {
             "imputer": "",
             "onehotencoder": "",
+            "dateextractor": "",
             "storey.filter": "(event['relation-type'] == 'TTT')",
             "storey.extend": "",
             "calc": "",
@@ -35,6 +38,7 @@
           "basic-account": {
             "imputer": "",
             "onehotencoder": "",
+            "dateextractor": "",
             "storey.filter": "(event['account-state'] == 'active')",
             "storey.extend": "({'baccount': 'account'})",
             "calc": "",
@@ -44,6 +48,7 @@
           {
             "imputer": "",
             "onehotencoder": "",
+            "dateextractor": "",
             "storey.filter": "(event['transaction-direction'] == 'Incoming' and event['transaction-type'] == 'Standard')",
             "storey.extend": "({'btransaction': 'transaction'})",
             "calc": "",
@@ -53,6 +58,7 @@
           {
             "imputer": "",
             "onehotencoder": "",
+            "dateextractor": "",
             "storey.filter": "(event['event-group'] == 'access' and event['event-action'] == 'login')",
             "storey.extend": "({'bevent': 'event'})",
             "calc": "",
@@ -62,6 +68,7 @@
           {
             "imputer": "",
             "onehotencoder": "",
+            "dateextractor": "",
             "storey.filter": "(event['content-type'] == 'text' and event['channel'] == 'xxx')",
             "storey.extend": "({'bcommunication': 'communication'})",
             "calc": "",
