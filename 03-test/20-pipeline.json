@@ -10,7 +10,7 @@
         "tests": {
           "basic-party": {
             "Imputer": {"party-gender": "F", "party-nchild": 0 },
-            "onehotencoder": {"party-gender": ["F", "M"], "party-familystatus": ["Married", "Single", "Divorced"]},
+            "OneHotEncoder": {"party-gender": ["F", "M"], "party-familystatus": ["Married", "Single", "Divorced"]},
             "dateextractor": {"parts": ["hour", "day_of_week"], "timestamp_col": "timestamp"},
             "MapValues": {},
             "storey.filter": "(event['party-gender'] == 'F')",
@@ -20,7 +20,7 @@
           },
           "basic-contact": {
             "Imputer": "",
-            "onehotencoder": "",
+            "OneHotEncoder": "",
             "dateextractor": "",
             "MapValues": {},
             "storey.filter": "(event['contact-state'] == 'Active')",
@@ -30,7 +30,7 @@
           },
           "basic-relation": {
             "Imputer": "",
-            "onehotencoder": "",
+            "OneHotEncoder": "",
             "dateextractor": "",
             "MapValues": {},
             "storey.filter": "(event['relation-type'] == 'TTT')",
@@ -40,7 +40,7 @@
           },
           "basic-account": {
             "Imputer": "",
-            "onehotencoder": "",
+            "OneHotEncoder": "",
             "dateextractor": "",
             "MapValues": {},
             "storey.filter": "(event['account-state'] == 'active')",
@@ -51,7 +51,7 @@
           "basic-transaction":
           {
             "Imputer": "",
-            "onehotencoder": "",
+            "OneHotEncoder": "",
             "dateextractor": "",
             "MapValues": {},
             "storey.filter": "(event['transaction-direction'] == 'Incoming' and event['transaction-type'] == 'Standard')",
@@ -62,7 +62,7 @@
           "basic-event":
           {
             "Imputer": "",
-            "onehotencoder": "",
+            "OneHotEncoder": "",
             "dateextractor": "",
             "MapValues": {},
             "storey.filter": "(event['event-group'] == 'access' and event['event-action'] == 'login')",
@@ -73,7 +73,7 @@
           "basic-communication":
           {
             "Imputer": "",
-            "onehotencoder": "",
+            "OneHotEncoder": "",
             "dateextractor": "",
             "MapValues": {},
             "storey.filter": "(event['content-type'] == 'text' and event['channel'] == 'xxx')",
