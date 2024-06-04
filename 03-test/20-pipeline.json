@@ -21,7 +21,7 @@
             "imputer": "",
             "onehotencoder": "",
             "dateextractor": "",
-            "storey.filter",: "(event['contact-state'] == 'Active')",
+            "storey.filter": "(event['contact-state'] == 'Active')",
             "storey.extend": "({'bcontact': 'contact'})",
             "calc": "",
             "aggregation": ""
