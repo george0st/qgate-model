@@ -11,7 +11,7 @@
           "basic-party": {
             "Imputer": {"party-gender": "F", "party-nchild": 0 },
             "OneHotEncoder": {"party-gender": ["F", "M"], "party-familystatus": ["Married", "Single", "Divorced"]},
-            "dateextractor": {"parts": ["hour", "day_of_week"], "timestamp_col": "timestamp"},
+            "DateExtractor": {"parts": ["hour", "day_of_week"], "timestamp_col": "timestamp"},
             "MapValues": {},
             "storey.filter": "(event['party-gender'] == 'F')",
             "storey.extend": "({'bparty': 'party'})",
@@ -21,7 +21,7 @@
           "basic-contact": {
             "Imputer": "",
             "OneHotEncoder": "",
-            "dateextractor": "",
+            "DateExtractor": "",
             "MapValues": {},
             "storey.filter": "(event['contact-state'] == 'Active')",
             "storey.extend": "({'bcontact': 'contact'})",
@@ -31,7 +31,7 @@
           "basic-relation": {
             "Imputer": "",
             "OneHotEncoder": "",
-            "dateextractor": "",
+            "DateExtractor": "",
             "MapValues": {},
             "storey.filter": "(event['relation-type'] == 'TTT')",
             "storey.extend": "",
@@ -41,7 +41,7 @@
           "basic-account": {
             "Imputer": "",
             "OneHotEncoder": "",
-            "dateextractor": "",
+            "DateExtractor": "",
             "MapValues": {},
             "storey.filter": "(event['account-state'] == 'active')",
             "storey.extend": "({'baccount': 'account'})",
@@ -52,7 +52,7 @@
           {
             "Imputer": "",
             "OneHotEncoder": "",
-            "dateextractor": "",
+            "DateExtractor": "",
             "MapValues": {},
             "storey.filter": "(event['transaction-direction'] == 'Incoming' and event['transaction-type'] == 'Standard')",
             "storey.extend": "({'btransaction': 'transaction'})",
@@ -63,7 +63,7 @@
           {
             "Imputer": "",
             "OneHotEncoder": "",
-            "dateextractor": "",
+            "DateExtractor": "",
             "MapValues": {},
             "storey.filter": "(event['event-group'] == 'access' and event['event-action'] == 'login')",
             "storey.extend": "({'bevent': 'event'})",
@@ -74,7 +74,7 @@
           {
             "Imputer": "",
             "OneHotEncoder": "",
-            "dateextractor": "",
+            "DateExtractor": "",
             "MapValues": {},
             "storey.filter": "(event['content-type'] == 'text' and event['channel'] == 'xxx')",
             "storey.extend": "({'bcommunication': 'communication'})",
