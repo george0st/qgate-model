@@ -11,6 +11,7 @@
           "basic-party": {
             "imputer": {"party-gender": "F", "party-nchild": 0 },
             "onehotencoder": {"party-gender": ["F", "M"], "party-familystatus": ["Married", "Single", "Divorced"]},
+            "dateextractor": {"parts": ["hour", "day_of_week"], "timestamp_col": "timestamp"},
             "storey.filter": "(event['party-gender'] == 'F')",
             "storey.extend": "({'bparty': 'party'})",
             "calc": "",
