@@ -14,7 +14,7 @@
             "DateExtractor": {"parts": ["hour", "day_of_week"], "timestamp_col": "timestamp"},
             "MapValues": {},
             "storey.Filter": "(event['party-gender'] == 'F')",
-            "storey.extend": "({'bparty': 'party'})",
+            "storey.Extend": "({'bparty': 'party'})",
             "calc": "",
             "aggregation": ""
           },
@@ -24,7 +24,7 @@
             "DateExtractor": "",
             "MapValues": {},
             "storey.Filter": "(event['contact-state'] == 'Active')",
-            "storey.extend": "({'bcontact': 'contact'})",
+            "storey.Extend": "({'bcontact': 'contact'})",
             "calc": "",
             "aggregation": ""
           },
@@ -34,7 +34,7 @@
             "DateExtractor": "",
             "MapValues": {},
             "storey.Filter": "(event['relation-type'] == 'TTT')",
-            "storey.extend": "",
+            "storey.Extend": "",
             "calc": "",
             "aggregation": ""
           },
@@ -44,7 +44,7 @@
             "DateExtractor": "",
             "MapValues": {},
             "storey.Filter": "(event['account-state'] == 'active')",
-            "storey.extend": "({'baccount': 'account'})",
+            "storey.Extend": "({'baccount': 'account'})",
             "calc": "",
             "aggregation": ""
           },
@@ -55,7 +55,7 @@
             "DateExtractor": "",
             "MapValues": {},
             "storey.Filter": "(event['transaction-direction'] == 'Incoming' and event['transaction-type'] == 'Standard')",
-            "storey.extend": "({'btransaction': 'transaction'})",
+            "storey.Extend": "({'btransaction': 'transaction'})",
             "calc": "",
             "aggregation": ""
           },
@@ -66,7 +66,7 @@
             "DateExtractor": "",
             "MapValues": {},
             "storey.Filter": "(event['event-group'] == 'access' and event['event-action'] == 'login')",
-            "storey.extend": "({'bevent': 'event'})",
+            "storey.Extend": "({'bevent': 'event'})",
             "calc": "",
             "aggregation": ""
           },
@@ -77,7 +77,7 @@
             "DateExtractor": "",
             "MapValues": {},
             "storey.Filter": "(event['content-type'] == 'text' and event['channel'] == 'xxx')",
-            "storey.extend": "({'bcommunication': 'communication'})",
+            "storey.Extend": "({'bcommunication': 'communication'})",
             "calc": "",
             "aggregation": ""
           }
