@@ -13,7 +13,7 @@
             "OneHotEncoder": {"party-gender": ["F", "M"], "party-familystatus": ["Married", "Single", "Divorced"]},
             "DateExtractor": {"parts": ["hour", "day_of_week"], "timestamp_col": "timestamp"},
             "MapValues": {},
-            "storey.filter": "(event['party-gender'] == 'F')",
+            "storey.Filter": "(event['party-gender'] == 'F')",
             "storey.extend": "({'bparty': 'party'})",
             "calc": "",
             "aggregation": ""
@@ -23,7 +23,7 @@
             "OneHotEncoder": "",
             "DateExtractor": "",
             "MapValues": {},
-            "storey.filter": "(event['contact-state'] == 'Active')",
+            "storey.Filter": "(event['contact-state'] == 'Active')",
             "storey.extend": "({'bcontact': 'contact'})",
             "calc": "",
             "aggregation": ""
@@ -33,7 +33,7 @@
             "OneHotEncoder": "",
             "DateExtractor": "",
             "MapValues": {},
-            "storey.filter": "(event['relation-type'] == 'TTT')",
+            "storey.Filter": "(event['relation-type'] == 'TTT')",
             "storey.extend": "",
             "calc": "",
             "aggregation": ""
@@ -43,7 +43,7 @@
             "OneHotEncoder": "",
             "DateExtractor": "",
             "MapValues": {},
-            "storey.filter": "(event['account-state'] == 'active')",
+            "storey.Filter": "(event['account-state'] == 'active')",
             "storey.extend": "({'baccount': 'account'})",
             "calc": "",
             "aggregation": ""
@@ -54,7 +54,7 @@
             "OneHotEncoder": "",
             "DateExtractor": "",
             "MapValues": {},
-            "storey.filter": "(event['transaction-direction'] == 'Incoming' and event['transaction-type'] == 'Standard')",
+            "storey.Filter": "(event['transaction-direction'] == 'Incoming' and event['transaction-type'] == 'Standard')",
             "storey.extend": "({'btransaction': 'transaction'})",
             "calc": "",
             "aggregation": ""
@@ -65,7 +65,7 @@
             "OneHotEncoder": "",
             "DateExtractor": "",
             "MapValues": {},
-            "storey.filter": "(event['event-group'] == 'access' and event['event-action'] == 'login')",
+            "storey.Filter": "(event['event-group'] == 'access' and event['event-action'] == 'login')",
             "storey.extend": "({'bevent': 'event'})",
             "calc": "",
             "aggregation": ""
@@ -76,7 +76,7 @@
             "OneHotEncoder": "",
             "DateExtractor": "",
             "MapValues": {},
-            "storey.filter": "(event['content-type'] == 'text' and event['channel'] == 'xxx')",
+            "storey.Filter": "(event['content-type'] == 'text' and event['channel'] == 'xxx')",
             "storey.extend": "({'bcommunication': 'communication'})",
             "calc": "",
             "aggregation": ""
