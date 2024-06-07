@@ -11,9 +11,8 @@
           "basic-party": {
             "Imputer": {"party-gender": "F", "party-nchild": 0 },
             "OneHotEncoder": {"party-gender": ["F", "M"], "party-familystatus": ["Married", "Single", "Divorced"]},
-            "DateExtractor": {"parts": ["hour", "day_of_week"], "timestamp_col": "timestamp"},
-            "MapValues": {},
-            "storey.Filter": "(event['party-gender'] == 'F')",
+            "DateExtractor": {"parts": ["day_of_week","weekofyear"], "timestamp_col": "party-establishment"},
+            "MapValues": "",
             "storey.Extend": "({'bparty': 'party'})",
             "calc": "",
             "aggregation": ""
