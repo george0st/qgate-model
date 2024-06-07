@@ -34,7 +34,7 @@
             "DateExtractor": "",
             "MapValues": {},
             "storey.Filter": "(event['relation-type'] == 'TTT')",
-            "storey.Extend": "",
+            "storey.Extend": "({'brelation': 'relation'})",
             "calc": "",
             "aggregation": ""
           },
