@@ -38,9 +38,9 @@
             "aggregation": ""
           },
           "basic-account": {
-            "Imputer": "",
-            "OneHotEncoder": "",
-            "DateExtractor": "",
+            "Imputer": {"account-state":  "Closed"},
+            "OneHotEncoder": {"account-type": ["Current account", "Saving account"]},
+            "DateExtractor": {"parts": ["quarter"], "timestamp_col": "record-date"},
             "MapValues": {},
             "storey.Filter": "(event['account-state'] == 'Active')",
             "storey.Extend": "({'baccount': 'account'})",
