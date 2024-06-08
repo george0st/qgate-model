@@ -18,7 +18,7 @@
       },
       {
         "name": "account-type",
-        "description": "Type of party account (current account, saving account, etc.)",
+        "description": "Type of party account ('Current account', 'Saving account', etc.)",
         "type": "string"
       },
       {
@@ -28,8 +28,9 @@
       },
       {
         "name": "account-state",
-        "description": "Account state (e.g. active, closed, blocked)",
-        "type": "string"
+        "description": "Account state (active, closed, blocked)",
+        "type": "string",
+        "none": "account-state"
       },
       {
         "name": "account-nonactivedate",
