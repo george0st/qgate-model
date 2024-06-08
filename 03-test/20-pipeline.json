@@ -30,7 +30,7 @@
           },
           "basic-relation": {
             "Imputer": {"relation-type": "Job"},
-            "OneHotEncoder": "",
+            "OneHotEncoder": {"relation-type": ["Family","Job","Social"]},
             "DateExtractor": "",
             "MapValues": {},
             "storey.Filter": "(event['relation-type'] == 'TTT')",
