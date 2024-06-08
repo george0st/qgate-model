@@ -56,7 +56,8 @@ class BasicRelation(BaseData):
                         break
 
                 # "name": "relation-type",
-                model['relation-type']=None     # not used, right now
+                model['relation-type']=self.rnd_choose(["Family", "Job", "Social"], [0.5, 0.3, 0.2])
+                self.apply_none_value(model, 'relation-type', "Job",lower_probability=0.05)
 
                 # "name": "relation-date",
                 # not used, right now

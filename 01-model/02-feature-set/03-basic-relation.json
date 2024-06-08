@@ -23,8 +23,9 @@
       },
       {
         "name": "relation-type",
-        "description": "Relation type e.g. family, job, social, ...",
-        "type": "string"
+        "description": "Relation type e.g. 'Family', 'Job', 'Social'",
+        "type": "string",
+        "none": "Job"
       },
       {
         "name": "relation-date",

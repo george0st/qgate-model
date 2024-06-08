@@ -29,7 +29,7 @@
             "aggregation": ""
           },
           "basic-relation": {
-            "Imputer": "",
+            "Imputer": {"relation-type": "Job"},
             "OneHotEncoder": "",
             "DateExtractor": "",
             "MapValues": {},
