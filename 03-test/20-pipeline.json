@@ -20,10 +20,10 @@
           },
           "basic-contact": {
             "Imputer": {"contact-state": "InActive"},
-            "OneHotEncoder": "",
+            "OneHotEncoder": {"contact-state": ["Active","InActive"]},
             "DateExtractor": {"parts": ["day_of_week"], "timestamp_col": "record-date"},
             "MapValues": {},
-            "storey.Filter": "(event['contact-state'] == 'Active')",
+            "storey.Filter": "(event['contact-email'] != '')",
             "storey.Extend": "({'bcontact': 'contact'})",
             "calc": "",
             "aggregation": ""
