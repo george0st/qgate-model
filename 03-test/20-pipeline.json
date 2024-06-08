@@ -49,9 +49,9 @@
           },
           "basic-transaction":
           {
-            "Imputer": "",
-            "OneHotEncoder": "",
-            "DateExtractor": "",
+            "Imputer": {"transaction-type": "Instant"},
+            "OneHotEncoder": {"transaction-type": ["Standard", "Instant"]},
+            "DateExtractor": {"parts": ["quarter"], "timestamp_col": "record-date"},
             "MapValues": {},
             "storey.Filter": "(event['transaction-direction'] == 'Incoming' and event['transaction-type'] == 'Standard')",
             "storey.Extend": "({'btransaction': 'transaction'})",
