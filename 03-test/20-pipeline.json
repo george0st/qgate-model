@@ -42,7 +42,7 @@
             "OneHotEncoder": "",
             "DateExtractor": "",
             "MapValues": {},
-            "storey.Filter": "(event['account-state'] == 'active')",
+            "storey.Filter": "(event['account-state'] == 'Active')",
             "storey.Extend": "({'baccount': 'account'})",
             "calc": "",
             "aggregation": ""
