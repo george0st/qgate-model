@@ -33,7 +33,6 @@
             "OneHotEncoder": {"relation-type": ["Family","Job","Social"]},
             "DateExtractor": "",
             "MapValues": {},
-            "storey.Filter": "(event['relation-type'] == 'TTT')",
             "storey.Extend": "({'brelation': 'relation'})",
             "calc": "",
             "aggregation": ""
