@@ -31,7 +31,7 @@
           "basic-relation": {
             "Imputer": {"relation-type": "Job"},
             "OneHotEncoder": {"relation-type": ["Family","Job","Social"]},
-            "DateExtractor": "",
+            "DateExtractor": {"parts": ["day_of_week"], "timestamp_col": "record-date"},
             "MapValues": {},
             "storey.Extend": "({'brelation': 'relation'})",
             "calc": "",
