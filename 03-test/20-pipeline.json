@@ -19,9 +19,9 @@
             "aggregation": ""
           },
           "basic-contact": {
-            "Imputer": "",
+            "Imputer": {"contact-state": "InActive"},
             "OneHotEncoder": "",
-            "DateExtractor": "",
+            "DateExtractor": {"parts": ["day_of_week"], "timestamp_col": "record-date"},
             "MapValues": {},
             "storey.Filter": "(event['contact-state'] == 'Active')",
             "storey.Extend": "({'bcontact': 'contact'})",

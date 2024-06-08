@@ -28,8 +28,9 @@
       },
       {
         "name": "contact-state",
-        "description": "Contact state e.g. active, inactive, ...",
-        "type": "string"
+        "description": "Contact state 'Active' and 'Inactive'",
+        "type": "string",
+        "none": "InActive"
       },
       {
         "name": "record-date",
