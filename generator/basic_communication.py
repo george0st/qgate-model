@@ -86,11 +86,11 @@ class BasicCommunication(BaseData):
                     self.apply_none_value(model, 'content-sentiment', "Neutral", lower_probability=0.10)
 
                     # "name": "content-type",
-                    model['content-type'] = "text"
-                    self.apply_none_value(model, 'content-type', "text", lower_probability=0.01)
+                    model['content-type'] = "Text"
+                    self.apply_none_value(model, 'content-type', "Text", lower_probability=0.01)
 
                     # "name": "channel",
-                    model['channel'] = self.rnd_choose(["email", "chat"], [0.8, 0.2])
+                    model['channel'] = self.rnd_choose(["Email", "Chat"], [0.8, 0.2])
 
                     # "name": "communication-date",
                     session_datetime = session_datetime + datetime.timedelta(seconds=float(self.rnd_int(0,13)))

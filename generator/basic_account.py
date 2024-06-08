@@ -47,15 +47,16 @@ class BasicAccount(BaseData):
 
                 # "name": "account-type",
                 # "description": "Type of party account (saving account, current account, etc.)",
-                model['account-type']=self.rnd_choose(["current account", "saving account"], [0.93, 0.07])
+                model['account-type']=self.rnd_choose(["Current account", "Saving account"], [0.93, 0.07])
 
                 # "name": "account-state",
                 # "description": "Account state (e.g. active, closed, etc.)",
-                model['account-state']=self.rnd_choose(["active", "closed", "blocked"], [0.98, 0.018, 0.002])
+                model['account-state']=self.rnd_choose(["Active", "Closed", "Blocked"], [0.98, 0.018, 0.002])
+                self.apply_none_value(model, 'account-state', "Closed",lower_probability=0.2)
 
                 # "name": "account-createdate",
                 # "description": "Date for account creation",
-                if model['account-state']=="active":
+                if model['account-state']=="Active":
                     active_account_count=active_account_count+1
                     if active_account_count==1:
                         # only first account will have date for counterparty established
@@ -69,7 +70,7 @@ class BasicAccount(BaseData):
 
                 # "name": "account-nonactivedate",
                 # "description": "Date when account state was closed or blocked",
-                if model['account-state']=="active":
+                if model['account-state']=="Active":
                     model['account-nonactivedate']=self.MAX_DATE
                 else:
                     model['account-nonactivedate']=self.fake.date_between_dates(model['account-createdate'],datetime.date.today())
