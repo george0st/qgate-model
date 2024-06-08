@@ -60,9 +60,7 @@
           },
           "basic-event":
           {
-            "Imputer": "",
-            "OneHotEncoder": "",
-            "DateExtractor": "",
+            "DateExtractor": {"parts": ["quarter", "dayofyear"], "timestamp_col": "record-date"},
             "MapValues": {},
             "storey.Filter": "(event['event-group'] == 'access' and event['event-action'] == 'login')",
             "storey.Extend": "({'bevent': 'event'})",
