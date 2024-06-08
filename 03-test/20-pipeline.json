@@ -69,11 +69,11 @@
           },
           "basic-communication":
           {
-            "Imputer": "",
-            "OneHotEncoder": "",
-            "DateExtractor": "",
+            "Imputer": {"content-type": "Text", "content-sentiment": "Neutral"},
+            "OneHotEncoder": {"content-sentiment": ["Positive", "Negative", "Neutral", "Fake"]},
+            "DateExtractor": {"parts": ["is_month_end", "dayofyear"], "timestamp_col": "record-date"},
             "MapValues": {},
-            "storey.Filter": "(event['content-type'] == 'text' and event['channel'] == 'xxx')",
+            "storey.Filter": "(event['content-type'] == 'Text' or event['channel'] == 'xxx')",
             "storey.Extend": "({'bcommunication': 'communication'})",
             "calc": "",
             "aggregation": ""

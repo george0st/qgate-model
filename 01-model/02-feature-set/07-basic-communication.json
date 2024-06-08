@@ -34,13 +34,13 @@
       },
       {
         "name": "content-type",
-        "description": "Type of content e.g. text, audio, video",
+        "description": "Type of content e.g. 'Text', 'Audio', 'Video'",
         "type": "string",
-        "none": "text"
+        "none": "Text"
       },
       {
         "name": "channel",
-        "description": "Communication channel",
+        "description": "Communication channel e.g. 'Email', 'Chat'",
         "type": "string"
       },
       {
