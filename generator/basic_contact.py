@@ -71,6 +71,7 @@ class BasicContact(BaseData):
                     model['contact-state']=self.rnd_choose(["Active", "InActive"], [0.95, 0.05])
                 else:
                     model['contact-state']= "InActive"
+                self.apply_none_value(model, 'contact-state', "InActive", lower_probability=0.5)
 
                 # "name": "record-date"
                 model['record-date']=self.gmodel["NOW"]
