@@ -19,21 +19,20 @@
             "aggregation": ""
           },
           "basic-contact": {
-            "Imputer": "",
-            "OneHotEncoder": "",
-            "DateExtractor": "",
+            "Imputer": {"contact-state": "InActive"},
+            "OneHotEncoder": {"contact-state": ["Active","InActive"]},
+            "DateExtractor": {"parts": ["day_of_week"], "timestamp_col": "record-date"},
             "MapValues": {},
-            "storey.Filter": "(event['contact-state'] == 'Active')",
+            "storey.Filter": "(event['contact-email'] != '')",
             "storey.Extend": "({'bcontact': 'contact'})",
             "calc": "",
             "aggregation": ""
           },
           "basic-relation": {
-            "Imputer": "",
-            "OneHotEncoder": "",
+            "Imputer": {"relation-type": "Job"},
+            "OneHotEncoder": {"relation-type": ["Family","Job","Social"]},
             "DateExtractor": "",
             "MapValues": {},
-            "storey.Filter": "(event['relation-type'] == 'TTT')",
             "storey.Extend": "({'brelation': 'relation'})",
             "calc": "",
             "aggregation": ""
