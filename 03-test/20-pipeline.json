@@ -10,9 +10,9 @@
         "tests": {
           "basic-party": {
             "Imputer": {"party-gender": "F", "party-nchild": 0 },
-            "OneHotEncoder": {"party-gender": ["F", "M"], "party-familystatus": ["Married", "Single", "Divorced"]},
+            "OneHotEncoder": {"party-gender": ["F", "M"]},
             "DateExtractor": {"parts": ["day_of_week","weekofyear"], "timestamp_col": "party-establishment"},
-            "MapValues": "",
+            "MapValues": {"party-familystatus": {"Married": "M", "Single": "S", "Divorced": "D"}},
             "storey.Filter": "(event['party-nchild'] > 0)",
             "storey.Extend": "({'bparty': 'party'})",
             "calc": "",
@@ -53,7 +53,7 @@
             "OneHotEncoder": {"transaction-type": ["Standard", "Instant"]},
             "DateExtractor": {"parts": ["quarter"], "timestamp_col": "record-date"},
             "MapValues": {},
-            "storey.Filter": "(event['transaction-direction'] == 'Incoming' and event['transaction-type'] == 'Standard')",
+            "storey.Filter": "(event['transaction-direction'] == 'Incoming')",
             "storey.Extend": "({'btransaction': 'transaction'})",
             "calc": "",
             "aggregation": ""
