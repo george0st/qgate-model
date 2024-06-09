@@ -10,9 +10,9 @@
         "tests": {
           "basic-party": {
             "Imputer": {"party-gender": "F", "party-nchild": 0 },
-            "OneHotEncoder": {"party-gender": ["F", "M"], "party-familystatus": ["Married", "Single", "Divorced"]},
+            "OneHotEncoder": {"party-gender": ["F", "M"]},
             "DateExtractor": {"parts": ["day_of_week","weekofyear"], "timestamp_col": "party-establishment"},
-            "MapValues": "",
+            "MapValues": {"party-familystatus": {"Married": "M", "Single": "S", "Divorced": "D"}},
             "storey.Filter": "(event['party-nchild'] > 0)",
             "storey.Extend": "({'bparty': 'party'})",
             "calc": "",
