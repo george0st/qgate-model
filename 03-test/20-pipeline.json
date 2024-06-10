@@ -13,7 +13,7 @@
             "OneHotEncoder": {"party-gender": ["F", "M"]},
             "DateExtractor": {"parts": ["day_of_week","weekofyear"], "timestamp_col": "party-establishment"},
             "MapValues": {"party-familystatus": {"Married": "M", "Single": "S", "Divorced": "D"}},
-            "DropFeatures": [],
+            "DropFeatures": ["party-expenseshousehold"],
             "storey.Filter": "(event['party-nchild'] > 0)",
             "storey.Extend": "({'bparty': 'party'})",
             "calc": "",
