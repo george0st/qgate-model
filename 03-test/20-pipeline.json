@@ -57,7 +57,7 @@
             "OneHotEncoder": {"transaction-type": ["Standard", "Instant"]},
             "DateExtractor": {"parts": ["quarter"], "timestamp_col": "record-date"},
             "MapValues": {},
-            "DropFeatures": [],
+            "DropFeatures": ["counterparty-name", "counterparty-iban"],
             "storey.Filter": "(event['transaction-direction'] == 'Incoming')",
             "storey.Extend": "({'btransaction': 'transaction'})",
             "calc": "",
