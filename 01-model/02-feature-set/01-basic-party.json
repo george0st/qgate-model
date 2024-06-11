@@ -99,6 +99,11 @@
           "type": "string"
         },
         {
+          "name": "party-note",
+          "description": "Party note",
+          "type": "string"
+        },
+        {
           "name": "record-date",
           "description": "The date when the record was created",
           "type": "datetime"
