@@ -120,6 +120,10 @@ class BasicParty(BaseData):
         # "description": "Party currency (USD, EUR)",
         model['party-currency']=self.rnd_choose(["USD", "EUR"], [0.95, 0.05])
 
+        # "name": "party-note",
+        # "description": "Party note",
+        model['party-note'] = ""
+
         # "name": "record-date",
         # "description": "The date when the record was created",
         model['record-date']=self.gmodel["NOW"]
