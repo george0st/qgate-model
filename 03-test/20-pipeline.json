@@ -9,7 +9,7 @@
           "basic-communication"],
         "tests": {
           "basic-party": {
-            "Imputer": {"party-gender": "F", "party-nchild": 0 },
+            "Imputer": {"party-gender": "F", "party-nchild": 0 , "party-type": "Lead", "party-education": "Elementary school"},
             "OneHotEncoder": {"party-gender": ["F", "M"]},
             "DateExtractor": {"parts": ["day_of_week","weekofyear"], "timestamp_col": "party-establishment"},
             "MapValues": {"party-familystatus": {"Married": "M", "Single": "S", "Divorced": "D"}},
