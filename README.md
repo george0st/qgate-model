@@ -14,7 +14,7 @@ learning solutions (definition in json, data in csv/parquet).
 This meta-model is suitable for:
  - compare capabilities and functions of machine learning solutions (as part of RFP/X and SWOT analysis)
  - independent test new versions of machine learning solutions (with aim to keep quality in time)
- - unit, sanity, smoke, system, reqression, function, acceptance, performance, shadow, ... tests
+ - unit, sanity, smoke, system, regression, function, acceptance, performance, shadow, ... tests
  - external test coverage (in case, that internal test coverage is not available or weak)
  - etc.
 
