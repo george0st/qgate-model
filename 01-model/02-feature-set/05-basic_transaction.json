@@ -1,79 +1,79 @@
 {
-  "name": "basic-transaction",
+  "name": "basic_transaction",
   "description": "Transactions detail with relation to account",
   "kind": "feature-set",
   "spec": {
       "entities": [
         {
-          "name": "account-id",
+          "name": "account_id",
           "description": "Relation to account identificator",
           "type": "string"
         }
       ],
       "features": [
         {
-          "name": "transaction-id",
+          "name": "transaction_id",
           "description": "Unique transaction identificator",
           "type": "string"
         },
         {
-          "name": "transaction-direction",
+          "name": "transaction_direction",
           "description": "Transaction direction e.g. incoming, outgoing",
           "type": "string"
         },
         {
-          "name": "transaction-type",
+          "name": "transaction_type",
           "description": "Transaction type e.g. 'Standard', 'Instant'",
           "type": "string",
           "none": "Instant"
         },
         {
-          "name": "transaction-value",
+          "name": "transaction_value",
           "description": "Transaction value",
           "type": "int"
         },
         {
-          "name": "transaction-currency",
+          "name": "transaction_currency",
           "description": "Transaction currency",
           "type": "string"
         },
         {
-          "name": "transaction-description",
+          "name": "transaction_description",
           "description": "Transaction description",
           "type": "string"
         },
         {
-          "name": "transaction-date",
+          "name": "transaction_date",
           "description": "Transaction date",
           "type": "datetime"
         },
         {
-          "name": "counterparty-name",
+          "name": "counterparty_name",
           "description": "Transaction counterparty name",
           "type": "string"
         },
         {
-          "name": "counterparty-iban",
+          "name": "counterparty_iban",
           "description": "Transaction counterparty IBAN",
           "type": "string"
         },
         {
-          "name": "counterparty-other",
+          "name": "counterparty_other",
           "description": "Transaction counterparty other information",
           "type": "string"
         },
         {
-          "name": "transaction-fraudanomaly",
+          "name": "transaction_fraudanomaly",
           "description": "Possible fraud anomaly detection (min. 0 - without anomaly detection, max. 1)",
           "type": "float"
         },
         {
-          "name": "transaction-fraud",
+          "name": "transaction_fraud",
           "description": "Identification of fraud (1 - fraud, 0 - without fraud)",
           "type": "int"
         },
         {
-          "name": "record-date",
+          "name": "record_date",
           "description": "The date when the record was created",
           "type": "datetime"
         }

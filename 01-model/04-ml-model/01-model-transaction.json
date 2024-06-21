@@ -5,9 +5,9 @@
   "spec": {
         "source": "vector-transaction",
         "query": "",
-        "source-columns": ["transaction-direction","transaction-type","transaction-value","transaction-currency"],
-        "target-columns": "transaction-fraud",
-        "encode-columns": ["transaction-direction","transaction-type","transaction-currency"],
+        "source-columns": ["transaction_direction","transaction_type","transaction_value","transaction_currency"],
+        "target-columns": "transaction_fraud",
+        "encode-columns": ["transaction_direction","transaction_type","transaction_currency"],
         "test-size": 0.3
   }
 }

@@ -5,7 +5,7 @@
   "spec": {
         "featuresets": ["basic_party", "basic_contact",
           "basic_relation", "basic_account",
-          "basic-transaction", "basic-event",
+          "basic_transaction", "basic-event",
           "basic-communication"],
         "tests": {
           "basic_party": {
@@ -52,14 +52,14 @@
             "calc": "",
             "aggregation": ""
           },
-          "basic-transaction":
+          "basic_transaction":
           {
-            "Imputer": {"transaction-type": "Instant"},
-            "OneHotEncoder": {"transaction-type": ["Standard", "Instant"]},
-            "DateExtractor": {"parts": ["quarter"], "timestamp_col": "record-date"},
+            "Imputer": {"transaction_type": "Instant"},
+            "OneHotEncoder": {"transaction_type": ["Standard", "Instant"]},
+            "DateExtractor": {"parts": ["quarter"], "timestamp_col": "record_date"},
             "MapValues": {},
-            "DropFeatures": ["counterparty-name", "counterparty-iban"],
-            "storey.Filter": "(event['transaction-direction'] == 'Incoming')",
+            "DropFeatures": ["counterparty_name", "counterparty_iban"],
+            "storey.Filter": "(event['transaction_direction'] == 'Incoming')",
             "storey.Extend": "({'btransaction': 'transaction'})",
             "calc": "",
             "aggregation": ""

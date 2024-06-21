@@ -6,10 +6,10 @@
         "features": [
           "basic_account.account_type",
           "basic_account.account_state",
-          "basic-transaction.transaction-id",
-          "basic-transaction.transaction-value",
-          "basic-transaction.transaction-currency",
-          "basic-transaction.transaction-date"
+          "basic_transaction.transaction_id",
+          "basic_transaction.transaction_value",
+          "basic_transaction.transaction_currency",
+          "basic_transaction.transaction_date"
         ]
   }
 }
