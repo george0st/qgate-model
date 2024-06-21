@@ -11,7 +11,7 @@
       "prj-online": ["redis"]
     },
     "feature-sets": [
-      "basic_account", "basic_contact", "aggregate-account"],
+      "basic_account", "basic_contact", "aggregate_account"],
     "feature-vectors": []
   }
 }

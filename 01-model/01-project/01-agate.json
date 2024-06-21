@@ -12,7 +12,7 @@
     },
     "feature-sets": [
       "basic_party", "basic_contact", "basic_relation", "basic_account", "basic_transaction", "basic_event", "basic_communication",
-      "aggregate_party", "aggregate-account", "aggregate-transaction", "aggregate-circle"],
+      "aggregate_party", "aggregate_account", "aggregate-transaction", "aggregate-circle"],
     "feature-vectors": [
       "vector-party",
       "vector-contact",
