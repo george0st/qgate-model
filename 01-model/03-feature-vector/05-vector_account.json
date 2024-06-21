@@ -1,5 +1,5 @@
 {
-  "name": "vector-account",
+  "name": "vector_account",
   "description": "Vector for the 'basic-account'",
   "kind": "feature-vector",
   "spec": {

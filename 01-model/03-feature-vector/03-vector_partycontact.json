@@ -1,5 +1,5 @@
 {
-  "name": "vector-partycontact",
+  "name": "vector_partycontact",
   "description": "Vector joins the 'basic-party' and the 'basic-contact'",
   "kind": "feature-vector",
   "spec": {

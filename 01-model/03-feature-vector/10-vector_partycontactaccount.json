@@ -1,5 +1,5 @@
 {
-  "name": "vector-partycontactaccount",
+  "name": "vector_partycontactaccount",
   "description": "Vector joins three featuresets, the 'basic-party', 'basic-contact' and 'basoc-account'",
   "kind": "feature-vector",
   "spec": {

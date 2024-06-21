@@ -1,5 +1,5 @@
 {
-  "name": "vector-partyaccount",
+  "name": "vector_partyaccount",
   "description": "Vector joins the 'basic-party' and the 'basic-account'",
   "kind": "feature-vector",
   "spec": {
