@@ -126,6 +126,6 @@ class BasicParty(BaseData):
 
         # "name": "record-date",
         # "description": "The date when the record was created",
-        model['record-date']=self.gmodel["NOW"]
+        model['record_date']=self.gmodel["NOW"]
 
         self.model.append(model)

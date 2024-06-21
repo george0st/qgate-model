@@ -4,6 +4,6 @@
   "kind": "feature-vector",
   "spec": {
         "features": [
-          "basic-party.*"]
+          "basic_party.*"]
   }
 }

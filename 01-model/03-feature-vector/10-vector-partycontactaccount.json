@@ -4,9 +4,9 @@
   "kind": "feature-vector",
   "spec": {
         "features": [
-          "basic-party.party_gender",
-          "basic-party.party_familystatus",
-          "basic-party.party_nchild",
+          "basic_party.party_gender",
+          "basic_party.party_familystatus",
+          "basic_party.party_nchild",
           "basic-contact.contact-id",
           "basic-contact.contact-email",
           "basic-contact.contact-phone",

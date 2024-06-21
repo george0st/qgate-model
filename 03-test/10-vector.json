@@ -9,7 +9,7 @@
         ],
         "tests": {
           "vector-party": {
-            "feature-set": "01-basic-party",
+            "feature-set": "01-basic_party",
             "entities": ["party_id"],
             "features": ["party_id", "party_establishment", "party_type", "party_gender","party_education", "party_familystatus",
             "party_nchild", "party_industry","party_industryposition", "party_income", "party_incomehousehold"]
