@@ -34,7 +34,7 @@ class BasicContact(BaseData):
         for party in parties:
 
             # max 3 contacts for Customers and only one contact for Leads or Prospects
-            contacts= 1 if party['party-type'] != "Customer" else self.rnd_choose([1, 2, 3], [0.85, 0.1, 0.05])
+            contacts= 1 if party['party_type'] != "Customer" else self.rnd_choose([1, 2, 3], [0.85, 0.1, 0.05])
             for count in range(contacts):
 
                 # add new model
@@ -43,13 +43,13 @@ class BasicContact(BaseData):
                 # "name": "contact-id",
                 model['contact-id']=str(uuid.uuid4())
 
-                # "name": "party-id",
-                model['party-id']=party['party-id']
+                # "name": "party_id",
+                model['party_id']=party['party_id']
 
                 # generate different amount of contact information
                 # Customer = email + phone
                 # !Customer = random email or phone
-                contact_detail=ContactEnum.Full if party['party-type']=="Customer" else ContactEnum.Email \
+                contact_detail=ContactEnum.Full if party['party_type']=="Customer" else ContactEnum.Email \
                     if self.rnd_bool() else ContactEnum.Phone
 
                 # "name": "contact-email"

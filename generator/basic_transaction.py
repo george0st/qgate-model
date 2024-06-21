@@ -89,11 +89,11 @@ class BasicTransaction(BaseData):
                 # "description": "Transaction date",
                 model['transaction-date']=new_date
 
-                # "name": "counterparty-name",
+                # "name": "counterparty_name",
                 # "description": "Transaction counterparty name",
                 model["counterparty-name"] = self.fake.name()
 
-                # "name": "counterparty-iban",
+                # "name": "counterparty_iban",
                 # "description": "Transaction counterparty IBAN",
                 if int(self.rnd_choose([0,1],[0.998, 0.002]))==0:
                     iban=self.fake.iban()

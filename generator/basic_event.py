@@ -70,7 +70,7 @@ class BasicEvent(BaseData):
             # mix of actions
 
             # generate event with history EVENT_HISTORY_DAYS
-            party_customer=party['party-type'] == "Customer"
+            party_customer=party['party_type'] == "Customer"
             event_date = self.now - datetime.timedelta(days=float(BasicEvent.MAX_EVENT_HISTORY_DAYS))
 
             # iteration cross days
@@ -109,8 +109,8 @@ class BasicEvent(BaseData):
                     # "name": "session-id",
                     model['session-id'] = session_id
 
-                    # "name": "party-id",
-                    model['party-id'] = party['party-id']
+                    # "name": "party_id",
+                    model['party_id'] = party['party_id']
 
                     if event==0:
                         # add default group, category and action -> login for first event in bundle

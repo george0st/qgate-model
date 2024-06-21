@@ -9,13 +9,13 @@
           "basic-communication"],
         "tests": {
           "basic-party": {
-            "Imputer": {"party-gender": "F", "party-nchild": 0 , "party-type": "Lead", "party-education": "Elementary school"},
-            "OneHotEncoder": {"party-gender": ["F", "M"]},
-            "DateExtractor": {"parts": ["day_of_week","weekofyear"], "timestamp_col": "party-establishment"},
-            "MapValues": {"party-familystatus": {"Married": "M", "Single": "S", "Divorced": "D"}},
-            "DropFeatures": ["party-expenseshousehold"],
-            "GenerateId": {"namespace": "a334", "features": ["party-note"]},
-            "storey.Filter": "(event['party-nchild'] > 0)",
+            "Imputer": {"party_gender": "F", "party_nchild": 0 , "party_type": "Lead", "party_education": "Elementary school"},
+            "OneHotEncoder": {"party_gender": ["F", "M"]},
+            "DateExtractor": {"parts": ["day_of_week","weekofyear"], "timestamp_col": "party_establishment"},
+            "MapValues": {"party_familystatus": {"Married": "M", "Single": "S", "Divorced": "D"}},
+            "DropFeatures": ["party_expenseshousehold"],
+            "GenerateId": {"namespace": "a334", "features": ["party_note"]},
+            "storey.Filter": "(event['party_nchild'] > 0)",
             "storey.Extend": "({'bparty': 'party'})",
             "calc": "",
             "aggregation": ""

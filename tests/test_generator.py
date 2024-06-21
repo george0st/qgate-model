@@ -121,12 +121,12 @@ class TestGenerator(unittest.TestCase):
 
         dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
-        self._check_csv_header(path.join(dir, f"{basic_party.BasicParty.NAME}.csv"), "party-id")
-        self._check_csv_header(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv"), "party-id")
-        self._check_csv_header(path.join(dir, f"{basic_relation.BasicRelation.NAME}.csv"), "party-id")
-        self._check_csv_header(path.join(dir, f"{basic_account.BasicAccount.NAME}.csv"), "party-id")
+        self._check_csv_header(path.join(dir, f"{basic_party.BasicParty.NAME}.csv"), "party_id")
+        self._check_csv_header(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv"), "party_id")
+        self._check_csv_header(path.join(dir, f"{basic_relation.BasicRelation.NAME}.csv"), "party_id")
+        self._check_csv_header(path.join(dir, f"{basic_account.BasicAccount.NAME}.csv"), "party_id")
         self._check_csv_header(path.join(dir, f"{basic_transaction.BasicTransaction.NAME}.csv"), "account-id")
-        self._check_csv_header(path.join(dir, f"{basic_event.BasicEvent.NAME}.csv"), "party-id")
-        self._check_csv_header(path.join(dir, f"{basic_communication.BasicCommunication.NAME}.csv"), "party-id")
+        self._check_csv_header(path.join(dir, f"{basic_event.BasicEvent.NAME}.csv"), "party_id")
+        self._check_csv_header(path.join(dir, f"{basic_communication.BasicCommunication.NAME}.csv"), "party_id")
 
     # TODO: Add batch size under limit, it will generate wrong dataset

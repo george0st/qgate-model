@@ -5,106 +5,106 @@
   "spec": {
       "entities": [
         {
-          "name": "party-id",
+          "name": "party_id",
           "description": "Unique party identificator",
           "type": "string"
         }
       ],
       "features": [
         {
-          "name": "party-establishment",
+          "name": "party_establishment",
           "description": "Date of establishment of the party (e.g. birthday for client, etc.)",
           "type": "datetime"
         },
         {
-          "name": "party-type",
+          "name": "party_type",
           "description": "Party state (e.g. 'Lead', 'Prospect', 'Client')",
           "type": "string",
           "none": "Lead"
         },
         {
-          "name": "party-typedate",
+          "name": "party_typedate",
           "description": "Date for party type creation (data for change of the state to the prospect or client)",
           "type": "datetime"
         },
         {
-          "name": "party-gender",
+          "name": "party_gender",
           "description": "Party gender ('F' or 'M')",
           "type": "string"
         },
         {
-          "name": "party-education",
+          "name": "party_education",
           "description": "Party education (e.g. 'Elementary school', 'High school', 'University', etc.)",
           "type": "string",
           "none": "Elementary school"
         },
         {
-          "name": "party-familystatus",
+          "name": "party_familystatus",
           "description": "Family status for party ('Married', 'Single', 'Divorced')",
           "type": "string"
         },
         {
-          "name": "party-nchild",
+          "name": "party_nchild",
           "description": "Amount of children",
           "type": "int"
         },
         {
-          "name": "party-industry",
+          "name": "party_industry",
           "description": "Party industry (e.g. 'IT', 'Finance', 'Telco', 'Medical', etc.)",
           "type": "string"
         },
         {
-          "name": "party-industryposition",
+          "name": "party_industryposition",
           "description": "Party position in industry (e.g. 'Manager', 'Developer', 'Analyst', etc.)",
           "type": "string"
         },
         {
-          "name": "party-residencecountry",
+          "name": "party_residencecountry",
           "description": "Party country residence",
           "type": "string"
         },
         {
-          "name": "party-city",
+          "name": "party_city",
           "description": "Permanent stay-city (part of permanent stay)",
           "type": "string"
         },
         {
-          "name": "party-income",
+          "name": "party_income",
           "description": "Monthly income in local currency",
           "type": "int"
         },
         {
-          "name": "party-incometype",
+          "name": "party_incometype",
           "description": "Type of the main income (e.g. 'Earned', 'Passive', 'Portfolio')",
           "type": "string"
         },
         {
-          "name": "party-peoplehousehold",
+          "name": "party_peoplehousehold",
           "description": "Number of people in household",
           "type": "int"
         },
         {
-          "name": "party-incomehousehold",
+          "name": "party_incomehousehold",
           "description": "Monthly income in local currency for household",
           "type": "int"
         },
         {
-          "name": "party-expenseshousehold",
+          "name": "party_expenseshousehold",
           "description": "Monthly expenses (insurance, loans, etc.) for household",
           "type": "int"
         },
         {
-          "name": "party-currency",
+          "name": "party_currency",
           "description": "Party currency (USD, EUR)",
           "type": "string"
         },
         {
-          "name": "party-note",
+          "name": "party_note",
           "description": "Party note",
           "type": "string"
         },
         {
-          "name": "record-date",
+          "name": "record_date",
           "description": "The date when the record was created",
           "type": "datetime"
         }

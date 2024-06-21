@@ -34,7 +34,7 @@ class BasicCommunication(BaseData):
 
             # only 3 months back history
             # generate communication with history EVENT_HISTORY_DAYS
-            party_customer=party['party-type'] == "Customer"
+            party_customer=party['party_type'] == "Customer"
             communication_date = self.now - datetime.timedelta(days=float(BasicCommunication.MAX_COMMUNICATION_HISTORY_DAYS))
 
             # iteration cross days
@@ -75,8 +75,8 @@ class BasicCommunication(BaseData):
                     # "name": "session-id",
                     model['session-id'] = session_id
 
-                    # "name": "party-id",
-                    model['party-id'] = party['party-id']
+                    # "name": "party_id",
+                    model['party_id'] = party['party_id']
 
                     # "name": "content",
                     model['content'] = self._generate_text(session_sentiment)

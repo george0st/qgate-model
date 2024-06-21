@@ -27,7 +27,7 @@ class BasicAccount(BaseData):
         for party in parties:
 
             # accounts will be generated only for customers
-            if party['party-type'] != "Customer":
+            if party['party_type'] != "Customer":
                 continue
 
             # customer can have from 1 to 4 accounts
@@ -41,9 +41,9 @@ class BasicAccount(BaseData):
                 # "description": "Unique account identificator",
                 model['account-id']=str(uuid.uuid4())
 
-                # "name": "party-id",
+                # "name": "party_id",
                 # "description": "Party identificator",
-                model['party-id']=party['party-id']
+                model['party_id']=party['party_id']
 
                 # "name": "account-type",
                 # "description": "Type of party account (saving account, current account, etc.)",
@@ -60,13 +60,13 @@ class BasicAccount(BaseData):
                     active_account_count=active_account_count+1
                     if active_account_count==1:
                         # only first account will have date for counterparty established
-                        model['account-createdate']=party['party-typedate']
+                        model['account-createdate']=party['party_typedate']
                     else:
                         # other active accounts, date will be between today and date for counterparty established
-                        model['account-createdate']=self.fake.date_between_dates(party['party-typedate'],datetime.date.today())
+                        model['account-createdate']=self.fake.date_between_dates(party['party_typedate'],datetime.date.today())
                 else:
                     # account is in state closed or blocked date will be between today and date for countrparty established
-                    model['account-createdate']=self.fake.date_between_dates(party['party-typedate'],datetime.date.today())
+                    model['account-createdate']=self.fake.date_between_dates(party['party_typedate'],datetime.date.today())
 
                 # "name": "account-nonactivedate",
                 # "description": "Date when account state was closed or blocked",

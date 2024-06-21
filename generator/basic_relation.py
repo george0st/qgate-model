@@ -33,7 +33,7 @@ class BasicRelation(BaseData):
         # iteration cross all parties
         for party in parties:
 
-            if party['party-type']=="Customer":
+            if party['party_type']=="Customer":
                 relations=self.rnd_choose(range(0, BasicRelation.MAX_RELATIONS), [0.15, 0.5, 0.3, 0.04, 0.01])
             else:
                 relations=self.rnd_choose(range(0, BasicRelation.MAX_RELATIONS), [0.55, 0.3, 0.1, 0.04, 0.01])
@@ -46,12 +46,12 @@ class BasicRelation(BaseData):
                 model['relation-id']=str(uuid.uuid4())
 
                 # "name": "relation-parentid",
-                model['party-id']=party['party-id']
+                model['party_id']=party['party_id']
 
                 # "name": "relation-childid",
                 while (True):
-                    random_id = parties[self.rnd_int(0, len(parties))]['party-id']
-                    if random_id != model['party-id']:
+                    random_id = parties[self.rnd_int(0, len(parties))]['party_id']
+                    if random_id != model['party_id']:
                         model['relation-childid'] = random_id
                         break
 
