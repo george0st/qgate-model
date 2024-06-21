@@ -5,7 +5,7 @@
   "spec": {
         "featuresets": ["basic_party", "basic_contact",
           "basic_relation", "basic_account",
-          "basic_transaction", "basic-event",
+          "basic_transaction", "basic_event",
           "basic-communication"],
         "tests": {
           "basic_party": {
@@ -64,12 +64,12 @@
             "calc": "",
             "aggregation": ""
           },
-          "basic-event":
+          "basic_event":
           {
-            "DateExtractor": {"parts": ["quarter", "dayofyear"], "timestamp_col": "record-date"},
+            "DateExtractor": {"parts": ["quarter", "dayofyear"], "timestamp_col": "record_date"},
             "MapValues": {},
             "DropFeatures": [],
-            "storey.Filter": "(event['event-group'] == 'access' and event['event-action'] == 'login')",
+            "storey.Filter": "(event['event_group'] == 'access' and event['event_action'] == 'login')",
             "storey.Extend": "({'bevent': 'event'})",
             "calc": "",
             "aggregation": ""

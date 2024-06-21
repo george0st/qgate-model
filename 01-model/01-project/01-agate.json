@@ -11,7 +11,7 @@
       "prj-online": ["redis"]
     },
     "feature-sets": [
-      "basic_party", "basic_contact", "basic_relation", "basic_account", "basic_transaction", "basic-event", "basic-communication",
+      "basic_party", "basic_contact", "basic_relation", "basic_account", "basic_transaction", "basic_event", "basic-communication",
       "aggregate-party", "aggregate-account", "aggregate-transaction", "aggregate-circle"],
     "feature-vectors": [
       "vector-party",

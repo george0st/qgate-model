@@ -1,53 +1,53 @@
 {
-  "name": "basic-event",
+  "name": "basic_event",
   "description": "Party events e.g. run app, view paymemt conditions, check account state, show item in shop, send message to friend, etc.",
   "kind": "feature-set",
   "spec": {
     "entities": [
       {
-        "name": "party-id",
+        "name": "party_id",
         "description": "Relation to party ID",
         "type": "string"
       }
     ],
     "features": [
       {
-        "name": "event-id",
+        "name": "event_id",
         "description": "Unique party event identificator",
         "type": "string"
       },
       {
-        "name": "session-id",
+        "name": "session_id",
         "description": "Session ID (bundle of event for one customer session)",
         "type": "string"
       },
       {
-        "name": "event-group",
+        "name": "event_group",
         "description": "Party event group (L0)",
         "type": "string"
       },
       {
-        "name": "event-category",
+        "name": "event_category",
         "description": "Party event category (L1)",
         "type": "string"
       },
       {
-        "name": "event-action",
+        "name": "event_action",
         "description": "Party event action (L2)",
         "type": "string"
       },
       {
-        "name": "event-detail",
+        "name": "event_detail",
         "description": "Party event detail (L3)",
         "type": "string"
       },
       {
-        "name": "event-date",
+        "name": "event_date",
         "description": "Datetime for party event",
         "type": "datetime"
       },
       {
-        "name": "record-date",
+        "name": "record_date",
         "description": "The date when the record was created",
         "type": "datetime"
       }

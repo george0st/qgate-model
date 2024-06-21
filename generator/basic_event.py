@@ -12,7 +12,7 @@ import numpy
 
 class BasicEvent(BaseData):
 
-    NAME = "06-basic-event"
+    NAME = "06-basic_event"
     MAX_EVENT_HISTORY_DAYS = 90
 
     def __init__(self, path, gmodel):
@@ -104,10 +104,10 @@ class BasicEvent(BaseData):
                     model = self.model_item()
 
                     # "name": "event-id",
-                    model['event-id'] = str(uuid.uuid4())
+                    model['event_id'] = str(uuid.uuid4())
 
                     # "name": "session-id",
-                    model['session-id'] = session_id
+                    model['session_id'] = session_id
 
                     # "name": "party_id",
                     model['party_id'] = party['party_id']
@@ -130,25 +130,25 @@ class BasicEvent(BaseData):
                         action = self.rnd_choose(self.event_actions[group_category_name][0], self.event_actions[group_category_name][1])
 
                     # "name": "event-group",
-                    model['event-group'] = group
+                    model['event_group'] = group
 
                     # "name": "event-category",
-                    model['event-category'] = category
+                    model['event_category'] = category
 
                     # "name": "event-action",
-                    model['event-action'] = action
+                    model['event_action'] = action
 
                     # "name": "event-detail",
-                    model['event-detail'] = ""    # not used, right now
+                    model['event_detail'] = ""    # not used, right now
 
                     # "name": "event-date",
                     #   random movement in second for next event
                     #   new datetime for this event in session
                     session_datetime = session_datetime + datetime.timedelta(seconds=float(self.rnd_int(0,13)))
-                    model['event-date']=session_datetime.strftime("%Y-%m-%d %H:%M:%S")
+                    model['event_date']=session_datetime.strftime("%Y-%m-%d %H:%M:%S")
 
                     # "name": "record-date"
-                    model['record-date']=self.gmodel["NOW"]
+                    model['record_date']=self.gmodel["NOW"]
 
                     self.model.append(model)
 
