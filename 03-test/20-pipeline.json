@@ -3,85 +3,85 @@
   "description": "Setting for test pipelines for ingestion",
   "kind": "test",
   "spec": {
-        "featuresets": ["basic-party", "basic-contact",
-          "basic-relation", "basic-account",
-          "basic-transaction", "basic-event",
-          "basic-communication"],
+        "featuresets": ["basic_party", "basic_contact",
+          "basic_relation", "basic_account",
+          "basic_transaction", "basic_event",
+          "basic_communication"],
         "tests": {
-          "basic-party": {
-            "Imputer": {"party-gender": "F", "party-nchild": 0 , "party-type": "Lead", "party-education": "Elementary school"},
-            "OneHotEncoder": {"party-gender": ["F", "M"]},
-            "DateExtractor": {"parts": ["day_of_week","weekofyear"], "timestamp_col": "party-establishment"},
-            "MapValues": {"party-familystatus": {"Married": "M", "Single": "S", "Divorced": "D"}},
-            "DropFeatures": ["party-expenseshousehold"],
-            "GenerateId": {"namespace": "a334", "features": ["party-note"]},
-            "storey.Filter": "(event['party-nchild'] > 0)",
+          "basic_party": {
+            "Imputer": {"party_gender": "F", "party_nchild": 0 , "party_type": "Lead", "party_education": "Elementary school"},
+            "OneHotEncoder": {"party_gender": ["F", "M"]},
+            "DateExtractor": {"parts": ["day_of_week","weekofyear"], "timestamp_col": "party_establishment"},
+            "MapValues": {"party_familystatus": {"Married": "M", "Single": "S", "Divorced": "D"}},
+            "DropFeatures": ["party_expenseshousehold"],
+            "GenerateId": {"namespace": "a334", "features": ["party_note"]},
+            "storey.Filter": "(event['party_nchild'] > 0)",
             "storey.Extend": "({'bparty': 'party'})",
             "calc": "",
             "aggregation": ""
           },
-          "basic-contact": {
-            "Imputer": {"contact-state": "InActive"},
-            "OneHotEncoder": {"contact-state": ["Active","InActive"]},
-            "DateExtractor": {"parts": ["day_of_week"], "timestamp_col": "record-date"},
+          "basic_contact": {
+            "Imputer": {"contact_state": "InActive"},
+            "OneHotEncoder": {"contact_state": ["Active","InActive"]},
+            "DateExtractor": {"parts": ["day_of_week"], "timestamp_col": "record_date"},
             "MapValues": {},
             "DropFeatures": [],
-            "storey.Filter": "(event['contact-email'] != '')",
+            "storey.Filter": "(event['contact_email'] != '')",
             "storey.Extend": "({'bcontact': 'contact'})",
             "calc": "",
             "aggregation": ""
           },
-          "basic-relation": {
-            "Imputer": {"relation-type": "Job"},
-            "OneHotEncoder": {"relation-type": ["Family","Job","Social"]},
-            "DateExtractor": {"parts": ["day_of_week"], "timestamp_col": "record-date"},
+          "basic_relation": {
+            "Imputer": {"relation_type": "Job"},
+            "OneHotEncoder": {"relation_type": ["Family","Job","Social"]},
+            "DateExtractor": {"parts": ["day_of_week"], "timestamp_col": "record_date"},
             "MapValues": {},
             "DropFeatures": [],
             "storey.Extend": "({'brelation': 'relation'})",
             "calc": "",
             "aggregation": ""
           },
-          "basic-account": {
-            "Imputer": {"account-state":  "Closed"},
-            "OneHotEncoder": {"account-type": ["Current account", "Saving account"]},
-            "DateExtractor": {"parts": ["quarter"], "timestamp_col": "record-date"},
+          "basic_account": {
+            "Imputer": {"account_state":  "Closed"},
+            "OneHotEncoder": {"account_type": ["Current account", "Saving account"]},
+            "DateExtractor": {"parts": ["quarter"], "timestamp_col": "record_date"},
             "MapValues": {},
             "DropFeatures": [],
-            "storey.Filter": "(event['account-state'] == 'Active')",
+            "storey.Filter": "(event['account_state'] == 'Active')",
             "storey.Extend": "({'baccount': 'account'})",
             "calc": "",
             "aggregation": ""
           },
-          "basic-transaction":
+          "basic_transaction":
           {
-            "Imputer": {"transaction-type": "Instant"},
-            "OneHotEncoder": {"transaction-type": ["Standard", "Instant"]},
-            "DateExtractor": {"parts": ["quarter"], "timestamp_col": "record-date"},
+            "Imputer": {"transaction_type": "Instant"},
+            "OneHotEncoder": {"transaction_type": ["Standard", "Instant"]},
+            "DateExtractor": {"parts": ["quarter"], "timestamp_col": "record_date"},
             "MapValues": {},
-            "DropFeatures": ["counterparty-name", "counterparty-iban"],
-            "storey.Filter": "(event['transaction-direction'] == 'Incoming')",
+            "DropFeatures": ["counterparty_name", "counterparty_iban"],
+            "storey.Filter": "(event['transaction_direction'] == 'Incoming')",
             "storey.Extend": "({'btransaction': 'transaction'})",
             "calc": "",
             "aggregation": ""
           },
-          "basic-event":
+          "basic_event":
           {
-            "DateExtractor": {"parts": ["quarter", "dayofyear"], "timestamp_col": "record-date"},
+            "DateExtractor": {"parts": ["quarter", "dayofyear"], "timestamp_col": "record_date"},
             "MapValues": {},
             "DropFeatures": [],
-            "storey.Filter": "(event['event-group'] == 'access' and event['event-action'] == 'login')",
+            "storey.Filter": "(event['event_group'] == 'access' and event['event_action'] == 'login')",
             "storey.Extend": "({'bevent': 'event'})",
             "calc": "",
             "aggregation": ""
           },
-          "basic-communication":
+          "basic_communication":
           {
-            "Imputer": {"content-type": "Text", "content-sentiment": "Neutral"},
-            "OneHotEncoder": {"content-sentiment": ["Positive", "Negative", "Neutral", "Fake"]},
-            "DateExtractor": {"parts": ["is_month_end", "dayofyear"], "timestamp_col": "record-date"},
+            "Imputer": {"content_type": "Text", "content_sentiment": "Neutral"},
+            "OneHotEncoder": {"content_sentiment": ["Positive", "Negative", "Neutral", "Fake"]},
+            "DateExtractor": {"parts": ["is_month_end", "dayofyear"], "timestamp_col": "record_date"},
             "MapValues": {},
             "DropFeatures": [],
-            "storey.Filter": "(event['content-type'] == 'Text' or event['channel'] == 'xxx')",
+            "storey.Filter": "(event['content_type'] == 'Text' or event['channel'] == 'xxx')",
             "storey.Extend": "({'bcommunication': 'communication'})",
             "calc": "",
             "aggregation": ""

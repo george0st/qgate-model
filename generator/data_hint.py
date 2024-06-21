@@ -38,24 +38,24 @@ class DataHint(BaseTest):
 
         # random party (focus on 'Customer' because they have accounts and transactions also)
         parties = self.gmodel[BasicParty.NAME]
-        parties_customer = [c for c in parties if c['party-type']=='Customer']
+        parties_customer = [c for c in parties if c['party_type']=='Customer']
         # if it is not possible to select 'Customer' because only a few parties, I will use some parties (such as lead, etc.)
         if len(parties_customer)==0:
             parties_customer = parties
         party=parties_customer[self.rnd_int(0, len(parties_customer))]
-        partyid = party['party-id']
+        partyid = party['party_id']
         model[BasicParty.NAME] = party
 
         # random contact based on party
         contacts = self.gmodel[BasicContact.NAME]
-        contacts_party = [c for c in contacts if c['party-id']==partyid]
+        contacts_party = [c for c in contacts if c['party_id']==partyid]
         if len(contacts_party)>0:
             contact = contacts_party[-1] if last_values else contacts_party[self.rnd_int(0, len(contacts_party))]
             model[BasicContact.NAME] = contact
 
         # random relation
         relations = self.gmodel[BasicRelation.NAME]
-        relation_party = [r for r in relations if r['party-id'] == partyid]
+        relation_party = [r for r in relations if r['party_id'] == partyid]
         if len(relation_party) > 0:
             relation = relation_party[-1] if last_values else relation_party[self.rnd_int(0, len(relation_party))]
             model[BasicRelation.NAME] = relation
@@ -63,30 +63,30 @@ class DataHint(BaseTest):
         # random account
         accountid=None
         accounts = self.gmodel[BasicAccount.NAME]
-        account_party = [a for a in accounts if a['party-id'] == partyid]
+        account_party = [a for a in accounts if a['party_id'] == partyid]
         if len(account_party) > 0:
             account = account_party[-1] if last_values else account_party[self.rnd_int(0, len(account_party))]
-            accountid = account["account-id"]
+            accountid = account["account_id"]
             model[BasicAccount.NAME] = account
 
         # transaction
         if accountid:
             transactions = self.gmodel[BasicTransaction.NAME]
-            transaction_account = [t for t in transactions if t['account-id'] == accountid]
+            transaction_account = [t for t in transactions if t['account_id'] == accountid]
             if len(transaction_account) > 0:
                 transaction = transaction_account[-1] if last_values else transaction_account[self.rnd_int(0, len(transaction_account))]
                 model[BasicTransaction.NAME] = transaction
 
         # event
         events = self.gmodel[BasicEvent.NAME]
-        event_party = [e for e in events if e['party-id'] == partyid]
+        event_party = [e for e in events if e['party_id'] == partyid]
         if len(event_party) > 0:
             event = event_party[-1] if last_values else event_party[self.rnd_int(0, len(event_party))]
             model[BasicEvent.NAME] = event
 
         # communication
         communications = self.gmodel[BasicCommunication.NAME]
-        communication_party = [c for c in communications if c['party-id'] == partyid]
+        communication_party = [c for c in communications if c['party_id'] == partyid]
         if len(communication_party) > 0:
             communication = communication_party[-1] if last_values else communication_party[self.rnd_int(0, len(communication_party))]
             model[BasicCommunication.NAME] = communication

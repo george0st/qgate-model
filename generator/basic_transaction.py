@@ -9,7 +9,7 @@ from faker.providers import bank
 
 class BasicTransaction(BaseData):
 
-    NAME= "05-basic-transaction"
+    NAME= "05-basic_transaction"
     MAX_EVENT_HISTORY_MONTHS = 3*12     # 3 years as default, in case of value '0' or '-1', it is without limit
 
     def __init__(self, path, gmodel):
@@ -33,12 +33,12 @@ class BasicTransaction(BaseData):
         # iteration cross all accounts
         for account in accounts:
 
-            date_from=account['account-createdate']
+            date_from=account['account_createdate']
 
-            if account['account-nonactivedate'] ==  self.MAX_DATE:
+            if account['account_nonactivedate'] ==  self.MAX_DATE:
                 date_to=datetime.date.today()
             else:
-                date_to=account['account-nonactivedate']
+                date_to=account['account_nonactivedate']
 
             dif_date=round((date_to-date_from).days/30)
 
@@ -56,44 +56,44 @@ class BasicTransaction(BaseData):
 
                 # "name": "transaction-id",
                 # "description": "Unique transaction identificator",
-                model['transaction-id']=str(uuid.uuid4())
+                model['transaction_id']=str(uuid.uuid4())
 
                 # "name": "account-id",
                 # "description": "Relation to account identificator",
-                model['account-id']=account['account-id']
+                model['account_id']=account['account_id']
 
                 # "name": "transaction-direction",
                 # "description": "Transaction direction e.g. incoming, outgoing",
                 # TODO: Add both directions
-                model['transaction-direction'] = "Incoming"
+                model['transaction_direction'] = "Incoming"
 
                 # "name": "transaction-type",
                 # "description": "Transaction type",
-                model['transaction-type']=self.rnd_choose(["Standard", "Instant"], [0.7, 0.3])
-                self.apply_none_value(model, 'transaction-type', "Instant", lower_probability=0.25)
+                model['transaction_type']=self.rnd_choose(["Standard", "Instant"], [0.7, 0.3])
+                self.apply_none_value(model, 'transaction_type', "Instant", lower_probability=0.25)
 
                 # "name": "transaction-value",
                 # "description": "Transaction value",
                 #TODO: generate negative items also
-                model['transaction-value']=self.rnd_choose(range(1000, 5000))
+                model['transaction_value']=self.rnd_choose(range(1000, 5000))
 
                 # "name": "transaction-currency",
                 # "description": "Transaction currency",
-                model['transaction-currency']="USD"
+                model['transaction_currency']="USD"
 
                 # "name": "transaction-description",
                 # "description": "Transaction description",
-                model["transaction-description"] = self._transaction_description(True)
+                model["transaction_description"] = self._transaction_description(True)
 
                 # "name": "transaction-date",
                 # "description": "Transaction date",
-                model['transaction-date']=new_date
+                model['transaction_date']=new_date
 
-                # "name": "counterparty-name",
+                # "name": "counterparty_name",
                 # "description": "Transaction counterparty name",
-                model["counterparty-name"] = self.fake.name()
+                model["counterparty_name"] = self.fake.name()
 
-                # "name": "counterparty-iban",
+                # "name": "counterparty_iban",
                 # "description": "Transaction counterparty IBAN",
                 if int(self.rnd_choose([0,1],[0.998, 0.002]))==0:
                     iban=self.fake.iban()
@@ -103,12 +103,12 @@ class BasicTransaction(BaseData):
                                                     self.fake_tr, self.fake_az, self.fake_ru],
                                           [0.3, 0.2, 0.2, 0.1, 0.1, 0.025, 0.025, 0.025, 0.025])
                     iban=tmp_fake.iban()
-                model["counterparty-iban"]=iban
+                model["counterparty_iban"]=iban
 
                 # "name": "counterparty-other",
                 # "description": "Transaction counterparty other information",
                 # TODO: Add relevant value
-                model["counterparty-other"] = ""
+                model["counterparty_other"] = ""
 
                 fraud=False
                 fraud_anomaly=0
@@ -120,15 +120,15 @@ class BasicTransaction(BaseData):
 
                 # "name": "transaction-fraudanomaly",
                 # "description": "Possible fraud anomaly detection (min. 0 - without anomaly detection, max. 1)",
-                model["transaction-fraudanomaly"] = float(fraud_anomaly)
+                model["transaction_fraudanomaly"] = float(fraud_anomaly)
 
                 # "name": "transaction-fraud",
                 # "description": "Identification of fraud (True - fraud, False - without fraud)",
-                model["transaction-fraud"] = int(fraud)
+                model["transaction_fraud"] = int(fraud)
 
                 # "name": "record-date",
                 # "description": "The date when the record was created",
-                model['record-date']=self.gmodel["NOW"]
+                model['record_date']=self.gmodel["NOW"]
 
                 self.model.append(model)
 

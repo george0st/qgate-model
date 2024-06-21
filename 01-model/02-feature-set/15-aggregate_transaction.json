@@ -1,38 +1,38 @@
 {
-  "name": "aggregate-transaction",
+  "name": "aggregate_transaction",
   "description": "Transactions aggregation with relation to account",
   "kind": "feature-set",
   "spec": {
       "entities": [
         {
-          "name": "account-bundleid",
+          "name": "account_bundleid",
           "description": "Unique account identificator",
           "type": "string"
         }
       ],
       "features": [
         {
-          "name": "agg-value",
+          "name": "agg_value",
           "description": "Transaction value aggregation",
           "type": "double"
         },
         {
-          "name": "agg-currency",
+          "name": "agg_currency",
           "description": "Transaction currency",
           "type": "int"
         },
         {
-          "name": "agg-transaction",
+          "name": "agg_transaction",
           "description": "Aggregation of transactions",
           "type": "int"
         },
         {
-          "name": "agg-counterparty",
+          "name": "agg_counterparty",
           "description": "Aggregation of counterparty",
           "type": "string"
         },
         {
-          "name": "record-date",
+          "name": "record_date",
           "description": "The date when the record was created",
           "type": "datetime"
         }

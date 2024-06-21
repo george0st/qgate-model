@@ -1,0 +1,13 @@
+{
+  "name": "model_transaction",
+  "description": "Setting for model 'transaction'",
+  "kind": "ml-model",
+  "spec": {
+        "source": "vector_transaction",
+        "query": "",
+        "source-columns": ["transaction_direction","transaction_type","transaction_value","transaction_currency"],
+        "target-columns": "transaction_fraud",
+        "encode-columns": ["transaction_direction","transaction_type","transaction_currency"],
+        "test-size": 0.3
+  }
+}

@@ -1,44 +1,44 @@
 {
-  "name": "basic-account",
+  "name": "basic_account",
   "description": "Account detail with relation to party",
   "kind": "feature-set",
   "spec": {
     "entities": [
       {
-        "name": "party-id",
+        "name": "party_id",
         "description": "Relation to party-id",
         "type": "string"
       }
     ],
     "features": [
       {
-        "name": "account-id",
+        "name": "account_id",
         "description": "Unique account identificator",
         "type": "string"
       },
       {
-        "name": "account-type",
+        "name": "account_type",
         "description": "Type of party account ('Current account', 'Saving account', etc.)",
         "type": "string"
       },
       {
-        "name": "account-createdate",
+        "name": "account_createdate",
         "description": "Date for account creation",
         "type": "datetime"
       },
       {
-        "name": "account-state",
+        "name": "account_state",
         "description": "Account state ('Active', 'Closed', 'Blocked')",
         "type": "string",
         "none": "Closed"
       },
       {
-        "name": "account-nonactivedate",
+        "name": "account_nonactivedate",
         "description": "Date when account state was closed or blocked",
         "type": "datetime"
       },
       {
-        "name": "record-date",
+        "name": "record_date",
         "description": "The date when the record was created",
         "type": "datetime"
       }

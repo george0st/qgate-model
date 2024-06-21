@@ -1,0 +1,19 @@
+{
+  "name": "vector_partycontactaccount",
+  "description": "Vector joins three featuresets, the 'basic-party', 'basic-contact' and 'basoc-account'",
+  "kind": "feature-vector",
+  "spec": {
+        "features": [
+          "basic_party.party_gender",
+          "basic_party.party_familystatus",
+          "basic_party.party_nchild",
+          "basic_contact.contact_id",
+          "basic_contact.contact_email",
+          "basic_contact.contact_phone",
+          "basic_contact.contact_state",
+          "basic_account.account_id",
+          "basic_account.account_type",
+          "basic_account.account_state"
+        ]
+  }
+}

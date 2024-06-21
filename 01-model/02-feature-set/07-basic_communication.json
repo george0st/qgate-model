@@ -1,23 +1,23 @@
 {
-  "name": "basic-communication",
+  "name": "basic_communication",
   "description": "Party communication content from e.g. email, chat, phone, etc.",
   "kind": "feature-set",
   "spec": {
     "entities": [
       {
-        "name": "party-id",
+        "name": "party_id",
         "description": "Relation to party ID",
         "type": "string"
       }
     ],
     "features": [
       {
-        "name": "communication-id",
+        "name": "communication_id",
         "description": "Unique communication identificator",
         "type": "string"
       },
       {
-        "name": "session-id",
+        "name": "session_id",
         "description": "Session ID (bundle of communications for one customer session)",
         "type": "string"
       },
@@ -27,13 +27,13 @@
         "type": "string"
       },
       {
-        "name": "content-sentiment",
+        "name": "content_sentiment",
         "description": "Type of sentiment for content",
         "type": "string",
         "none": "Neutral"
       },
       {
-        "name": "content-type",
+        "name": "content_type",
         "description": "Type of content e.g. 'Text', 'Audio', 'Video'",
         "type": "string",
         "none": "Text"
@@ -44,12 +44,12 @@
         "type": "string"
       },
       {
-        "name": "communication-date",
+        "name": "communication_date",
         "description": "Datetime for party communication",
         "type": "datetime"
       },
       {
-        "name": "record-date",
+        "name": "record_date",
         "description": "The date when the record was created",
         "type": "datetime"
       }

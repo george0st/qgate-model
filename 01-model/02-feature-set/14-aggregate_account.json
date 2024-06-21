@@ -1,43 +1,43 @@
 {
-  "name": "aggregate-account",
+  "name": "aggregate_account",
   "description": "Account aggregation with relation to party",
   "kind": "feature-set",
   "spec": {
       "entities": [
         {
-          "name": "party-id",
+          "name": "party_id",
           "description": "Party identificator",
           "type": "string"
         },
         {
-          "name": "account-bundleid",
+          "name": "account_bundleid",
           "description": "Unique account identificator",
           "type": "string"
         }
       ],
       "features": [
         {
-          "name": "agg-type",
+          "name": "agg_type",
           "description": "Type of party account (saving account, current account, etc.)",
           "type": "int"
         },
         {
-          "name": "agg-state",
+          "name": "agg_state",
           "description": "Account state (e.g. active, closed, etc.)",
           "type": "int"
         },
         {
-          "name": "agg-financialstability",
+          "name": "agg_financialstability",
           "description": "Financial stability",
           "type": "int"
         },
         {
-          "name": "agg-financialbonity",
+          "name": "agg_financialbonity",
           "description": "Financial bonity",
           "type": "int"
         },
         {
-          "name": "record-date",
+          "name": "record_date",
           "description": "The date when the record was created",
           "type": "datetime"
         }

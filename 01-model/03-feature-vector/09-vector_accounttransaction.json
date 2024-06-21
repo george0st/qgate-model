@@ -1,0 +1,15 @@
+{
+  "name": "vector_accounttransaction",
+  "description": "Vector joins the 'basic-account' and the 'basic-transaction'",
+  "kind": "feature-vector",
+  "spec": {
+        "features": [
+          "basic_account.account_type",
+          "basic_account.account_state",
+          "basic_transaction.transaction_id",
+          "basic_transaction.transaction_value",
+          "basic_transaction.transaction_currency",
+          "basic_transaction.transaction_date"
+        ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "vector_partyaccount",
+  "description": "Vector joins the 'basic-party' and the 'basic-account'",
+  "kind": "feature-vector",
+  "spec": {
+        "features": [
+          "basic_party.party_gender",
+          "basic_party.party_familystatus",
+          "basic_party.party_nchild",
+          "basic_account.account_type",
+          "basic_account.account_state"
+          ]
+  }
+}

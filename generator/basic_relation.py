@@ -12,7 +12,7 @@ import numpy
 
 class BasicRelation(BaseData):
 
-    NAME= "03-basic-relation"
+    NAME= "03-basic_relation"
     MAX_RELATIONS = 5
 
     def __init__(self, path, gmodel):
@@ -33,7 +33,7 @@ class BasicRelation(BaseData):
         # iteration cross all parties
         for party in parties:
 
-            if party['party-type']=="Customer":
+            if party['party_type']=="Customer":
                 relations=self.rnd_choose(range(0, BasicRelation.MAX_RELATIONS), [0.15, 0.5, 0.3, 0.04, 0.01])
             else:
                 relations=self.rnd_choose(range(0, BasicRelation.MAX_RELATIONS), [0.55, 0.3, 0.1, 0.04, 0.01])
@@ -46,25 +46,25 @@ class BasicRelation(BaseData):
                 model['relation-id']=str(uuid.uuid4())
 
                 # "name": "relation-parentid",
-                model['party-id']=party['party-id']
+                model['party_id']=party['party_id']
 
                 # "name": "relation-childid",
                 while (True):
-                    random_id = parties[self.rnd_int(0, len(parties))]['party-id']
-                    if random_id != model['party-id']:
-                        model['relation-childid'] = random_id
+                    random_id = parties[self.rnd_int(0, len(parties))]['party_id']
+                    if random_id != model['party_id']:
+                        model['relation_childid'] = random_id
                         break
 
                 # "name": "relation-type",
-                model['relation-type']=self.rnd_choose(["Family", "Job", "Social"], [0.5, 0.3, 0.2])
-                self.apply_none_value(model, 'relation-type', "Job",lower_probability=0.05)
+                model['relation_type']=self.rnd_choose(["Family", "Job", "Social"], [0.5, 0.3, 0.2])
+                self.apply_none_value(model, 'relation_type', "Job",lower_probability=0.05)
 
                 # "name": "relation-date",
                 # not used, right now
-                model['relation-date']=datetime.datetime(1970, 1, 1, 8, 0, 0).strftime("%Y-%m-%d %H:%M:%S")
+                model['relation_date']=datetime.datetime(1970, 1, 1, 8, 0, 0).strftime("%Y-%m-%d %H:%M:%S")
 
                 # "name": "record-date"
-                model['record-date']=self.gmodel["NOW"]
+                model['record_date']=self.gmodel["NOW"]
 
                 self.model.append(model)
 

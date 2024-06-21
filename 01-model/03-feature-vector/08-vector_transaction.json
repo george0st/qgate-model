@@ -1,10 +1,10 @@
 {
-  "name": "vector-transaction",
+  "name": "vector_transaction",
   "description": "Vector for the 'basic-transaction'",
   "kind": "feature-vector",
   "spec": {
         "features": [
-          "basic-transaction.*"
+          "basic_transaction.*"
           ]
   }
 }
