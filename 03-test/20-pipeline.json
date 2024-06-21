@@ -4,7 +4,7 @@
   "kind": "test",
   "spec": {
         "featuresets": ["basic_party", "basic_contact",
-          "basic-relation", "basic-account",
+          "basic_relation", "basic-account",
           "basic-transaction", "basic-event",
           "basic-communication"],
         "tests": {
@@ -31,10 +31,10 @@
             "calc": "",
             "aggregation": ""
           },
-          "basic-relation": {
-            "Imputer": {"relation-type": "Job"},
-            "OneHotEncoder": {"relation-type": ["Family","Job","Social"]},
-            "DateExtractor": {"parts": ["day_of_week"], "timestamp_col": "record-date"},
+          "basic_relation": {
+            "Imputer": {"relation_type": "Job"},
+            "OneHotEncoder": {"relation_type": ["Family","Job","Social"]},
+            "DateExtractor": {"parts": ["day_of_week"], "timestamp_col": "record_date"},
             "MapValues": {},
             "DropFeatures": [],
             "storey.Extend": "({'brelation': 'relation'})",

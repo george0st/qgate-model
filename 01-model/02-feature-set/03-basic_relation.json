@@ -1,39 +1,39 @@
 {
-  "name": "basic-relation",
+  "name": "basic_relation",
   "description": "Relation between parties",
   "kind": "feature-set",
   "spec": {
     "entities": [
       {
-        "name": "party-id",
+        "name": "party_id",
         "description": "Parent party identificator",
         "type": "string"
       }
     ],
     "features": [
       {
-        "name": "relation-id",
+        "name": "relation_id",
         "description": "Unique party relation identificator",
         "type": "string"
       },
       {
-        "name": "relation-childid",
+        "name": "relation_childid",
         "description": "Child party identificator",
         "type": "string"
       },
       {
-        "name": "relation-type",
+        "name": "relation_type",
         "description": "Relation type e.g. 'Family', 'Job', 'Social'",
         "type": "string",
         "none": "Job"
       },
       {
-        "name": "relation-date",
+        "name": "relation_date",
         "description": "The date when the relation was identificated/created",
         "type": "datetime"
       },
       {
-        "name": "record-date",
+        "name": "record_date",
         "description": "The date when the record was created",
         "type": "datetime"
       }
