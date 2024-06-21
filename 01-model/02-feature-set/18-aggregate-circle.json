@@ -1,58 +1,58 @@
 {
-  "name": "aggregate-circle",
+  "name": "aggregate_circle",
   "description": "Circle aggregation for e.g. geo, transaction, etc.",
   "kind": "feature-set",
   "spec": {
       "entities": [
         {
-          "name": "party-id",
+          "name": "party_id",
           "description": "Relation to party ID",
           "type": "string"
         }
       ],
       "features": [
         {
-          "name": "circle-id",
+          "name": "circle_id",
           "description": "Unique circle identificator",
           "type": "string"
         },
         {
-          "name": "circle-type",
+          "name": "circle_type",
           "description": "Circle type",
           "type": "string"
         },
         {
-          "name": "circle-level",
+          "name": "circle_level",
           "description": "Circle level e.g. geo distance",
           "type": "int"
         },
         {
-          "name": "score-geo",
+          "name": "score_geo",
           "description": "Geo score",
           "type": "int"
         },
         {
-          "name": "score-transaction",
+          "name": "score_transaction",
           "description": "Transaction score",
           "type": "int"
         },
         {
-          "name": "score-contact",
+          "name": "score_contact",
           "description": "Contact score",
           "type": "int"
         },
         {
-          "name": "score-relation",
+          "name": "score_relation",
           "description": "Relation score",
           "type": "int"
         },
         {
-          "name": "score-event",
+          "name": "score_event",
           "description": "Event score",
           "type": "int"
         },
         {
-          "name": "record-date",
+          "name": "record_date",
           "description": "The date when the record was created",
           "type": "datetime"
         }
