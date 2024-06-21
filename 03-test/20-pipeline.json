@@ -6,7 +6,7 @@
         "featuresets": ["basic_party", "basic_contact",
           "basic_relation", "basic_account",
           "basic_transaction", "basic_event",
-          "basic-communication"],
+          "basic_communication"],
         "tests": {
           "basic_party": {
             "Imputer": {"party_gender": "F", "party_nchild": 0 , "party_type": "Lead", "party_education": "Elementary school"},
@@ -74,14 +74,14 @@
             "calc": "",
             "aggregation": ""
           },
-          "basic-communication":
+          "basic_communication":
           {
-            "Imputer": {"content-type": "Text", "content-sentiment": "Neutral"},
-            "OneHotEncoder": {"content-sentiment": ["Positive", "Negative", "Neutral", "Fake"]},
-            "DateExtractor": {"parts": ["is_month_end", "dayofyear"], "timestamp_col": "record-date"},
+            "Imputer": {"content_type": "Text", "content_sentiment": "Neutral"},
+            "OneHotEncoder": {"content_sentiment": ["Positive", "Negative", "Neutral", "Fake"]},
+            "DateExtractor": {"parts": ["is_month_end", "dayofyear"], "timestamp_col": "record_date"},
             "MapValues": {},
             "DropFeatures": [],
-            "storey.Filter": "(event['content-type'] == 'Text' or event['channel'] == 'xxx')",
+            "storey.Filter": "(event['content_type'] == 'Text' or event['channel'] == 'xxx')",
             "storey.Extend": "({'bcommunication': 'communication'})",
             "calc": "",
             "aggregation": ""

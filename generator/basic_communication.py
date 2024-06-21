@@ -15,7 +15,7 @@ class Sentiment(Enum):
 
 class BasicCommunication(BaseData):
 
-    NAME = "07-basic-communication"
+    NAME = "07-basic_communication"
     MAX_COMMUNICATION_HISTORY_DAYS = 90
 
     def __init__(self, path, gmodel):
@@ -70,10 +70,10 @@ class BasicCommunication(BaseData):
                     model = self.model_item()
 
                     # "name": "communication-id",
-                    model['communication-id'] = str(uuid.uuid4())
+                    model['communication_id'] = str(uuid.uuid4())
 
                     # "name": "session-id",
-                    model['session-id'] = session_id
+                    model['session_id'] = session_id
 
                     # "name": "party_id",
                     model['party_id'] = party['party_id']
@@ -82,22 +82,22 @@ class BasicCommunication(BaseData):
                     model['content'] = self._generate_text(session_sentiment)
 
                     # "name": "content-sentiment",
-                    model['content-sentiment'] = str(session_sentiment).replace('Sentiment.','')
-                    self.apply_none_value(model, 'content-sentiment', "Neutral", lower_probability=0.10)
+                    model['content_sentiment'] = str(session_sentiment).replace('Sentiment.','')
+                    self.apply_none_value(model, 'content_sentiment', "Neutral", lower_probability=0.10)
 
                     # "name": "content-type",
-                    model['content-type'] = "Text"
-                    self.apply_none_value(model, 'content-type', "Text", lower_probability=0.01)
+                    model['content_type'] = "Text"
+                    self.apply_none_value(model, 'content_type', "Text", lower_probability=0.01)
 
                     # "name": "channel",
                     model['channel'] = self.rnd_choose(["Email", "Chat"], [0.8, 0.2])
 
                     # "name": "communication-date",
                     session_datetime = session_datetime + datetime.timedelta(seconds=float(self.rnd_int(0,13)))
-                    model['communication-date']=session_datetime.strftime("%Y-%m-%d %H:%M:%S")
+                    model['communication_date']=session_datetime.strftime("%Y-%m-%d %H:%M:%S")
 
                     # "name": "record-date"
-                    model['record-date'] = self.gmodel["NOW"]
+                    model['record_date'] = self.gmodel["NOW"]
 
                     self.model.append(model)
 
