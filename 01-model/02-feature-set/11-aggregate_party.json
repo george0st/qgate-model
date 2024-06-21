@@ -1,88 +1,88 @@
 {
-  "name": "aggregate-party",
+  "name": "aggregate_party",
   "description": "Party aggregation",
   "kind": "feature-set",
   "spec": {
       "entities": [
         {
-          "name": "party-id",
+          "name": "party_id",
           "description": "Unique party identificator",
           "type": "string"
         }
       ],
       "features": [
         {
-          "name": "agg-partyacquisition",
+          "name": "agg_partyacquisition",
           "description": "Duration of acquisition (e.g. from lead/prospect to client, etc.) in days",
           "type": "int"
         },
         {
-          "name": "agg-partyduration",
+          "name": "agg_partyduration",
           "description": "How long we have relationship with party, in days",
           "type": "int"
         },
         {
-          "name": "agg-partyage",
+          "name": "agg_partyage",
           "description": "Party age (e.g. how old is the client), in days",
           "type": "int"
         },
         {
-          "name": "pd-georesidence",
+          "name": "pd_georesidence",
           "description": "Predictor, residence for geo location",
           "type": "double"
         },
         {
-          "name": "pd-financialstability-0m",
+          "name": "pd_financialstability-0m",
           "description": "Predictor of financial stability (now), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd-financialstability-6m",
+          "name": "pd_financialstability-6m",
           "description": "Predictor of financial stability (6 months back), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd-financialstability-1y",
+          "name": "pd_financialstability-1y",
           "description": "Predictor of financial stability (1 year back), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd-financialstability-2y",
+          "name": "pd_financialstability-2y",
           "description": "Predictor of financial stability (2 years back), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd-financialstability-5y",
+          "name": "pd_financialstability-5y",
           "description": "Predictor of financial stability (5 years back), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd-financialbonity-0m",
+          "name": "pd_financialbonity-0m",
           "description": "Predictor of financial bonity (now), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd-financialbonity-6m",
+          "name": "pd_financialbonity-6m",
           "description": "Predictor of financial bonity (6 months back), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd-financialbonity-1y",
+          "name": "pd_financialbonity-1y",
           "description": "Predictor of financial bonity (1 year back), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd-financialbonity-2y",
+          "name": "pd_financialbonity-2y",
           "description": "Predictor of financial bonity (2 years back), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd-financialbonity-5y",
+          "name": "pd_financialbonity-5y",
           "description": "Predictor of financial bonity (5 years back),  based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "record-date",
+          "name": "record_date",
           "description": "The date when the record was created",
           "type": "datetime"
         }
