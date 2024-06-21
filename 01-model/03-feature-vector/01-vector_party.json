@@ -1,6 +1,6 @@
 {
   "name": "vector_party",
-  "description": "Vector for the 'basic-party'",
+  "description": "Vector for the 'basic_party'",
   "kind": "feature-vector",
   "spec": {
         "features": [

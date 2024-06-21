@@ -1,6 +1,6 @@
 {
   "name": "vector_transaction",
-  "description": "Vector for the 'basic-transaction'",
+  "description": "Vector for the 'basic_transaction'",
   "kind": "feature-vector",
   "spec": {
         "features": [

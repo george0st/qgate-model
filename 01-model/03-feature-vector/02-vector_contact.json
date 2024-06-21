@@ -1,6 +1,6 @@
 {
   "name": "vector_contact",
-  "description": "Vector to the 'basic-contact'",
+  "description": "Vector to the 'basic_contact'",
   "kind": "feature-vector",
   "spec": {
         "features": [

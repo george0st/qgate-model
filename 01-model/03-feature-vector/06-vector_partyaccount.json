@@ -1,6 +1,6 @@
 {
   "name": "vector_partyaccount",
-  "description": "Vector joins the 'basic-party' and the 'basic-account'",
+  "description": "Vector joins the 'basic_party' and the 'basic_account'",
   "kind": "feature-vector",
   "spec": {
         "features": [

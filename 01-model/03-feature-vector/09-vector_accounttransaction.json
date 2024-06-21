@@ -1,6 +1,6 @@
 {
   "name": "vector_accounttransaction",
-  "description": "Vector joins the 'basic-account' and the 'basic-transaction'",
+  "description": "Vector joins the 'basic_account' and the 'basic_transaction'",
   "kind": "feature-vector",
   "spec": {
         "features": [
