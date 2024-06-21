@@ -10,7 +10,7 @@ import numpy
 
 class BasicParty(BaseData):
 
-    NAME= "01-basic-party"
+    NAME= "01-basic_party"
 
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, BasicParty.NAME)

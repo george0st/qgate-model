@@ -7,8 +7,8 @@
           "basic_party.party_gender",
           "basic_party.party_familystatus",
           "basic_party.party_nchild",
-          "basic-contact.contact-email",
-          "basic-contact.contact-phone",
-          "basic-contact.contact-state"]
+          "basic_contact.contact_email",
+          "basic_contact.contact_phone",
+          "basic_contact.contact_state"]
   }
 }

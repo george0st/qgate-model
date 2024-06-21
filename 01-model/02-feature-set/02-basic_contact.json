@@ -1,39 +1,39 @@
 {
-  "name": "basic-contact",
+  "name": "basic_contact",
   "description": "Contact to party",
   "kind": "feature-set",
   "spec": {
     "entities": [
       {
-        "name": "party-id",
+        "name": "party_id",
         "description": "Relation to party ID",
         "type": "string"
       }
     ],
     "features": [
       {
-        "name": "contact-id",
+        "name": "contact_id",
         "description": "Unique party contact identificator",
         "type": "string"
       },
       {
-        "name": "contact-email",
+        "name": "contact_email",
         "description": "Party email",
         "type": "string"
       },
       {
-        "name": "contact-phone",
+        "name": "contact_phone",
         "description": "Party phone",
         "type": "string"
       },
       {
-        "name": "contact-state",
+        "name": "contact_state",
         "description": "Contact state 'Active' and 'Inactive'",
         "type": "string",
         "none": "InActive"
       },
       {
-        "name": "record-date",
+        "name": "record_date",
         "description": "The date when the record was created",
         "type": "datetime"
       }

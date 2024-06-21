@@ -3,12 +3,12 @@
   "description": "Setting for test pipelines for ingestion",
   "kind": "test",
   "spec": {
-        "featuresets": ["basic_party", "basic-contact",
+        "featuresets": ["basic_party", "basic_contact",
           "basic-relation", "basic-account",
           "basic-transaction", "basic-event",
           "basic-communication"],
         "tests": {
-          "basic-party": {
+          "basic_party": {
             "Imputer": {"party_gender": "F", "party_nchild": 0 , "party_type": "Lead", "party_education": "Elementary school"},
             "OneHotEncoder": {"party_gender": ["F", "M"]},
             "DateExtractor": {"parts": ["day_of_week","weekofyear"], "timestamp_col": "party_establishment"},
@@ -20,13 +20,13 @@
             "calc": "",
             "aggregation": ""
           },
-          "basic-contact": {
-            "Imputer": {"contact-state": "InActive"},
-            "OneHotEncoder": {"contact-state": ["Active","InActive"]},
-            "DateExtractor": {"parts": ["day_of_week"], "timestamp_col": "record-date"},
+          "basic_contact": {
+            "Imputer": {"contact_state": "InActive"},
+            "OneHotEncoder": {"contact_state": ["Active","InActive"]},
+            "DateExtractor": {"parts": ["day_of_week"], "timestamp_col": "record_date"},
             "MapValues": {},
             "DropFeatures": [],
-            "storey.Filter": "(event['contact-email'] != '')",
+            "storey.Filter": "(event['contact_email'] != '')",
             "storey.Extend": "({'bcontact': 'contact'})",
             "calc": "",
             "aggregation": ""

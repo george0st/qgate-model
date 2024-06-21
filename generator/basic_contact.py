@@ -17,7 +17,7 @@ class ContactEnum(IntFlag):
 
 class BasicContact(BaseData):
 
-    NAME= "02-basic-contact"
+    NAME= "02-basic_contact"
 
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, BasicContact.NAME)
@@ -41,7 +41,7 @@ class BasicContact(BaseData):
                 model = self.model_item()
 
                 # "name": "contact-id",
-                model['contact-id']=str(uuid.uuid4())
+                model['contact_id']=str(uuid.uuid4())
 
                 # "name": "party_id",
                 model['party_id']=party['party_id']
@@ -54,26 +54,26 @@ class BasicContact(BaseData):
 
                 # "name": "contact-email"
                 if contact_detail & ContactEnum.Email:
-                    model['contact-email'] = self.fake.email()
+                    model['contact_email'] = self.fake.email()
                 else:
-                    model['contact-email'] = ""
+                    model['contact_email'] = ""
 
                 # "name": "contact-phone"
                 if contact_detail & ContactEnum.Phone:
-                    model['contact-phone'] = self.fake.phone_number()
+                    model['contact_phone'] = self.fake.phone_number()
                 else:
-                    model['contact-phone'] = ""
+                    model['contact_phone'] = ""
 
                 # "name": "contact-state"
                 if count==0:
-                    model['contact-state']= "Active"
+                    model['contact_state']= "Active"
                 elif count==1:
-                    model['contact-state']=self.rnd_choose(["Active", "InActive"], [0.95, 0.05])
+                    model['contact_state']=self.rnd_choose(["Active", "InActive"], [0.95, 0.05])
                 else:
-                    model['contact-state']= "InActive"
-                self.apply_none_value(model, 'contact-state', "InActive", lower_probability=0.5)
+                    model['contact_state']= "InActive"
+                self.apply_none_value(model, 'contact_state', "InActive", lower_probability=0.5)
 
                 # "name": "record-date"
-                model['record-date']=self.gmodel["NOW"]
+                model['record_date']=self.gmodel["NOW"]
 
                 self.model.append(model)

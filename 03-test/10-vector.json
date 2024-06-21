@@ -15,17 +15,17 @@
             "party_nchild", "party_industry","party_industryposition", "party_income", "party_incomehousehold"]
           },
           "vector-contact": {
-            "feature-set": "02-basic-contact",
+            "feature-set": "02-basic_contact",
             "entities": ["party_id"],
-            "features": ["party_id", "contact-id", "contact-email", "contact-phone", "contact-state"]
+            "features": ["party_id", "contact_id", "contact_email", "contact_phone", "contact_state"]
           },
           "vector-partycontact": {
-            "feature-set": "02-basic-contact",
+            "feature-set": "02-basic_contact",
             "entities": ["party_id"],
-            "features": ["party_id", "contact-email", "contact-phone", "contact-state"]
+            "features": ["party_id", "contact_email", "contact_phone", "contact_state"]
           },
           "vector-partycontact-02": {
-            "feature-set": "02-basic-contact",
+            "feature-set": "02-basic_contact",
             "entities": ["party_id"],
             "features": ["contact-id", "contact-email", "contact-phone", "contact-state"]
           },
