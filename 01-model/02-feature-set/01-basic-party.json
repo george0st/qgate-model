@@ -18,7 +18,7 @@
         },
         {
           "name": "party-type",
-          "description": "Party state (e.g. lead, prospect, client)",
+          "description": "Party state (e.g. 'Lead', 'Prospect', 'Client')",
           "type": "string",
           "none": "Lead"
         },
