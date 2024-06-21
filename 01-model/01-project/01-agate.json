@@ -14,19 +14,19 @@
       "basic_party", "basic_contact", "basic_relation", "basic_account", "basic_transaction", "basic_event", "basic_communication",
       "aggregate_party", "aggregate_account", "aggregate_transaction", "aggregate_circle"],
     "feature-vectors": [
-      "vector-party",
-      "vector-contact",
-      "vector-partycontact",
-      "vector-partycontact-02",
-      "vector-account",
-      "vector-partyaccount",
-      "vector-partyaccount-02",
-      "vector-transaction",
-      "vector-partycontactaccount",
-      "vector-accounttransaction"
+      "vector_party",
+      "vector_contact",
+      "vector_partycontact",
+      "vector_partycontact_02",
+      "vector_account",
+      "vector_partyaccount",
+      "vector_partyaccount_02",
+      "vector_transaction",
+      "vector_partycontactaccount",
+      "vector_accounttransaction"
     ],
     "ml-models": [
-      "model-transaction"
+      "model_transaction"
     ]
   }
 }
