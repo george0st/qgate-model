@@ -66,13 +66,13 @@ class DataHint(BaseTest):
         account_party = [a for a in accounts if a['party_id'] == partyid]
         if len(account_party) > 0:
             account = account_party[-1] if last_values else account_party[self.rnd_int(0, len(account_party))]
-            accountid = account["account-id"]
+            accountid = account["account_id"]
             model[BasicAccount.NAME] = account
 
         # transaction
         if accountid:
             transactions = self.gmodel[BasicTransaction.NAME]
-            transaction_account = [t for t in transactions if t['account-id'] == accountid]
+            transaction_account = [t for t in transactions if t['account_id'] == accountid]
             if len(transaction_account) > 0:
                 transaction = transaction_account[-1] if last_values else transaction_account[self.rnd_int(0, len(transaction_account))]
                 model[BasicTransaction.NAME] = transaction
