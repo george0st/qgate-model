@@ -125,7 +125,7 @@ class TestGenerator(unittest.TestCase):
         self._check_csv_header(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv"), "party_id")
         self._check_csv_header(path.join(dir, f"{basic_relation.BasicRelation.NAME}.csv"), "party_id")
         self._check_csv_header(path.join(dir, f"{basic_account.BasicAccount.NAME}.csv"), "party_id")
-        self._check_csv_header(path.join(dir, f"{basic_transaction.BasicTransaction.NAME}.csv"), "account-id")
+        self._check_csv_header(path.join(dir, f"{basic_transaction.BasicTransaction.NAME}.csv"), "account_id")
         self._check_csv_header(path.join(dir, f"{basic_event.BasicEvent.NAME}.csv"), "party_id")
         self._check_csv_header(path.join(dir, f"{basic_communication.BasicCommunication.NAME}.csv"), "party_id")
 
