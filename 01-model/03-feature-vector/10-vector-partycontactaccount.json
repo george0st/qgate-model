@@ -11,9 +11,9 @@
           "basic_contact.contact_email",
           "basic_contact.contact_phone",
           "basic_contact.contact_state",
-          "basic-account.account-id",
-          "basic-account.account-type",
-          "basic-account.account-state"
+          "basic_account.account_id",
+          "basic_account.account_type",
+          "basic_account.account_state"
         ]
   }
 }

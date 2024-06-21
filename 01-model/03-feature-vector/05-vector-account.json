@@ -4,7 +4,7 @@
   "kind": "feature-vector",
   "spec": {
         "features": [
-          "basic-account.*"
+          "basic_account.*"
           ]
   }
 }

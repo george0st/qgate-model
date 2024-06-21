@@ -12,7 +12,7 @@ from generator.basic_party import BasicParty
 
 class BasicAccount(BaseData):
 
-    NAME = "04-basic-account"
+    NAME = "04-basic_account"
 
     def __init__(self, path, gmodel):
         super().__init__(path, gmodel, BasicAccount.NAME)
@@ -39,7 +39,7 @@ class BasicAccount(BaseData):
 
                 # "name": "account-id",
                 # "description": "Unique account identificator",
-                model['account-id']=str(uuid.uuid4())
+                model['account_id']=str(uuid.uuid4())
 
                 # "name": "party_id",
                 # "description": "Party identificator",
@@ -47,36 +47,36 @@ class BasicAccount(BaseData):
 
                 # "name": "account-type",
                 # "description": "Type of party account (saving account, current account, etc.)",
-                model['account-type']=self.rnd_choose(["Current account", "Saving account"], [0.93, 0.07])
+                model['account_type']=self.rnd_choose(["Current account", "Saving account"], [0.93, 0.07])
 
                 # "name": "account-state",
                 # "description": "Account state (e.g. active, closed, etc.)",
-                model['account-state']=self.rnd_choose(["Active", "Closed", "Blocked"], [0.98, 0.018, 0.002])
-                self.apply_none_value(model, 'account-state', "Closed",lower_probability=0.2)
+                model['account_state']=self.rnd_choose(["Active", "Closed", "Blocked"], [0.98, 0.018, 0.002])
+                self.apply_none_value(model, 'account_state', "Closed",lower_probability=0.2)
 
                 # "name": "account-createdate",
                 # "description": "Date for account creation",
-                if model['account-state']=="Active":
+                if model['account_state']=="Active":
                     active_account_count=active_account_count+1
                     if active_account_count==1:
                         # only first account will have date for counterparty established
-                        model['account-createdate']=party['party_typedate']
+                        model['account_createdate']=party['party_typedate']
                     else:
                         # other active accounts, date will be between today and date for counterparty established
-                        model['account-createdate']=self.fake.date_between_dates(party['party_typedate'],datetime.date.today())
+                        model['account_createdate']=self.fake.date_between_dates(party['party_typedate'],datetime.date.today())
                 else:
                     # account is in state closed or blocked date will be between today and date for countrparty established
-                    model['account-createdate']=self.fake.date_between_dates(party['party_typedate'],datetime.date.today())
+                    model['account_createdate']=self.fake.date_between_dates(party['party_typedate'],datetime.date.today())
 
                 # "name": "account-nonactivedate",
                 # "description": "Date when account state was closed or blocked",
-                if model['account-state']=="Active":
-                    model['account-nonactivedate']=self.MAX_DATE
+                if model['account_state']=="Active":
+                    model['account_nonactivedate']=self.MAX_DATE
                 else:
-                    model['account-nonactivedate']=self.fake.date_between_dates(model['account-createdate'],datetime.date.today())
+                    model['account_nonactivedate']=self.fake.date_between_dates(model['account_createdate'],datetime.date.today())
 
                 # "name": "record-date",
                 # "description": "The date when the record was created",
-                model['record-date']=self.gmodel["NOW"]
+                model['record_date']=self.gmodel["NOW"]
 
                 self.model.append(model)

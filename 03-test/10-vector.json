@@ -30,19 +30,19 @@
             "features": ["contact-id", "contact-email", "contact-phone", "contact-state"]
           },
           "vector-account": {
-            "feature-set": "04-basic-account",
+            "feature-set": "04-basic_account",
             "entities": ["party_id"],
-            "features": ["party_id", "account-id","account-type", "account-state", "account-createdate", "account-nonactivedate"]
+            "features": ["party_id", "account_id","account_type", "account_state", "account_createdate", "account_nonactivedate"]
           },
           "vector-partyaccount": {
-            "feature-set": "04-basic-account",
+            "feature-set": "04-basic_account",
             "entities": ["party_id"],
-            "features": ["party_id", "account-type", "account-state"]
+            "features": ["party_id", "account_type", "account_state"]
           },
           "vector-partyaccount-02": {
-            "feature-set": "04-basic-account",
-            "entities": ["party_id", "account-id"],
-            "features": ["party_id", "account-id", "account-createdate", "account-nonactivedate"]
+            "feature-set": "04-basic_account",
+            "entities": ["party_id", "account_id"],
+            "features": ["party_id", "account_id", "account_createdate", "account_nonactivedate"]
           }
         }
   }
