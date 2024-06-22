@@ -37,7 +37,7 @@ class BasicAccount(BaseData):
 
                 model=self.model_item()
 
-                # "name": "account-id",
+                # "name": "account_id",
                 # "description": "Unique account identificator",
                 model['account_id']=str(uuid.uuid4())
 
@@ -45,16 +45,16 @@ class BasicAccount(BaseData):
                 # "description": "Party identificator",
                 model['party_id']=party['party_id']
 
-                # "name": "account-type",
+                # "name": "account_type",
                 # "description": "Type of party account (saving account, current account, etc.)",
                 model['account_type']=self.rnd_choose(["Current account", "Saving account"], [0.93, 0.07])
 
-                # "name": "account-state",
+                # "name": "account_state",
                 # "description": "Account state (e.g. active, closed, etc.)",
                 model['account_state']=self.rnd_choose(["Active", "Closed", "Blocked"], [0.98, 0.018, 0.002])
                 self.apply_none_value(model, 'account_state', "Closed",lower_probability=0.2)
 
-                # "name": "account-createdate",
+                # "name": "account_createdate",
                 # "description": "Date for account creation",
                 if model['account_state']=="Active":
                     active_account_count=active_account_count+1
@@ -68,14 +68,14 @@ class BasicAccount(BaseData):
                     # account is in state closed or blocked date will be between today and date for countrparty established
                     model['account_createdate']=self.fake.date_between_dates(party['party_typedate'],datetime.date.today())
 
-                # "name": "account-nonactivedate",
+                # "name": "account_nonactivedate",
                 # "description": "Date when account state was closed or blocked",
                 if model['account_state']=="Active":
                     model['account_nonactivedate']=self.MAX_DATE
                 else:
                     model['account_nonactivedate']=self.fake.date_between_dates(model['account_createdate'],datetime.date.today())
 
-                # "name": "record-date",
+                # "name": "record_date",
                 # "description": "The date when the record was created",
                 model['record_date']=self.gmodel["NOW"]
 
