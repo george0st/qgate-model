@@ -69,10 +69,10 @@ class BasicCommunication(BaseData):
                     # add new model
                     model = self.model_item()
 
-                    # "name": "communication-id",
+                    # "name": "communication_id",
                     model['communication_id'] = str(uuid.uuid4())
 
-                    # "name": "session-id",
+                    # "name": "session_id",
                     model['session_id'] = session_id
 
                     # "name": "party_id",
@@ -85,18 +85,18 @@ class BasicCommunication(BaseData):
                     model['content_sentiment'] = str(session_sentiment).replace('Sentiment.','')
                     self.apply_none_value(model, 'content_sentiment', "Neutral", lower_probability=0.10)
 
-                    # "name": "content-type",
+                    # "name": "content_type",
                     model['content_type'] = "Text"
                     self.apply_none_value(model, 'content_type', "Text", lower_probability=0.01)
 
                     # "name": "channel",
                     model['channel'] = self.rnd_choose(["Email", "Chat"], [0.8, 0.2])
 
-                    # "name": "communication-date",
+                    # "name": "communication_date",
                     session_datetime = session_datetime + datetime.timedelta(seconds=float(self.rnd_int(0,13)))
                     model['communication_date']=session_datetime.strftime("%Y-%m-%d %H:%M:%S")
 
-                    # "name": "record-date"
+                    # "name": "record_date"
                     model['record_date'] = self.gmodel["NOW"]
 
                     self.model.append(model)
