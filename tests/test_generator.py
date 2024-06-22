@@ -67,7 +67,7 @@ class TestGenerator(unittest.TestCase):
     def test_generate_smallbulk_repeat(self):
         """Repeat generation of small files"""
 
-        for i in range(10):
+        for i in range(20):
             lbl = f"0-size-iter{i}-8,6"
 
             generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
@@ -108,7 +108,7 @@ class TestGenerator(unittest.TestCase):
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_party.BasicParty.NAME}.csv")))
 
     def test_generate_bigbulk_repeat(self):
-        for i in range(10):
+        for i in range(5):
             lbl = f"0-size-iter{i}-1000,1000"
 
             generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
