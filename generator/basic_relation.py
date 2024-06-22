@@ -42,28 +42,28 @@ class BasicRelation(BaseData):
                 # add new model
                 model = self.model_item()
 
-                # "name": "relation-id",
-                model['relation-id']=str(uuid.uuid4())
+                # "name": "relation_id",
+                model['relation_id']=str(uuid.uuid4())
 
-                # "name": "relation-parentid",
+                # "name": "relation_parentid",
                 model['party_id']=party['party_id']
 
-                # "name": "relation-childid",
+                # "name": "relation_childid",
                 while (True):
                     random_id = parties[self.rnd_int(0, len(parties))]['party_id']
                     if random_id != model['party_id']:
                         model['relation_childid'] = random_id
                         break
 
-                # "name": "relation-type",
+                # "name": "relation_type",
                 model['relation_type']=self.rnd_choose(["Family", "Job", "Social"], [0.5, 0.3, 0.2])
                 self.apply_none_value(model, 'relation_type', "Job",lower_probability=0.05)
 
-                # "name": "relation-date",
+                # "name": "relation_date",
                 # not used, right now
                 model['relation_date']=datetime.datetime(1970, 1, 1, 8, 0, 0).strftime("%Y-%m-%d %H:%M:%S")
 
-                # "name": "record-date"
+                # "name": "record_date"
                 model['record_date']=self.gmodel["NOW"]
 
                 self.model.append(model)
