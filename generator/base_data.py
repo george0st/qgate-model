@@ -81,7 +81,7 @@ class BaseData(Base):
         # free memory
         del df
 
-    def apply_none_value(self, current_collection, property_name, default_value, lower_probability=1, none_value=""):
+    def apply_none_value(self, current_collection, property_name, default_value, lower_probability=1, none_value=None):
         """Apply None value, in case that current value is default.
          It is based on project setting (see setting in file 'model.json',
          with config values 'NONE_VALUES' and 'NONE_VALUES_PROBABILITY')
