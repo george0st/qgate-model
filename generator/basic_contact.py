@@ -40,7 +40,7 @@ class BasicContact(BaseData):
                 # add new model
                 model = self.model_item()
 
-                # "name": "contact-id",
+                # "name": "contact_id",
                 model['contact_id']=str(uuid.uuid4())
 
                 # "name": "party_id",
@@ -52,19 +52,19 @@ class BasicContact(BaseData):
                 contact_detail=ContactEnum.Full if party['party_type']=="Customer" else ContactEnum.Email \
                     if self.rnd_bool() else ContactEnum.Phone
 
-                # "name": "contact-email"
+                # "name": "contact_email"
                 if contact_detail & ContactEnum.Email:
                     model['contact_email'] = self.fake.email()
                 else:
                     model['contact_email'] = ""
 
-                # "name": "contact-phone"
+                # "name": "contact_phone"
                 if contact_detail & ContactEnum.Phone:
                     model['contact_phone'] = self.fake.phone_number()
                 else:
                     model['contact_phone'] = ""
 
-                # "name": "contact-state"
+                # "name": "contact_state"
                 if count==0:
                     model['contact_state']= "Active"
                 elif count==1:
