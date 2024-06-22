@@ -54,38 +54,38 @@ class BasicTransaction(BaseData):
 
                 model=self.model_item()
 
-                # "name": "transaction-id",
+                # "name": "transaction_id",
                 # "description": "Unique transaction identificator",
                 model['transaction_id']=str(uuid.uuid4())
 
-                # "name": "account-id",
+                # "name": "account?id",
                 # "description": "Relation to account identificator",
                 model['account_id']=account['account_id']
 
-                # "name": "transaction-direction",
+                # "name": "transaction_direction",
                 # "description": "Transaction direction e.g. incoming, outgoing",
                 # TODO: Add both directions
                 model['transaction_direction'] = "Incoming"
 
-                # "name": "transaction-type",
+                # "name": "transaction_type",
                 # "description": "Transaction type",
                 model['transaction_type']=self.rnd_choose(["Standard", "Instant"], [0.7, 0.3])
                 self.apply_none_value(model, 'transaction_type', "Instant", lower_probability=0.25)
 
-                # "name": "transaction-value",
+                # "name": "transaction_value",
                 # "description": "Transaction value",
                 #TODO: generate negative items also
                 model['transaction_value']=self.rnd_choose(range(1000, 5000))
 
-                # "name": "transaction-currency",
+                # "name": "transaction_currency",
                 # "description": "Transaction currency",
                 model['transaction_currency']="USD"
 
-                # "name": "transaction-description",
+                # "name": "transaction_description",
                 # "description": "Transaction description",
                 model["transaction_description"] = self._transaction_description(True)
 
-                # "name": "transaction-date",
+                # "name": "transaction_date",
                 # "description": "Transaction date",
                 model['transaction_date']=new_date
 
@@ -105,7 +105,7 @@ class BasicTransaction(BaseData):
                     iban=tmp_fake.iban()
                 model["counterparty_iban"]=iban
 
-                # "name": "counterparty-other",
+                # "name": "counterparty_other",
                 # "description": "Transaction counterparty other information",
                 # TODO: Add relevant value
                 model["counterparty_other"] = ""
@@ -118,15 +118,15 @@ class BasicTransaction(BaseData):
                         if self.rnd_bool():
                             fraud=True
 
-                # "name": "transaction-fraudanomaly",
+                # "name": "transaction_fraudanomaly",
                 # "description": "Possible fraud anomaly detection (min. 0 - without anomaly detection, max. 1)",
                 model["transaction_fraudanomaly"] = float(fraud_anomaly)
 
-                # "name": "transaction-fraud",
+                # "name": "transaction_fraud",
                 # "description": "Identification of fraud (True - fraud, False - without fraud)",
                 model["transaction_fraud"] = int(fraud)
 
-                # "name": "record-date",
+                # "name": "record_date",
                 # "description": "The date when the record was created",
                 model['record_date']=self.gmodel["NOW"]
 
