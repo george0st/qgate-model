@@ -107,6 +107,17 @@ class TestGenerator(unittest.TestCase):
         self.assertTrue(os.path.exists(dir))
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_party.BasicParty.NAME}.csv")))
 
+    def test_generate_bigbulk_repeat(self):
+        for i in range(10):
+            lbl = f"0-size-iter{i}-1000,1000"
+
+            generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
+            generator.generate(label=lbl, count=1000, bulk_max=1000, compress=False)
+
+            dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
+            self.assertTrue(os.path.exists(dir))
+            self.assertTrue(os.path.exists(path.join(dir, f"{basic_party.BasicParty.NAME}.csv")))
+
 
     def _check_csv_header(self, filename, key_text):
         if os.path.exists(filename):
