@@ -103,10 +103,10 @@ class BasicEvent(BaseData):
                     # add new model
                     model = self.model_item()
 
-                    # "name": "event-id",
+                    # "name": "event_id",
                     model['event_id'] = str(uuid.uuid4())
 
-                    # "name": "session-id",
+                    # "name": "session_id",
                     model['session_id'] = session_id
 
                     # "name": "party_id",
@@ -129,25 +129,25 @@ class BasicEvent(BaseData):
                         group_category_name=str.format("{0}/{1}", group,category)
                         action = self.rnd_choose(self.event_actions[group_category_name][0], self.event_actions[group_category_name][1])
 
-                    # "name": "event-group",
+                    # "name": "event_group",
                     model['event_group'] = group
 
-                    # "name": "event-category",
+                    # "name": "event_category",
                     model['event_category'] = category
 
-                    # "name": "event-action",
+                    # "name": "event_action",
                     model['event_action'] = action
 
-                    # "name": "event-detail",
+                    # "name": "event_detail",
                     model['event_detail'] = ""    # not used, right now
 
-                    # "name": "event-date",
+                    # "name": "event_date",
                     #   random movement in second for next event
                     #   new datetime for this event in session
                     session_datetime = session_datetime + datetime.timedelta(seconds=float(self.rnd_int(0,13)))
                     model['event_date']=session_datetime.strftime("%Y-%m-%d %H:%M:%S")
 
-                    # "name": "record-date"
+                    # "name": "record_date"
                     model['record_date']=self.gmodel["NOW"]
 
                     self.model.append(model)
