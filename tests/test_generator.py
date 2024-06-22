@@ -107,6 +107,7 @@ class TestGenerator(unittest.TestCase):
         self.assertTrue(os.path.exists(dir))
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_party.BasicParty.NAME}.csv")))
 
+
     def _check_csv_header(self, filename, key_text):
         if os.path.exists(filename):
             df = pd.read_csv(filename)
