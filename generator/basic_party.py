@@ -124,7 +124,7 @@ class BasicParty(BaseData):
         # "description": "Party note",
         model['party_note'] = ""
 
-        # "name": "record-date",
+        # "name": "record_date",
         # "description": "The date when the record was created",
         model['record_date']=self.gmodel["NOW"]
 
