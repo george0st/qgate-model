@@ -1,0 +1,11 @@
+
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: "[Dependabot-automated] "
+    open-pull-requests-limit: 2
