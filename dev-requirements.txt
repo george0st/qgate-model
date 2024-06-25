@@ -1,6 +1,7 @@
 # command line
 click~=8.1
 
+# expected switch to the version numpy~=2.0
 numpy~=1.26
 pandas==2.2.2
 pyarrow==15.0.2
