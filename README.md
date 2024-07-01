@@ -33,7 +33,8 @@ The solution contains this simple structure:
    - You can also generate your own dataset with requested size (see samples `./02-data/03-size-10k.sh`, 
    `./02-data/04-size-50k.sh`, etc. and description `python main.py generate --help`)
  - **03-test**
-   - The information for test simplification e.g. feature vector vs on/off-line data, test/data hints, etc.
+   - The information for test simplification e.g. feature vector vs on/off-line data, 
+   test/data hints, pipeline setting, etc.
 
 Addition detail, [see](./docs/structure.md)
 
