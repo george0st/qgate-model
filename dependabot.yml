@@ -7,5 +7,5 @@ updates:
     schedule:
       interval: daily
     commit-message:
-      prefix: "[Dependabot-automated] "
+      prefix: "[Dependabot] "
     open-pull-requests-limit: 2
