@@ -32,52 +32,52 @@
           "type": "double"
         },
         {
-          "name": "pd_financialstability_f0m",
+          "name": "pd_financialstability_t0m",
           "description": "Predictor of financial stability (now), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd_financialstability_f6m",
+          "name": "pd_financialstability_t6m",
           "description": "Predictor of financial stability (6 months back), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd_financialstability_f1y",
+          "name": "pd_financialstability_t1y",
           "description": "Predictor of financial stability (1 year back), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd_financialstability_f2y",
+          "name": "pd_financialstability_t2y",
           "description": "Predictor of financial stability (2 years back), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd_financialstability_f5y",
+          "name": "pd_financialstability_t5y",
           "description": "Predictor of financial stability (5 years back), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd_financialbonity_f0m",
+          "name": "pd_financialbonity_t0m",
           "description": "Predictor of financial bonity (now), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd_financialbonity_f6m",
+          "name": "pd_financialbonity_t6m",
           "description": "Predictor of financial bonity (6 months back), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd_financialbonity_f1y",
+          "name": "pd_financialbonity_t1y",
           "description": "Predictor of financial bonity (1 year back), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd_financialbonity_f2y",
+          "name": "pd_financialbonity_t2y",
           "description": "Predictor of financial bonity (2 years back), based on incomes/expenses/...",
           "type": "double"
         },
         {
-          "name": "pd_financialbonity_f5y",
+          "name": "pd_financialbonity_t5y",
           "description": "Predictor of financial bonity (5 years back),  based on incomes/expenses/...",
           "type": "double"
         },
