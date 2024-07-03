@@ -3,39 +3,45 @@
 This is a basic look at several roles (not completed list) applied to generated data. 
 You can see full detail in source code, see the folder `generator` in this GIT project.
 
-## 01. Basic-party
+## Name convention
 
- - **party-establishment**: between generated data minus 15-100 years
- - **party-nchild**: interval 0-4
- - **party-type**: available values 'lead', 'prospect', 'client'
- - **party-peoplehousehold**: respect amnout of childrens
+ - Not to use '-' in feature/entity names (instead of that use '_')
+   - Note: it supports compatibility between Python and SQL
+ - Not to use longer name (for feature/entity name) than 32 chars, code_page=ASCII
 
-## 02. Basic-partycontact
+## 01. basic_party
 
- - **cardinality**: basic-party vs basic-partycontact (1:N)
+ - **party_establishment**: between generated data minus 15-100 years
+ - **party_nchild**: interval 0-4
+ - **party_type**: available values 'lead', 'prospect', 'client'
+ - **party_peoplehousehold**: respect amount of childrens
+
+## 02. basic_contact
+
+ - **cardinality**: basic_party vs basic_contact (1:N)
  - ...
 
-## 03. Basic-partyrelation
+## 03. basic_relation
  
- - **cardinality**: basic-party vs basic-partyrelation (M:N)
+ - **cardinality**: basic_party vs basic_relation (M:N)
  - ...
 
-## 04. Basic-account
+## 04. basic_account
 
- - **cardinality**: basic-party vs basic-account (1:N) 
- - **party-type**: only type 'client' has accounts (amount of accounts from 1 to 4)
+ - **cardinality**: basic_party vs basic_account (1:N) 
+ - **party_type**: only type 'client' has accounts (amount of accounts from 1 to 4)
 
-## 05. Basic-transaction
+## 05. basic_transaction
 
- - **cardinality**: basic-account vs basic-transaction (1:N) 
+ - **cardinality**: basic_account vs basic_transaction (1:N) 
  - ...
 
-## 06. Basic-event
+## 06. basic_event
 
- - **cardinality**: basic-party vs basic-event (1:N) 
+ - **cardinality**: basic_party vs basic_event (1:N) 
  - ...
 
-## 07. Basic-communication
+## 07. basic_communication
  
- - **cardinality**: basic-party vs basic-event (1:N) 
+ - **cardinality**: basic_party vs basic_event (1:N) 
  - ...
