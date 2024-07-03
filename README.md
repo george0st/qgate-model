@@ -44,7 +44,8 @@ the definition `/spec/targets/` for project in JSON files:
  - ✅ Redis, ✅ MySQL, ✅ Postgres, ✅ Kafka 
  - ✅ Parquet, ✅ CSV
 
-## Model
+## Meta-Model
+![Object-relations](./00-high-level/object-relations.png)
 ![Basic-model](./00-high-level/basic-feature-sets.png)
 ![Derived-model](./00-high-level/derived-feature-sets.png)
 
