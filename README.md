@@ -36,7 +36,7 @@ The solution contains this simple structure:
    - The information for test simplification e.g. feature vector vs on/off-line data, 
    test/data hints, pipeline setting, etc.
 
-Addition detail, [see](./docs/structure.md)
+Addition details, [see structure](./docs/structure.md) and [see rules](./docs/rules.md)
 
 ## Expected integrations
 The supported sources/targets for realization (✅ done, ✔ in-progress, ❌ planned), see 

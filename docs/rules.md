@@ -3,6 +3,11 @@
 This is a basic look at several roles (not completed list) applied to generated data. 
 You can see full detail in source code, see the folder `generator` in this GIT project.
 
+## Name convention
+
+ - Not to use '-' in feature/entity names (use '_' instead of that)
+   - Note: it supports compatibility between Python and SQL
+ - Not to use 
 ## 01. Basic-party
 
  - **party-establishment**: between generated data minus 15-100 years
