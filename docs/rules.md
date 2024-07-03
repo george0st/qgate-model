@@ -5,15 +5,16 @@ You can see full detail in source code, see the folder `generator` in this GIT p
 
 ## Name convention
 
- - Not to use '-' in feature/entity names (use '_' instead of that)
+ - Not to use '-' in feature/entity names (instead of that use '_')
    - Note: it supports compatibility between Python and SQL
- - Not to use 
+ - Not to use longer name (for feature/entity name) than 32 chars, code_page=ASCII
+
 ## 01. Basic-party
 
- - **party-establishment**: between generated data minus 15-100 years
- - **party-nchild**: interval 0-4
- - **party-type**: available values 'lead', 'prospect', 'client'
- - **party-peoplehousehold**: respect amnout of childrens
+ - **party_establishment**: between generated data minus 15-100 years
+ - **party_nchild**: interval 0-4
+ - **party_type**: available values 'lead', 'prospect', 'client'
+ - **party_peoplehousehold**: respect amnout of childrens
 
 ## 02. Basic-partycontact
 
@@ -28,7 +29,7 @@ You can see full detail in source code, see the folder `generator` in this GIT p
 ## 04. Basic-account
 
  - **cardinality**: basic-party vs basic-account (1:N) 
- - **party-type**: only type 'client' has accounts (amount of accounts from 1 to 4)
+ - **party_type**: only type 'client' has accounts (amount of accounts from 1 to 4)
 
 ## 05. Basic-transaction
 

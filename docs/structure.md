@@ -5,7 +5,6 @@
    - The objects such as projects, feature sets, feature vectors, ml models, etc.
    are chosen based on best practices (without view to limits some specific 
    ML/MLOps solutions)
-   - A few details: max_name=32 chars, code_page=ASCII
  - **02-data**
    - Data sets are in different amount of items based on amount of counterparties 
    (clients, prospects, leads). Default data sets are 100 items and 1K items.    
