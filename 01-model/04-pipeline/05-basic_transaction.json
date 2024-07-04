@@ -1,6 +1,6 @@
 {
   "name": "basic_transaction",
-  "description": "Setting for test pipelines for ingestion",
+  "description": "Pipeline for ingestion",
   "kind": "pipeline",
   "spec": {
     "Imputer": {"transaction_type": "Instant"},

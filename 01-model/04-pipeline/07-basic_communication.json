@@ -1,6 +1,6 @@
 {
   "name": "basic_communication",
-  "description": "Setting for test pipelines for ingestion",
+  "description": "Pipeline for ingestion",
   "kind": "pipeline",
   "spec": {
     "Imputer": {"content_type": "Text", "content_sentiment": "Neutral"},

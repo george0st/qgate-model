@@ -1,6 +1,6 @@
 {
   "name": "basic_account",
-  "description": "Setting for test pipelines for ingestion",
+  "description": "Pipeline for ingestion",
   "kind": "pipeline",
   "spec": {
     "Imputer": {"account_state":  "Closed"},

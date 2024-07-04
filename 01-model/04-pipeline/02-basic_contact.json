@@ -1,6 +1,6 @@
 {
   "name": "basic_contact",
-  "description": "Setting for test pipelines for ingestion",
+  "description": "Pipeline for ingestion",
   "kind": "pipeline",
   "spec": {
     "Imputer": {"contact_state": "InActive"},

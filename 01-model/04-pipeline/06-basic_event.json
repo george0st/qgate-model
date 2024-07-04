@@ -1,6 +1,6 @@
 {
   "name": "basic_event",
-  "description": "Setting for test pipelines for ingestion",
+  "description": "Pipeline for ingestion",
   "kind": "pipeline",
   "spec": {
     "DateExtractor": {"parts": ["quarter", "dayofyear"], "timestamp_col": "record_date"},
