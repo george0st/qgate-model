@@ -1,0 +1,15 @@
+{
+  "name": "basic_relation",
+  "description": "Setting for test pipelines for ingestion",
+  "kind": "pipeline",
+  "spec": {
+    "Imputer": {"relation_type": "Job"},
+    "OneHotEncoder": {"relation_type": ["Family","Job","Social"]},
+    "DateExtractor": {"parts": ["day_of_week"], "timestamp_col": "record_date"},
+    "MapValues": {},
+    "DropFeatures": [],
+    "storey.Extend": "({'brelation': 'relation'})",
+    "calc": "",
+    "aggregation": ""
+  }
+}
