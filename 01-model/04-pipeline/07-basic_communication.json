@@ -1,0 +1,16 @@
+{
+  "name": "basic_communication",
+  "description": "Setting for test pipelines for ingestion",
+  "kind": "pipeline",
+  "spec": {
+    "Imputer": {"content_type": "Text", "content_sentiment": "Neutral"},
+    "OneHotEncoder": {"content_sentiment": ["Positive", "Negative", "Neutral", "Fake"]},
+    "DateExtractor": {"parts": ["is_month_end", "dayofyear"], "timestamp_col": "record_date"},
+    "MapValues": {},
+    "DropFeatures": [],
+    "storey.Filter": "(event['content_type'] == 'Text' or event['channel'] == 'xxx')",
+    "storey.Extend": "({'bcommunication': 'communication'})",
+    "calc": "",
+    "aggregation": ""
+  }
+}
