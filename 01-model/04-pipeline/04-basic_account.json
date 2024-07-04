@@ -1,0 +1,16 @@
+{
+  "name": "basic_account",
+  "description": "Pipeline for ingestion",
+  "kind": "pipeline",
+  "spec": {
+    "Imputer": {"account_state":  "Closed"},
+    "OneHotEncoder": {"account_type": ["Current account", "Saving account"]},
+    "DateExtractor": {"parts": ["quarter"], "timestamp_col": "record_date"},
+    "MapValues": {},
+    "DropFeatures": [],
+    "storey.Filter": "(event['account_state'] == 'Active')",
+    "storey.Extend": "({'baccount': 'account'})",
+    "calc": "",
+    "aggregation": ""
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "basic_event",
+  "description": "Pipeline for ingestion",
+  "kind": "pipeline",
+  "spec": {
+    "DateExtractor": {"parts": ["quarter", "dayofyear"], "timestamp_col": "record_date"},
+    "MapValues": {},
+    "DropFeatures": [],
+    "storey.Filter": "(event['event_group'] == 'access' and event['event_action'] == 'login')",
+    "storey.Extend": "({'bevent': 'event'})",
+    "calc": "",
+    "aggregation": ""
+  }
+}

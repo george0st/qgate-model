@@ -1,0 +1,16 @@
+{
+  "name": "basic_contact",
+  "description": "Pipeline for ingestion",
+  "kind": "pipeline",
+  "spec": {
+    "Imputer": {"contact_state": "InActive"},
+    "OneHotEncoder": {"contact_state": ["Active","InActive"]},
+    "DateExtractor": {"parts": ["day_of_week"], "timestamp_col": "record_date"},
+    "MapValues": {},
+    "DropFeatures": [],
+    "storey.Filter": "(event['contact_email'] != '')",
+    "storey.Extend": "({'bcontact': 'contact'})",
+    "calc": "",
+    "aggregation": ""
+  }
+}
