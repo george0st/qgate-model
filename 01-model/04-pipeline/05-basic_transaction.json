@@ -1,0 +1,16 @@
+{
+  "name": "basic_transaction",
+  "description": "Setting for test pipelines for ingestion",
+  "kind": "pipeline",
+  "spec": {
+    "Imputer": {"transaction_type": "Instant"},
+    "OneHotEncoder": {"transaction_type": ["Standard", "Instant"]},
+    "DateExtractor": {"parts": ["quarter"], "timestamp_col": "record_date"},
+    "MapValues": {},
+    "DropFeatures": ["counterparty_name", "counterparty_iban"],
+    "storey.Filter": "(event['transaction_direction'] == 'Incoming')",
+    "storey.Extend": "({'btransaction': 'transaction'})",
+    "calc": "",
+    "aggregation": ""
+  }
+}
