@@ -26,7 +26,7 @@ The solution contains this simple structure:
    - The high-level [view](#model) to the meta-model for better understanding
  - **01-model**
    - The definition contains 01-projects, 02-feature sets, 03-feature vectors, 
-   04-ml models, etc. in JSON format
+   04-ml models, etc.
  - **02-data**
    - The synthetic data for meta-model in CSV/GZ and parquet formats for party, account,
    transaction, event, communication, etc.
@@ -34,7 +34,7 @@ The solution contains this simple structure:
    `./02-data/04-size-50k.sh`, etc. and description `python main.py generate --help`)
  - **03-test**
    - The information for test simplification e.g. feature vector vs on/off-line data, 
-   test/data hints, pipeline setting, etc.
+   test/data hints, etc.
 
 Addition details, [see structure](./docs/structure.md) and [see rules](./docs/rules.md)
 
