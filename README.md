@@ -26,7 +26,7 @@ The solution contains this simple structure:
    - The high-level [view](#model) to the meta-model for better understanding
  - **01-model**
    - The definition contains 01-projects, 02-feature sets, 03-feature vectors, 
-   04-ml models, etc. in JSON format
+   04-ml models, etc.
  - **02-data**
    - The synthetic data for meta-model in CSV/GZ and parquet formats for party, account,
    transaction, event, communication, etc.
@@ -34,25 +34,28 @@ The solution contains this simple structure:
    `./02-data/04-size-50k.sh`, etc. and description `python main.py generate --help`)
  - **03-test**
    - The information for test simplification e.g. feature vector vs on/off-line data, 
-   test/data hints, pipeline setting, etc.
+   test/data hints, etc.
 
 Addition details, [see structure](./docs/structure.md) and [see rules](./docs/rules.md)
 
 ## Expected integrations
 The supported sources/targets for realization (✅ done, ✔ in-progress, ❌ planned), see 
-the definition `/spec/targets/` for project in JSON files:
+the definition `/spec/targets/` in projects (see specification in JSON files):
  - ✅ Redis, ✅ MySQL, ✅ Postgres, ✅ Kafka 
  - ✅ Parquet, ✅ CSV
 
 ## Meta-Model
 
 The object relations contain relations between key objects in meta-model, plus
-splitting these objects in packages (01-model, 02-data, etc.)
+splitting these objects in packages (01-model/01-project, 01-model/02-feature-set, 02-data, etc.).
+
 ![Object-relations](./00-high-level/object-relations.png)
 
 The basic feasture sets contains view to basic feature sets and relations between them.
+
 ![Basic-model](./00-high-level/basic-feature-sets.png)
 
 The derived feasture sets contains view to derived feature sets and relations
 between them.
+
 ![Derived-model](./00-high-level/derived-feature-sets.png)
