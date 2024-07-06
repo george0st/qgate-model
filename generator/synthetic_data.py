@@ -18,7 +18,7 @@ class SyntheticData:
     def __init__(self, model_path="01-model", output_path="02-data", test_path="03-test"):
 
         # init setup singleton
-        Setup(model_path)
+        self._setup=Setup(model_path)
 
         self._model_path=model_path
         self._output_path=output_path
@@ -89,7 +89,7 @@ class SyntheticData:
 
             self._save_all(label, compress)
 
-            self.generate_test(3)
+            self.generate_test(self._setup.data_hint_amount)
             self._save_test_all(label)
 
             self._clean_all()

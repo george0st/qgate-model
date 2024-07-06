@@ -39,3 +39,8 @@ class Setup(metaclass=Singleton):
     def none_values_probability(self):
         """Probability of None value generation (1 = 100%, 0.1 = 10%, etc.)"""
         return self._model_setting["NONE_VALUES_PROBABILITY"]
+
+    @property
+    def data_hint_amount(self):
+        """Amount of generated data hints"""
+        return self._model_setting["DATA_HINT_AMOUNT"]
