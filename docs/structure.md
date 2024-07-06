@@ -17,7 +17,6 @@
    - The information for test simplification e.g.
      - which feature vectors support on/off-line features sets
      - hints for tests (how can you check valid output from feature vectors)
-     - setting for pipeline testing
      - etc. 
 
 
