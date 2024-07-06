@@ -1,6 +1,6 @@
 {
   "name": "basic_account",
-  "description": "Account detail with relation to party",
+  "description": "Account details with relation to party",
   "kind": "feature-set",
   "spec": {
     "entities": [

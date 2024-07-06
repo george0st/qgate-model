@@ -1,6 +1,6 @@
 {
   "name": "basic_contact",
-  "description": "Contact to party",
+  "description": "Contacts to party",
   "kind": "feature-set",
   "spec": {
     "entities": [

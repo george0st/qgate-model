@@ -1,6 +1,6 @@
 {
   "name": "basic_communication",
-  "description": "Party communication content from e.g. email, chat, phone, etc.",
+  "description": "Party communications from e.g. email, chat, phone, etc.",
   "kind": "feature-set",
   "spec": {
     "entities": [

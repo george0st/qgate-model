@@ -1,6 +1,6 @@
 {
   "name": "aggregate_circle",
-  "description": "Circle aggregation for e.g. geo, transaction, etc.",
+  "description": "Circle aggregations for e.g. geo, transaction, etc.",
   "kind": "feature-set",
   "spec": {
       "entities": [

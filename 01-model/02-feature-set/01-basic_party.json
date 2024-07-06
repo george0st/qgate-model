@@ -1,6 +1,6 @@
 {
   "name": "basic_party",
-  "description": "Party (client, prospect, lead, ...) detail",
+  "description": "Party (client, prospect, lead, ...) details",
   "kind": "feature-set",
   "spec": {
       "entities": [
