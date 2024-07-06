@@ -2,7 +2,7 @@
  - **00-high-level**
    - [Basic-model](../00-high-level/basic-feature-sets.png), [Derived-model](../00-high-level/derived-feature-sets.png) are described as class model in UML
  - **01-model**
-   - The objects such as projects, feature sets, feature vectors, ml models, etc.
+   - The objects such as projects, feature sets, feature vectors, pipelines, ml models, etc.
    are chosen based on best practices (without view to limits some specific 
    ML/MLOps solutions)
  - **02-data**
@@ -17,7 +17,6 @@
    - The information for test simplification e.g.
      - which feature vectors support on/off-line features sets
      - hints for tests (how can you check valid output from feature vectors)
-     - setting for pipeline testing
      - etc. 
 
 

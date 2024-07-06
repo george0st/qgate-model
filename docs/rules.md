@@ -6,7 +6,7 @@ You can see full detail in source code, see the folder `generator` in this GIT p
 ## Name convention
 
  - Not to use '-' in feature/entity names (instead of that use '_')
-   - Note: it supports compatibility between Python and SQL
+   - Note: '_' supports compatibility between Python and SQL
  - Not to use longer name (for feature/entity name) than 32 chars, code_page=ASCII
 
 ## 01. basic_party
