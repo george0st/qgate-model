@@ -7,6 +7,7 @@
     "CSV_SEPARATOR": ",",
     "CSV_DECIMAL": ".",
     "NONE_VALUES": true,
-    "NONE_VALUES_PROBABILITY": 0.05
+    "NONE_VALUES_PROBABILITY": 0.05,
+    "DATA_HINT_AMOUNT": 3
   }
 }
