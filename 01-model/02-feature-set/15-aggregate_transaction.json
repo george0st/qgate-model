@@ -1,6 +1,6 @@
 {
   "name": "aggregate_transaction",
-  "description": "Transactions aggregation with relation to account",
+  "description": "Transactions aggregations with relation to account",
   "kind": "feature-set",
   "spec": {
       "entities": [

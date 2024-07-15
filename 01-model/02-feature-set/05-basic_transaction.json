@@ -1,6 +1,6 @@
 {
   "name": "basic_transaction",
-  "description": "Transactions detail with relation to account",
+  "description": "Transaction details with relation to account",
   "kind": "feature-set",
   "spec": {
       "entities": [

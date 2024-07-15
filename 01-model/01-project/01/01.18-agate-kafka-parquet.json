@@ -1,0 +1,12 @@
+{
+  "name": "agate-kafka-parquet",
+  "description": "The A-GATE with kafka and parquet targets",
+  "labels": {
+    "temp": "True"
+  },
+  "kind": "project",
+  "parent": "agate",
+  "spec": {
+    "targets": ["parquet","kafka"]
+  }
+}

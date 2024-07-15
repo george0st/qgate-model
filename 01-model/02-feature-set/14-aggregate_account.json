@@ -1,6 +1,6 @@
 {
   "name": "aggregate_account",
-  "description": "Account aggregation with relation to party",
+  "description": "Account aggregations with relation to party",
   "kind": "feature-set",
   "spec": {
       "entities": [

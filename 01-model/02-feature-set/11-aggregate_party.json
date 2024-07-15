@@ -1,6 +1,6 @@
 {
   "name": "aggregate_party",
-  "description": "Party aggregation",
+  "description": "Party aggregations",
   "kind": "feature-set",
   "spec": {
       "entities": [
