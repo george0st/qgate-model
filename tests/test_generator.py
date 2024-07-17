@@ -71,7 +71,7 @@ class TestGenerator(unittest.TestCase):
     def test_generate_smallbulk_repeat(self):
         """Repeat generation of small files"""
 
-        for i in range(20):
+        for i in range(25):
             lbl = f"0-size-iter{i}-8,6"
 
             generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
