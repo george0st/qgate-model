@@ -46,17 +46,17 @@ the definition `/spec/targets/` in projects (see specification in JSON files):
 
 ## Meta-Model
 
-The object relations contain relations between key objects in meta-model, plus
+The object relations for key objects in meta-model, plus
 splitting these objects in packages (01-model/01-project, 01-model/02-feature-set,
 02-data, etc.).
 
 ![Object-relations](./00-high-level/object-relations.png)
 
-The basic feature sets contain view to basic feature sets and relations between them.
+The basic feature sets and relations between them.
 
 ![Basic-model](./00-high-level/basic-feature-sets.png)
 
-The derived feature sets contain view to derived feature sets and relations
+The derived feature sets and relations
 between them.
 
 ![Derived-model](./00-high-level/derived-feature-sets.png)
