@@ -33,6 +33,7 @@ class TestGenerator(unittest.TestCase):
         dir=path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_communication.BasicCommunication.NAME}.csv.gz")))
+        self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv.gz")))
 
     def test_generate_compress_smallbulk(self):
         lbl="0-size-20,6-compress"
@@ -43,6 +44,7 @@ class TestGenerator(unittest.TestCase):
         dir=path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_communication.BasicCommunication.NAME}.csv.gz")))
+        self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv.gz")))
 
     def test_generate_compress_super_smallbulk(self):
         lbl="0-size-s-10,6-compress"
@@ -53,6 +55,7 @@ class TestGenerator(unittest.TestCase):
         dir=path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_communication.BasicCommunication.NAME}.csv.gz")))
+        self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv.gz")))
 
     def test_generate(self):
         lbl = "0-size-200,20"
@@ -63,6 +66,7 @@ class TestGenerator(unittest.TestCase):
         dir=path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_party.BasicParty.NAME}.csv")))
+        self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv")))
 
     def test_generate_smallbulk_repeat(self):
         """Repeat generation of small files"""
@@ -76,6 +80,7 @@ class TestGenerator(unittest.TestCase):
             dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
             self.assertTrue(os.path.exists(dir))
             self.assertTrue(os.path.exists(path.join(dir, f"{basic_party.BasicParty.NAME}.csv")))
+            self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv")))
 
     def test_generate_smallbulk(self):
         lbl = "0-size-20,6"
@@ -86,6 +91,7 @@ class TestGenerator(unittest.TestCase):
         dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_party.BasicParty.NAME}.csv")))
+        self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv")))
 
     def test_generate_super_smallbulk(self):
         lbl = "0-size-s-10,6"
@@ -96,6 +102,7 @@ class TestGenerator(unittest.TestCase):
         dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_party.BasicParty.NAME}.csv")))
+        self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv")))
 
     def test_generate_bigbulk(self):
         lbl = "0-size-2000,2000"
@@ -106,6 +113,7 @@ class TestGenerator(unittest.TestCase):
         dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_party.BasicParty.NAME}.csv")))
+        self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv")))
 
     def test_generate_bigbulk_repeat(self):
         for i in range(5):
@@ -117,6 +125,7 @@ class TestGenerator(unittest.TestCase):
             dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
             self.assertTrue(os.path.exists(dir))
             self.assertTrue(os.path.exists(path.join(dir, f"{basic_party.BasicParty.NAME}.csv")))
+            self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv")))
 
 
     def _check_csv_header(self, filename, key_text):
