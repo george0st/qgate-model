@@ -56,7 +56,6 @@ The basic feature sets and relations between them.
 
 ![Basic-model](./00-high-level/basic-feature-sets.png)
 
-The derived feature sets and relations
-between them.
+The derived feature sets and relations between them.
 
 ![Derived-model](./00-high-level/derived-feature-sets.png)
