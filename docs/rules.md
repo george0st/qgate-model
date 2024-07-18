@@ -9,6 +9,14 @@ You can see full detail in source code, see the folder `generator` in this GIT p
    - Note: '_' supports compatibility between Python and SQL
  - Not to use longer name (for feature/entity name) than 32 chars, code_page=ASCII
 
+## Object relations & packages
+
+The object relations for key objects in meta-model, plus
+splitting these objects in packages (01-model/01-project, 01-model/02-feature-set,
+02-data, etc.).
+
+![Object-relations](../00-high-level/object-relations.png)
+
 ## 01. basic_party
 
  - **party_establishment**: between generated data minus 15-100 years
