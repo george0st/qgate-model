@@ -23,7 +23,7 @@ Note: You can see real usage in e.g. project **[qgate-sln-mlrun](https://github.
 ## Structure
 The solution contains this simple structure:
  - **00-high-level**
-   - The high-level [view](#model) to the meta-model for better understanding
+   - The high-level [view](#meta-model) to the meta-model for better understanding
  - **01-model**
    - The definition contains 01-projects, 02-feature sets, 03-feature vectors, 
    04-pipelines, 05-ml models, etc.
