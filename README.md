@@ -42,7 +42,7 @@ Addition details, [see structure](./docs/structure.md) and [see rules](./docs/ru
 The supported sources/targets for realization (✅ done, ✔ in-progress, ❌ planned), see 
 the definition `/spec/targets/` in projects (see specification in JSON files):
  - ✅ Redis, ✅ MySQL, ✅ Postgres, ✅ Kafka 
- - ✅ Parquet, ✅ CSV
+ - ✅ Pandas, ✅ Parquet, ✅ CSV
 
 ## Meta-Model
 
