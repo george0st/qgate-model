@@ -366,6 +366,16 @@ class BasicCommunication(BaseData):
         "Our staff turnover rate is alarmingly high due to poor working conditions.",
         "The catering company's communication with clients is often unclear and unprofessional.",
         "We've received negative reviews about the tasteless vegetarian options at our events.",
+        "Your service is incredibly slow, and I’ve been waiting for hours.",
+        "I’m tired of dealing with your incompetent staff.",
+        "Your online banking system is a disaster; it’s always down.",
+        "Why do I keep getting charged hidden fees?",
+        "Your customer service representatives are rude and unhelpful.",
+        "I’ve lost faith in this bank; the security breaches are unacceptable.",
+        "Your interest rates are a joke.",
+        "I’ve been on hold forever; your phone support is terrible.",
+        "Your mobile app crashes every time I try to use it.",
+        "I regret choosing this bank; the overall experience has been dreadful.",
     ]
 
     # GenAI prompt
