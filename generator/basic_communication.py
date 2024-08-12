@@ -113,7 +113,7 @@ class BasicCommunication(BaseData):
 
     # GenAI prompt
     # Write ten positive sentences or questions to the user support. The writer will be the satisfy or very satisfy user.
-    # Write ten positive sentences or questions to the user support. The writer will be the satisfy or very satisfy user. The user support will be from travel agency.
+    # Write ten real positive sentences or questions to the user support. The writer will be the satisfy or very satisfy user. The user support will be from travel agency.
     POSITIVE_SENTENCES = [
         "I just wanted to say thank you for your amazing service. You really made my day!",
         "I'm very impressed with your product. It works flawlessly and has all the features I need. How can I leave a positive review?",
@@ -244,6 +244,16 @@ class BasicCommunication(BaseData):
         "Your satisfaction is our top priority; feel free to reach out with any questions.",
         "We're excited to make your event memorable with our culinary expertise.",
         "Thank you for choosing us; we can't wait to exceed your expectations!",
+        "Your compassionate care truly makes a difference in patients' lives.",
+        "Thank you for your dedication to providing excellent service.",
+        "Your efficient handling of medical records retrieval is greatly appreciated.",
+        "Patients value the seamless coordination among care teams—keep up the great work!",
+        "May your day be filled with positive interactions and successful outcomes.",
+        "Your commitment to patient empowerment shines through.",
+        "We appreciate your timely communication and reliability.",
+        "Your efforts contribute to an ideal healthcare environment.",
+        "Keep up the good work—you're making a meaningful impact!",
+        "How can we continue to improve patient experiences together?",
     ]
 
     # GenAI prompt
