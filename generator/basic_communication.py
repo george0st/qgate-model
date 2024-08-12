@@ -426,6 +426,16 @@ class BasicCommunication(BaseData):
         "The parking lot was poorly lit, and finding my car was a nightmare.",
         "The airport shuttle service was infrequent, leaving passengers stranded.",
         "Overall, this airport needs a major overhaul to improve the passenger experience.",
+        "Your customer service is abysmal. I've been waiting for days for a response to my inquiry, and it's like shouting into a void.",
+        "Your return process is a nightmare. I've sent multiple emails, and nobody seems to care about resolving my issue.",
+        "The shipping carrier you work with is utterly incompetent. My package has been lost, and your support team is clueless.",
+        "I regret ever shopping at your store. The lack of communication and assistance is infuriating.",
+        "Your app is glitchy, and reporting issues seems pointless. No wonder people are abandoning it.",
+        "I've never encountered such unhelpful support. It's like dealing with robots who don't understand human problems.",
+        "Your refund process is a joke. I've followed all the steps, and still, nothing.",
+        "The Shop app crashes constantly, and your support team's canned responses are laughable.",
+        "I've wasted hours trying to get help. Your support team needs a reality check.",
+        "Congratulations, you've turned a loyal customer into a vocal critic. Your service is appalling.",
     ]
 
     # GenAI prompt
