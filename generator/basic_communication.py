@@ -113,7 +113,7 @@ class BasicCommunication(BaseData):
 
     # GenAI prompt
     # Write ten positive sentences or questions to the user support. The writer will be the satisfy or very satisfy user.
-    # Write ten positive sentences or questions to the user support. The writer will be the satisfy or very satisfy user. The user support will be from travel agency.
+    # Write ten real positive sentences or questions to the user support. The writer will be the satisfy or very satisfy user. The user support will be from travel agency.
     POSITIVE_SENTENCES = [
         "I just wanted to say thank you for your amazing service. You really made my day!",
         "I'm very impressed with your product. It works flawlessly and has all the features I need. How can I leave a positive review?",
@@ -244,11 +244,21 @@ class BasicCommunication(BaseData):
         "Your satisfaction is our top priority; feel free to reach out with any questions.",
         "We're excited to make your event memorable with our culinary expertise.",
         "Thank you for choosing us; we can't wait to exceed your expectations!",
+        "Your compassionate care truly makes a difference in patients' lives.",
+        "Thank you for your dedication to providing excellent service.",
+        "Your efficient handling of medical records retrieval is greatly appreciated.",
+        "Patients value the seamless coordination among care teams—keep up the great work!",
+        "May your day be filled with positive interactions and successful outcomes.",
+        "Your commitment to patient empowerment shines through.",
+        "We appreciate your timely communication and reliability.",
+        "Your efforts contribute to an ideal healthcare environment.",
+        "Keep up the good work—you're making a meaningful impact!",
+        "How can we continue to improve patient experiences together?",
     ]
 
     # GenAI prompt
     # Write ten negative sentences to the user support. The writer will be the user.
-    # Write ten highly negative sentences to the user support. The writer will be the user.
+    # Write ten highly negative and real sentences to the user support. The writer will be the user.
     # Write ten truly negative sentences from bank environment to the user support. The writer will be the user.
     NEGATIVE_SENTENCES = [
         "Why is your product so slow and buggy? Fix it now or I'm leaving!",
@@ -376,6 +386,26 @@ class BasicCommunication(BaseData):
         "I’ve been on hold forever; your phone support is terrible.",
         "Your mobile app crashes every time I try to use it.",
         "I regret choosing this bank; the overall experience has been dreadful.",
+        "Your staff's dismissive attitude made my experience even more distressing.",
+        "The lack of communication between departments caused unnecessary delays in my treatment.",
+        "The hospital's outdated facilities and equipment are unacceptable.",
+        "I felt ignored and undervalued during my stay.",
+        "The billing process was a nightmare, with hidden fees and confusing invoices.",
+        "The cleanliness standards were shockingly low.",
+        "The nurses' incompetence jeopardized my recovery.",
+        "Navigating the hospital's bureaucracy was frustrating and time-consuming.",
+        "The waiting times for appointments were unreasonable.",
+        "Overall, my encounter with your hospital left me deeply dissatisfied and frustrated.",
+        "The lack of empathy from your staff made me feel like just another number.",
+        "Navigating the hospital's phone system was an exercise in frustration.",
+        "I received conflicting information from different departments, causing confusion.",
+        "The waiting room was uncomfortable and overcrowded.",
+        "I witnessed unprofessional behavior among the hospital staff.",
+        "The discharge process was rushed, leaving me with unanswered questions.",
+        "Your online appointment booking system is glitchy and unreliable.",
+        "The cafeteria food was barely edible.",
+        "I felt ignored when I raised concerns about my treatment plan.",
+        "Overall, my experience with your hospital was disheartening and disappointing.",
     ]
 
     # GenAI prompt
@@ -558,4 +588,24 @@ class BasicCommunication(BaseData):
         "Can you guide me through the process of applying for a mortgage?",
         "How can I increase the credit limit on my existing credit card?",
         "What are the penalties for early withdrawal from a fixed deposit?",
+        "Could you please provide information about visiting hours for patients?",
+        "Is there a specific protocol for scheduling follow-up appointments?",
+        "What are the available payment options for medical services?",
+        "Can you clarify the process for obtaining medical records?",
+        "Are there any dietary restrictions I should be aware of during my stay?",
+        "Could you explain the discharge process after surgery?",
+        "Is there a preferred pharmacy for prescription refills?",
+        "What safety measures are in place to prevent infections?",
+        "Can you guide me on how to reach the hospital by public transportation?",
+        "Are there any support groups or counseling services available for patients?",
+        "Is there a waiting area for family members near the patient's room?",
+        "What are the guidelines for bringing personal items into the hospital?",
+        "Could you provide information about parking facilities for visitors?",
+        "Are there any restrictions on food delivery or outside meals?",
+        "Can you explain the process for requesting medical equipment or supplies?",
+        "Is there a policy regarding cell phone usage within the hospital premises?",
+        "What accommodations are available for patients with disabilities?",
+        "Could you clarify the policy on visiting hours for pediatric patients?",
+        "Are there any specific discharge instructions for post-surgery care?",
+        "Can you guide me on how to access patient education materials?",
     ]
