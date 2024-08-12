@@ -455,8 +455,7 @@ class BasicCommunication(BaseData):
         "Your website is a nightmare. Finding information about rentals feels like solving a cryptic puzzle.",
         "The brakes on your bikes barely work. I almost crashed into traffic!",
         "I'd rather walk barefoot on broken glass than rent from you again.",
-        "Congratulations, Biky Rental, you've ruined my vacation."
-
+        "Congratulations, Biky Rental, you've ruined my vacation.",
     ]
 
     # GenAI prompt
