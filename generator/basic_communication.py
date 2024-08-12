@@ -406,6 +406,16 @@ class BasicCommunication(BaseData):
         "The cafeteria food was barely edible.",
         "I felt ignored when I raised concerns about my treatment plan.",
         "Overall, my experience with your hospital was disheartening and disappointing.",
+        "The restrooms were filthy, with overflowing trash bins and broken stall doors.",
+        "I had to navigate through a sea of litter just to find a seat in the waiting area.",
+        "The lack of hand sanitizer stations near security checkpoints is unacceptable.",
+        "The airport staff seemed indifferent to passengers' concerns and requests.",
+        "I witnessed rodents scurrying around near the food court—disgusting!",
+        "The floors were sticky and stained; it felt like I was walking through a neglected bus station.",
+        "Navigating the airport was a nightmare due to poor signage and confusing layouts.",
+        "The Wi-Fi was practically nonexistent, making it impossible to get any work done.",
+        "I waited over an hour for my baggage, only to discover it had been misplaced.",
+        "Overall, this airport's cleanliness and service are abysmal—I won't be flying through here again!",
     ]
 
     # GenAI prompt
