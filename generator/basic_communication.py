@@ -396,6 +396,16 @@ class BasicCommunication(BaseData):
         "Navigating the hospital's bureaucracy was frustrating and time-consuming.",
         "The waiting times for appointments were unreasonable.",
         "Overall, my encounter with your hospital left me deeply dissatisfied and frustrated.",
+        "The lack of empathy from your staff made me feel like just another number.",
+        "Navigating the hospital's phone system was an exercise in frustration.",
+        "I received conflicting information from different departments, causing confusion.",
+        "The waiting room was uncomfortable and overcrowded.",
+        "I witnessed unprofessional behavior among the hospital staff.",
+        "The discharge process was rushed, leaving me with unanswered questions.",
+        "Your online appointment booking system is glitchy and unreliable.",
+        "The cafeteria food was barely edible.",
+        "I felt ignored when I raised concerns about my treatment plan.",
+        "Overall, my experience with your hospital was disheartening and disappointing.",
     ]
 
     # GenAI prompt
