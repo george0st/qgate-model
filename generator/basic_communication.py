@@ -258,7 +258,7 @@ class BasicCommunication(BaseData):
 
     # GenAI prompt
     # Write ten negative sentences to the user support. The writer will be the user.
-    # Write ten highly negative sentences to the user support. The writer will be the user.
+    # Write ten highly negative and real sentences to the user support. The writer will be the user.
     # Write ten truly negative sentences from bank environment to the user support. The writer will be the user.
     NEGATIVE_SENTENCES = [
         "Why is your product so slow and buggy? Fix it now or I'm leaving!",
@@ -386,6 +386,16 @@ class BasicCommunication(BaseData):
         "I’ve been on hold forever; your phone support is terrible.",
         "Your mobile app crashes every time I try to use it.",
         "I regret choosing this bank; the overall experience has been dreadful.",
+        "Your staff's dismissive attitude made my experience even more distressing.",
+        "The lack of communication between departments caused unnecessary delays in my treatment.",
+        "The hospital's outdated facilities and equipment are unacceptable.",
+        "I felt ignored and undervalued during my stay.",
+        "The billing process was a nightmare, with hidden fees and confusing invoices.",
+        "The cleanliness standards were shockingly low.",
+        "The nurses' incompetence jeopardized my recovery.",
+        "Navigating the hospital's bureaucracy was frustrating and time-consuming.",
+        "The waiting times for appointments were unreasonable.",
+        "Overall, my encounter with your hospital left me deeply dissatisfied and frustrated.",
     ]
 
     # GenAI prompt
