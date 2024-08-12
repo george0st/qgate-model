@@ -416,6 +416,16 @@ class BasicCommunication(BaseData):
         "The Wi-Fi was practically nonexistent, making it impossible to get any work done.",
         "I waited over an hour for my baggage, only to discover it had been misplaced.",
         "Overall, this airport's cleanliness and service are abysmal—I won't be flying through here again!",
+        "The airport security lines were interminable, and the staff seemed disorganized.",
+        "The seating in the departure lounge was uncomfortable and worn out.",
+        "The baggage claim area was chaotic, with no clear instructions on where to find our luggage.",
+        "The food options were limited, and the prices were exorbitant.",
+        "I encountered rude and unhelpful personnel at the information desk.",
+        "The terminal was poorly ventilated, making it stuffy and uncomfortable.",
+        "The flight announcements were barely audible due to faulty speakers.",
+        "The parking lot was poorly lit, and finding my car was a nightmare.",
+        "The airport shuttle service was infrequent, leaving passengers stranded.",
+        "Overall, this airport needs a major overhaul to improve the passenger experience.",
     ]
 
     # GenAI prompt
