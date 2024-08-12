@@ -436,6 +436,16 @@ class BasicCommunication(BaseData):
         "The Shop app crashes constantly, and your support team's canned responses are laughable.",
         "I've wasted hours trying to get help. Your support team needs a reality check.",
         "Congratulations, you've turned a loyal customer into a vocal critic. Your service is appalling.",
+        "Your lack of transparency regarding product availability is infuriating. I've wasted time and energy chasing after items that were supposedly in stock.",
+        "The checkout process on your website is a disaster. It's like navigating a maze of broken links and error messages.",
+        "Your loyalty program is a sham. I've accumulated points, but redeeming them feels impossible.",
+        "I've lost count of how many times I've been put on hold during phone calls to your support line. It's beyond frustrating.",
+        "Your in-store staff's indifference is astounding. I've never felt so invisible while shopping.",
+        "Your online chat support is a joke. They copy-paste irrelevant responses and disappear when things get tough.",
+        "Your store layout is a nightmare. It's like you intentionally hide the exits and restrooms.",
+        "I've given up on your mobile app. It crashes, freezes, and fails to load basic information.",
+        "Your return policy is convoluted. I need a law degree to decipher it.",
+        "Congratulations once again, your customer service has reached new lows. It's a masterclass in incompetence.",
     ]
 
     # GenAI prompt
