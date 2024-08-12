@@ -446,6 +446,17 @@ class BasicCommunication(BaseData):
         "I've given up on your mobile app. It crashes, freezes, and fails to load basic information.",
         "Your return policy is convoluted. I need a law degree to decipher it.",
         "Congratulations once again, your customer service has reached new lows. It's a masterclass in incompetence.",
+        "Your bikes are a disaster waiting to happen. I've never ridden anything so rickety and unsafe.",
+        "The customer service is abysmal. I've been waiting for a response to my complaint for days.",
+        "Your pricing is outrageous. I could buy a decent bike for what you charge for a day's rental.",
+        "The bike I rented smelled like it had been dipped in sewage. Disgusting!",
+        "Your self-guided city tour suggestions? More like a wild goose chase. I got lost three times!",
+        "I've seen better-maintained bikes in junkyards. Seriously, invest in some maintenance!",
+        "Your website is a nightmare. Finding information about rentals feels like solving a cryptic puzzle.",
+        "The brakes on your bikes barely work. I almost crashed into traffic!",
+        "I'd rather walk barefoot on broken glass than rent from you again.",
+        "Congratulations, Biky Rental, you've ruined my vacation."
+
     ]
 
     # GenAI prompt
