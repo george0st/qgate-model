@@ -2,7 +2,7 @@
 click~=8.1
 
 # expected switch to the version numpy~=2.0
-numpy~=1.26
+numpy~=2.O
 pandas==2.2.2
 pyarrow==16.1.0
 
