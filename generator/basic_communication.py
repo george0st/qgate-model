@@ -264,6 +264,16 @@ class BasicCommunication(BaseData):
         "I appreciate the emphasis on preventive care. It shows that you truly care about patients.",
         "The waiting area is clean and comfortable. It's a pleasant place to be.",
         "Overall, I'm very satisfied with the care I receive at your dental office!",
+        "The dental equipment is modern and well-maintained.",
+        "I appreciate the follow-up calls after my procedures.",
+        "The waiting time was minimal, which I really value.",
+        "Your dental team is knowledgeable and skilled.",
+        "I'm impressed by the cleanliness of the treatment rooms.",
+        "The billing process was straightforward and transparent.",
+        "The dental assistant made me feel comfortable throughout my appointment.",
+        "I love the complimentary toothbrush and toothpaste!",
+        "The dentist's gentle touch during the exam was reassuring.",
+        "I recommend your office to friends and family.",
     ]
 
     # GenAI prompt
