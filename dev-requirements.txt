@@ -7,7 +7,7 @@ pandas==2.2.2
 pyarrow==16.1.0
 
 # generation of synthetic data
-faker~=24.2
+faker~=27.0
 
 packaging>=21.3
 
