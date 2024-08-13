@@ -460,7 +460,7 @@ class BasicCommunication(BaseData):
 
     # GenAI prompt
     # Write ten neutral sentences or questions to the user support. The writer will be the user.
-    # Write ten real neutral sentences or questions to the user support. The writer will be the user. The user support will be from travel agency.
+    # Write ten real and neutral sentences or questions to the user support. The writer will be the user. The user support will be from travel agency.
     NEUTRAL_SENTENCES = [
         "Thank you for your help.",
         "Could you please clarify this for me?",
@@ -658,4 +658,14 @@ class BasicCommunication(BaseData):
         "Could you clarify the policy on visiting hours for pediatric patients?",
         "Are there any specific discharge instructions for post-surgery care?",
         "Can you guide me on how to access patient education materials?",
+        "Hello, I have a question about my upcoming dental appointment. Can you help?",
+        "Is there a way to check my insurance eligibility online before my visit?",
+        "Could you provide information on the accepted payment methods at your office?",
+        "I'm experiencing tooth pain. How soon can I schedule an emergency appointment?",
+        "What preventive measures do you recommend for maintaining good oral health?",
+        "Can you assist me with rescheduling my appointment due to a scheduling conflict?",
+        "Is there a way to access my dental records or treatment history online?",
+        "Do you offer any discounts or payment plans for specific treatments?",
+        "What safety protocols are in place during COVID-19 for in-person visits?",
+        "Could you explain the process for submitting dental insurance claims?",
     ]
