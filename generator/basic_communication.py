@@ -254,12 +254,22 @@ class BasicCommunication(BaseData):
         "Your efforts contribute to an ideal healthcare environment.",
         "Keep up the good work—you're making a meaningful impact!",
         "How can we continue to improve patient experiences together?",
+        "I had a wonderful experience during my visit! The staff was so friendly and welcoming.",
+        "Thank you for taking such great care of my teeth. I feel confident in my oral health.",
+        "The dental hygienist was gentle and thorough. I appreciate their attention to detail.",
+        "Your office has a calming atmosphere. It really helps reduce any anxiety I have about dental visits.",
+        "The receptionist was efficient and made scheduling my next appointment a breeze.",
+        "I love the fresh feeling after a professional cleaning. Your team does an excellent job!",
+        "The dentist explained everything clearly and answered all my questions.",
+        "I appreciate the emphasis on preventive care. It shows that you truly care about patients.",
+        "The waiting area is clean and comfortable. It's a pleasant place to be.",
+        "Overall, I'm very satisfied with the care I receive at your dental office!",
     ]
 
     # GenAI prompt
     # Write ten negative sentences to the user support. The writer will be the user.
     # Write ten highly negative and real sentences to the user support. The writer will be the user.
-    # Write ten truly negative sentences from bank environment to the user support. The writer will be the user.
+    # Write ten real and truly negative sentences from bank environment to the user support. The writer will be the user.
     NEGATIVE_SENTENCES = [
         "Why is your product so slow and buggy? Fix it now or I'm leaving!",
         "You charged me twice for the same service! This is unacceptable! I want a refund immediately!",
