@@ -143,12 +143,19 @@ class TestGenerator(unittest.TestCase):
 
         dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
-        self._check_csv_header(path.join(dir, f"{basic_party.BasicParty.NAME}.csv"), ["party_id"])
-        self._check_csv_header(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv"), ["party_id"])
-        self._check_csv_header(path.join(dir, f"{basic_relation.BasicRelation.NAME}.csv"), ["party_id"])
-        self._check_csv_header(path.join(dir, f"{basic_account.BasicAccount.NAME}.csv"), ["party_id"])
-        self._check_csv_header(path.join(dir, f"{basic_transaction.BasicTransaction.NAME}.csv"), ["account_id"])
-        self._check_csv_header(path.join(dir, f"{basic_event.BasicEvent.NAME}.csv"), ["party_id"])
-        self._check_csv_header(path.join(dir, f"{basic_communication.BasicCommunication.NAME}.csv"), ["party_id"])
+        self._check_csv_header(path.join(dir, f"{basic_party.BasicParty.NAME}.csv"),
+                               ["party_id", "party_gender"])
+        self._check_csv_header(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv"),
+                               ["party_id", "contact_id", "contact_state"])
+        self._check_csv_header(path.join(dir, f"{basic_relation.BasicRelation.NAME}.csv"),
+                               ["party_id", "relation_id", "relation_type"])
+        self._check_csv_header(path.join(dir, f"{basic_account.BasicAccount.NAME}.csv"),
+                               ["party_id", "account_id", "account_state"])
+        self._check_csv_header(path.join(dir, f"{basic_transaction.BasicTransaction.NAME}.csv"),
+                               ["account_id", "transaction_id", "transaction_direction"])
+        self._check_csv_header(path.join(dir, f"{basic_event.BasicEvent.NAME}.csv"),
+                               ["party_id", "event_id", "session_id"])
+        self._check_csv_header(path.join(dir, f"{basic_communication.BasicCommunication.NAME}.csv"),
+                               ["party_id", "communication_id", "content"])
 
     # TODO: Add batch size under limit, it will generate wrong dataset
