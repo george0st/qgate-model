@@ -128,10 +128,11 @@ class TestGenerator(unittest.TestCase):
             self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv")))
 
 
-    def _check_csv_header(self, filename, key_text):
+    def _check_csv_header(self, filename, key_texts: list):
         if os.path.exists(filename):
-            df = pd.read_csv(filename)
-            self.assertTrue(df.to_string().find(key_text) >= 0)
+            content = pd.read_csv(filename).to_string()
+            for key_text in key_texts:
+                self.assertTrue(content.find(key_text) >= 0)
 
     def test_csv_structure(self):
         """All csv have header"""
@@ -142,12 +143,12 @@ class TestGenerator(unittest.TestCase):
 
         dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
-        self._check_csv_header(path.join(dir, f"{basic_party.BasicParty.NAME}.csv"), "party_id")
-        self._check_csv_header(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv"), "party_id")
-        self._check_csv_header(path.join(dir, f"{basic_relation.BasicRelation.NAME}.csv"), "party_id")
-        self._check_csv_header(path.join(dir, f"{basic_account.BasicAccount.NAME}.csv"), "party_id")
-        self._check_csv_header(path.join(dir, f"{basic_transaction.BasicTransaction.NAME}.csv"), "account_id")
-        self._check_csv_header(path.join(dir, f"{basic_event.BasicEvent.NAME}.csv"), "party_id")
-        self._check_csv_header(path.join(dir, f"{basic_communication.BasicCommunication.NAME}.csv"), "party_id")
+        self._check_csv_header(path.join(dir, f"{basic_party.BasicParty.NAME}.csv"), ["party_id"])
+        self._check_csv_header(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv"), ["party_id"])
+        self._check_csv_header(path.join(dir, f"{basic_relation.BasicRelation.NAME}.csv"), ["party_id"])
+        self._check_csv_header(path.join(dir, f"{basic_account.BasicAccount.NAME}.csv"), ["party_id"])
+        self._check_csv_header(path.join(dir, f"{basic_transaction.BasicTransaction.NAME}.csv"), ["account_id"])
+        self._check_csv_header(path.join(dir, f"{basic_event.BasicEvent.NAME}.csv"), ["party_id"])
+        self._check_csv_header(path.join(dir, f"{basic_communication.BasicCommunication.NAME}.csv"), ["party_id"])
 
     # TODO: Add batch size under limit, it will generate wrong dataset
