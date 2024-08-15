@@ -28,6 +28,9 @@ class BasicRelation(BaseData):
 
         # remove unlimited cycle for generation of relations
         if len(parties) < BasicRelation.MAX_RELATIONS:
+            from colorama import Fore, Style
+
+            print(Fore.BLUE + "      NOTE: Small amount of parties." + Style.RESET_ALL)
             return
 
         # iteration cross all parties
