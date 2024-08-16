@@ -274,6 +274,16 @@ class BasicCommunication(BaseData):
         "I love the complimentary toothbrush and toothpaste!",
         "The dentist's gentle touch during the exam was reassuring.",
         "I recommend your office to friends and family.",
+        "Thank you for choosing our catering services! We're excited to make your event memorable.",
+        "Is there a specific theme or cuisine you'd like us to focus on for your event?",
+        "We appreciate your feedback! How can we improve our service to better meet your needs?",
+        "Your satisfaction is our priority. Is there anything else we can assist you with?",
+        "Our team is dedicated to ensuring your guests have a delightful dining experience.",
+        "We're thrilled to be part of your special occasion. Let's discuss menu options!",
+        "Your positive feedback motivates us to continue delivering exceptional service.",
+        "How can we tailor our offerings to match your preferences?",
+        "We're committed to exceeding your expectations. What dietary requirements should we consider?",
+        "Thank you for entrusting us with your catering needs. We look forward to serving you!",
     ]
 
     # GenAI prompt
