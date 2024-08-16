@@ -284,6 +284,16 @@ class BasicCommunication(BaseData):
         "How can we tailor our offerings to match your preferences?",
         "We're committed to exceeding your expectations. What dietary requirements should we consider?",
         "Thank you for entrusting us with your catering needs. We look forward to serving you!",
+        "Thank you for reaching out to us during this difficult time. We're here to support you.",
+        "Your loved one's memory will forever remain in our hearts. How can we assist you today?",
+        "We appreciate your trust in our services. How can we make this process easier for you?",
+        "We're committed to honoring your loved one's legacy. How can we personalize their service?",
+        "Your feedback matters to us. Is there anything specific you'd like us to improve?",
+        "We're dedicated to providing compassionate care. How can we alleviate any concerns?",
+        "We're honored to be part of your family's journey. How can we support you further?",
+        "Your satisfaction is our priority. Is there anything else we can do for you?",
+        "We're here to listen. Please feel free to share any memories or special requests.",
+        "Thank you for allowing us to serve you. How can we ensure your experience is positive?",
     ]
 
     # GenAI prompt
