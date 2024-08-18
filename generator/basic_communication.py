@@ -505,6 +505,16 @@ class BasicCommunication(BaseData):
         "The ad banner on our homepage slowed down the website's loading time.",
         "Our social media ads were perceived as spammy and generated unfollows.",
         "Unfortunately, our ad creative failed to evoke any emotional response from viewers.",
+        "Our ad targeting algorithm seems to be completely off the mark.",
+        "The ad banner on our mobile app is causing usability issues.",
+        "Users are complaining about irrelevant ads appearing in their email newsletters.",
+        "Our recent ad campaign received backlash due to cultural insensitivity.",
+        "The sponsored content we published was met with skepticism and distrust.",
+        "Our ad server experienced downtime during peak hours.",
+        "Customers are frustrated with the constant retargeting ads.",
+        "The ad video autoplay on our website is annoying users.",
+        "Our ad placements on social media are generating negative comments.",
+        "The ad frequency capping is not working as expected, bombarding users with the same ad repeatedly.",
     ]
 
     # GenAI prompt
