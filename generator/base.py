@@ -37,9 +37,6 @@ class Base:
             return round(self._gen.uniform(low, high), ndigits)
         return self._gen.uniform(low, high)
 
-    # def rnd_bool(self) -> bool:
-    #     return bool(self._gen.integers(0, 2))
-
     def rnd_bool(self, probability=None) -> bool:
         if probability:
             return bool(self._gen.choice([0, 1], size = 1, p = [1 - probability, probability]))
@@ -51,7 +48,7 @@ class Base:
         Generate random value from list and based on defined probabilities
 
         :param items:        item for selection
-        :param probability:  probability items (total sum is 1, sample [0.5, 0.1, 0.1, 0.3]
+        :param probability:  probability items (total sum must be 1, sample [0.5, 0.1, 0.1, 0.3]
         :return:             selected value
         """
         return self._gen.choice(items, size=1, p=probability)[0]
