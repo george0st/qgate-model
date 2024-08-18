@@ -300,6 +300,7 @@ class BasicCommunication(BaseData):
     # Write ten negative sentences to the user support. The writer will be the user.
     # Write ten highly negative and real sentences to the user support. The writer will be the user.
     # Write ten real and truly negative sentences from bank environment to the user support. The writer will be the user.
+    # Write ten real and truly negative sentences to the user support from advertising company. The writer will be the user.
     NEGATIVE_SENTENCES = [
         "Why is your product so slow and buggy? Fix it now or I'm leaving!",
         "You charged me twice for the same service! This is unacceptable! I want a refund immediately!",
@@ -496,6 +497,24 @@ class BasicCommunication(BaseData):
         "The brakes on your bikes barely work. I almost crashed into traffic!",
         "I'd rather walk barefoot on broken glass than rent from you again.",
         "Congratulations, Biky Rental, you've ruined my vacation.",
+        "Customers have expressed frustration with the intrusive pop-up ads on our website.",
+        "Our recent ad copy was confusing and didn't effectively convey the product benefits.",
+        "The ad analytics show that our return on investment is disappointingly low.",
+        "Several users complained about irrelevant ads appearing during their browsing sessions.",
+        "Our sponsored content received negative feedback due to its biased tone.",
+        "The ad banner on our homepage slowed down the website's loading time.",
+        "Our social media ads were perceived as spammy and generated unfollows.",
+        "Unfortunately, our ad creative failed to evoke any emotional response from viewers.",
+        "Our ad targeting algorithm seems to be completely off the mark.",
+        "The ad banner on our mobile app is causing usability issues.",
+        "Users are complaining about irrelevant ads appearing in their email newsletters.",
+        "Our recent ad campaign received backlash due to cultural insensitivity.",
+        "The sponsored content we published was met with skepticism and distrust.",
+        "Our ad server experienced downtime during peak hours.",
+        "Customers are frustrated with the constant retargeting ads.",
+        "The ad video autoplay on our website is annoying users.",
+        "Our ad placements on social media are generating negative comments.",
+        "The ad frequency capping is not working as expected, bombarding users with the same ad repeatedly.",
     ]
 
     # GenAI prompt

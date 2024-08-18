@@ -1,6 +1,6 @@
 # Structure details
  - **00-high-level**
-   - [Basic-model](../00-high-level/basic-feature-sets.png), [Derived-model](../00-high-level/derived-feature-sets.png) are described as class model in UML
+   - [Object-relations](../00-high-level/object-relations.png), [Basic-model](../00-high-level/basic-feature-sets.png), [Derived-model](../00-high-level/derived-feature-sets.png) are described as class model in UML
  - **01-model**
    - The objects such as projects, feature sets, feature vectors, pipelines, ml models, etc.
    are chosen based on best practices (without view to limits some specific 

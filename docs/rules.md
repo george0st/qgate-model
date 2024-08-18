@@ -1,7 +1,7 @@
 # Rules for generated data
 
 This is a basic look at several roles (not completed list) applied to generated data. 
-You can see full detail in source code, see the folder `generator` in this GIT project.
+You can see the full detail in source code, see the folder `generator` in this GIT project.
 
 ## Name convention
 

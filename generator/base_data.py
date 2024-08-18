@@ -18,7 +18,6 @@ class BaseData(Base):
         super().__init__()
         self._model_definition=Base.create(path, name)
         self.model=[]
-        # self._gen = np.random.default_rng()
         self.gmodel = gmodel
         self._name = name
         self.clean()

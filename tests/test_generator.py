@@ -155,7 +155,7 @@ class TestGenerator(unittest.TestCase):
         dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
         self.assertTrue(os.path.exists(dir))
         self._check_csv_header(path.join(dir, f"{basic_party.BasicParty.NAME}.csv"),
-                               ["party_id", "party_gender", "party_establishment"])
+                               ["party_id", "party_gender", "party_establishment", "party_familystatus", "party_nchild", "party_income"])
         self._check_csv_header(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv"),
                                ["party_id", "contact_id", "contact_state", "contact_phone", "contact_email"])
         self._check_csv_header(path.join(dir, f"{basic_relation.BasicRelation.NAME}.csv"),
