@@ -11,14 +11,17 @@ learning solutions (definition in json, data in csv/parquet).
 ![Quality-Gate](./docs/assets/icons8-quality-100.png) 
 
 ## Usage
-This meta-model is suitable for:
- - compare capabilities and functions of machine learning solutions (as part of RFP/X and SWOT analysis)
+The meta-model is suitable for:
+ - compare capabilities and functions of machine learning solutions (as part of RFP/X and 
+SWOT analysis)
  - independent test new versions of machine learning solutions (with aim to keep quality in time)
- - unit, sanity, smoke, system, regression, function, acceptance, performance, shadow, ... tests
+ - unit, sanity, smoke, system, integration, regression, function, acceptance, 
+performance, shadow, ... tests
  - external test coverage (in case, that internal test coverage is not available or weak)
  - etc.
 
-Note: You can see real usage in e.g. project **[qgate-sln-mlrun](https://github.com/george0st/qgate-sln-mlrun)** for testing MLRun/Iguazio solution.
+Note: You can see real usage of this meta-model in e.g. project **[qgate-sln-mlrun](https://github.com/george0st/qgate-sln-mlrun)** 
+for testing MLRun/Iguazio solution.
 
 ## Structure
 The solution contains this simple structure:
