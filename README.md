@@ -13,7 +13,7 @@ learning solutions (definition in json, data in csv/parquet).
 ## Usage
 The meta-model is suitable for:
  - compare capabilities and functions of machine learning solutions (as part of RFP/X and 
-SWOT analysis)
+[SWOT analysis](https://en.wikipedia.org/wiki/SWOT_analysis))
  - independent test new versions of machine learning solutions (with aim to keep quality in time)
  - unit, sanity, smoke, system, integration, regression, function, acceptance, 
 performance, shadow, ... tests
@@ -21,7 +21,7 @@ performance, shadow, ... tests
  - etc.
 
 Note: You can see real usage of this meta-model in e.g. project **[qgate-sln-mlrun](https://github.com/george0st/qgate-sln-mlrun)** 
-for testing MLRun/Iguazio solution.
+for testing [MLRun](https://www.mlrun.org/)/[Iguazio](https://www.iguazio.com/) solution.
 
 ## Structure
 The solution contains this simple structure:
