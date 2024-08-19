@@ -184,10 +184,5 @@ class TestGenerator(unittest.TestCase):
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
         generator.generate(label=lbl, count=size, bulk_max=size, compress=False)
 
-        dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
-        self.assertTrue(os.path.exists(dir))
-
-        dir = path.join(dir, f"{basic_relation.BasicRelation.NAME}.csv")
+        dir = path.join(TestGenerator.OUTPUT_ADR, lbl, f"{basic_relation.BasicRelation.NAME}.csv")
         self.assertFalse(os.path.exists(dir))
-
-    # TODO: Add batch size under limit, it will generate wrong dataset
