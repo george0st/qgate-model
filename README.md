@@ -11,14 +11,17 @@ learning solutions (definition in json, data in csv/parquet).
 ![Quality-Gate](./docs/assets/icons8-quality-100.png) 
 
 ## Usage
-This meta-model is suitable for:
- - compare capabilities and functions of machine learning solutions (as part of RFP/X and SWOT analysis)
+The meta-model is suitable for:
+ - compare capabilities and functions of machine learning solutions (as part of RFP/X and 
+[SWOT analysis](https://en.wikipedia.org/wiki/SWOT_analysis))
  - independent test new versions of machine learning solutions (with aim to keep quality in time)
- - unit, sanity, smoke, system, regression, function, acceptance, performance, shadow, ... tests
+ - unit, sanity, smoke, system, integration, regression, function, acceptance, 
+performance, shadow, ... tests
  - external test coverage (in case, that internal test coverage is not available or weak)
  - etc.
 
-Note: You can see real usage in e.g. project **[qgate-sln-mlrun](https://github.com/george0st/qgate-sln-mlrun)** for testing MLRun/Iguazio solution.
+Note: You can see real usage of this meta-model in e.g. project **[qgate-sln-mlrun](https://github.com/george0st/qgate-sln-mlrun)** 
+for testing [MLRun](https://www.mlrun.org/)/[Iguazio](https://www.iguazio.com/) solution.
 
 ## Structure
 The solution contains this simple structure:
@@ -28,8 +31,8 @@ The solution contains this simple structure:
    - The definition contains 01-projects, 02-feature sets, 03-feature vectors, 
    04-pipelines, 05-ml models, etc.
  - **02-data**
-   - The synthetic data for meta-model in CSV/GZ and parquet formats for party, account,
-   transaction, event, communication, etc.
+   - The synthetic data for meta-model in CSV/GZ and parquet formats for party, contact, relation,
+   account, transaction, event, communication, etc.
    - You can also generate your own dataset with requested size (see samples `./02-data/03-size-10k.sh`, 
    `./02-data/04-size-50k.sh`, etc. and description `python main.py generate --help`)
  - **03-test**
