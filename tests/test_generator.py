@@ -176,4 +176,16 @@ class TestGenerator(unittest.TestCase):
                                ["party_id", "communication_id", "content",
                                 "content_sentiment", "content_type", "channel", "record_date"])
 
+    def test_invalid_size(self):
+        """All csv have header"""
+        lbl = "0-size-invalid_size-3,3"
+
+        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
+        generator.generate(label=lbl, count=3, bulk_max=3, compress=False)
+
+        dir = path.join(TestGenerator.OUTPUT_ADR, lbl)
+        self.assertTrue(os.path.exists(dir))
+
+        dir = path.join(dir, "")
+
     # TODO: Add batch size under limit, it will generate wrong dataset
