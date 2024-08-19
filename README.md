@@ -31,8 +31,8 @@ The solution contains this simple structure:
    - The definition contains 01-projects, 02-feature sets, 03-feature vectors, 
    04-pipelines, 05-ml models, etc.
  - **02-data**
-   - The synthetic data for meta-model in CSV/GZ and parquet formats for party, account,
-   transaction, event, communication, etc.
+   - The synthetic data for meta-model in CSV/GZ and parquet formats for party, contact, relation,
+   account, transaction, event, communication, etc.
    - You can also generate your own dataset with requested size (see samples `./02-data/03-size-10k.sh`, 
    `./02-data/04-size-50k.sh`, etc. and description `python main.py generate --help`)
  - **03-test**
