@@ -177,7 +177,7 @@ class TestGenerator(unittest.TestCase):
                                 "content_sentiment", "content_type", "channel", "record_date"])
 
     def test_invalid_size(self):
-        """All csv have header"""
+        """Check invalid amount of items"""
         size=basic_relation.BasicRelation.MAX_RELATIONS-1
         lbl = f"0-size-invalid_size-{size},{size}"
 
