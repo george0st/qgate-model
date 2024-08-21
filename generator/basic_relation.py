@@ -30,7 +30,7 @@ class BasicRelation(BaseData):
         if len(parties) < BasicRelation.MAX_RELATIONS:
             from colorama import Fore, Style
 
-            print(Fore.BLUE + "      NOTE: Small amount of parties." + Style.RESET_ALL)
+            print(Fore.BLUE + f"      NOTE: Small amount of parties '{len(parties)}' (expected >= {BasicRelation.MAX_RELATIONS})." + Style.RESET_ALL)
             return
 
         # iteration cross all parties
