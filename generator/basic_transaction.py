@@ -333,5 +333,5 @@ class BasicTransaction(BaseData):
         "Payment for Drawing Classes",
         "Fine for speeding",
         "Parking fine",
-        "fine for bad vehicle condition",
+        "Fine for bad vehicle condition",
     ]
