@@ -74,7 +74,7 @@ class BasicTransaction(BaseData):
 
                 # "name": "transaction_value",
                 # "description": "Transaction value",
-                #TODO: generate negative items also
+                #TODO: generate negative items also for outgoing paymants also
                 model['transaction_value']=self.rnd_choose(range(1000, 5000))
 
                 # "name": "transaction_currency",
@@ -83,6 +83,7 @@ class BasicTransaction(BaseData):
 
                 # "name": "transaction_description",
                 # "description": "Transaction description",
+                #TODO: generate description for outgoing paymants also
                 model["transaction_description"] = self._transaction_description(True)
 
                 # "name": "transaction_date",
