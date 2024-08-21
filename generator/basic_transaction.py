@@ -35,7 +35,7 @@ class BasicTransaction(BaseData):
 
             date_from=account['account_createdate']
 
-            if account['account_nonactivedate'] ==  self.MAX_DATE:
+            if account['account_nonactivedate'] == self.MAX_DATE:
                 date_to=datetime.date.today()
             else:
                 date_to=account['account_nonactivedate']
@@ -58,7 +58,7 @@ class BasicTransaction(BaseData):
                 # "description": "Unique transaction identificator",
                 model['transaction_id']=str(uuid.uuid4())
 
-                # "name": "account?id",
+                # "name": "account_id",
                 # "description": "Relation to account identificator",
                 model['account_id']=account['account_id']
 
@@ -237,6 +237,7 @@ class BasicTransaction(BaseData):
     ]
 
     TRANSACTION_OUTCOME_DESCRIPTION = [
+        "Payment for Childcare",
         "Payment for Invoice",
         "Monthly subscription for Premium Plan",
         "Donation to Charity",
@@ -330,4 +331,7 @@ class BasicTransaction(BaseData):
         "Payment for Chimney Cleaning Services",
         "Health Insurance Payment",
         "Payment for Drawing Classes",
+        "Fine for speeding",
+        "Parking fine",
+        "fine for bad vehicle condition",
     ]
