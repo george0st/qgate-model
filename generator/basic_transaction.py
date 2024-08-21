@@ -35,7 +35,7 @@ class BasicTransaction(BaseData):
 
             date_from=account['account_createdate']
 
-            if account['account_nonactivedate'] ==  self.MAX_DATE:
+            if account['account_nonactivedate'] == self.MAX_DATE:
                 date_to=datetime.date.today()
             else:
                 date_to=account['account_nonactivedate']
@@ -58,7 +58,7 @@ class BasicTransaction(BaseData):
                 # "description": "Unique transaction identificator",
                 model['transaction_id']=str(uuid.uuid4())
 
-                # "name": "account?id",
+                # "name": "account_id",
                 # "description": "Relation to account identificator",
                 model['account_id']=account['account_id']
 
@@ -74,7 +74,7 @@ class BasicTransaction(BaseData):
 
                 # "name": "transaction_value",
                 # "description": "Transaction value",
-                #TODO: generate negative items also
+                #TODO: generate negative items also for outgoing paymants also
                 model['transaction_value']=self.rnd_choose(range(1000, 5000))
 
                 # "name": "transaction_currency",
@@ -83,6 +83,7 @@ class BasicTransaction(BaseData):
 
                 # "name": "transaction_description",
                 # "description": "Transaction description",
+                #TODO: generate description for outgoing paymants also
                 model["transaction_description"] = self._transaction_description(True)
 
                 # "name": "transaction_date",
@@ -237,6 +238,7 @@ class BasicTransaction(BaseData):
     ]
 
     TRANSACTION_OUTCOME_DESCRIPTION = [
+        "Payment for Childcare",
         "Payment for Invoice",
         "Monthly subscription for Premium Plan",
         "Donation to Charity",
@@ -278,11 +280,13 @@ class BasicTransaction(BaseData):
         "Mortgage Payment",
         "Payment for Art Classes",
         "Payment for Yoga Classes",
+        "Payment for Yoga Private Training",
         "Payment for House Painting Services",
         "Payment for Dog Walking Services",
         "Trash Collection Bill Payment",
         "Payment for DJ Services - Party",
         "Payment for Home Security Services",
+        "Payment for Private Security Services",
         "Student Loan Payment",
         "Payment for Dance Classes",
         "Payment for Personal Training Sessions",
@@ -328,4 +332,7 @@ class BasicTransaction(BaseData):
         "Payment for Chimney Cleaning Services",
         "Health Insurance Payment",
         "Payment for Drawing Classes",
+        "Fine for speeding",
+        "Parking fine",
+        "Fine for bad vehicle condition",
     ]
