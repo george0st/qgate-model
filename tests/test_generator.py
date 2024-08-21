@@ -188,7 +188,7 @@ class TestGenerator(unittest.TestCase):
         self.assertFalse(os.path.exists(dir))
 
     def test_invalid_size_compress(self):
-        """Check invalid amount of items"""
+        """Check invalid amount of items (with compress)"""
         size=basic_relation.BasicRelation.MAX_RELATIONS-1
         lbl = f"0-size-invalid_size-{size},{size}-compress"
 
@@ -213,7 +213,7 @@ class TestGenerator(unittest.TestCase):
         self.assertTrue(os.path.exists(dir))
 
     def test_valid_size_compress(self):
-        """Check minimum valid amount of items"""
+        """Check minimum valid amount of items (with compress)"""
         size=basic_relation.BasicRelation.MAX_RELATIONS
         lbl = f"0-size-valid_size-{size},{size}-compress"
 
