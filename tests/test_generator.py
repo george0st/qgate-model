@@ -195,7 +195,10 @@ class TestGenerator(unittest.TestCase):
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
         generator.generate(label=lbl, count=size, bulk_max=size, compress=True)
 
-        dir = path.join(TestGenerator.OUTPUT_ADR, lbl, f"{basic_relation.BasicRelation.NAME}.csv")
+        dir = path.join(TestGenerator.OUTPUT_ADR, lbl, f"{basic_relation.BasicRelation.NAME}.csv.gz")
+        self.assertFalse(os.path.exists(dir))
+
+        dir = path.join(TestGenerator.OUTPUT_ADR, lbl, f"{basic_relation.BasicRelation.NAME}.parquet")
         self.assertFalse(os.path.exists(dir))
 
     def test_valid_size(self):
