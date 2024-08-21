@@ -186,3 +186,14 @@ class TestGenerator(unittest.TestCase):
 
         dir = path.join(TestGenerator.OUTPUT_ADR, lbl, f"{basic_relation.BasicRelation.NAME}.csv")
         self.assertFalse(os.path.exists(dir))
+
+    def test_valid_size(self):
+        """Check minimum valid amount of items"""
+        size=basic_relation.BasicRelation.MAX_RELATIONS
+        lbl = f"0-size-valid_size-{size},{size}"
+
+        generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
+        generator.generate(label=lbl, count=size, bulk_max=size, compress=False)
+
+        dir = path.join(TestGenerator.OUTPUT_ADR, lbl, f"{basic_relation.BasicRelation.NAME}.csv")
+        self.assertTrue(os.path.exists(dir))
