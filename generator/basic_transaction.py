@@ -49,11 +49,22 @@ class BasicTransaction(BaseData):
 
             for mounth in range(dif_date):
                 a=mounth*30
-                b=int(self.rnd_int(1,30))
-                new_date=date_to-datetime.timedelta(days=a+b)
 
-                # add income payments
-                self.model.append(self._create_transaction(account, new_date))
+                # INCOME
+                    # regular income (one per month till)
+                b=int(self.rnd_int(1,21))
+                new_date=date_to-datetime.timedelta(days=a+b)
+                self.model.append(self._create_transaction(account, new_date, True))
+
+                    # addition income (0..2 times)
+                for _ in range(int(self.rnd_choose([0,1,2],[0.9, 0.08, 0.02]))):
+                    b = int(self.rnd_int(1, 29))
+                    new_date=date_to-datetime.timedelta(days=a+b)
+                    self.model.append(self._create_transaction(account, new_date, True))
+
+
+                # OUTCOME
+
 
                 #
                 # model=self.model_item()
@@ -139,7 +150,7 @@ class BasicTransaction(BaseData):
                 #
                 # self.model.append(model)
 
-    def _create_transaction(self, account, new_date):
+    def _create_transaction(self, account, new_date, income=True):
         model = self.model_item()
 
         # "name": "transaction_id",
