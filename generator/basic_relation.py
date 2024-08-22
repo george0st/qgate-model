@@ -60,7 +60,7 @@ class BasicRelation(BaseData):
 
                 # "name": "relation_type",
                 model['relation_type']=self.rnd_choose(["Family", "Job", "Social"], [0.5, 0.3, 0.2])
-                self.apply_none_value(model, 'relation_type', "Job",lower_probability=0.05)
+                self.apply_none_value(model, 'relation_type', "Job", probability_multiplicator=0.05)
 
                 # "name": "relation_date",
                 # not used, right now

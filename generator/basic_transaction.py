@@ -70,7 +70,7 @@ class BasicTransaction(BaseData):
                 # "name": "transaction_type",
                 # "description": "Transaction type",
                 model['transaction_type']=self.rnd_choose(["Standard", "Instant"], [0.7, 0.3])
-                self.apply_none_value(model, 'transaction_type', "Instant", lower_probability=0.25)
+                self.apply_none_value(model, 'transaction_type', "Instant", probability_multiplicator=0.25)
 
                 # "name": "transaction_value",
                 # "description": "Transaction value",
