@@ -112,10 +112,7 @@ class BasicTransaction(BaseData):
 
         # "name": "transaction_description",
         # "description": "Transaction description (note: empty value is valid)",
-        # TODO: generate description for outgoing paymants also
         model["transaction_description"] = self._transaction_description(income)
-        # probability_empty=0.25
-        # self.apply_none_value(model, 'transaction_description', "",lower_probability=0.2)
 
         # "name": "transaction_date",
         # "description": "Transaction date",
