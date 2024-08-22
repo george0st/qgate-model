@@ -82,10 +82,11 @@ class BasicTransaction(BaseData):
                 model['transaction_currency']="USD"
 
                 # "name": "transaction_description",
-                # "description": "Transaction description",
+                # "description": "Transaction description (note: empty value is valid)",
                 #TODO: generate description for outgoing paymants also
                 model["transaction_description"] = self._transaction_description(True)
-                #self.apply_none_value(model, 'transaction_description', "",lower_probability=0.2)
+                # probability_empty=0.25
+                # self.apply_none_value(model, 'transaction_description', "",lower_probability=0.2)
 
                 # "name": "transaction_date",
                 # "description": "Transaction date",
@@ -137,11 +138,12 @@ class BasicTransaction(BaseData):
     def _transaction_description(self, income=True, probability_empty=0.25, probability_fake=0.1):
         option = self.rnd_choose([0, 1, 2],
                                  [probability_empty, probability_fake, 1 - probability_empty - probability_fake])
-        if option==0:
+        if option==0:   # empty description
             return ""
-        elif option==1:
+        elif option==1: # fake description
             return self.fake.text(max_nb_chars=64)
 
+        # real description
         if income:
             return self.TRANSACTION_INCOME_DESCRIPTION[self.rnd_int(0, len(self.TRANSACTION_INCOME_DESCRIPTION))]
         return self.TRANSACTION_OUTCOME_DESCRIPTION[self.rnd_int(0, len(self.TRANSACTION_INCOME_DESCRIPTION))]
