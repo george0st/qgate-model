@@ -25,6 +25,14 @@ class BasicTransaction(BaseData):
         self.fake_az = Faker(['az_AZ'])
         self.fake_ru = Faker(['ru_RU'])
 
+    def change_date(self, year, month, day, months_to_add):
+        """Change date, add month"""
+        # https://www.geeksforgeeks.org/add-months-to-datetime-object-in-python/
+        new_date = datetime.date(year + (month + months_to_add - 1) // 12,
+                            (month + months_to_add - 1) % 12 + 1,
+                            day)
+        return new_date
+
     def generate(self, count):
 
         # reference to the data from BasicAccount
@@ -47,13 +55,17 @@ class BasicTransaction(BaseData):
                 if dif_date > self.MAX_EVENT_HISTORY_MONTHS:
                     dif_date = self.MAX_EVENT_HISTORY_MONTHS
 
-            for mounth in range(dif_date):
-                a=mounth*30
+            for month in range(dif_date):
+                a = month * 30
 
                 # INCOME
                     # regular income (one per month till)
-                b=int(self.rnd_int(1,21))
-                new_date=date_to-datetime.timedelta(days=a+b)
+                day=int(self.rnd_int(1,21))
+                new_date=self.change_date(date_to.year, date_to.month, day, - month)
+                if new_date > date_to:
+                    continue
+
+                #new_date=date_to-datetime.timedelta(days=a+b)
                 self.model.append(self._create_transaction(account, new_date, True))
 
                     # addition income (0..2 times)
@@ -61,7 +73,6 @@ class BasicTransaction(BaseData):
                     b = int(self.rnd_int(1, 29))
                     new_date=date_to-datetime.timedelta(days=a+b)
                     self.model.append(self._create_transaction(account, new_date, True))
-
 
                 # OUTCOME
 
