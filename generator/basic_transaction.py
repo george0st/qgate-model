@@ -92,8 +92,7 @@ class BasicTransaction(BaseData):
 
         # "name": "transaction_direction",
         # "description": "Transaction direction e.g. incoming, outgoing",
-        # TODO: Add both directions
-        model['transaction_direction'] = "Incoming"
+        model['transaction_direction'] = "Incoming" if income else "Outgoing"
 
         # "name": "transaction_type",
         # "description": "Transaction type",
@@ -102,8 +101,10 @@ class BasicTransaction(BaseData):
 
         # "name": "transaction_value",
         # "description": "Transaction value",
-        # TODO: generate negative items also for outgoing paymants also
-        model['transaction_value'] = self.rnd_choose(range(1000, 5000))
+        if income:
+            model['transaction_value'] = self.rnd_choose(range(1500, 5000))
+        else:
+            model['transaction_value'] = self.rnd_choose(range(200, 1000))
 
         # "name": "transaction_currency",
         # "description": "Transaction currency",
@@ -112,7 +113,7 @@ class BasicTransaction(BaseData):
         # "name": "transaction_description",
         # "description": "Transaction description (note: empty value is valid)",
         # TODO: generate description for outgoing paymants also
-        model["transaction_description"] = self._transaction_description(True)
+        model["transaction_description"] = self._transaction_description(income)
         # probability_empty=0.25
         # self.apply_none_value(model, 'transaction_description', "",lower_probability=0.2)
 
