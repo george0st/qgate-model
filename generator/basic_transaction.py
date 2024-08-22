@@ -69,10 +69,10 @@ class BasicTransaction(BaseData):
                 self.model.append(self._create_transaction(account, new_date, True))
 
                     # addition income (0..2 times)
-                for _ in range(int(self.rnd_choose([0,1,2],[0.9, 0.08, 0.02]))):
-                    b = int(self.rnd_int(1, 29))
-                    new_date=date_to-datetime.timedelta(days=a+b)
-                    self.model.append(self._create_transaction(account, new_date, True))
+                # for _ in range(int(self.rnd_choose([0,1,2],[0.9, 0.08, 0.02]))):
+                #     b = int(self.rnd_int(1, 29))
+                #     new_date=date_to-datetime.timedelta(days=a+b)
+                #     self.model.append(self._create_transaction(account, new_date, True))
 
                 # OUTCOME
 
