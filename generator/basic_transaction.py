@@ -56,14 +56,15 @@ class BasicTransaction(BaseData):
                     dif_date = self.MAX_EVENT_HISTORY_MONTHS
 
             for month in range(dif_date):
-                # INCOME - regular income (one per month till)
-                new_date=self.change_date(date_to.year,
-                                          date_to.month,
-                                          int(self.rnd_int(1,21)),
-                                          - month)
-                if new_date > date_to:
-                    continue
-                self.model.append(self._create_transaction(account, new_date, True))
+                # INCOME - regular income (0..1 times)
+                for _ in range(int(self.rnd_choose([0,1],[0.001, 0.999]))):
+                    new_date=self.change_date(date_to.year,
+                                              date_to.month,
+                                              int(self.rnd_int(1,21)),
+                                              - month)
+                    if new_date > date_to:
+                        continue
+                    self.model.append(self._create_transaction(account, new_date, True))
 
                 # INCOME - addition income (0..2 times)
                 for _ in range(int(self.rnd_choose([0,1,2],[0.9, 0.08, 0.02]))):
@@ -71,94 +72,12 @@ class BasicTransaction(BaseData):
                                                 date_to.month,
                                                 int(self.rnd_int(1, 29)),
                                                 - month)
+                    if new_date > date_to:
+                        continue
                     self.model.append(self._create_transaction(account, new_date, True))
 
                 # OUTCOME
-
-
-                #
-                # model=self.model_item()
-                #
-                # # "name": "transaction_id",
-                # # "description": "Unique transaction identificator",
-                # model['transaction_id']=str(uuid.uuid4())
-                #
-                # # "name": "account_id",
-                # # "description": "Relation to account identificator",
-                # model['account_id']=account['account_id']
-                #
-                # # "name": "transaction_direction",
-                # # "description": "Transaction direction e.g. incoming, outgoing",
-                # # TODO: Add both directions
-                # model['transaction_direction'] = "Incoming"
-                #
-                # # "name": "transaction_type",
-                # # "description": "Transaction type",
-                # model['transaction_type'] = self.rnd_choose(["Standard", "Instant"], [0.7, 0.3])
-                # self.apply_none_value(model, 'transaction_type', "Instant", probability_multiplicator=0.25)
-                #
-                # # "name": "transaction_value",
-                # # "description": "Transaction value",
-                # #TODO: generate negative items also for outgoing paymants also
-                # model['transaction_value']=self.rnd_choose(range(1000, 5000))
-                #
-                # # "name": "transaction_currency",
-                # # "description": "Transaction currency",
-                # model['transaction_currency']="USD"
-                #
-                # # "name": "transaction_description",
-                # # "description": "Transaction description (note: empty value is valid)",
-                # #TODO: generate description for outgoing paymants also
-                # model["transaction_description"] = self._transaction_description(True)
-                # # probability_empty=0.25
-                # # self.apply_none_value(model, 'transaction_description', "",lower_probability=0.2)
-                #
-                # # "name": "transaction_date",
-                # # "description": "Transaction date",
-                # model['transaction_date']=new_date
-                #
-                # # "name": "counterparty_name",
-                # # "description": "Transaction counterparty name",
-                # model["counterparty_name"] = self.fake.name()
-                #
-                # # "name": "counterparty_iban",
-                # # "description": "Transaction counterparty IBAN",
-                # if int(self.rnd_choose([0,1],[0.998, 0.002]))==0:
-                #     iban=self.fake.iban()
-                # else:
-                #     tmp_fake=self.rnd_choose([self.fake_at, self.fake_de, self.fake_ch,
-                #                                     self.fake_pl, self.fake_it, self.fake_es,
-                #                                     self.fake_tr, self.fake_az, self.fake_ru],
-                #                           [0.3, 0.2, 0.2, 0.1, 0.1, 0.025, 0.025, 0.025, 0.025])
-                #     iban=tmp_fake.iban()
-                # model["counterparty_iban"]=iban
-                #
-                # # "name": "counterparty_other",
-                # # "description": "Transaction counterparty other information",
-                # # TODO: Add relevant value
-                # model["counterparty_other"] = ""
-                #
-                # fraud=False
-                # fraud_anomaly=0
-                # if self.rnd_choose([False, True],[0.95, 0.05]):
-                #     fraud_anomaly = self.rnd_float(0,1,4)
-                #     if self.rnd_choose([False, True],[0.95, 0.05]):
-                #         if self.rnd_bool():
-                #             fraud=True
-                #
-                # # "name": "transaction_fraudanomaly",
-                # # "description": "Possible fraud anomaly detection (min. 0 - without anomaly detection, max. 1)",
-                # model["transaction_fraudanomaly"] = float(fraud_anomaly)
-                #
-                # # "name": "transaction_fraud",
-                # # "description": "Identification of fraud (True - fraud, False - without fraud)",
-                # model["transaction_fraud"] = int(fraud)
-                #
-                # # "name": "record_date",
-                # # "description": "The date when the record was created",
-                # model['record_date']=self.gmodel["NOW"]
-                #
-                # self.model.append(model)
+                # TODO: add code
 
     def _create_transaction(self, account, new_date, income=True):
         model = self.model_item()
@@ -173,8 +92,7 @@ class BasicTransaction(BaseData):
 
         # "name": "transaction_direction",
         # "description": "Transaction direction e.g. incoming, outgoing",
-        # TODO: Add both directions
-        model['transaction_direction'] = "Incoming"
+        model['transaction_direction'] = "Incoming" if income else "Outgoing"
 
         # "name": "transaction_type",
         # "description": "Transaction type",
@@ -183,8 +101,10 @@ class BasicTransaction(BaseData):
 
         # "name": "transaction_value",
         # "description": "Transaction value",
-        # TODO: generate negative items also for outgoing paymants also
-        model['transaction_value'] = self.rnd_choose(range(1000, 5000))
+        if income:
+            model['transaction_value'] = self.rnd_choose(range(1500, 5000))
+        else:
+            model['transaction_value'] = self.rnd_choose(range(200, 1000))
 
         # "name": "transaction_currency",
         # "description": "Transaction currency",
@@ -192,10 +112,7 @@ class BasicTransaction(BaseData):
 
         # "name": "transaction_description",
         # "description": "Transaction description (note: empty value is valid)",
-        # TODO: generate description for outgoing paymants also
-        model["transaction_description"] = self._transaction_description(True)
-        # probability_empty=0.25
-        # self.apply_none_value(model, 'transaction_description', "",lower_probability=0.2)
+        model["transaction_description"] = self._transaction_description(income)
 
         # "name": "transaction_date",
         # "description": "Transaction date",
