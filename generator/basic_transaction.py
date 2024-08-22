@@ -85,6 +85,7 @@ class BasicTransaction(BaseData):
                 # "description": "Transaction description",
                 #TODO: generate description for outgoing paymants also
                 model["transaction_description"] = self._transaction_description(True)
+                #self.apply_none_value(model, 'transaction_description', "",lower_probability=0.2)
 
                 # "name": "transaction_date",
                 # "description": "Transaction date",
