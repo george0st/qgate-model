@@ -52,7 +52,7 @@ class BasicAccount(BaseData):
                 # "name": "account_state",
                 # "description": "Account state (e.g. active, closed, etc.)",
                 model['account_state']=self.rnd_choose(["Active", "Closed", "Blocked"], [0.98, 0.018, 0.002])
-                self.apply_none_value(model, 'account_state', "Closed",lower_probability=0.2)
+                self.apply_none_value(model, 'account_state', "Closed", probability_multiplicator=0.2)
 
                 # "name": "account_createdate",
                 # "description": "Date for account creation",

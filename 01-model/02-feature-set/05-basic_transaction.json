@@ -39,7 +39,7 @@
         },
         {
           "name": "transaction_description",
-          "description": "Transaction description",
+          "description": "Transaction description (note: empty value is valid)",
           "type": "string"
         },
         {

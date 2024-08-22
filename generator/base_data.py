@@ -80,7 +80,7 @@ class BaseData(Base):
         # free memory
         del df
 
-    def apply_none_value(self, current_collection, property_name, default_value, lower_probability=1, none_value=None):
+    def apply_none_value(self, current_collection, property_name, default_value, probability_multiplicator=1, none_value=None):
         """Apply None value, in case that current value is default.
          It is based on project setting (see setting in file 'model.json',
          with config values 'NONE_VALUES' and 'NONE_VALUES_PROBABILITY')
@@ -89,10 +89,12 @@ class BaseData(Base):
          :param property_name:          name of property in current collection (e.g. 'transaction-type')
          :param default_value:          default value (what can consider such as default value)
          :param none_value:             changed value, default is ''
-         :param lower_probability:      the value 1 = the same probability, 0.5 = 50% of lower probability, default is 1
+         :param probability_multiplicator:      default is 1 (without change of probability), 0.5 = 50% of lower probability,
+                                            1.5 = 150% of higher probability, etc.
          """
         if current_collection[property_name] == default_value:
             if self._none_values:
-                if self.rnd_bool(self._none_values_probability * lower_probability):
+                total_probability=self._none_values_probability * probability_multiplicator
+                if self.rnd_bool(total_probability if total_probability < 1 else 1):
                     current_collection[property_name] = none_value
 

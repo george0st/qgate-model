@@ -83,11 +83,11 @@ class BasicCommunication(BaseData):
 
                     # "name": "content-sentiment",
                     model['content_sentiment'] = str(session_sentiment).replace('Sentiment.','')
-                    self.apply_none_value(model, 'content_sentiment', "Neutral", lower_probability=0.10)
+                    self.apply_none_value(model, 'content_sentiment', "Neutral", probability_multiplicator=0.10)
 
                     # "name": "content_type",
                     model['content_type'] = "Text"
-                    self.apply_none_value(model, 'content_type', "Text", lower_probability=0.01)
+                    self.apply_none_value(model, 'content_type', "Text", probability_multiplicator=0.01)
 
                     # "name": "channel",
                     model['channel'] = self.rnd_choose(["Email", "Chat"], [0.8, 0.2])
