@@ -56,23 +56,22 @@ class BasicTransaction(BaseData):
                     dif_date = self.MAX_EVENT_HISTORY_MONTHS
 
             for month in range(dif_date):
-                a = month * 30
-
-                # INCOME
-                    # regular income (one per month till)
-                day=int(self.rnd_int(1,21))
-                new_date=self.change_date(date_to.year, date_to.month, day, - month)
+                # INCOME - regular income (one per month till)
+                new_date=self.change_date(date_to.year,
+                                          date_to.month,
+                                          int(self.rnd_int(1,21)),
+                                          - month)
                 if new_date > date_to:
                     continue
-
-                #new_date=date_to-datetime.timedelta(days=a+b)
                 self.model.append(self._create_transaction(account, new_date, True))
 
-                    # addition income (0..2 times)
-                # for _ in range(int(self.rnd_choose([0,1,2],[0.9, 0.08, 0.02]))):
-                #     b = int(self.rnd_int(1, 29))
-                #     new_date=date_to-datetime.timedelta(days=a+b)
-                #     self.model.append(self._create_transaction(account, new_date, True))
+                # INCOME - addition income (0..2 times)
+                for _ in range(int(self.rnd_choose([0,1,2],[0.9, 0.08, 0.02]))):
+                    new_date = self.change_date(date_to.year,
+                                                date_to.month,
+                                                int(self.rnd_int(1, 29)),
+                                                - month)
+                    self.model.append(self._create_transaction(account, new_date, True))
 
                 # OUTCOME
 
