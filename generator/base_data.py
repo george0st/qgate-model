@@ -89,8 +89,8 @@ class BaseData(Base):
          :param property_name:          name of property in current collection (e.g. 'transaction-type')
          :param default_value:          default value (what can consider such as default value)
          :param none_value:             changed value, default is ''
-         :param probability_multiplicator:      default is 1,
-            the value 1 = the same probability, 0.5 = 50% of lower probability, 1.5 = 150% of higher probability
+         :param probability_multiplicator:      default is 1 (without change of probability), 0.5 = 50% of lower probability,
+                                            1.5 = 150% of higher probability, etc.
          """
         if current_collection[property_name] == default_value:
             if self._none_values:
