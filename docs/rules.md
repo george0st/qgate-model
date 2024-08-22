@@ -17,6 +17,10 @@ splitting these objects in packages (01-model/01-project, 01-model/02-feature-se
 
 ![Object-relations](../00-high-level/object-relations.png)
 
+## Supported types
+
+TBD.
+
 ## 01. basic_party
 
  - **party_establishment**: between generated data minus 15-100 years
