@@ -86,7 +86,7 @@ class BasicTransaction(BaseData):
                         continue
                     self.model.append(self._create_transaction(account, new_date, False, 300, 800))
 
-    def _create_transaction(self, account, new_date, income, finance_min=1500, finance_max=5000):
+    def _create_transaction(self, account, new_date, income, finance_min = 1500, finance_max = 5000):
         model = self.model_item()
 
         # "name": "transaction_id",
