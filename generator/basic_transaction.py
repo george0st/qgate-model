@@ -74,10 +74,17 @@ class BasicTransaction(BaseData):
                                                 - month)
                     if new_date > date_to:
                         continue
-                    self.model.append(self._create_transaction(account, new_date, True, 300, 800))
+                    self.model.append(self._create_transaction(account, new_date, True, 500, 2500))
 
-                # OUTCOME
-                # TODO: add code
+                # OUTCOME - typical outcome (0..5 times)
+                for _ in range(int(self.rnd_choose([0,1,2,3,4,5],[0.01, 0.6, 0.2, 0.1, 0.05, 0.04]))):
+                    new_date = self.change_date(date_to.year,
+                                                date_to.month,
+                                                int(self.rnd_int(1, 29)),
+                                                - month)
+                    if new_date > date_to:
+                        continue
+                    self.model.append(self._create_transaction(account, new_date, False, 300, 800))
 
     def _create_transaction(self, account, new_date, income, finance_min=1500, finance_max=5000):
         model = self.model_item()
