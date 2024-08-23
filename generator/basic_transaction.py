@@ -77,7 +77,7 @@ class BasicTransaction(BaseData):
                     self.model.append(self._create_transaction(account, new_date, True, 500, 2500))
 
                 # OUTCOME - typical outcome (0..5 times)
-                for _ in range(int(self.rnd_choose([0,1,2,3,4,5],[0.005, 0.6, 0.2, 0.1, 0.05, 0.045]))):
+                for _ in range(int(self.rnd_choose([0,1,2,3,4,5],[0.002, 0.6, 0.2, 0.1, 0.05, 0.048]))):
                     new_date = self.change_date(date_to.year,
                                                 date_to.month,
                                                 int(self.rnd_int(1, 29)),
