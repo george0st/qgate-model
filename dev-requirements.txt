@@ -2,14 +2,14 @@
 click~=8.1
 
 # expected switch to the version numpy~=2.0
-numpy~=2.0
+numpy>=1.24.3,<=2.1.2
 pandas==2.2.2
 
 pyarrow~=17.0
 #pyarrow==16.1.0
 
 # generation of synthetic data
-faker~=27.0
+faker~=30.6
 
 packaging>=21.3
 
