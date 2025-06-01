@@ -1,5 +1,5 @@
 # command line
-click~=8.1
+click~=8.2
 
 # expected switch to the version numpy~=2.0
 numpy>=1.24.3,<=2.2.6
