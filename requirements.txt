@@ -2,9 +2,9 @@
 click~=8.1
 
 numpy>=1.24.3,<=2.2.6
-pandas==2.2.2
+pandas==2.2.3
 
-pyarrow~=17.0
+pyarrow~=20.0
 #pyarrow==16.1.0
 
 # generation of synthetic data
