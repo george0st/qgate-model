@@ -1,7 +1,6 @@
 **/__pycache__/
 /venv/
 /.coverage
-/.idea/
 /00-high-level/source/qgate-model.ldb
 /tests_output/
 
