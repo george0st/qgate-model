@@ -9,7 +9,7 @@ pyarrow~=17.0
 #pyarrow==16.1.0
 
 # generation of synthetic data
-faker~=30.6
+faker~=37.3
 
 packaging>=21.3
 
