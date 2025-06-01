@@ -5,7 +5,7 @@
 ![GitHub release](https://img.shields.io/github/v/release/george0st/qgate-model) 
 
 # QGate-Model
-The machine learning meta-model with synthetic data (useful for MLOps/feature store), is independent of machine
+The machine learning meta-model with a synthetic data (useful for MLOps/feature store), is independent of machine
 learning solutions (definition in json, data in csv/parquet).
 
 ![Quality-Gate](./docs/assets/icons8-quality-100.png) 
