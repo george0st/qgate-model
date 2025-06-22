@@ -525,6 +525,16 @@ class BasicCommunication(BaseData):
         "The ad video autoplay on our website is annoying users.",
         "Our ad placements on social media are generating negative comments.",
         "The ad frequency capping is not working as expected, bombarding users with the same ad repeatedly.",
+        "I’m extremely disappointed with the lack of transparency in your billing process—none of the charges were clearly explained.",
+        "Despite multiple messages, no one has responded to my support ticket for over a week.",
+        "The campaign performance was far below what was promised, and I feel misled by your initial presentation.",
+        "Your platform's user interface is confusing and unintuitive—it’s slowed down my workflow instead of helping it.",
+        "The customer service agent I spoke to seemed uninterested in resolving my issue and rushed the conversation.",
+        "I expected better reporting tools for the price I’m paying; the current dashboards are basic and unhelpful.",
+        "I followed all your optimization tips, yet my ad reach dropped significantly—something isn’t working as it should.",
+        "The onboarding process was chaotic, and I received conflicting information from different members of your team.",
+        "There seems to be zero accountability when things go wrong, and I always have to chase for answers.",
+        "If things don’t improve soon, I’ll be reconsidering my contract with your company.",
     ]
 
     # GenAI prompt
