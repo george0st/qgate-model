@@ -294,6 +294,16 @@ class BasicCommunication(BaseData):
         "Your satisfaction is our priority. Is there anything else we can do for you?",
         "We're here to listen. Please feel free to share any memories or special requests.",
         "Thank you for allowing us to serve you. How can we ensure your experience is positive?",
+        "Just wanted to say thank you—everything went so smoothly, and I couldn't be happier with my trip!",
+        "Your team’s attention to detail made our vacation unforgettable—you're amazing at what you do.",
+        "I really appreciate how quickly you responded to my questions; it made the whole process stress-free!",
+        "Can you pass on my compliments to the agent who helped me with my itinerary? They were brilliant!",
+        "Is there anywhere I can leave a review to share how wonderful your support has been?",
+        "Every recommendation you gave was spot on—we loved each place we visited.",
+        "You guys made planning this trip so easy; I’ll definitely be booking with you again.",
+        "Thank you for being so patient and friendly during the whole booking process—it truly meant a lot.",
+        "I've already told my friends and family about your agency—you’ve earned a lifelong customer here.",
+        "Honestly, you exceeded all my expectations. Is there a loyalty program I can join?",
     ]
 
     # GenAI prompt
