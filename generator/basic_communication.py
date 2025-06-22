@@ -294,6 +294,16 @@ class BasicCommunication(BaseData):
         "Your satisfaction is our priority. Is there anything else we can do for you?",
         "We're here to listen. Please feel free to share any memories or special requests.",
         "Thank you for allowing us to serve you. How can we ensure your experience is positive?",
+        "Just wanted to say thank you—everything went so smoothly, and I couldn't be happier with my trip!",
+        "Your team’s attention to detail made our vacation unforgettable—you're amazing at what you do.",
+        "I really appreciate how quickly you responded to my questions; it made the whole process stress-free!",
+        "Can you pass on my compliments to the agent who helped me with my itinerary? They were brilliant!",
+        "Is there anywhere I can leave a review to share how wonderful your support has been?",
+        "Every recommendation you gave was spot on—we loved each place we visited.",
+        "You guys made planning this trip so easy; I’ll definitely be booking with you again.",
+        "Thank you for being so patient and friendly during the whole booking process—it truly meant a lot.",
+        "I've already told my friends and family about your agency—you’ve earned a lifelong customer here.",
+        "Honestly, you exceeded all my expectations. Is there a loyalty program I can join?",
     ]
 
     # GenAI prompt
@@ -515,6 +525,16 @@ class BasicCommunication(BaseData):
         "The ad video autoplay on our website is annoying users.",
         "Our ad placements on social media are generating negative comments.",
         "The ad frequency capping is not working as expected, bombarding users with the same ad repeatedly.",
+        "I’m extremely disappointed with the lack of transparency in your billing process—none of the charges were clearly explained.",
+        "Despite multiple messages, no one has responded to my support ticket for over a week.",
+        "The campaign performance was far below what was promised, and I feel misled by your initial presentation.",
+        "Your platform's user interface is confusing and unintuitive—it’s slowed down my workflow instead of helping it.",
+        "The customer service agent I spoke to seemed uninterested in resolving my issue and rushed the conversation.",
+        "I expected better reporting tools for the price I’m paying; the current dashboards are basic and unhelpful.",
+        "I followed all your optimization tips, yet my ad reach dropped significantly—something isn’t working as it should.",
+        "The onboarding process was chaotic, and I received conflicting information from different members of your team.",
+        "There seems to be zero accountability when things go wrong, and I always have to chase for answers.",
+        "If things don’t improve soon, I’ll be reconsidering my contract with your company.",
     ]
 
     # GenAI prompt
@@ -757,4 +777,14 @@ class BasicCommunication(BaseData):
         "Do you provide move-in or move-out cleaning services?",
         "Can you clean commercial spaces or offices?",
         "What's the best way to provide feedback or leave a review?",
+        "I’m reviewing my booking details and noticed something I’d like to double-check—can you help me confirm the information?",
+        "Could you provide more details about the cancellation policy for my reservation?",
+        "I’m interested in changing my travel dates—what’s the process for making an adjustment?",
+        "Is there a list of recommended activities or tours available for the destination I’m visiting?",
+        "I’d like to know if airport transfers are included in my package or if they need to be booked separately.",
+        "Can you clarify the baggage policy for the flight that was included in my booking?",
+        "I received a confirmation email, but I’d appreciate it if someone could walk me through what’s included in the itinerary.",
+        "What’s the best way to reach support while I’m traveling in case anything comes up?",
+        "Could you confirm whether travel insurance was included with my package, or if it needs to be purchased separately?",
+        "I’d like to ensure my dietary preferences were noted for the meals provided—can someone assist with that?",
     ]
