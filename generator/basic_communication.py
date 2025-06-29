@@ -535,6 +535,16 @@ class BasicCommunication(BaseData):
         "The onboarding process was chaotic, and I received conflicting information from different members of your team.",
         "There seems to be zero accountability when things go wrong, and I always have to chase for answers.",
         "If things don’t improve soon, I’ll be reconsidering my contract with your company.",
+        "I’m extremely disappointed with the lack of resolution despite multiple follow-ups.",
+        "The experience with your service has been frustrating and far below my expectations.",
+        "I’ve spent hours trying to resolve this issue, and it still hasn’t been addressed properly.",
+        "It feels like my concerns are being ignored, which is unacceptable.",
+        "The support I’ve received so far has been slow, unhelpful, and at times dismissive.",
+        "I no longer feel confident relying on your platform given the ongoing problems.",
+        "I was promised a fix, but nothing has changed—this is not acceptable.",
+        "I’ve followed all instructions provided, yet the issue remains unresolved.",
+        "The lack of communication and updates is causing significant inconvenience.",
+        "This situation is affecting my ability to use your service, and I need a serious response.",
     ]
 
     # GenAI prompt
@@ -787,4 +797,14 @@ class BasicCommunication(BaseData):
         "What’s the best way to reach support while I’m traveling in case anything comes up?",
         "Could you confirm whether travel insurance was included with my package, or if it needs to be purchased separately?",
         "I’d like to ensure my dietary preferences were noted for the meals provided—can someone assist with that?",
+        "I am reaching out for assistance with an issue I encountered on your platform.",
+        "Could you please provide more information regarding the recent update?",
+        "I would appreciate clarification on the steps needed to resolve this problem.",
+        "Can you confirm if this feature is still supported?",
+        "I noticed unexpected behavior and would like to report it for review.",
+        "Please let me know if there are any known issues related to this situation.",
+        "I’m having trouble accessing a specific section—could you advise?",
+        "I’d like to request more details on your current support process.",
+        "Is there a workaround available while this issue is being addressed?",
+        "Thank you for looking into this—I'll wait for your guidance.",
     ]
