@@ -1,11 +1,11 @@
 # command line
 click~=8.2
 
-numpy>=1.24.3,<=2.3.0
+numpy>=1.24.3,<=2.3.1
 pandas~=2.3
 
 pyarrow~=20.0
 #pyarrow==16.1.0
 
 # generation of synthetic data
-faker~=37.3
+faker~=37.4
