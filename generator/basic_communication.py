@@ -535,6 +535,16 @@ class BasicCommunication(BaseData):
         "The onboarding process was chaotic, and I received conflicting information from different members of your team.",
         "There seems to be zero accountability when things go wrong, and I always have to chase for answers.",
         "If things don’t improve soon, I’ll be reconsidering my contract with your company.",
+        "I’m extremely disappointed with the lack of resolution despite multiple follow-ups.",
+        "The experience with your service has been frustrating and far below my expectations.",
+        "I’ve spent hours trying to resolve this issue, and it still hasn’t been addressed properly.",
+        "It feels like my concerns are being ignored, which is unacceptable.",
+        "The support I’ve received so far has been slow, unhelpful, and at times dismissive.",
+        "I no longer feel confident relying on your platform given the ongoing problems.",
+        "I was promised a fix, but nothing has changed—this is not acceptable.",
+        "I’ve followed all instructions provided, yet the issue remains unresolved.",
+        "The lack of communication and updates is causing significant inconvenience.",
+        "This situation is affecting my ability to use your service, and I need a serious response.",
     ]
 
     # GenAI prompt
