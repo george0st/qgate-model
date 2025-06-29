@@ -304,6 +304,14 @@ class BasicCommunication(BaseData):
         "Thank you for being so patient and friendly during the whole booking process—it truly meant a lot.",
         "I've already told my friends and family about your agency—you’ve earned a lifelong customer here.",
         "Honestly, you exceeded all my expectations. Is there a loyalty program I can join?",
+        "I didn’t expect a reply so thorough—it felt like a masterclass in customer care.",
+        "You’ve managed to connect all the dots for me. Honestly, it feels like magic!",
+        "Your guidance wasn’t just helpful—it shifted my whole direction. That’s rare and priceless.",
+        "I learn more from your support replies than some tutorials I've read. Impressive and insightful!",
+        "You turned a stressful problem into a peaceful resolution. Thank you for the calm clarity",
+        "Support like yours makes me confident doing business with your company. It really shows your values.",
+        "Your help planted seeds for long-term success, not just a quick fix. That matters to me.",
+        "You were my shield today—fast, firm, and incredibly kind. Please pass my gratitude on.",
     ]
 
     # GenAI prompt
