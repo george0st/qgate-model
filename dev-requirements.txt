@@ -12,7 +12,7 @@ faker~=37.4
 packaging>=21.3
 
 # test coverage
-coverage>=7
-coverage-badge>=1
+coverage~=7.9
+coverage-badge~=1.1
 
 pympler==1.0.1
