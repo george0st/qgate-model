@@ -1,11 +1,9 @@
 import datetime
-import math
 import uuid
-
 from generator.base_data import BaseData
 from faker import Faker
 from generator.basic_account import BasicAccount
-from faker.providers import bank
+
 
 class BasicTransaction(BaseData):
 
