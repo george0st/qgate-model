@@ -25,6 +25,7 @@ class TestGenerator(unittest.TestCase):
         pass
 
     def test_generate_compress(self):
+        """Small 20,20 with compress"""
 
         lbl="0-size-20,20-compress"
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
@@ -36,6 +37,7 @@ class TestGenerator(unittest.TestCase):
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv.gz")))
 
     def test_generate_compress_smallbulk(self):
+        """Small 20,6 with compress"""
         lbl="0-size-20,6-compress"
 
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
@@ -47,6 +49,7 @@ class TestGenerator(unittest.TestCase):
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv.gz")))
 
     def test_generate_compress_super_smallbulk(self):
+        """Small 10,6 with compress"""
         lbl="0-size-s-10,6-compress"
 
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
@@ -58,6 +61,7 @@ class TestGenerator(unittest.TestCase):
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv.gz")))
 
     def test_generate(self):
+        """Test 200,20"""
         lbl = "0-size-200,20"
 
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
@@ -69,7 +73,7 @@ class TestGenerator(unittest.TestCase):
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv")))
 
     def test_generate_smallbulk_repeat(self):
-        """Repeat generation of small files"""
+        """Repeat small 25x8,6"""
 
         for i in range(25):
             lbl = f"0-size-iter{i}-8,6"
@@ -83,6 +87,7 @@ class TestGenerator(unittest.TestCase):
             self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv")))
 
     def test_generate_smallbulk(self):
+        """Small 20,6"""
         lbl = "0-size-20,6"
 
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
@@ -94,6 +99,7 @@ class TestGenerator(unittest.TestCase):
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv")))
 
     def test_generate_super_smallbulk(self):
+        """Small 10,6"""
         lbl = "0-size-s-10,6"
 
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
@@ -105,6 +111,7 @@ class TestGenerator(unittest.TestCase):
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv")))
 
     def test_generate_bigbigbulk(self):
+        """Big bulk 7000,2000"""
         lbl = "0-size-7000,2000"
 
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
@@ -116,6 +123,7 @@ class TestGenerator(unittest.TestCase):
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv")))
 
     def test_generate_bigbulk(self):
+        """Bulk 2000,2000"""
         lbl = "0-size-2000,2000"
 
         generator = SyntheticData(os.path.join("..","01-model"),TestGenerator.OUTPUT_ADR, TestGenerator.OUTPUT_ADR)
@@ -127,6 +135,7 @@ class TestGenerator(unittest.TestCase):
         self.assertTrue(os.path.exists(path.join(dir, f"{basic_contact.BasicContact.NAME}.csv")))
 
     def test_generate_bigbulk_repeat(self):
+        """Repeat bulk 5x 1000,1000"""
         for i in range(5):
             lbl = f"0-size-iter{i}-1000,1000"
 

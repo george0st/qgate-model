@@ -1,6 +1,5 @@
 import datetime
 import time
-
 from generator.basic_party import BasicParty
 from generator.basic_contact import BasicContact
 from generator.basic_relation import BasicRelation
@@ -12,6 +11,7 @@ from generator.base_data import BaseData
 from generator.base_test import BaseTest
 from generator.data_hint import DataHint
 from generator.setup import Setup
+
 
 class SyntheticData:
 
