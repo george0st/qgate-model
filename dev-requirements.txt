@@ -15,4 +15,4 @@ packaging>=21.3
 coverage~=7.9
 coverage-badge~=1.1
 
-pympler==1.0.1
+pympler==1.1
