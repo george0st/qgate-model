@@ -7,4 +7,4 @@ pandas~=2.3
 pyarrow~=20.0
 
 # generation of synthetic data
-faker~=37.4
+faker~=37.5
